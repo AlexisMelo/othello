@@ -1,0 +1,47 @@
+\documentclass[]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithmeUTF8} 
+\begin{document}
+
+	\begin{tad}
+		\tadNom{Couleur}
+		\tadDependances{Chaine de caractères}
+		\begin{tadOperations}{Couleur}
+			\tadOperation{Couleur}{\tadUnParam{Chaine de caractères}}{\tadUnParam{Couleur}}
+			\tadOperation{CouleurOpposée}{\tadUnParam{Couleur}}{\tadUnParam{Couleur}}
+			
+		\end{tadOperations}
+		\begin{tadAxiomes}
+			\tadAxiome{CouleurOpposée( CouleurOpposée( Couleur ))) = Couleur}
+		\end{tadAxiomes}
+	\end{tad}
+	
+	\begin{tad}
+		\tadNom{Pion}
+		\tadDependances{Couleur}
+		\begin{tadOperations}{Pion}
+			\tadOperation{Pion}{\tadUnParam{Couleur}}{\tadUnParam{Pion}}
+			\tadOperation{ObtenirCouleur}{\tadUnParam{Pion}}{\tadUnParam{Couleur}}
+			\tadOperation{InverserCouleur}{\tadUnParam{Pion}}{\tadUnParam{Pion}}
+		\end{tadOperations}
+		\begin{tadAxiomes}
+			\tadAxiome{InverserCouleur(InverserCouleur(Pion(Couleur))) = Pion}
+		\end{tadAxiomes}
+	\end{tad}
+	
+	\begin{tad}
+		\tadNom{Position}
+		\tadDependances{Colonne,Ligne}
+		\begin{tadOperations}{Position}
+			\tadOperation{Position}{\tadUnParam{Colonne x Ligne}}{\tadUnParam{Position}}
+			\tadOperation{FixerColonne}{\tadUnParam{Colonne}}{\tadUnParam{Position}}
+			\tadOperation{FixerLigne}{\tadUnParam{Ligne}}{\tadUnParam{Position}}
+			\tadOperation{ObtenirColonne}{\tadUnParam{Position}}{\tadUnParam{Colonne}}
+			\tadOperation{ObtenirLigne}{\tadUnParam{Position}}{\tadUnParam{Ligne}}
+		\end{tadOperations}
+		\begin{tadAxiomes}
+		\end{tadAxiomes}
+	\end{tad}
+	
+\end{document}
