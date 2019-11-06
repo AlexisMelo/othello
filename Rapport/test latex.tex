@@ -57,6 +57,31 @@
 		\end{tadAxiomes}
 	\end{tad}
 	
+	\begin{tad}
+		\tadNom{Plateau}
+		\tadDependances{Position,Coup,Plateau,Pion}
+		\begin{tadOperations}{Plateau}
+			\tadOperation{Plateau}{\tadUnParam{Naturel x Naturel}}{\tadUnParam{Plateau}}
+			\tadOperation{JouerCoup}{\tadUnParam{Plateau x Coup}}{\tadUnParam{Plateau}}
+			\tadOperation{ObtenirPion}{\tadUnParam{Plateau x Position}}{\tadUnParam{Pion}}
+			\tadOperation{CaseVide}{\tadUnParam{Plateau x Position}}{\tadUnParam{Booleen}}
+			\tadOperation{Remplacer}{\tadUnParam{Plateau x Position}}{\tadUnParam{Plateau}}
+		\end{tadOperations}
+		\begin{tadAxiomes}
+			\tadAxiome{ObtenirPion(JouerCoup(Plateau,Coup(Position,Pion)), Position) = Pion}
+			\tadAxiome{Remplacer(Remplacer(Plateau,Position),Position) = Plateau}
+		\end{tadAxiomes}
+	\end{tad}
 	
+	\begin{tad}
+		\tadNom{Coups}
+		\begin{tadOperations}{Coups}
+			\tadOperation{Coups}{}{\tadUnParam{Ensemble<Coup>}
+			\tadOperation{AjouterCoup}{\tabUnParam{Coups x Coup}}{\tabUnParam{Coups}}
+			\tadOperation{RetirerCoup}{\tabUnParam{Coups x Coup}}{\tabUnParam{Coups}}
+			\tadOperation{NombreCoups}{\tabUnParam{Coups}}{\tabUnParam{Naturel}}
+		\end{tadOperations}
+		
+	\end{tad}
 	
 \end{document}
