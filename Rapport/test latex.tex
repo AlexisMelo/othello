@@ -1,5 +1,5 @@
 \documentclass[]{article}
-%\usepackage[french]{babel}
+\usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{algorithmeUTF8} 
 \begin{document}
@@ -43,5 +43,20 @@
 		\begin{tadAxiomes}
 		\end{tadAxiomes}
 	\end{tad}
+	
+	\begin{tad}
+		\tadNom{Coup}
+		\tadDependances{Position,Pion,Plateau}
+		\begin{tadOperations}{Coup}
+			\tadOperation{Coup}{\tadUnParam{Position x Pion}}{\tadUnParam{Coup}}
+			\tadOperation{ObtenirPosition}{\tadUnParam{Coup}}{\tadUnParam{Position}}
+			\tadOperation{ObtenirPion}{\tadUnParam{Coup}}{\tadUnParam{Pion}}
+			\tadOperation{EstValideCoup}{\tadUnParam{Plateau}}{\tadUnParam{Booleen}}
+		\end{tadOperations}
+		\begin{tadAxiomes}
+		\end{tadAxiomes}
+	\end{tad}
+	
+	
 	
 \end{document}
