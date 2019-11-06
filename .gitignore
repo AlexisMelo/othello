@@ -5,3 +5,6 @@
 /lib
 *.tmp
 *.pdf
+*.log
+*.aux
+*.synctex.gz
