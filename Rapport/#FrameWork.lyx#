@@ -9,9 +9,8 @@
 % \usepackage{minted}
 
 \usepackage[svgnames]{xcolor}
-\usepackage{algorithmeUTF8}
-\usepackage[french]{babel}
-\usepackage[utf8]{inputenc}
+\usepackag{algorithmeUTF8}
+\usepackag[french]{babel}
 
 \usepackage{fancyhdr}
 \lhead{TITRE DOCUMENT}
@@ -132,7 +131,7 @@ AUTEURS - RU Siu - MELO DA SILVA Alexis - MESBAH Zacharia - SAIVRES Jerôme
 \end_layout
 
 \begin_layout Date
-2019 - 2020
+MOIS ANNÉES
 \end_layout
 
 \begin_layout Right Address
