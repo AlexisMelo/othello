@@ -1,0 +1,26 @@
+###jouerCoup
+
+Pose le pion sur le plateau (pas de saisie)
+
+Param1 : Coup (coup à jouer)
+Param2 : Plateau
+
+Return :
+
+###estUnCoupValable
+
+Vérifie qu'un coup peut être joué (comparaison entre coup joueur et coups valides)
+
+Param1 : Coup
+Param2 : Ensemble de Coups
+
+Return : Booleen
+
+###chercherTousLesCoups
+
+Obtient la liste de tous les coups possibles pour un tour
+
+Param1 : Couleur
+Param2 : Plateau
+
+Return1: Coups (liste de coups possibles)
