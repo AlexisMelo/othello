@@ -1,0 +1,76 @@
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french]{extarticle}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{4}
+\usepackage{color}
+\makeatletter
+% \addto\extrasfrench{%
+%    \providecommand{\og}{\leavevmode\flqq~}%
+%    \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+% }
+
+\makeatother
+\usepackage{graphicx}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
+ {hyperref}
+\hypersetup{
+ linkcolor=blue,urlcolor=blue}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newcommand{\lyxrightaddress}[1]{
+	\par {\raggedleft \begin{tabular}{l}\ignorespaces
+	#1
+	\end{tabular}
+	\vspace{1.4em}
+	\par}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% \usepackage{minted}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{algorithmeUTF8}
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{fancyhdr}
+\lhead{TITRE DOCUMENT}
+\chead{}
+\rhead{}
+\lfoot{AUTEURS - AUTEURS}
+\cfoot{Page \thepage}
+\rfoot{\today}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\addtolength{\headheight}{\baselineskip}
+
+
+\usepackage{fancyvrb}
+
+\makeatother
+
+\begin{document}
+
+\rhead{\includegraphics[height=1cm]{Logo_INSARouen}}
+\title{TITRE}
+\author{AUTEURS - RU Siu - MELO DA SILVA Alexis - MESBAH Zacharia - SAIVRES
+Jerôme - SI Ruixu}
+\date{2019 - 2020}
+\maketitle
+
+\newpage{}
+
+\tableofcontents{}\newpage{}
+
+\section{TADs}
+
+\input{TADs}
+\section{Analyse Descendante}
+
+\subsection{SOUS SECTION 2}
+\end{document}
