@@ -1,3 +1,74 @@
+###FaireUnePartie
+
+Jouer une partie d'Othello
+
+Param1 : Couleur
+Param2 : Naturel (profondeur de l'IA)
+
+Return1: Couleur
+
+###InitialiserPlateau
+
+Crée un plateau et place les premiers pions au centre
+
+Return : Plateau
+
+###AfficherPlateau
+
+Affiche le plateau sur le terminal
+
+Param1 : Plateau
+
+###FinirLaPartie
+
+Verifie si on peut finir la partie
+Si oui : compte les points de chaque couleur, compare, et affiche le résultat
+Si non : continue de tourner
+
+Param1 : Couleur (couleur qui est censée jouer)
+Param2 : Plateau
+
+Return1: Booléen (vrai si la partie est finie)
+
+###CalculPoint
+
+Calcul le nombre de points d'une couleur sur un plateau donné
+
+Param1 : Plateau
+Param2 : Couleur (couleur dont on cherche le nb de points)
+
+Return : Naturel (nombre de pions de la couleur donnée)
+
+###EtatDeLaPartie
+
+Savoir si la partie est bloquée, terminée, ou en cours
+
+Param1 : Couleur
+Param2 : Plateau
+
+Return1: Etat (bloqué, terminé, en cours) -> faire une enum
+
+Bloqué = la couleur peut pas jouer
+Terminé = personne peut jouer (aucun coup ou alors plateau rempli)
+En cours = c ok
+
+###PlateauRempli
+
+Vérifie si le plateau est rempli
+
+Param1 : Plateau
+
+Return1: Booléen
+
+###CoupValideExiste
+
+Verifie si la couleur peut jouer en cherchant tous les coups possibles
+
+Param1 : couleur
+Param2 : Plateau
+
+Return1: Booléen
+
 ###jouerCoup
 
 Pose le pion sur le plateau (pas de saisie)
@@ -7,7 +78,7 @@ Param2 : Plateau
 
 Return :
 
-###estUnCoupValable
+###estUnCoupValide
 
 Vérifie qu'un coup peut être joué (comparaison entre coup joueur et coups valides)
 
@@ -16,11 +87,45 @@ Param2 : Ensemble de Coups
 
 Return : Booleen
 
-###chercherTousLesCoups
+###ChercherTousLesCoups
 
-Obtient la liste de tous les coups possibles pour un tour
+Obtient la liste de tous les coups possibles pour une couleur
+
+Param1 : Couleur (couleur qui est censée jouer)
+Param2 : Plateau
+
+Return1: Coups (liste de coups possibles)
+
+###ObtenirCoupValide
 
 Param1 : Couleur
 Param2 : Plateau
 
-Return1: Coups (liste de coups possibles)
+###ObtenirCoupIA
+
+Obtenir un coup joué par l'IA (algorithme naif au début puis min max/meilleure prise de decision)
+
+Param1 : Couleur
+Param2 : Plateau
+Param3 : Naturel (profondeur de l'algo)
+
+Return1: Coup
+
+###MiseAJourPlateau
+
+Mettre à jour le plateau à partir d'un coup joué (placer le coup & inverser les pions)
+
+Param1 : Coup
+Param2 : Plateau
+
+Return1 : Plateau
+
+###JouerUnTour
+
+Obtenir un coup de la part de lIA ou du joueur et l'effectuer sur le plateau
+
+Param1 : Couleur (couleur qui doit jouer pdt le tour)
+Param2 : Naturel (profondeur de l'IA)
+Parma3 : Plateau
+
+Return1: Plateau (modifié après mise à jour)
