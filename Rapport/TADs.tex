@@ -84,4 +84,25 @@
 		
 	\end{tad}
 	
+	\begin{tad}
+		\tadNom{Ligne}
+		\begin{tadOperations}{Ligne}
+			\tadOperation{Ligne}{NaturelNonNul}{\tadUnParam{Ligne}}
+			\tadOperation{ObtenirNumeroLigne}{\tadUnParam{Ligne}}{\tadUnParam{NaturelNonNul}}
+		\end{tadOperations}
+		\begin{tadAxiomes}
+			\tadAxiome{ObtenirNumeroLigne(Ligne(NaturelNonNul)) = NaturelNonNul}
+		\end{tadAxiomes}
+	\end{tad}
+	
+	\begin{tad}
+		\tadNom{Colonne}
+		\begin{tadOperations}{Colonne}
+			\tadOperation{Colonne}{NaturelNonNul}{\tadUnParam{Colonne}}
+			\tadOperation{ObtenirNumeroColonne}{\tadUnParam{Colonne}}{\tadUnParam{NaturelNonNul}}
+		\end{tadOperations}
+		\begin{tadAxiomes}
+			\tadAxiome{ObtenirNumeroColonne(Colonne(NaturelNonNul)) = NaturelNonNul}
+		\end{tadAxiomes}
+	\end{tad}
 \end{document}
