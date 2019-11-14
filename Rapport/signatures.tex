@@ -1,18 +1,52 @@
 \subsection{Signatures}
-	\signatureprocedure {jouerUnePartie}{Couleur}
-	\signaturefonction {InitialiserPlateau}{None}{Plateau}
-	\signatureprocedure {AfficherPlateau}{Plateau}
-	\signaturefunction {JouerUnTour}{Plateau, Naturel, Couleur}{Coup}
-	\signaturefunction {obtenirCoupValide}{Couleur, Plateau}{Coup}
-	\signaturefunction {obtenirCoupIA}{Plateau, Couleur, Naturel}{Coup}
-	\signaturefunction {obtenirCoupJoueur}{}{Coup}
-	\signaturefunction {estUnCoupValide}{Coup, Coups}{Booléen}
-	\signaturefunction {chercherTousLesCoups}{Plateau, Couleur}{Coups}
-	\signaturefunction {MiseAJourPlateau}{Coup, Plateau}{Plateau}
-	\signaturefunction {jouerCoup}{Plateau, Coup}{Plateau}
-	\signaturefunction {PionsCapturés}{coup, Plateau}{Ensemble de pion}
-	\signaturefunction {finirLaPartie}{Couleur, Plateau}{Naturel}
-	\signaturefunction {EtatDeLaPartie}{Couleur, Plateau}{Etat}
-	\signaturefunction {CalculPoint}{Couleur, Plateau}{Naturel}
-	\signaturefunction {plateauRempli}{Plateau}{Booléen}
-	\signaturefunction {CoupValideExiste}{Plateau, Couleur}{Booléen}
+	\begin{algorithme}
+	\signatureprocedure{jouerUnePartie}{Couleur}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefonction{InitialiserPlateau}{None}{Plateau}
+	\end{algorithme}
+	\begin{algorithme}
+	\signatureprocedure{AfficherPlateau}{Plateau}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{JouerUnTour}{PlateauNaturelCouleur}{Coup}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{obtenirCoupValide}{CouleurPlateau}{Coup}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{obtenirCoupIA}{PlateauCouleurNaturel}{Coup}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{obtenirCoupJoueur}{}{Coup}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{estUnCoupValide}{Coup, Coups}{Booléen}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{chercherTousLesCoups}{Plateau, Couleur}{Coups}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{MiseAJourPlateau}{Coup, Plateau}{Plateau}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{jouerCoup}{Plateau, Coup}{Plateau}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{PionsCapturés}{coup, Plateau}{Ensemble de pion}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{finirLaPartie}{Couleur, Plateau}{Naturel}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{EtatDeLaPartie}{Couleur, Plateau}{Etat}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{CalculPoint}{Couleur, Plateau}{Naturel}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{plateauRempli}{Plateau}{Booléen}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefunction{CoupValideExiste}{Plateau, Couleur}{Booléen}
+	\end{algorithme}

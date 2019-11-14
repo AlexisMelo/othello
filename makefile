@@ -1,6 +1,6 @@
 all :
-	pdflatex Framework.tex
-
+	cd ./Rapport && pdflatex -interaction nonstopmode -halt-on-error -file-line-error ./Framework.tex
+	
 clean :
 	rm -rf ./Rapport/*.pdf
 	rm -rf ./Rapport/*.log
