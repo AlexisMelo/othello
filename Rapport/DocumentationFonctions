@@ -71,16 +71,34 @@ Return1: Booléen
 
 ###jouerCoup
 
-Pose le pion sur le plateau (pas de saisie)
+Effectue un coup sur un plateau : poser le pion et capturer les pions adverses
 
 Param1 : Coup (coup à jouer)
 Param2 : Plateau
 
-Return :
+Return : Plateau (mis à jour)
+
+###PoserPion
+
+place le pion sur le plateau à la position contenue dans le coup
+
+Param1 : Coup (coup à jouer)
+Param2 : Plateau
+
+Return : Plateau (mis à jour avec le nouveau pion)
+
+###CapturerPions
+
+change la couleur des pions situés entre le pion du coup et le premier pion rencontré dans chaque direction
+
+Param1 : Coup (coup joué pendant le tour)
+Param2 : Plateau
+
+Return : Plateau (mis à jour avec inversion couleurs)
 
 ###estUnCoupValide
 
-Vérifie qu'un coup peut être joué (comparaison entre coup joueur et coups valides)
+Vérifie qu'un coup peut être joué (comparaison entre coup joueur saisi et coups valides)
 
 Param1 : Coup
 Param2 : Ensemble de Coups
@@ -98,8 +116,12 @@ Return1: Coups (liste de coups possibles)
 
 ###ObtenirCoupValide
 
-Param1 : Couleur
+Obtenir un coup prêt à être joué sur un plateau
+
+Param1 : Couleur (qui doit jouer)
 Param2 : Plateau
+
+Return1: Coup (coup obtenu)
 
 ###ObtenirCoupIA
 
@@ -111,14 +133,13 @@ Param3 : Naturel (profondeur de l'algo)
 
 Return1: Coup
 
-###MiseAJourPlateau
+###ObtenirCoupJoueur
 
-Mettre à jour le plateau à partir d'un coup joué (placer le coup & inverser les pions)
+Obtenir un coup d'un jour à partir d'une saisie de coordonnées et d'une couleur
 
-Param1 : Coup
-Param2 : Plateau
+Param1 : Couleur (du joueur qui doit jouer)
 
-Return1 : Plateau
+Return1: Coup
 
 ###JouerUnTour
 
