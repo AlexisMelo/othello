@@ -10,3 +10,5 @@
 *.synctex.gz
 *.Rhistory
 *.odg#
+*.toc
+*.out
