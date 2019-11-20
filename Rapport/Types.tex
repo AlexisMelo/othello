@@ -1,0 +1,34 @@
+\begin{algorithme}
+
+	\begin{enregistrement}{Couleur}
+		\champEnregistrement{nom}{Chaine de caractères}
+		\champEnregistrement{hexa}{Chaine de caractères}
+		\champEnregistrement{couleurOpposee}{Couleur}
+		\champEnregistrement{symbole}{Caractère}
+	\end{enregistrement}
+\\	
+	\begin{enregistrement}{Pion}
+		\champEnregistrement{couleur}{Couleur}
+	\end{enregistrement}
+\\
+	\begin{enregistrement}{Position}
+		\champEnregistrement{ligne}{Ligne}
+		\champEnregistrement{colonne}{Colonne}
+	\end{enregistrement}
+\\
+
+	\begin{enregistrement}{Coup}
+		\champEnregistrement{pion}{Pion}
+		\champEnregistrement{position}{Position}
+	\end{enregistrement}
+\\\\	
+	\textbf{Type} Plateau \textbf{=} tableau[1...longueur][1...longueur] de Pions
+\\\\
+	\textbf{Type} Coups \textbf{=} Ensemble<Coup>
+\\\\
+	\textbf{Type} Ligne \textbf{=} Entier[1...longueur]
+\\\\
+	\textbf{Type} Colonne \textbf{=} Entier[1...longueur] 
+	
+\end{algorithme}
+
