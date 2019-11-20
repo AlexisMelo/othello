@@ -1,5 +1,6 @@
 all :
-	pdflatex -interaction nonstopmode -halt-on-error -file-line-error Rapport/Framework.tex
+	pwd
+	pdflatex -interaction nonstopmode -halt-on-error -file-line-error Rapport/FrameWork.tex
 	
 clean :
 	rm -rf ./Rapport/*.pdf
