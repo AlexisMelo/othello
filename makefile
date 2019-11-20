@@ -1,5 +1,5 @@
 all :
-	cd ./Rapport && pdflatex -interaction nonstopmode -halt-on-error -file-line-error ./Framework.tex
+	pdflatex -interaction nonstopmode -halt-on-error -file-line-error Rapport/Framework.tex
 	
 clean :
 	rm -rf ./Rapport/*.pdf
