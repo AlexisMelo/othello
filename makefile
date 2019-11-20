@@ -1,6 +1,6 @@
 all :
 	pwd
-	pdflatex -interaction nonstopmode -halt-on-error -file-line-error Rapport/FrameWork.tex _output-directory ./Rapport
+	pdflatex -interaction nonstopmode -halt-on-error -file-line-error Rapport/FrameWork.tex -output-directory ./Rapport
 	
 clean :
 	rm -rf ./Rapport/*.pdf
