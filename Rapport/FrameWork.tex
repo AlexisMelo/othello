@@ -9,10 +9,6 @@
 \addtolength{\evensidemargin}{-.8in}
 \addtolength{\textwidth}{1.6in}
 \makeatletter
-% \addto\extrasfrench{%
-%    \providecommand{\og}{\leavevmode\flqq~}%
-%    \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
-% }
 
 \makeatother
 \usepackage{graphicx}
@@ -24,7 +20,6 @@
  linkcolor=blue,urlcolor=blue}
 
 \makeatletter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 \newcommand{\lyxrightaddress}[1]{
 	\par {\raggedleft \begin{tabular}{l}\ignorespaces
 	#1
@@ -32,9 +27,6 @@
 	\vspace{1.4em}
 	\par}
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.CONTINUE
-% \usepackage{minted}
 
 \usepackage[svgnames]{xcolor}
 \usepackage{svg}
@@ -52,26 +44,22 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \addtolength{\headheight}{\baselineskip}
-
 \makeatother
 
 \begin{document}
-
 \rhead{\includegraphics[height=1cm]{./Rapport/Logo_INSARouen.png}}
 \title{TITRE}
 \author{AUTEURS - RU Siu - MELO DA SILVA Alexis - MESBAH Zacharia - SAIVRES
 Jerôme - SI Ruixu}
 \date{2019 - 2020}
 \maketitle
-
-\newpage{}
-
-\tableofcontents{}\newpage{}
-
+\newpage
+\tableofcontents{}
+\newpage
 \section{TADs}
 \input{./Rapport/TADs}
 
-\section{Analyse Descendante}
+\section{Analyse descendante}
 \input{./Rapport/analyse_descendante}
 \newpage
 \section{Conception détaillée}
