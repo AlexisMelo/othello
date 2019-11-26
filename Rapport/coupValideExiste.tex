@@ -1,0 +1,14 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{coupValideExiste}
+	{plateauDeJeu : Plateau, joueurActuel : Couleur}
+	{\booleen}
+	{coupsValides : Coups}
+	{
+	\affecter{coupsValides}{chercherTousLesCoups(joueurActuel, plateauDeJeu)}
+	\sialorssinon {estVide(coupsValides)}
+		{\retourner{(Faux)}}
+		{\retourner{(Vrai)}}
+	}
+\end{algorithme}
