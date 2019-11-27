@@ -1,0 +1,10 @@
+//
+// Created by zhack on 27/11/2019.
+//
+
+#ifndef PROJECT_OTHELLO_LMMSS_PLATEAU_H
+#define PROJECT_OTHELLO_LMMSS_PLATEAU_H
+
+#endif //PROJECT_OTHELLO_LMMSS_PLATEAU_H
+
+Ligne ligne(){}

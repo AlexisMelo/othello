@@ -1,0 +1,8 @@
+//
+// Created by zhack on 27/11/2019.
+//
+
+#ifndef PROJECT_OTHELLO_LMMSS_COULEUR_H
+#define PROJECT_OTHELLO_LMMSS_COULEUR_H
+
+#endif //PROJECT_OTHELLO_LMMSS_COULEUR_H
