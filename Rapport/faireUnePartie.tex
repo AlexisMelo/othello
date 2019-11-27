@@ -1,15 +1,15 @@
 \begin{algorithme}
 	\small
-	\fonction
+	\procedure
 	{FaireUnePartie}
-	{joueur = Couleur, ProfondeurIA = Naturel}
-	{}
+	{couleur = Couleur, ProfondeurIA = Naturel}
 	{plateau = Plateau}
 	{
 	\affecter{plateau}{InitialiserPlateau()}
-	\tantque{non FinirLaPartie}{
-		\affecter{plateau}{JouerUnTour(plateau, joueur, ProfondeurIA)}
-		\affecter{joueur}{Inverser(joueur)}
+	\tantque{non FinirLaPartie(couleur, plateau}{
+		\affecter{plateau}{JouerUnTour(plateau, niveau, couleur)}
+		\instruction afficherPlateau(plateau)
+		\affecter{couleur}{Inverser(couleur)}
 	}
 	}
 \end{algorithme}
