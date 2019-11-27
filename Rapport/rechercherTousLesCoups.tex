@@ -1,0 +1,42 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{rechercherUnCoup}
+	{plateauDeJeu : Plateau, joueurActuel : Couleur, positionDuCoup : Position}
+	{\booleen}
+	{i : 1 .. largeur
+	j : 1 .. longueur}
+	{
+	\sialorssinon {non (CaseVide(plateauDeJeu, positionDuCoup))}
+			{\retourner{(Faux)}}
+			{\retourner{(parcourirDirection(positionDuCoup, HG)\\
+			ou parcourirDirection(positionDuCoup, HG)\\
+			ou parcourirDirection(positionDuCoup, H)\\
+			ou parcourirDirection(positionDuCoup, HD)\\
+			ou parcourirDirection(positionDuCoup, D)\\
+			ou parcourirDirection(positionDuCoup, BD)\\
+			ou parcourirDirection(positionDuCoup, B)\\
+			ou parcourirDirection(positionDuCoup, BG)\\
+			ou parcourirDirection(positionDuCoup, G))}}		
+	}
+\end{algorithme}
+
+\begin{algorithme}
+	\small
+	\fonction
+	{rechercherTousLesCoups}
+	{plateauDeJeu : Plateau, joueurActuel : Couleur}
+	{Coups}
+	{lesCoups : Coups
+	i : 1 .. largeur
+	j : 1 .. longueur}
+	{
+	\pour{i}{1}{largeur}{}{
+		\pour{j}{1}{longueur}{}{
+			\sialors {rechercherUnCoup(plateauDeJeu,joueurActuel,Position(i,j))}
+				{\instruction{ajouter(lesCoups,Coup(Position(i,j),Pion(joueurActuel)))}}
+		}
+	}
+	\retourner{(lesCoups)}
+	}
+\end{algorithme}
