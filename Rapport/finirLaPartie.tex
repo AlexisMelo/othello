@@ -8,17 +8,17 @@
 	\sialorssinon 
 		{EtatDeLaPartie(couleur,plateau)="En Cours" ou (EtatDeLaPartie(couleur,plateau)="Blqué" et EtatDeLaPartie(couleurOpposée(couleur),plateau)="En Cours")}
 		{\retourner{(Faux)}}	
-		{affecter(point1,calculPoint(plateau,couleur)
-		affecter(point2,calculPoint(plateau,couleurOpposée(couleur)))
-		Ecrire couleur "a" point1 "points"
-		Ecrire CouleurOpposée(couleur) "a" point2 "points"
+		{\affecter{point1}{calculPoint(plateau,couleur)}
+		\affecter{point2}{calculPoint(plateau,couleurOpposée(couleur))}
+		\ecrire{couleur "a" point1 "points"}
+		\ecrire{CouleurOpposée(couleur) "a" point2 "points"}
 		\sialorssinon
 			{point1>point2}
-			{Ecrire couleur "a gagné"}
+			{\ecrire{couleur "a gagné"}
 			{\sialorssinon
 				{point1<point2}
-				{Ecrire couleurOpposée(couleur) "a gagné"}
-				{Ecrire "match nul"}
+				{\ecrire{couleurOpposée(couleur) "a gagné"}
+				{\ecrire{"match nul"}
 		    }
 		    \retourner Vrai
 		}
