@@ -24,8 +24,8 @@ void fixerListeSuivante(ListeChainee liste1, ListeChainee liste2){
 }
 
 void ajouter(ListeChainee* liste,void* element,EC_FonctionCopierDansCollection copier){
-    Noeud new;
-    new.element = element;
-    new.listeSuivante = liste;
-    return new*;
+    Noeud NouveauNoued;
+    NouveauNoued.element = element;
+    NouveauNoued.listeSuivante = liste;
+    liste = &NouveauNoued; 
 }
