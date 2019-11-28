@@ -1,7 +1,29 @@
-typedef struct Noeud * ListeChainee;
+#ifndef LISTE CHAINEE
+#define LISTE CHAINEE
+#include<errno.h>
+#include"elementCollection.h"
+
+
+typedef Noeud * ListeChainee;
 
 typedef struct
 {
-    int element;
+    void * element;
     ListeChainee listeSuivante;
 } Noeud;
+
+
+#define LC ERREUR MEMOIRE 1
+
+ListeChainee listeChainee () ;
+bool estVide(ListeChainee);
+void ajouter(ListeChainee*,void*,EC_FonctionCopierDansCollection);
+void * obtenirElement( ListeChainee);
+ListeChainee  obtenirListeSuivante (ListeChainee) ;
+void fixerListeSuivante(ListeChainee, ListeChainee) ;
+void fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC FonctionLibererDeCollection) ;
+void supprimerTete(ListeChainee*, EC_FonctionLibererDeCollection) ;
+void supprimer(ListeChainee*, EC_FonctionLibererDeCollection) ;
+ListeChainee copier(ListeChainee,EC_FonctionCopierDansCollection);
+int egales(ListeChainee, ListeChainee,EC_FonctionComparaison);
+#endif
