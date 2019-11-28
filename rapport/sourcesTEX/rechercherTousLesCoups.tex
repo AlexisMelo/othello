@@ -1,42 +1,87 @@
 \begin{algorithme}
 	\small
 	\fonction
-	{rechercherUnCoup}
-	{plateauDeJeu : Plateau, joueurActuel : Couleur, positionDuCoup : Position}
-	{\booleen}
-	{i : 1 .. largeur
-	j : 1 .. longueur}
-	{
-	\sialorssinon {non (CaseVide(plateauDeJeu, positionDuCoup))}
-			{\retourner{(Faux)}}
-			{\retourner{(parcourirDirection(positionDuCoup, HG)\\
-			ou parcourirDirection(positionDuCoup, HG)\\
-			ou parcourirDirection(positionDuCoup, H)\\
-			ou parcourirDirection(positionDuCoup, HD)\\
-			ou parcourirDirection(positionDuCoup, D)\\
-			ou parcourirDirection(positionDuCoup, BD)\\
-			ou parcourirDirection(positionDuCoup, B)\\
-			ou parcourirDirection(positionDuCoup, BG)\\
-			ou parcourirDirection(positionDuCoup, G))}}		
-	}
-\end{algorithme}
-
-\begin{algorithme}
-	\small
-	\fonction
 	{rechercherTousLesCoups}
 	{plateauDeJeu : Plateau, joueurActuel : Couleur}
 	{Coups}
-	{lesCoups : Coups
-	i : 1 .. largeur
+	{lesCoups : Coups \\
+	i : 1 .. largeur \\
 	j : 1 .. longueur}
 	{
 	\pour{i}{1}{largeur}{}{
 		\pour{j}{1}{longueur}{}{
-			\sialors {rechercherUnCoup(plateauDeJeu,joueurActuel,Position(i,j))}
-				{\instruction{ajouter(lesCoups,Coup(Position(i,j),Pion(joueurActuel)))}}
+			\sialors {rechercherUnCoup (plateauDeJeu, joueurActuel, Position(i,j))}
+				{\instruction{ajouter (lesCoups, Coup(Position(i,j), Pion(joueurActuel)))}}
 		}
 	}
 	\retourner{(lesCoups)}
+	}
+\end{algorithme}
+
+\vspace*{2cm}
+
+\begin{algorithme}
+	\small
+	\fonction
+	{rechercherUnCoup}
+	{plateauDeJeu : Plateau, joueurActuel : Couleur, positionDuCoup : Position}
+	{\booleen}
+	{}
+	{
+	\sialorssinon {CaseVide(plateauDeJeu, positionDuCoup)}
+			{\retourner{parcourirLesDirections (unPlateauDeJeu, positionDuCoup, joueurActuel)}}
+			{\retourner{(Faux)}}		
+	}
+\end{algorithme}
+
+\vspace*{2cm}
+
+\begin{algorithme}
+	\small
+	\fonction
+	{parcourirLesDirections}
+	{unPlateauDeJeu : Plateau, positionDuCoup : Position, joueurActuel: Couleur}
+	{\booleen}
+	{}
+	{
+	\retourner{parcourirUneDirection (unPlateauDeJeu, positionDuCoup, HG, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, H, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, HD, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, D, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, BD, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, B, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, BG, joueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, G, joueurActuel)}
+	}
+\end{algorithme}
+
+\vspace*{2cm}
+
+\begin{algorithme}
+	\small
+	\fonction
+	{parcourirUneDirection}
+	{unPlateauDeJeu : Plateau, positionDuCoup : Position, uneDirection : Direction, joueurActuel : Couleur}
+	{\booleen}
+	{ligneEnCours, directionValide : \booleen \\
+	i : 1 .. largeur\\
+	j : 1 .. longueur}
+	{
+	\affecter{i}{obtenirLigne (PositionDuCoup)}
+	\affecter{j}{obtenirColonne (PositionDuCoup)}
+	\affecter{ligneEnCours}{Faux}
+	\affecter{directionValide}{Faux}
+	\instruction{appliquerDirection (uneDirection,i,j)}
+	\sialors{obtenirCouleur (obtenirPion (unPlateauDeJeu, Position(i,j))) $\neq$ joueurActuel}{
+		\affecter{ligneEnCours}{Vrai}
+		\tantque{(non(directionValide) et ligneEnCours)}{
+			\instruction{appliquerDirection (uneDirection, i, j)}
+			\sialorssinon{caseVide (obtenirPion (unPlateauDeJeu, Position(i,j)))}
+				{\affecter{ligneEnCours}{Faux}}
+				{\sialors{obtenirCouleur (obtenirPion (unPlateauDeJeu, Position(i,j))) = joueurActuel}
+					{\affecter{directionValide}{Vrai}}}
+		}
+	}
+	\retourner{(estUneDirectionValide)}
 	}
 \end{algorithme}
