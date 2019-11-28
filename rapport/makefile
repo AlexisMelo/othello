@@ -1,15 +1,15 @@
 all :
 	pwd
-	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory Rapport Rapport/FrameWork.tex
-	rm -rf ./Rapport/*.log
-	rm -rf ./Rapport/*.aux
-	rm -rf ./Rapport/*.dvi
-	rm -rf ./Rapport/*.toc
-	rm -rf ./Rapport/*.out
+	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory . Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex
+	rm -rf ./*.log
+	rm -rf ./.aux
+	rm -rf ./*.dvi
+	rm -rf ./*.toc
+	rm -rf ./*.out
 clean :
-	rm -rf ./Rapport/*.pdf
-	rm -rf ./Rapport/*.log
-	rm -rf ./Rapport/*.aux
-	rm -rf ./Rapport/*.dvi
-	rm -rf ./Rapport/*.toc
-	rm -rf ./Rapport/*.out
+	rm -rf ./*.pdf
+	rm -rf ./*.log
+	rm -rf ./*.aux
+	rm -rf ./*.dvi
+	rm -rf ./*.toc
+	rm -rf ./*.out
