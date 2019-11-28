@@ -3,16 +3,20 @@
 	\tadDependances{\booleen}
 	\tadDependances{Chaine de caractères}
 		\begin{tadOperations}{Couleur}
-		\tadOperation{Couleur}{\tadUnParam{Chaine de caractères}}{\tadUnParam{Couleur}}
-		\tadOperationAvecPreconditions{CouleurOpposée}{\tadUnParam{Couleur}}{\tadUnParam{Couleur}}
+		\tadOperation{creerBlanc}{}{\tadUnParam{Couleur}}
+		\tadOperation{creerNoir}{}{\tadUnParam{Couleur}}
+		\tadOperation{creerNeutre}{}{\tadUnParam{Couleur}}
+		\tadOperationAvecPreconditions{ObtenirCouleurOpposée}{\tadUnParam{Couleur}}{\tadUnParam{Couleur}}
 		\tadOperation{EstNeutre}{\tadUnParam{Couleur}}{\tadUnParam{\booleen}}
+		\tadOperationAvecPreconditions{FixerCouleurOpposée}{\tadUnParam{Couleur x Couleur}}{\tadUnParam{Couleur}}
 
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{CouleurOpposée(CouleurOpposée(Couleur)) = Couleur}
+		\tadAxiome{ObtenirCouleurOpposée(ObtenirCouleurOpposée(Couleur)) = Couleur}
 	\end{tadAxiomes}
 	\begin{tadPreconditions}{Couleur}
-		\tadPrecondition{CouleurOpposée}{non EstNeutre(Couleur)}
+		\tadPrecondition{ObtenirCouleurOpposée}{non EstNeutre(Couleur)}
+		\tadPrecondition{FixerCouleurOpposée}{Couleur $neq$ Couleur}
 	\end{tadPreconditions}
 \end{tad}
 
@@ -103,12 +107,13 @@
 
 \begin{tad}
 	\tadNom{Plateau}
-	\tadDependances{Position,Coup,Couleur,\booleen}
+	\tadDependances{Position,Coup,Couleur,\booleen,\naturel}
 	\begin{tadOperations}{Plateau}
-		\tadOperation{Plateau}{\tadUnParam{Naturel x Naturel}}{\tadUnParam{Plateau}}
+		\tadOperation{Plateau}{\tadUnParam{\naturel}}{\tadUnParam{Plateau}}
 		\tadOperationAvecPreconditions{JouerCoup}{\tadUnParam{Plateau x Coup}}{\tadUnParam{Plateau}}
 		\tadOperation{ObtenirCouleur}{\tadUnParam{Plateau x Position}}{\tadUnParam{Couleur}}
 		\tadOperation{EstPositionVide}{\tadUnParam{Plateau x Position}}{\tadUnParam{\booleen}}
+		\tadOperation{ObtenirTaille}{\tadUnParam{Plateau}}{\tadUnParam{\naturel}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
 		\tadAxiome{ObtenirCouleur(JouerCoup(Plateau,Coup(Position,Couleur)), Position) = Couleur}
@@ -123,21 +128,21 @@
 \begin{tad}
 	\tadNom{Ligne}
 	\begin{tadOperations}{Ligne}
-		\tadOperation{Ligne}{1..9}{\tadUnParam{Ligne}}
-		\tadOperation{ObtenirNumeroLigne}{\tadUnParam{Ligne}}{\tadUnParam{1..9}}
+		\tadOperation{Ligne}{1..Taille}{\tadUnParam{Ligne}}
+		\tadOperation{ObtenirNumeroLigne}{\tadUnParam{Ligne}}{\tadUnParam{1..Taille}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{ObtenirNumeroLigne(Ligne(1..9)) = 1..9}
+		\tadAxiome{ObtenirNumeroLigne(Ligne(1..Taille)) = 1..Taille}
 	\end{tadAxiomes}
 \end{tad}
 
 \begin{tad}
 	\tadNom{Colonne}
 	\begin{tadOperations}{Colonne}
-		\tadOperation{Colonne}{1..9}{\tadUnParam{Colonne}}
-		\tadOperation{ObtenirNumeroColonne}{\tadUnParam{Colonne}}{\tadUnParam{1..9}}
+		\tadOperation{Colonne}{1..Taille}{\tadUnParam{Colonne}}
+		\tadOperation{ObtenirNumeroColonne}{\tadUnParam{Colonne}}{\tadUnParam{1..Taille}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{ObtenirNumeroColonne(Colonne(1..9)) = 1..9}
+		\tadAxiome{ObtenirNumeroColonne(Colonne(1..Taille)) = 1..Taille}
 		\end{tadAxiomes}
 \end{tad}

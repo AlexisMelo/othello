@@ -1,32 +1,29 @@
 \begin{algorithme}
 	\small
-	\fonction
+	\procedure
 	{Initialiser Plateau}
-	{}
-	{Plateau}
-	{longueur , largeur : Naturel \
-	blanc, noir, vide : Couleur}
+	{\paramEntreeSortie Plateau}
+	{Taille : \naturelNonNul \\
+	blanc, noir, neutre : Couleur}
 	{
-	\affecter{vide}{Vide}
-	\affecter{blanc}{Blanc}
-	\affecter{noir}{Noir}
-	\affecter{longueur}{8}
-	\affecter{largeur}{8}
-	\affecter{plateau}{Plateau()}
-	\pour{i}{1}{longueur}{}{
-	
-		\pour{j}{1}{longueur}{}{
+	\affecter{neutre}{creerNeutre()}
+	\affecter{blanc}{creerBlanc()}
+	\affecter{noir}{creerNoir()}
+	\affecter{taille}{8}
+	\pour{i}{1}{taille}{}{
 
-			\instruction{fixer(plateau, position(ligne(i), colonne(j), vide)}
+		\pour{j}{1}{taille}{}{
+
+			\instruction{JouerCoup(plateau,Coup(neutre,Position(Ligne(i),Colonne(j))))}
 		}
 	}
-	
-	fixer(plateau, position(ligne(4), colonne(4), blanc)
-	
-	fixer(plateau, position(ligne(5), colonne(5), blanc)
 
-	fixer(plateau, position(ligne(4), colonne(5), noir)
+	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(taille div 2),Colonne(taille div 2))))}
 
-	fixer(plateau, position(ligne(5), colonne(4), noir)
+	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(taille div 2 + 1),Colonne(taille div 2 + 1))))}
+
+	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(taille div 2),Colonne(taille div 2 + 1))))}
+
+	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(taille div 2 + 1),Colonne(taille div 2))))}
 	}
 \end{algorithme}
