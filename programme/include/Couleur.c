@@ -24,7 +24,7 @@ Couleur CouleurNoir() {
 
 Couleur CouleurBlanc() {
     Couleur resultat = CouleurNulle();
-    resultat.nom[5] = Vide;
+    resultat.nom = Vide;
     resultat.hexa[2] = '01';
     resultat.symbole = ' ';
     return resultat;
