@@ -9,4 +9,8 @@ typedef struct
     Colonne colonne;
 } Position;
 
+Position creerPosition(Ligne ligne, Colonne colonne);
+Ligne obtenirLigne(Position position);
+Colonne obtenirColonne(Position position);
+
 #endif
