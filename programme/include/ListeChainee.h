@@ -13,15 +13,15 @@ typedef struct
 } Noeud;
 
 
-#define LC ERREUR MEMOIRE 1
+#define ERREUR_MEMOIRE 1
 
 ListeChainee listeChainee () ;
 bool estVide(ListeChainee);
 void ajouter(ListeChainee*,void*,EC_FonctionCopierDansCollection);
-void * obtenirElement( ListeChainee);
+void * obtenirElement(ListeChainee);
 ListeChainee  obtenirListeSuivante (ListeChainee) ;
 void fixerListeSuivante(ListeChainee, ListeChainee) ;
-void fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC FonctionLibererDeCollection) ;
+void fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC_FonctionLibererDeCollection) ;
 void supprimerTete(ListeChainee*, EC_FonctionLibererDeCollection) ;
 void supprimer(ListeChainee*, EC_FonctionLibererDeCollection) ;
 ListeChainee copier(ListeChainee,EC_FonctionCopierDansCollection);
