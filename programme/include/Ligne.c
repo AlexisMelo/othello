@@ -6,7 +6,7 @@ int obtenirNumeroLigne(Ligne ligne) {
 }
 
 
-Ligne colonne(int numero){
+Ligne creerLigne(int numero) {
     switch (numero)
     {
     case 1:

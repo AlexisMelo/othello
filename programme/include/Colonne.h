@@ -4,5 +4,6 @@
 typedef enum {A, B, C, D, E, F, G, H}Colonne;
 
 
-int ObtenirNumeroColonne(Colonne colonne);
+int ObtenirNumeroColonne(Colonne);
+Colonne creerColonne(int);
 #endif

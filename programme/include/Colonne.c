@@ -1,6 +1,6 @@
 # include "Colonne.h";
 
-Colonne colonne(int numero){
+Colonne creerColonne(int numero){
     switch (numero)
     {
     case 1:
