@@ -1,6 +1,6 @@
 all :
 	pwd
-	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory . rapport/sourcesTEX/Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex
+	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory . Rapport_elec.tex
 	rm -rf ./*.log
 	rm -rf ./.aux
 	rm -rf ./*.dvi
@@ -8,7 +8,8 @@ all :
 	rm -rf ./*.out
 clean :
 	rm -rf ./*.pdf
-	rm -rf ./*.log
+	rm -rf
+	./*.log
 	rm -rf ./*.aux
 	rm -rf ./*.dvi
 	rm -rf ./*.toc
