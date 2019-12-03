@@ -1,0 +1,53 @@
+\subsection{TAD Position}
+\begin{algorithme}
+	\signaturefonction{position}{c : Colonne, l : Ligne}{Position}
+	\signatureprocedure{appliquerDirection}{\paramEntreeSortie unePostion : Position, \paramEntree uneDirection : Direction}
+	\signaturefonction{fixerColonne}{c : Colonne, l : Ligne}{Position}
+	\signaturefonction{fixerLigne}{c : Colonne}{Position}
+	\signaturefonction{obtenirColonne}{unePostion : Position}{Colonne}
+	\signaturefonction{obtenirLigne}{unePostion : Position}{Ligne}
+	\signaturefonction{estPositionValide}{unPlateauDeJeu : Plateau, unePostion : Position}{\booleen}
+\end{algorithme}
+
+
+\subsection{TAD Coup}
+\begin{algorithme}
+	\signaturefonction{coup}{unePostion : Position, uneCouleur : Couleur}{Coup}
+	\signaturefonction{obtenirPosition}{unCoup : Coup}{Position}
+	\signaturefonction{obtenirCouleur}{unCoup : Coup}{Couleur}
+	\signaturefonction{estValideCoup}{unPlateauDeJeu : Plateau}{\booleen}
+\end{algorithme}
+
+
+\subsection{TAD Coups}
+\begin{algorithme}
+	\signaturefonction{coups}{}{Ensemble $<$Coup$>$}
+	\signatureprocedure{ajouterCoup}{\paramEntreeSortie lesCoups : Coups, \paramEntree unCoup : Coup}
+	\signatureprocedure{retirerCoup}{\paramEntreeSortie lesCoups : Coups, \paramEntree unCoup : Coup}
+	\signaturefonction{nombreCoups}{lesCoups : Coups}{\naturel}
+	\signaturefonction{estPresent}{lesCoups : Coups, unCoup : Coup}{\booleen}
+\end{algorithme}
+
+
+\subsection{TAD Plateau}
+\begin{algorithme}
+	\signaturefonction{plateau}{taille : \naturel}{Plateau}
+	\signatureprocedure{jouerCoup}{\paramEntreeSortie unPlateauDeJeu : Plateau, \paramEntree unCoup : Coup}
+	\signaturefonction{obtenirCouleur}{unPlateauDeJeu : Plateau, unePosition : Position}{Couleur}
+	\signaturefonction{estPositionVide}{unPlateauDeJeu : Plateau, unePosition : Position}{\booleen}
+	\signaturefonction{obtenirTaille}{unPlateauDeJeu : Plateau}{\naturel}
+\end{algorithme}
+
+
+\subsection{TAD Ligne}
+\begin{algorithme}
+	\signaturefonction{ligne}{uneTaille : 1 .. Taille}{Ligne}
+	\signaturefonction{obtenirNumeroLigne}{l : Ligne}{1 .. Taille}
+\end{algorithme}
+
+
+\subsection{TAD Colonne}
+\begin{algorithme}
+	\signaturefonction{colonne}{uneTaille : 1 .. Taille}{Colonne}
+	\signaturefonction{obtenirNumeroColonne}{c : Colonne}{1 .. Taille}
+\end{algorithme}
