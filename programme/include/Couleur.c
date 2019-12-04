@@ -29,3 +29,17 @@ Couleur CouleurBlanc() {
     resultat.symbole = ' ';
     return resultat;
 }
+
+Couleur obtenirCouleuropposee(Couleur couleur) {
+    switch (couleur.nom)
+    {
+    case Blanc:
+        couleur.nom = Blanc;
+        return couleur;
+    case Noir:
+        couleur.nom = Noir;
+        return couleur;
+    default:
+        break;
+    }
+}

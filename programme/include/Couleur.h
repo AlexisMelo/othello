@@ -7,4 +7,9 @@ typedef struct
     char symbole;
 } Couleur;
 
+
+Couleur obtenirCouleuropposee(Couleur couleur) ;
+Couleur CouleurNoir() ;
+Couleur CouleurBlanc() ;
+Couleur CouleurNeutre() ;
 #endif
