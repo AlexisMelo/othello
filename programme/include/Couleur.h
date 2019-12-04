@@ -8,8 +8,9 @@ typedef struct
 } Couleur;
 
 
-Couleur obtenirCouleuropposee(Couleur couleur) ;
 Couleur CouleurNoir() ;
 Couleur CouleurBlanc() ;
 Couleur CouleurNeutre() ;
+Couleur obtenirCouleuropposee(Couleur couleur) ;
+bool estNeutre(Couleur couleur) ;
 #endif

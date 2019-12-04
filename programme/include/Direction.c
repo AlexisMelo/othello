@@ -20,7 +20,7 @@ int obtenirDecalageLigne(Direction direction) {
     case 7:
         return -1;
     default:
-        break;
+        __raise DIRECTION_ERROR;
     }
 }
 
@@ -44,6 +44,6 @@ int obtenirDecalageColonne(Direction direction) {
     case 7:
         return -1;
     default:
-        break;
+        __raise DIRECTION_ERROR;
     }
 }

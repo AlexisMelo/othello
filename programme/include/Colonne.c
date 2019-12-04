@@ -19,6 +19,8 @@ Colonne creerColonne(int numero){
         return G;
     case 8:
         return H;
+    default:
+        __raise KEY_ERROR;
     }
 
 }

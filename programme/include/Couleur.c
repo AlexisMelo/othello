@@ -1,7 +1,13 @@
+#include<stdbool.h>;
+#include<assert.h>;
 #include"Couleur.h";
+#include<stdlib.h>;
 
 Couleur CouleurNulle() {
     Couleur resultat;
+    resultat.nom = NULL;
+    resultat.hexa[2] = NULL;
+    resultat.symbole = NULL;
     return resultat;
 }
 
@@ -22,7 +28,7 @@ Couleur CouleurNoir() {
 }
 
 
-Couleur CouleurBlanc() {
+Couleur CouleurNeutre() {
     Couleur resultat = CouleurNulle();
     resultat.nom = Vide;
     resultat.hexa[2] = '01';
@@ -31,15 +37,18 @@ Couleur CouleurBlanc() {
 }
 
 Couleur obtenirCouleuropposee(Couleur couleur) {
+    assert(!estNeutre(couleur));
     switch (couleur.nom)
     {
     case Blanc:
-        couleur.nom = Blanc;
-        return couleur;
+        return CouleurNoir();
     case Noir:
-        couleur.nom = Noir;
-        return couleur;
+        return CouleurBlanc();
     default:
-        break;
+        return CouleurNeutre();
     }
+}
+
+bool estNeutre(Couleur couleur) {
+    return (couleur.nom == CouleurNeutre().nom) && (couleur.hexa == CouleurNeutre().hexa) && (couleur.symbole == CouleurNeutre().symbole);
 }
