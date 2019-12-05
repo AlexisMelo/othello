@@ -8,6 +8,7 @@ Couleur CouleurNulle() {
     resultat.nom = NULL;
     resultat.hexa[2] = NULL;
     resultat.symbole = NULL;
+    resultat.couleurOpposee = NULL;
     return resultat;
 }
 
@@ -16,6 +17,7 @@ Couleur CouleurBlanc() {
     resultat.nom = Blanc;
     resultat.hexa[2] = '00';
     resultat.symbole = '0';
+    resultat.couleurOpposee = Noir
     return resultat;
 }
 
@@ -24,6 +26,7 @@ Couleur CouleurNoir() {
     resultat.nom = Noir;
     resultat.hexa[2] = 'FF';
     resultat.symbole = 'X';
+    resultat.couleurOpposee = Blanc;
     return resultat;
 }
 
@@ -38,15 +41,7 @@ Couleur CouleurNeutre() {
 
 Couleur obtenirCouleuropposee(Couleur couleur) {
     assert(!estNeutre(couleur));
-    switch (couleur.nom)
-    {
-    case Blanc:
-        return CouleurNoir();
-    case Noir:
-        return CouleurBlanc();
-    default:
-        return CouleurNeutre();
-    }
+    return couleur.couleurOpposee;
 }
 
 bool estNeutre(Couleur couleur) {
