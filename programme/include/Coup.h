@@ -1,10 +1,19 @@
-#ifndef PROJECT_OTHELLO_LMMSS_COUP_H
-#define PROJECT_OTHELLO_LMMSS_COUP_H
+#ifndef COUP_TYPE
+#define COUP_TYPE
 
-#include "Couleur.h";
-#include "Position.h";
-typedef struct {
-    Couleur couleur;
+#include"Position.h"
+#include"Couleur.h"
+
+typedef struct
+{
     Position position;
-};
+    Couleur couleur;
+}Coup;
+
+
+
+Coup creerCoup(Position position, Couleur couleur) ;
+Couleur obtenirCouleur(Coup coup) ;
+Position obtenirPosition(Coup coup) ;
+bool estCoupValide(Coup coup) ;
 #endif

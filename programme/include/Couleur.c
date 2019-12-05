@@ -17,7 +17,7 @@ Couleur CouleurBlanc() {
     resultat.nom = Blanc;
     resultat.hexa[2] = '00';
     resultat.symbole = '0';
-    resultat.couleurOpposee = Noir
+    resultat.couleurOpposee = CouleurNoir();
     return resultat;
 }
 
@@ -26,7 +26,7 @@ Couleur CouleurNoir() {
     resultat.nom = Noir;
     resultat.hexa[2] = 'FF';
     resultat.symbole = 'X';
-    resultat.couleurOpposee = Blanc;
+    resultat.couleurOpposee = CouleurBlanc();
     return resultat;
 }
 
