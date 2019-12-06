@@ -1,5 +1,5 @@
-void FaireUnePartie(Couleur couleur){
+void FaireUnePartie(Couleur couleur,void (*AfficherResultat)(),void (*AfficherPlateau)(Plateau),Coup (*ObtenirCoupJ1)(),Coup (*ObtenirCoupJ2)()){
   Plateau *plateau;
-  InitialiserPlateau(plataeu);
-  GererPartie(couleur);
+  plateau=InitialiserPlateau();
+  GererPartie(couleur,plateau,AficherResultat,AfficherPlateau,ObtenirCoupJ1,ObtenirCoupJ2);
 }
