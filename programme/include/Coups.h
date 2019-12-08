@@ -1,4 +1,16 @@
+#ifndef COUPS_TYPE
+#define COUPS_TYPE
 #include "Coup.h"
 #include<stdbool.h>
-#include<stdlib.h>
-typedef Coup * Coups;
+#include "ListeChainee.h"
+
+
+typedef struct
+{
+    ListeChainee coups;
+    int nbDeCoups;
+} Coups;
+
+Coups creerCoups() ;
+
+#endif

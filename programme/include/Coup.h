@@ -16,4 +16,5 @@ Coup creerCoup(Position position, Couleur couleur) ;
 Couleur obtenirCouleur(Coup coup) ;
 Position obtenirPosition(Coup coup) ;
 bool estCoupValide(Coup coup) ;
+bool estEgalCoup(Coup coup1, Coup coup2) ;
 #endif

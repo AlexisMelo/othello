@@ -40,3 +40,8 @@ Position appliquerDirection(Position position, Direction direction){
         FixerLigne(position, obtenirLigne(position) + obtenirDecalageLigne(direction));
         FixerColonne(position, obtenirColonne(position) + obtenirDecalageColonne(direction));
 }
+
+
+bool estEgal(Position position1, Position position2) {
+    return estEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
+}

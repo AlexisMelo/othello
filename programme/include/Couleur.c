@@ -47,3 +47,7 @@ Couleur obtenirCouleuropposee(Couleur couleur) {
 bool estNeutre(Couleur couleur) {
     return (couleur.nom == CouleurNeutre().nom) && (couleur.hexa == CouleurNeutre().hexa) && (couleur.symbole == CouleurNeutre().symbole);
 }
+
+bool estEgalCouleur(Couleur couleur1, Couleur couleur2) {
+    return (couleur1.hexa == couleur2.hexa && couleur1.nom == couleur2.nom && couleur1.symbole == couleur2.symbole);
+};

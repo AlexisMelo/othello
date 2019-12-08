@@ -1,10 +1,13 @@
 #include "Ligne.h"
-
+#include<stdbool.h>
 
 int obtenirNumeroLigne(Ligne ligne) {
     return ligne;
 }
 
+bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
+    return colonne1 == colonne2;
+}
 
 Ligne creerLigne(int numero) {
     switch (numero)
@@ -27,4 +30,9 @@ Ligne creerLigne(int numero) {
         return Huit;
     }
 
+}
+
+
+bool estEgalLigne(Ligne ligne1, Ligne ligne2) {
+    return ligne1 == ligne2;
 }

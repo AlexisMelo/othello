@@ -1,4 +1,6 @@
 # include "Colonne.h";
+#include<stdbool.h>
+
 
 Colonne creerColonne(int numero){
     switch (numero)
@@ -28,4 +30,8 @@ Colonne creerColonne(int numero){
 
 int ObtenirNumeroColonne(Colonne colonne) {
     return colonne;
+}
+
+bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
+    return colonne1 == colonne2;
 }

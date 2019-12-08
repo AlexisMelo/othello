@@ -16,14 +16,14 @@ typedef struct
 #define ERREUR_MEMOIRE 1
 
 ListeChainee listeChainee () ;
-bool estVide(ListeChainee);
-void ajouter(ListeChainee*,void*,EC_FonctionCopierDansCollection);
-void * obtenirElement(ListeChainee);
-ListeChainee  obtenirListeSuivante (ListeChainee) ;
-void fixerListeSuivante(ListeChainee, ListeChainee) ;
-void fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC_FonctionLibererDeCollection) ;
-void supprimerTete(ListeChainee*, EC_FonctionLibererDeCollection) ;
-void supprimer(ListeChainee*, EC_FonctionLibererDeCollection) ;
+bool LC_estVide(ListeChainee);
+void LC_ajouter(ListeChainee*,void*,EC_FonctionCopierDansCollection);
+void * LC_obtenirElement(ListeChainee);
+ListeChainee  LC_obtenirListeSuivante (ListeChainee) ;
+void LC_fixerListeSuivante(ListeChainee, ListeChainee) ;
+void LC_fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC_FonctionLibererDeCollection) ;
+void LC_supprimerTete(ListeChainee*, EC_FonctionLibererDeCollection) ;
+void LC_supprimer(ListeChainee*, EC_FonctionLibererDeCollection) ;
 ListeChainee copier(ListeChainee,EC_FonctionCopierDansCollection);
-int egales(ListeChainee, ListeChainee,EC_FonctionComparaison);
+int LC_egales(ListeChainee, ListeChainee,EC_FonctionComparaison);
 #endif

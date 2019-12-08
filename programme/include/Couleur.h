@@ -18,4 +18,5 @@ Couleur CouleurBlanc() ;
 Couleur CouleurNeutre() ;
 Couleur obtenirCouleuropposee(Couleur couleur) ;
 bool estNeutre(Couleur couleur) ;
+bool estEgalCouleur(Couleur couleur1, Couleur couleur2) ;
 #endif
