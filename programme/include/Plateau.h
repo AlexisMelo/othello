@@ -25,7 +25,7 @@ void jouerCoup(Plateau * plateau, Coup coup) ;
 
 
 /** 
- *@brief Vérifie si la position donnée du plateau est vide.
+ *@brief Retourne la couleur du Plateau à cette Position.
  *@param plateau : Plateau actuel
  *@param position : Position à laquelle on regarde la couleur
  *@returns : Couleur
