@@ -3,6 +3,9 @@
 #include"Couleur.h";
 #include<stdlib.h>;
 
+
+
+
 Couleur CouleurNulle() {
     Couleur resultat;
     resultat.nom = NULL;

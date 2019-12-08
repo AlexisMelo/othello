@@ -24,21 +24,21 @@ bool estPositionValide(Position position) {
     return (colonne < 9) && (ligne < 9);
 }
 
-Position FixerLigne(Position position, Ligne ligne) {
-    position.ligne = ligne;
+void FixerLigne(Position * position, Ligne ligne) {
+    position -> ligne = ligne;
     return position;
 }
 
-Position FixerColonne(Position position, Colonne colonne) {
-    position.colonne = colonne;
+void FixerColonne(Position * position, Colonne colonne) {
+    position -> colonne = colonne;
     return position;
 }
 
 
 Position appliquerDirection(Position position, Direction direction){
     assert(estPositionValide(appliquerDirection(position, direction)));
-        FixerLigne(position, obtenirLigne(position) + obtenirDecalageLigne(direction));
-        FixerColonne(position, obtenirColonne(position) + obtenirDecalageColonne(direction));
+        FixerLigne(&position, obtenirLigne(position) + obtenirDecalageLigne(direction));
+        FixerColonne(&position, obtenirColonne(position) + obtenirDecalageColonne(direction));
 }
 
 

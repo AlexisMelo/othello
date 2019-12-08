@@ -29,7 +29,7 @@ Colonne creerColonne(int numero){
 
 
 int ObtenirNumeroColonne(Colonne colonne) {
-    return colonne;
+    return colonne + 1;
 }
 
 bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
