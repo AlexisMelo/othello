@@ -5,13 +5,13 @@
 	{plateauDeJeu : Plateau, joueurActuel : Couleur}
 	{Coups}
 	{lesCoups : Coups \\
-	i : 1 .. largeur \\
-	j : 1 .. longueur}
+	i : 1 .. Taille \\
+	j : 1 .. Taille}
 	{
-	\pour{i}{1}{largeur}{}{
-		\pour{j}{1}{longueur}{}{
+	\pour{i}{1}{Taille}{}{
+		\pour{j}{1}{Taille}{}{
 			\sialors {rechercherUnCoup (plateauDeJeu, joueurActuel, Position(i,j))}
-				{\instruction{ajouter (lesCoups, Coup(Position(i,j), Pion(joueurActuel)))}}
+				{\instruction{ajouterCoup (lesCoups, coup(Position(i,j), joueurActuel)}}
 		}
 	}
 	\retourner{(lesCoups)}
@@ -28,7 +28,7 @@
 	{\booleen}
 	{}
 	{
-	\sialorssinon {CaseVide(plateauDeJeu, positionDuCoup)}
+	\sialorssinon {EstPositionVide (plateauDeJeu, positionDuCoup)}
 			{\retourner{parcourirLesDirections (unPlateauDeJeu, positionDuCoup, joueurActuel)}}
 			{\retourner{(Faux)}}		
 	}
@@ -64,24 +64,24 @@
 	{unPlateauDeJeu : Plateau, positionDuCoup : Position, uneDirection : Direction, joueurActuel : Couleur}
 	{\booleen}
 	{ligneEnCours, directionValide : \booleen \\
-	i : 1 .. largeur\\
-	j : 1 .. longueur}
+	i : 1 .. Taille\\
+	j : 1 .. Taille}
 	{
-	\affecter{i}{obtenirLigne (PositionDuCoup)}
-	\affecter{j}{obtenirColonne (PositionDuCoup)}
+	\affecter{i}{obtenirNumeroLigne (positionDuCoup)}
+	\affecter{j}{obtenirNumeroColonne (positionDuCoup)}
 	\affecter{ligneEnCours}{Faux}
 	\affecter{directionValide}{Faux}
-	\instruction{appliquerDirection (uneDirection,i,j)}
-	\sialors{obtenirCouleur (obtenirPion (unPlateauDeJeu, Position(i,j))) $\neq$ joueurActuel}{
+	\instruction{appliquerDirection (positionDuCoup, uneDirection)}
+	\sialors{obtenirCouleur (unPlateauDeJeu, positionDuCoup) $\neq$ joueurActuel}{
 		\affecter{ligneEnCours}{Vrai}
-		\tantque{(non(directionValide) et ligneEnCours)}{
-			\instruction{appliquerDirection (uneDirection, i, j)}
-			\sialorssinon{caseVide (obtenirPion (unPlateauDeJeu, Position(i,j)))}
+		\tantque{(non directionValide et ligneEnCours)}{
+			\instruction{appliquerDirection (positionDuCoup, uneDirection)}
+			\sialorssinon {EstPositionVide (plateauDeJeu, positionDuCoup)}
 				{\affecter{ligneEnCours}{Faux}}
-				{\sialors{obtenirCouleur (obtenirPion (unPlateauDeJeu, Position(i,j))) = joueurActuel}
+				{\sialors{obtenirCouleur (unPlateauDeJeu, positionDuCoup) = joueurActuel}
 					{\affecter{directionValide}{Vrai}}}
 		}
 	}
-	\retourner{(estUneDirectionValide)}
+	\retourner{(directionValide)}
 	}
 \end{algorithme}

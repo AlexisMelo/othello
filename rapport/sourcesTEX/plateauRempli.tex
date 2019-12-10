@@ -4,16 +4,16 @@
 	{plateauRempli}
 	{plateauDeJeu : Plateau}
 	{\booleen}
-	{i : 1 .. Longueur
-	 j : 1 .. Largeur
+	{i : 1 .. Taille \\
+	 j : 1 .. Taille \\
 	 estRempli : \booleen}
 	{
 	\affecter{i}{1}
 	\affecter{j}{1}
 	\affecter{estRempli}{Vrai}
-	\tantque{(i <= Longueur et estRempli)}{
-		\tantque{(j <= Largeur et estRempli)}{
-			\affecter{estRempli}{non(caseVide(plateauDeJeu,Position(i,j)))}
+	\tantque{(i $\leq$ Taille et estRempli)}{
+		\tantque{(j $\leq$ Taille et estRempli)}{
+			\affecter{estRempli}{non EstPositionVide(plateauDeJeu,Position(i,j))}
 			\affecter{j}{j + 1}
 		}
 		\affecter{i}{i + 1}
