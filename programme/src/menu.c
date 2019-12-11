@@ -1,6 +1,6 @@
 #include "menu.h"
 
-int obtenirProfondeurIA(nbArguments, arguments) {
+int obtenirProfondeurIA(int nbArguments, char ** arguments) {
   if (nbArguments == 3){
     return arguments[2];
   }

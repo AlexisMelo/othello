@@ -3,6 +3,6 @@
 
 #define PROFONDEUR_DEFAUT_IA 5
 
-int obtenirProfondeur(nbArguments, arguments);
+int obtenirProfondeur(int nbArguments, char ** arguments);
 
 #endif
