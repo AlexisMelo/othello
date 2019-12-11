@@ -1,3 +1,5 @@
+#include "menuGraphique.h"
+
 void menuGraphique() {
-  print("Affichage d'un menu graphique pour lancer une partie");
+  printf("Affichage d'un menu graphique pour lancer une partie");
 }

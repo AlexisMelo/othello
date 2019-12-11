@@ -9,11 +9,11 @@
  * \return EXIT_SUCCESS - Arrêt normal du programme.
  */
 int main(int nbArguments, char ** arguments) {
-  if (argc == 1) {
+  if (nbArguments == 1) {
     menuGraphique();
   }
   else {
     menuLigneCommande(nbArguments, arguments);
   }
-  return EXIT_SUCCESS;
+  return 0;
 }
