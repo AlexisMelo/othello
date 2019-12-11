@@ -7,6 +7,7 @@ Coups CreerCoups() {
     Coups resultat;
     resultat.coups = listeChainee();
     resultat.nbDeCoups = 0;
+    return resultat;
 };
 
 void AjouterCoup(Coups * coups, Coup coup) {
@@ -43,12 +44,25 @@ int ObtenirnombreDeCoups(Coups coups) {
     return coups.nbDeCoups;
 };
 
+bool EstPresent(Coups coups, Coup coup) {
+    while (!estVide()){
+            if (estEgalCoup(coup, COUPS_ObtenirCoup(coups))){
+                return true;
+            };
+        }
+    return false;
+}
 
 void RetirerCoup(Coups * coups, Coup coup) {
-    if (EstPresent(*coups, coup)) {
+    assert(EstPresent(*coups, coup));
         while (!estVide()){
-            if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups)));
+            if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
+                ListeChainee liste = coups->coups;
+                Noeud noeud = *liste;
+                ListeChainee ls = noeud.listeSuivante;
+                coups->coups = ls;
+                };
+
         }
         Noeud noeud = *(coups->coups);
-    };
-};
+}
