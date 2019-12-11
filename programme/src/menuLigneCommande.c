@@ -1,11 +1,14 @@
+#include <string.h>
+
 void menuLigneCommande(int nbArguments, char ** arguments) {
+
   if (strcmp(argumnents[1], "standard") == 0) {
-    //partie Joueur vs IA
+    printf("Jouer partie Joueur vs IA avec profondeur %d\n", obtenirProfondeurIA(nbArguments,arguments));
   }
   else if (strcmp(arguments[1], "tournois") == 0) {
-    //partie IA vs IA
+    printf("Jouer partie IA vs IA avec profondeur %d\n", obtenirProfondeurIA(nbArguments,arguments));
   }
   else {
-    //afficher aide
+    printf("affichage de l'aide");
   }
 }

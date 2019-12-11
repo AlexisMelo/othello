@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "menuGraphique.h"
+#include "menuLigneCommande.h"
 
 /**
  * \fn int main (int argc, char ** argv)
