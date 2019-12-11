@@ -26,12 +26,10 @@ bool estPositionValide(Position position) {
 
 void FixerLigne(Position * position, Ligne ligne) {
     position -> ligne = ligne;
-    return position;
 }
 
 void FixerColonne(Position * position, Colonne colonne) {
     position -> colonne = colonne;
-    return position;
 }
 
 
@@ -39,6 +37,7 @@ Position appliquerDirection(Position position, Direction direction){
     assert(estPositionValide(appliquerDirection(position, direction)));
         FixerLigne(&position, obtenirLigne(position) + obtenirDecalageLigne(direction));
         FixerColonne(&position, obtenirColonne(position) + obtenirDecalageColonne(direction));
+        return position
 }
 
 

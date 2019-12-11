@@ -5,8 +5,8 @@ int obtenirNumeroLigne(Ligne ligne) {
     return ligne;
 }
 
-bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
-    return colonne1 == colonne2;
+bool estEgalLigne(Ligne ligne1, Ligne ligne2) {
+    return ligne1 == ligne2;
 }
 
 Ligne creerLigne(int numero) {

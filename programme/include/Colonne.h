@@ -1,7 +1,8 @@
-#include<stdbool.h>
 #ifndef COLONNE_TYPE
 #define COLONNE_TYPE
 
+
+#include<stdbool.h>
 typedef enum {A, B, C, D, E, F, G, H}Colonne;
 
 #define KEY_ERROR 1;

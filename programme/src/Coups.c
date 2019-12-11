@@ -3,24 +3,15 @@
 #include "CoupCollection.h"
 #include "ListeChainee.h"
 #include<assert.h>
-Coups creerCoups() {
+Coups CreerCoups() {
     Coups resultat;
     resultat.coups = listeChainee();
     resultat.nbDeCoups = 0;
 };
 
-
-/** Ajoute un coup en tête de la liste de coups.
- * @param coups : Coups auxquels on veut 
- * @param coup : Coup à ajouter
- * @returns coups : ensemble de coups avec le coup ajouter
- * 
-*/
-
-Coups ajouterCoup(Coups coups, Coup coup) {
-    LC_ajouter(&(coups.coups), &coup, fonctionCopierCoup);
-    coups.nbDeCoups += 1;
-    return coups;
+void AjouterCoup(Coups * coups, Coup coup) {
+    LC_ajouter(&(coups->coups), &coup, fonctionCopierCoup);
+    coups->nbDeCoups += 1;
 };
 
 /** Obtient le coup en tête de la liste chaînée de coups.
@@ -29,7 +20,7 @@ Coups ajouterCoup(Coups coups, Coup coup) {
  * @returns Coup: Coup en tête
 */
 
-Coup obtenirCoup(Coups coups){
+Coup COUPS_ObtenirCoup(Coups coups){
     assert(coups.nbDeCoups != 0);
     return *(coups.coups);
 };
@@ -39,23 +30,25 @@ Coup obtenirCoup(Coups coups){
  * @param coups : Coups dont on veut supprimer un Coup
  * @returns coups : Ensemble sans le coup supprimé
 */
-Coups supprimerCoupEnTete(Coups coups){
-    Noeud noeud = *(coups.coups);
+void SupprimerCoupEnTete(Coups * coups){
+    Noeud noeud = *(coups->coups);
     ListeChainee ls = noeud.listeSuivante;
-    Coups resultat;
-    resultat.coups = ls;
-    resultat.nbDeCoups -= 1;
+    coups->coups = ls;
+    coups->nbDeCoups -= 1;
     fonctionLibererCoup((Coup*)(noeud.element));
-    return resultat;
 };
 
-/** Donne le nombre de coups dans l'ensemble Coups.
- * 
- * Utilise le champ nbDeCoups de la structure Coups
- * 
- * @param coups :  Ensemble dont on veut obtenir le nombre de coups
- * @returns int : nbDeCoups
-*/
-int obtenirnombreDeCoups(Coups coups) {
+
+int ObtenirnombreDeCoups(Coups coups) {
     return coups.nbDeCoups;
+};
+
+
+void RetirerCoup(Coups * coups, Coup coup) {
+    if (EstPresent(*coups, coup)) {
+        while (!estVide()){
+            if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups)));
+        }
+        Noeud noeud = *(coups->coups);
+    };
 };

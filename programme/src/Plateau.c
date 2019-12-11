@@ -15,7 +15,7 @@ Plateau * creerPlateau() {
 
 void jouerCoup(Plateau * plateau, Coup coup) {
     Position positionDuCoup;
-    Ligne ligneDuCoup = ObtenirNumeroColonne(obtenirLigne(positionDuCoup));
+    Ligne ligneDuCoup = obtenirNumeroLigne(obtenirLigne(positionDuCoup));
     Colonne colonneDuCoup = ObtenirNumeroColonne(obtenirColonne(positionDuCoup));
     *plateau[ligneDuCoup][colonneDuCoup] = obtenirCouleur(coup);
 };
