@@ -32,9 +32,3 @@ bool estPositionVide(Plateau plateau, Position position) {
     Couleur couleurDeLaCase = obtenirCouleurDepuisPlateau(plateau, position);
     return couleurDeLaCase.nom == Vide;
 };
-
-
-
-int obtenirTaille(Plateau plateau) {
-    return 64;
-};

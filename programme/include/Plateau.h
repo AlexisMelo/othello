@@ -46,3 +46,7 @@ bool estPositionVide(Plateau plateau, Position position) ;
  *@returns : Taille dans un int
 */
 int obtenirTaille(Plateau plateau) ;
+
+
+#define LARGEUR 8;
+#define LONGUEUR 8;
