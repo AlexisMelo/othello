@@ -9,7 +9,7 @@
 Couleur CouleurNulle() {
     Couleur resultat;
     resultat.nom = NULL;
-    resultat.hexa[2] = NULL;
+    resultat.hexa = NULL;
     resultat.symbole = NULL;
     resultat.couleurOpposee = NULL;
     return resultat;
@@ -18,8 +18,8 @@ Couleur CouleurNulle() {
 Couleur CouleurBlanc() {
     Couleur resultat = CouleurNulle();
     resultat.nom = Blanc;
-    resultat.hexa[2] = '00';
-    resultat.symbole = '0';
+    resultat.hexa = "00";
+    resultat.symbole = "0";
     resultat.couleurOpposee = CouleurNoir();
     return resultat;
 }
@@ -27,8 +27,8 @@ Couleur CouleurBlanc() {
 Couleur CouleurNoir() {
     Couleur resultat = CouleurNulle();
     resultat.nom = Noir;
-    resultat.hexa[2] = 'FF';
-    resultat.symbole = 'X';
+    resultat.hexa[2] = "FF";
+    resultat.symbole = "X";
     resultat.couleurOpposee = CouleurBlanc();
     return resultat;
 }
@@ -37,8 +37,8 @@ Couleur CouleurNoir() {
 Couleur CouleurNeutre() {
     Couleur resultat = CouleurNulle();
     resultat.nom = Vide;
-    resultat.hexa[2] = '01';
-    resultat.symbole = ' ';
+    resultat.hexa[2] = "01";
+    resultat.symbole = " ";
     return resultat;
 }
 
