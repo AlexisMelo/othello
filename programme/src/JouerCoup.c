@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void JouerCoup(Plateau *plateau,Coup *coupJoue){
- PoserPion(Plateau *plateau,Coup *coupJoue)
- CapturerPions(Plateau *plateau,Coup *coupJoue)
+void JouerCoup(Plateau *plateauDeJeu,Coup coupJoue){
+ PoserPion(Plateau *plateauDeJeu,Coup coupJoue)
+ CapturerPions(Plateau *plateauDeJeu,Coup coupJoue)
 
 }
   
