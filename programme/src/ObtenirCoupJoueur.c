@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Coup ObtenirCoupJoueur(Couleur *c){
+Coup ObtenirCoupJoueur(Couleur c){
   Ligne ligne;
   Colonne colonne;
   printf("Entrer la valeur de la ligne");
