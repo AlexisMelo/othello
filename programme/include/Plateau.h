@@ -10,7 +10,7 @@
 
 
 
-typedef Couleur Plateau[TAILLE][TAILLE];
+//typedef Couleur Plateau[TAILLE][TAILLE];
 
 
 /** 
@@ -19,7 +19,7 @@ typedef Couleur Plateau[TAILLE][TAILLE];
  *@param position : Position à laquelle on regarde la couleur
  *@returns : Couleur
 */
-Plateau * creerPlateau() ;
+Couleur * creerPlateau() ;
 
 
 /**
@@ -28,7 +28,7 @@ Plateau * creerPlateau() ;
  *@param plateau : Plateau
  *@param coup : Coup à jouer
 */
-void jouerCoup(Plateau * plateau, Coup coup) ;
+Couleur * jouerCoup(Couleur plateau[], Coup coup) ;
 
 
 
@@ -38,7 +38,7 @@ void jouerCoup(Plateau * plateau, Coup coup) ;
  *@param position : Position à laquelle on regarde la couleur
  *@returns : Couleur
 */
-Couleur obtenirCouleurDepuisPlateau(Plateau plateau, Position position) ;
+Couleur obtenirCouleurDepuisPlateau(Couleur * plateau, Position position) ;
 
 /** 
  *@brief Vérifie si la position donnée du plateau est vide.
@@ -46,11 +46,11 @@ Couleur obtenirCouleurDepuisPlateau(Plateau plateau, Position position) ;
  *@param position : Position que l'on veut vérifier
  *@returns : Booléen
 */
-bool estPositionVide(Plateau plateau, Position position) ;
+bool estPositionVide(Couleur * plateau, Position position) ;
 
 /** Fonction d'accès à la taille du plateau.
  * 
  *@param plateau : Plateau dont on veut la taille 
  *@returns : Taille dans un int
 */
-int obtenirTaille(Plateau plateau) ;
+int obtenirTaille(Couleur * plateau) ;

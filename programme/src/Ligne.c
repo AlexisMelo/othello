@@ -1,5 +1,6 @@
 #include "../include/Ligne.h"
 #include<stdbool.h>
+#include<stdlib.h>
 
 int obtenirNumeroLigne(Ligne ligne) {
     return ligne + 1;
@@ -11,24 +12,35 @@ bool estEgalLigne(Ligne ligne1, Ligne ligne2) {
 
 
 Ligne creerLigne(int numero) {
+    Ligne* lig;
+    lig = (Ligne*)malloc(sizeof(Ligne));
+    *lig = Un;
     switch (numero)
     {
     case 1:
-        return Un;
+        *lig = Un;
+        return *lig;
     case 2:
-        return Deux;
+        *lig = Deux;
+        return *lig;
     case 3:
-        return Trois;
+        *lig = Trois;
+        return *lig;
     case 4:
-        return Quatre;
+        *lig = Quatre;
+        return *lig;
     case 5:
-        return Cinq;
+        *lig = Cinq;
+        return *lig;
     case 6:
-        return Six;
+        *lig = Six;
+        return *lig;
     case 7:
-        return Sept;
+        *lig = Sept;
+        return *lig;
     case 8:
-        return Huit;
+        *lig = Huit;
+        return *lig;
     }
 
 }
