@@ -1,10 +1,11 @@
 #ifndef POSITION_TYPE
 #define POSITION_TYPE
 
-#include "Ligne.h"
-#include "Direction.h"
-#include "Colonne.h"
+#include "../include/Ligne.h"
+#include "../include/Direction.h"
+#include "../include/Colonne.h"
 #include<stdbool.h>
+#include<assert.h>
 
 typedef struct 
 {
@@ -91,4 +92,5 @@ Position appliquerDirection(Position position, Direction direction) ;
 
 
 
+bool estEgalPosition(Position position1, Position position2);
 #endif

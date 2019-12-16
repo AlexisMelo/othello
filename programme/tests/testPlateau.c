@@ -2,23 +2,19 @@
 #include <time.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include "Plateau.h"
-#include "Couleur.h"
-#include "Coup.h"
+#include <CUnit/CUnit.h>
+#include"testPlateau.h"
 
 
-int main() {
-    int longueur = 8;
-    int largeur = 8;
-    Plateau plateau =creerPlateau();
-    for (int i = 0; i < longueur; i++){
-        for (int j = 0; j < largeur; j++) {
+void TestPlateau() {
+    Plateau * pPlateau = creerPlateau();
+    for (int i = 0; i < TAILLE; i++){
+        for (int j = 0; j < TAILLE; j++) {
             Couleur couleur = obtenirCouleuropposee(couleur);
             Coup coup = creerCoup(creerPosition(i, j), couleur);
-            jouerCoup(*plateau, coup);
-            Couleur res = obtenirCouleurDepuisPlateau(plateau, creerPosition(creerLigne(i), creerColonne(j)));
-            bool inter = estEgalCouleur(res, couleur);
-            printf("test case %d, %d : %d", i, j, inter);
+            jouerCoup(pPlateau, coup);
+            Couleur res = obtenirCouleurDepuisPlateau(*pPlateau, creerPosition(creerLigne(i), creerColonne(j)));
+            CU_ASSERT(estEgalCouleur(res, couleur));
         }   
     }
 }

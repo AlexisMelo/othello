@@ -2,7 +2,15 @@
 #include "Position.h"
 #include "Coup.h"
 #include<stdbool.h>
-typedef Couleur Plateau[8][8];
+
+
+
+
+#define TAILLE 8
+
+
+
+typedef Couleur Plateau[TAILLE][TAILLE];
 
 
 /** 
@@ -46,7 +54,3 @@ bool estPositionVide(Plateau plateau, Position position) ;
  *@returns : Taille dans un int
 */
 int obtenirTaille(Plateau plateau) ;
-
-
-#define LARGEUR 8;
-#define LONGUEUR 8;

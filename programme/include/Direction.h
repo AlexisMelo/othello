@@ -1,6 +1,8 @@
+#ifndef DIRECTION_TYPE
+#define DIRECTION_TYPE
 typedef enum{H, HD, D, BD, B, BG, G, HG}Direction;
 
-#define DIRECTION_ERROR 1;
+#define DIRECTION_ERROR -1;
 
 
 
@@ -25,3 +27,4 @@ int obtenirDecalageLigne(Direction direction) ;
  * 
 */
 int obtenirDecalageColonne(Direction direction) ;
+#endif

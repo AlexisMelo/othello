@@ -17,4 +17,4 @@ void testNoir(){
     CU_ASSERT(res.nom == noir.nom);
     CU_ASSERT(strcmp(res.hexa, noir.hexa) == 0);
     CU_ASSERT(res.symbole == noir.symbole);
-}noir
+}

@@ -1,4 +1,4 @@
-# include "Colonne.h";
+# include "../include/Colonne.h"
 #include<stdbool.h>
 
 
@@ -6,23 +6,23 @@ Colonne creerColonne(int numero){
     switch (numero)
     {
     case 1:
-        return A;
+        return a;
     case 2:
-        return B;
+        return b;
     case 3:
-        return C;
+        return c;
     case 4:
-        return D;
+        return d;
     case 5:
-        return E;
+        return e;
     case 6:
-        return F;
+        return f;
     case 7:
-        return G;
+        return g;
     case 8:
-        return H;
+        return h;
     default:
-        __raise KEY_ERROR;
+        return -1;
     }
 
 }

@@ -3,7 +3,7 @@
 
 
 #include<stdbool.h>
-typedef enum {A, B, C, D, E, F, G, H}Colonne;
+typedef enum {a, b, c, d, e, f, g, h}Colonne;
 
 #define KEY_ERROR 1;
 
