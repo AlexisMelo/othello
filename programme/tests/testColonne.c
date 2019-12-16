@@ -1,11 +1,11 @@
 #include"../include/Colonne.h"
 #include <CUnit/CUnit.h>
 #include "testColonne.h"
-
+#include<stdio.h>
 
 
 void TestColonne(){
-    for (int i = 1; i<=LARGEUR; i++) {
+    for (int i = 1; i<=TAILLE; i++) {
         CU_ASSERT(ObtenirNumeroColonne(creerColonne(i)) == i);
     }
 }
