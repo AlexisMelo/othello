@@ -27,7 +27,7 @@ Coups rechercherTousLesCoups (Plateau plateauDeJeu, Couleur joueurActuel);
  *
  *@param positionDuCoup : Position du coup qu'on souhaite évaluer
  *
- *@returns Coups 
+ *@returns booléen 
 */
 bool rechercherUnCoup (Plateau plateauDeJeu, Couleur joueurActuel, Position positionDuCoup);
 #endif
