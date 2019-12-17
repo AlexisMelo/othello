@@ -89,7 +89,13 @@ void FixerColonne(Position * position, Colonne colonne) ;
 Position appliquerDirection(Position position, Direction direction) ;
 
 
-
+/**
+ * @brief Vérifie si les positions sont égales
+ * 
+ * @param position1 : Position
+ * @param position2 : Position
+ * @returns bool : 
+*/
 
 
 bool estEgalPosition(Position position1, Position position2);

@@ -42,7 +42,25 @@ void RetirerCoup(Coups*, Coup) ;
  * @returns int : nbDeCoups
 */
 int NbCoups(Coups) ;
-Coup COUPS_ObtenirCoup(Coups coups) ;
+
+
+/** Donne la liste chaînée des coups dans l'ensemble Coups
+ * 
+ * 
+ * @param coups :  Ensemble dont on veut obtenir le nombre de coups
+ * @returns ListeChainée : coups
+*/
+Coup COUPS_ObtenirCoup(Coups) ;
+
+
+/** Vérifie si un Coup est présent dans un ensemble Coups
+ * 
+ * Utilise le champ nbDeCoups de la structure Coups
+ * 
+ * @param coups : Ensemble de coups à vérifier
+ * @param coup : coup à rechercher
+ * @returns bool : nbDeCoups
+*/
 bool EstPresent(Coups, Coup) ;
 
 #endif
