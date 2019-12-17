@@ -9,21 +9,21 @@ INCFLAGS = -I$(INCLUDEDIR)
 all :
 	pwd
 	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory . ./rapport/sourcesTEX/Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex
-	rm -rf ./*.log
-	rm -rf ./.aux
-	rm -rf ./*.dvi
-	rm -rf ./*.toc
-	rm -rf ./*.out
-
+	find . -type f -name '*.log' -exec rm {} +
+	find . -type f -name '*.out' -exec rm {} +
+	find . -type f -name '*.toc' -exec rm {} +
+	find . -type f -name '*.dvi' -exec rm {} +
+	find . -type f -name '*.aux' -exec rm {} +
+	
 clean :
-	rm -rf ./*.pdf
-	rm -rf ./*.log
-	rm -rf ./*.aux
-	rm -rf ./*.dvi
-	rm -rf ./*.toc
-	rm -rf ./*.out
-	rm -rf ./*.o
-	rm -rf ./*.a
+	find . -type f -name '*.pdf' -exec rm {} +
+	find . -type f -name '*.log' -exec rm {} +
+	find . -type f -name '*.out' -exec rm {} +
+	find . -type f -name '*.toc' -exec rm {} +
+	find . -type f -name '*.dvi' -exec rm {} +
+	find . -type f -name '*.aux' -exec rm {} +
+	find . -type f -name '*.o' -exec rm {} +
+	find . -type f -name '*.a' -exec rm {} +
 
 tests :	$(TESTDIR)/$(TEST)
 $(TESTDIR)/test : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o
