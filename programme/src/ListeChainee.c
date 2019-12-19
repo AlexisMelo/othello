@@ -21,7 +21,7 @@ void LC_ajouter(ListeChainee* pliste, void* element,EC_FonctionCopierDansCollect
         errno = 0;
         pNoeud->element = element;
         pNoeud->listeSuivante = *pliste;
-        *pliste = *pNoeud
+        *pliste = *pNoeud;
     }
     else{
         errno = ERREUR_MEMOIRE;

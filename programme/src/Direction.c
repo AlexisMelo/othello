@@ -1,4 +1,4 @@
-#include"Direction.h";
+#include"Direction.h"
 
 int obtenirDecalageLigne(Direction direction) {
       switch (direction)
@@ -20,7 +20,7 @@ int obtenirDecalageLigne(Direction direction) {
     case 7:
         return -1;
     default:
-        __raise DIRECTION_ERROR;
+        return DIRECTION_ERROR;
     }
 }
 
@@ -44,6 +44,6 @@ int obtenirDecalageColonne(Direction direction) {
     case 7:
         return -1;
     default:
-        __raise DIRECTION_ERROR;
+        return DIRECTION_ERROR;
     }
 }

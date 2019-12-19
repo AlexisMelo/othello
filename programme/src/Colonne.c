@@ -1,28 +1,39 @@
-# include "Colonne.h";
+# include "../include/Colonne.h"
 #include<stdbool.h>
+#include<stdlib.h>
+#include<stdio.h>
 
 
 Colonne creerColonne(int numero){
+    Colonne * col;
+    col = (Colonne*)malloc(sizeof(Colonne));
+    *col = a;
     switch (numero)
     {
     case 1:
-        return A;
+        *col = a;
+        return *col;
     case 2:
-        return B;
+        *col = b;
+        return *col;
     case 3:
-        return C;
+        *col = c;
+        return *col;
     case 4:
-        return D;
+        *col = d;
+        return *col;
     case 5:
-        return E;
+        *col = e;
+        return *col;
     case 6:
-        return F;
+        *col = f;
+        return *col;
     case 7:
-        return G;
+        *col = g;
+        return *col;
     case 8:
-        return H;
-    default:
-        __raise KEY_ERROR;
+        *col = h;
+        return *col;
     }
 
 }

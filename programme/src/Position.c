@@ -1,6 +1,6 @@
-#include<stdbool.h>;
-#include"Position.h";
-#include"Direction.h";
+#include<stdbool.h>
+#include"../include/Position.h"
+#include"../include/Direction.h"
 
 Position creerPosition(Ligne ligne, Colonne colonne) {
     Position position;
@@ -26,12 +26,10 @@ bool estPositionValide(Position position) {
 
 void FixerLigne(Position * position, Ligne ligne) {
     position -> ligne = ligne;
-    return position;
 }
 
 void FixerColonne(Position * position, Colonne colonne) {
     position -> colonne = colonne;
-    return position;
 }
 
 
@@ -39,9 +37,10 @@ Position appliquerDirection(Position position, Direction direction){
     assert(estPositionValide(appliquerDirection(position, direction)));
         FixerLigne(&position, obtenirLigne(position) + obtenirDecalageLigne(direction));
         FixerColonne(&position, obtenirColonne(position) + obtenirDecalageColonne(direction));
+        return position;
 }
 
 
-bool estEgal(Position position1, Position position2) {
+bool estEgalPosition(Position position1, Position position2) {
     return estEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
 }

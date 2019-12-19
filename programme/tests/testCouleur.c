@@ -1,24 +1,20 @@
-#include<stdio.h>;
-#include"Couleur.h";
-
-int testBlanc(){
-    Couleur res1;
+#include<stdio.h>
+#include"../include/Couleur.h"
+#include "testCouleur.h"
+#include <CUnit/CUnit.h>
+#include <string.h>
+void testBlanc(){
     Couleur blanc = CouleurBlanc();
-    res1 = obtenirCouleuropposee(obtenirCouleuropposee(blanc));
-    return res1.nom == blanc.nom && res1.hexa == blanc.hexa && res1.symbole == blanc.symbole;
-}
+    Couleur res = obtenirCouleuropposee(obtenirCouleuropposee(blanc));
+    CU_ASSERT(res.nom == blanc.nom);
+    CU_ASSERT(strcmp(res.hexa, blanc.hexa) == 0);
+    CU_ASSERT(res.symbole == blanc.symbole);
+    }
 
-int testNoir(){
-    Couleur res1;
+void testNoir(){
     Couleur noir = CouleurNoir();
-    res1 = obtenirCouleuropposee(obtenirCouleuropposee(noir));
-    return res1.nom == noir.nom && res1.hexa == noir.hexa && res1.symbole == noir.symbole;
-}
-
-
-int main(){
-    int resBlanc = testBlanc();
-    int resNoir = testNoir();
-    printf('Test des blancs ......... %d', resNoir);
-    printf('Test des noirs ......... %d', resNoir);
+    Couleur res = obtenirCouleuropposee(obtenirCouleuropposee(noir));
+    CU_ASSERT(res.nom == noir.nom);
+    CU_ASSERT(strcmp(res.hexa, noir.hexa) == 0);
+    CU_ASSERT(res.symbole == noir.symbole);
 }

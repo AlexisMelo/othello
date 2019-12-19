@@ -1,16 +1,11 @@
-#include"Colonne.h";
-
-int * testColonne(){
-    int * res;
-    for (int i = 0; i<8; i++) {
-        res[i] = (ObtenirNumeroColonne(creerColonne(i)) == i);
-    }
-}
+#include"../include/Colonne.h"
+#include <CUnit/CUnit.h>
+#include "testColonne.h"
+#include<stdio.h>
 
 
-int main() {
-    int * res = testColonne();
-    for (int i =1; i < 8; i++) {
-        printf('Test colonne%d ......... %d',i, res[i]);
+void TestColonne(){
+    for (int i = 1; i<=TAILLE; i++) {
+        CU_ASSERT(ObtenirNumeroColonne(creerColonne(i)) == i);
     }
 }

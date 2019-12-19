@@ -2,15 +2,13 @@
 #define COULEUR_TYPE
 
 #include<stdbool.h>
+#include<string.h>
 
-
-typedef struct 
-{
-    enum {Vide, Blanc, Noir}nom;
-    char hexa[2];
+typedef struct{
+    enum {Vide, Blanc, Noir, nulle}nom;
+    char hexa[3];
     char symbole;
-    Couleur couleurOpposee;
-} Couleur;
+}Couleur;
 
 /**
  * @brief Retourne une Couleur noire
