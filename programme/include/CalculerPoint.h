@@ -4,6 +4,6 @@
 #include"Couleur.h"
 #include"Plateau.h"
 
-int CalculerPoint(Plateau *p, Couleur couleur);
+int CalculerPoint(Couleur * p, Couleur couleur);
 
 #endif
