@@ -4,12 +4,14 @@
 #include <stdlib.h>
 
 Coup ObtenirCoupJoueur(Couleur c){
-  Ligne ligne;
+  int ligneNb, colonneNb;
   Colonne colonne;
   printf("Entrer la valeur de la ligne");
-  scanf("%d", &ligne);
+  scanf("%d", ligneNb);
   printf("Entrer la valeur de la colonne");
-  scanf("%d", &colonne);
+  scanf("%c", colonneNb);
+  Ligne ligne = obtenirLigne(ligneNb);
+  Colonne colonne = obtenirColonne(colonneNb);
   return Coup(Position(ligne,colonne),c);
 }
 

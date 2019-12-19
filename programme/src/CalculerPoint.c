@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int CalculerPoint(Plateau p, Couleur couleur){
+int CalculerPoint(Couleur * p, Couleur couleur){
   int points, i, j;
   for(i=1;i<=ObtenirTaille(p);i++){
     for(j=1;j<=ObtenirTaille(p);j++){
