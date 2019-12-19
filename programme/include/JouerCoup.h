@@ -4,6 +4,6 @@
 #include"Plateau.h"
 #include"Coup.h"
 
-void JouerCoup(Couleur * plateau,Coup *coupJoue);
+void JouerCoup(Couleur * plateau,Coup coupJoue);
 
 #endif
