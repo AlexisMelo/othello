@@ -13,5 +13,3 @@ Coup ObtenirCoupJoueur(Couleur c){
   Colonne colonne = obtenirColonne(colonneNb);
   return Coup(Position(ligne,colonne),c);
 }
-
-

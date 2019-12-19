@@ -9,7 +9,8 @@ int CalculerPoint(Couleur * p, Couleur couleur){
   int i, j;
   for(i=1;i<=ObtenirTaille(p);i++){
     for(j=1;j<=ObtenirTaille(p);j++){
-      if(couleur==obtenirCouleurDepuisPlateau(p,position(i,j)))
+      if(couleur==ObtenirCouleurDepuisPlateau(p,creerPosition(i,j))){
+       if(couleur==obtenirCouleurDepuisPlateau(p,position(i,j)))
 	    points=points+1;
       }
     }
