@@ -2,6 +2,6 @@
 #define ObtenirCoupJoueur_h
 #include <stdio.h>
 #include"Couleur.h"
-Coup ObtenirCoupJoueur(Couleur *c);
+Coup ObtenirCoupJoueur(Couleur c);
 
 #endif

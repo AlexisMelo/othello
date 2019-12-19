@@ -6,7 +6,7 @@
 Coup ObtenirCoupJoueur(Couleur c){
   int ligneNb, colonneNb;
   printf("Entrer la valeur de la ligne");
-  scanf("%d", ligneNb);
+  scanf("%d", &ligneNb);
   printf("Entrer la valeur de la colonne");
   scanf("%c", colonneNb);
   Ligne ligne = obtenirLigne(ligneNb);
