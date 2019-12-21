@@ -7,7 +7,7 @@ typedef enum{H, HD, D, BD, B, BG, G, HG}Direction;
 
 
 /**
- * @brief Décalage à effectuer sur les colonnes lors de l'application de la direction
+ * @brief Décalage à effectuer sur la lignes lors de l'application de la direction
  * 
  * @param direction : Direction
  * 
@@ -19,7 +19,7 @@ int obtenirDecalageLigne(Direction direction) ;
 
 
 /**
- * @brief Décalage à effectuer sur les colonnes lors de l'application de la direction
+ * @brief Décalage à effectuer sur la colonnescolonne lors de l'application de la direction
  * 
  * @param direction : Direction
  * 

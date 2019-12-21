@@ -14,10 +14,8 @@
 
 
 /** 
- *@brief Constructeur du type Plateau
- *@param plateau : Plateau actuel
- *@param position : Position à laquelle on regarde la couleur
- *@returns : Couleur
+ *@brief Constructeur du Plateau
+ *@returns : Couleur *
 */
 Couleur * creerPlateau() ;
 
@@ -25,9 +23,10 @@ Couleur * creerPlateau() ;
 /**
  * @brief Joue un coup sur le plateau.
  * 
- *@param plateau : Plateau
+ *@param plateau : Couleur *
  *@param coup : Coup à jouer
-*/
+ *@returns plateau mis à Jour : Couleur*
+ */
 Couleur * jouerCoup(Couleur plateau[], Coup coup) ;
 
 
