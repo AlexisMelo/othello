@@ -18,5 +18,5 @@
  *
  *@param ObtenirCoupJ2 : pointeur de fonction pour obtenir le coup du deuxième joueur
 */
-void FaireUnePartie(Couleur,AfficherResultat,AfficherPlateau,ObtenirCoupJ1,ObtenirCoupJ2);
+void FaireUnePartie(Couleur,void (*AfficherResultat)(Plateau),void (*AfficherPlateau)(Plateau),Coup (*ObtenirCoupJ1)(Couleur,Plateau),Coup (*ObtenirCoupJ2)(Couleur,Plateau));
 #endif

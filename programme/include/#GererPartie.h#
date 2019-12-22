@@ -6,5 +6,6 @@
 #include "ObtenirCoupJ2.h"
 #include "EtatDeLaPartie.h"
 #include "JouerUnTour.h"
+
 void GererPartie(Couleur,Couleur *,AfficherResultat,AfficherPlateau,ObtenirCoupJ1,ObtenirCoupJ2);
 #endif
