@@ -1,10 +1,10 @@
-void InitialiserPlateau(Plateau *p){
+void InitialiserPlateau(Couleur *p){
   Couleur neutre, blanc, noir;
   neutre=CouleurNeutre();
   blanc=CouleurBlanc();
   noir=CouleurNoir();
-  for (i=1;i<=ObtenirTaille(*p);i++){
-    for (j=1;j<=ObtenirTaille(*p);j++){
+  for (i=1;i<=ObtenirTaille(p);i++){
+    for (j=1;j<=ObtenirTaille(p);j++){
       JouerCoup(p,CreerCoup(CreerPosition(CreerLigne(i),CreerColonne(j))),neutre);
     }
   }
