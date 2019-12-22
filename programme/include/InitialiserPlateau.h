@@ -4,5 +4,13 @@
 #include "Plateau.h"
 #include "Coup.h"
 #include "Position.h"
-void InitisliserPlateau(Plateau *);
+
+/**
+ *@brief initialiser un plateau de jeu
+ *
+ * Exemple : InitialiserPlateau(Couleur * plateau)
+ * 
+ *@param Couleur * : nom du plateau qu'on veut initialiser
+*/
+void InitisliserPlateau(Couleur *);
 #endif
