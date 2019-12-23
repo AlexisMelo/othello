@@ -4,6 +4,17 @@
 #include"Plateau.h"
 #include"Coup.h"
 
-void JouerCoup(Couleur * plateau,Coup coupJoue);
+
+/**
+ *@brief Effectue un coup sur un plateau.
+ * 
+ *@param plateauDeJeu : Couleur
+ *
+ *@param coupJoue : Coup
+ *
+*/
+
+
+void JouerCoup(Couleur * plateauDeJeu,Coup coupJoue);
 
 #endif
