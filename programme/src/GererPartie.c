@@ -1,4 +1,4 @@
-void GererPartie(Couleur couleur,Couleur *plateau,void (*AfficherResultat)(Plateau),void (*AfficherPlateau)(Plateau),Coup (*ObtenirCoupJ1)(Couleur,Plateau),void (*ObtenirCoupJ2)(Couleur,Plateau)){
+void GererPartie(Couleur couleur,Couleur *plateau,void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *),Coup (*ObtenirCoupJ1)(Couleur,Couleur *),void (*ObtenirCoupJ2)(Couleur,Couleur *)){
   char* j1 = "En Cours";
   char* j2 = "En Cours";
   while((EtatDeLaPartie(couleur,plateau)!="Terminée") && (j1 != "Bloqué" || j2 != "Bloqué"){
