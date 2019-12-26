@@ -3,4 +3,6 @@
 #include "testJouerCoup.h"
 #include<stdio.h>
 
-
+void TestJouerCoup(){
+    
+    }

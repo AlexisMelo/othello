@@ -3,3 +3,7 @@
 #include "testObtenirCoupJoueur.h"
 #include<stdio.h>
 
+void TestObtenirCoupJoueur(){
+    
+    }
+

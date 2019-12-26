@@ -3,4 +3,6 @@
 #include "testCalculerPoint.h"
 #include<stdio.h>
 
-
+void TestCalculerPoint(){
+    
+    }
