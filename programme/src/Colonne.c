@@ -34,8 +34,9 @@ Colonne creerColonne(int numero){
     case 8:
         *col = h;
         return *col;
+    default:
+        break;
     }
-
 }
 
 

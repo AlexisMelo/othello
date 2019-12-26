@@ -1,5 +1,5 @@
-#ifndef LISTE CHAINEE
-#define LISTE CHAINEE
+#ifndef LISTE_CHAINEE
+#define LISTE_CHAINEE
 #include<errno.h>
 #include"elementCollection.h"
 

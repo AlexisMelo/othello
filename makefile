@@ -26,7 +26,7 @@ clean :
 	find . -type f -name '*.a' -exec rm {} +
 
 tests : $(TESTDIR)/$(TEST)
-$(TESTDIR)/test : $(TESTDIR)/testParcourirUneDirection.o $(TESTDIR)/testParcourirLesDirections.o $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/Parcourir_Direction.o
+$(TESTDIR)/test : $(TESTDIR)/testParcourirUneDirection.o $(TESTDIR)/testParcourirLesDirections.o $(TESTDIR)/testRechercheDesCoups.o $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/Parcourir_Direction.o $(SRCDIR)/Recherche_Coup.o
 	$(CC) -o $(TESTDIR)/test $^ -lcunit $(CFLAGS) -I$(TESTDIR)
 	
 $(SRCDIR)/%.o : $(SRCDIR)/%.c

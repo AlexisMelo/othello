@@ -42,5 +42,4 @@ Ligne creerLigne(int numero) {
         *lig = Huit;
         return *lig;
     }
-
 }

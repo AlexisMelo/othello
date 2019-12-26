@@ -20,7 +20,7 @@ void testParcourirLesDirections() {
             jouerCoup(plateau, coup);
         }
     }
-    /* Creation d'un plateau de test pour la direction 'D' */
+    /* Creation d'un plateau de test des Directions */
     /* Ligne n° 2 */
     coup = creerCoup(creerPosition(2,3), NOIR);
     jouerCoup(plateau, coup);
