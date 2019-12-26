@@ -3,15 +3,13 @@
 #include<errno.h>
 #include"elementCollection.h"
 
-
-typedef Noeud * ListeChainee;
+typedef struct Noeud* ListeChainee;
 
 typedef struct
 {
     void * element;
     ListeChainee listeSuivante;
 } Noeud;
-
 
 #define ERREUR_MEMOIRE 1
 
