@@ -12,5 +12,5 @@
  * 
  *@param Couleur * : nom du plateau qu'on veut initialiser
 */
-void InitisliserPlateau(Couleur *);
+void InitialiserPlateau(Couleur *);
 #endif
