@@ -1,6 +1,6 @@
 #include"Parcourir_Direction.h"
 
-bool parcourirLesDirections (Plateau plateauDeJeu, Position positionDuCoup, Couleur joueurActuel) {
+bool parcourirLesDirections (Couleur * plateauDeJeu, Position positionDuCoup, Couleur joueurActuel) {
     return (parcourirUneDirection (plateauDeJeu, positionDuCoup, HG, joueurActuel)
             || parcourirUneDirection (plateauDeJeu, positionDuCoup, H, joueurActuel)
             || parcourirUneDirection (plateauDeJeu, positionDuCoup, HD, joueurActuel)
@@ -8,32 +8,31 @@ bool parcourirLesDirections (Plateau plateauDeJeu, Position positionDuCoup, Coul
             || parcourirUneDirection (plateauDeJeu, positionDuCoup, BD, joueurActuel)
             || parcourirUneDirection (plateauDeJeu, positionDuCoup, B, joueurActuel)
             || parcourirUneDirection (plateauDeJeu, positionDuCoup, BG, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, G, joueurActuel))
+            || parcourirUneDirection (plateauDeJeu, positionDuCoup, G, joueurActuel));
 }
 
 
-bool parcourirUneDirection (Plateau plateauDeJeu, Position positionDuCoup, Direction uneDirection, Couleur joueurActuel) {
+bool parcourirUneDirection (Couleur * plateauDeJeu, Position positionDuCoup, Direction uneDirection, Couleur joueurActuel) {
     bool ligneEnCours, directionValide;
-    int taille = obtenirtaille(plateauDeJeu);
-    i[taille];
-    j[taille];
-    i = obtenirNumeroLigne (obtenirLigne(positionDuCoup));
-    j = obtenirNumeroColonne (obtenirLigne(positionDuCoup));
     ligneEnCours = false;
     directionValide = false;
-    appliquerDirection (positionDuCoup, uneDirection);
-    if (obtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup) != joueurActuel) {
+    appliquerDirection (&positionDuCoup, uneDirection);
+    if (estPositionValide(positionDuCoup) && estEgalCouleur(obtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup), obtenirCouleuropposee(joueurActuel))) {
         ligneEnCours = true;
         while (!directionValide && ligneEnCours) {
-            appliquerDirection (positionDuCoup, uneDirection);
-            if (EstPositionVide (plateauDeJeu, positionDuCoup)) {
-                ligneEnCours = false;
-            } else {
-                if (obtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup) = joueurActuel) {
-                    directionValide = true;
+            appliquerDirection (&positionDuCoup, uneDirection);
+            if (estPositionValide(positionDuCoup)) {
+                if (estPositionVide (plateauDeJeu, positionDuCoup)) {
+                    ligneEnCours = false;
+                } else {
+                    if (estEgalCouleur(obtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup), joueurActuel)) {
+                        directionValide = true;
+                    }
                 }
+            } else {
+                ligneEnCours = false;
             }
         }
     }
-    return (directionValide)
+    return (directionValide);
 }

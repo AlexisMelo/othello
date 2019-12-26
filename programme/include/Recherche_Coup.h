@@ -16,7 +16,7 @@
  *
  *@returns Coups 
 */
-Coups rechercherTousLesCoups (Plateau plateauDeJeu, Couleur joueurActuel);
+Coups rechercherTousLesCoups (Couleur * plateauDeJeu, Couleur joueurActuel);
 
 /**
  *@brief Retourne un booléen pour savoir si un coup est possible ou pas
@@ -29,5 +29,5 @@ Coups rechercherTousLesCoups (Plateau plateauDeJeu, Couleur joueurActuel);
  *
  *@returns booléen 
 */
-bool rechercherUnCoup (Plateau plateauDeJeu, Couleur joueurActuel, Position positionDuCoup);
+bool rechercherUnCoup (Couleur * plateauDeJeu, Couleur joueurActuel, Position positionDuCoup);
 #endif

@@ -86,7 +86,7 @@ void FixerColonne(Position * position, Colonne colonne) ;
  * @param Direction : Direction à appliquer
  * 
 */
-Position appliquerDirection(Position position, Direction direction) ;
+void appliquerDirection(Position * position, Direction direction) ;
 
 
 /**

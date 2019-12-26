@@ -25,16 +25,18 @@ clean :
 	find . -type f -name '*.o' -exec rm {} +
 	find . -type f -name '*.a' -exec rm {} +
 
-tests :	$(TESTDIR)/$(TEST)
-$(TESTDIR)/test : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o
-		$(CC) -o $(TESTDIR)/test $^ -lcunit $(CFLAGS) -I$(TESTDIR)
-
+tests : $(TESTDIR)/$(TEST)
+$(TESTDIR)/test : $(TESTDIR)/testParcourirUneDirection.o $(TESTDIR)/testParcourirLesDirections.o $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/Parcourir_Direction.o
+	$(CC) -o $(TESTDIR)/test $^ -lcunit $(CFLAGS) -I$(TESTDIR)
+	
+$(SRCDIR)/%.o : $(SRCDIR)/%.c
+	$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
 
 $(TESTDIR)/%.o : $(TESTDIR)/%.c
-		$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
-		
-$(SRCDIR)/%.o : $(SRCDIR)/%.c
-		$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
+	
+
+	
 	
 
 

@@ -1,7 +1,7 @@
 #include"Recherche_Coup.h"
 #include"Parcourir_Direction.h"
 
-Coups rechercherTousLesCoups (Plateau plateauDeJeu, Couleur joueurActuel) {
+Coups rechercherTousLesCoups (Couleur * plateauDeJeu, Couleur joueurActuel) {
     Coups lesCoups;
     int taille = obtenirtaille(plateauDeJeu);
     i[taille];
@@ -17,7 +17,7 @@ Coups rechercherTousLesCoups (Plateau plateauDeJeu, Couleur joueurActuel) {
 return lesCoups;
 }
 
-bool rechercherUnCoup (Plateau plateauDeJeu, Couleur joueurActuel, Position positionDuCoup) {
+bool rechercherUnCoup (Couleur * plateauDeJeu, Couleur joueurActuel, Position positionDuCoup) {
     if (estPositionVide(plateauDeJeu, positionDuCoup)) {
         return (parcourirLesDirections (plateauDeJeu, positionDuCoup, joueurActuel));
     }

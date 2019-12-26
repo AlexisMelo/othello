@@ -33,11 +33,9 @@ void FixerColonne(Position * position, Colonne colonne) {
 }
 
 
-Position appliquerDirection(Position position, Direction direction){
-    assert(estPositionValide(appliquerDirection(position, direction)));
-        FixerLigne(&position, obtenirLigne(position) + obtenirDecalageLigne(direction));
-        FixerColonne(&position, obtenirColonne(position) + obtenirDecalageColonne(direction));
-        return position;
+void appliquerDirection(Position * position, Direction direction){
+    FixerLigne(position, obtenirLigne(*position) + obtenirDecalageLigne(direction));
+    FixerColonne(position, obtenirColonne(*position) + obtenirDecalageColonne(direction));
 }
 
 
