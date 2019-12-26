@@ -17,7 +17,7 @@
  *@brief Constructeur du type Plateau
  *@param plateau : Plateau actuel
  *@param position : Position à laquelle on regarde la couleur
- *@returns : Couleur
+ *@returns : Couleur *
 */
 Couleur * creerPlateau() ;
 
