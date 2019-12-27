@@ -42,3 +42,6 @@ Colonne creerColonne(int nb);
 */
 bool estEgalColonne(Colonne colonne1, Colonne colonne2) ;
 #endif
+
+
+Colonne ObtenirColonneDepuisChar(char colChar);
