@@ -5,8 +5,7 @@
 #include <CUnit/CUnit.h>
 #include "testPlateau.h"
 #include "../include/Couleur.h"
-void TestPlateau()
-{
+void TestPlateau(){
     void * plateau = creerPlateau();
     Couleur couleur = CouleurNoir();
     Ligne ligne = creerLigne(1);

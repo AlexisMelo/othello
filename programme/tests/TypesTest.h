@@ -6,6 +6,7 @@
 #include"../include/Ligne.h"
 #include"../include/Couleur.h"
 #include "testPlateau.h"
+#include "testCalculerPoint.h"
 
 
 int main() ;
