@@ -2,12 +2,14 @@
 #define LISTE_CHAINEE
 #include<errno.h>
 #include"elementCollection.h"
+#include "Coup.h"
+struct _Noeud;
 
-typedef struct Noeud* ListeChainee;
+typedef struct _Noeud* ListeChainee;
 
-typedef struct
+typedef struct _Noeud
 {
-    void * element;
+    Coup * element;
     ListeChainee listeSuivante;
 } Noeud;
 
@@ -18,7 +20,7 @@ bool LC_estVide(ListeChainee);
 void LC_ajouter(ListeChainee*,void*,EC_FonctionCopierDansCollection);
 void * LC_obtenirElement(ListeChainee);
 ListeChainee  LC_obtenirListeSuivante (ListeChainee) ;
-void LC_fixerListeSuivante(ListeChainee, ListeChainee) ;
+void LC_fixerListeSuivante(ListeChainee *, ListeChainee) ;
 void LC_fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC_FonctionLibererDeCollection) ;
 void LC_supprimerTete(ListeChainee*, EC_FonctionLibererDeCollection) ;
 void LC_supprimer(ListeChainee*, EC_FonctionLibererDeCollection) ;

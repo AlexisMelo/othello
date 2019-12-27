@@ -8,12 +8,12 @@ Coups CreerCoups() {
     resultat.coups = listeChainee();
     resultat.nbDeCoups = 0;
     return resultat;
-};
+}
 
 void AjouterCoup(Coups * coups, Coup coup) {
     LC_ajouter(&(coups->coups), &coup, fonctionCopierCoup);
     coups->nbDeCoups += 1;
-};
+}
 
 /** Obtient le coup en tête de la liste chaînée de coups.
  * 
@@ -23,8 +23,8 @@ void AjouterCoup(Coups * coups, Coup coup) {
 
 Coup COUPS_ObtenirCoup(Coups coups){
     assert(coups.nbDeCoups != 0);
-    return *(coups.coups);
-};
+    return *(coups.coups->element);
+} 
 
 /** Supprime coup en tête de la liste chaînée de coups.
  * 
@@ -37,15 +37,15 @@ void SupprimerCoupEnTete(Coups * coups){
     coups->coups = ls;
     coups->nbDeCoups -= 1;
     fonctionLibererCoup((Coup*)(noeud.element));
-};
+}
 
 
 int ObtenirnombreDeCoups(Coups coups) {
     return coups.nbDeCoups;
-};
+}
 
 bool EstPresent(Coups coups, Coup coup) {
-    while (!estVide()){
+    while (!LC_estVide(coups.coups)){
             if (estEgalCoup(coup, COUPS_ObtenirCoup(coups))){
                 return true;
             };
@@ -55,14 +55,15 @@ bool EstPresent(Coups coups, Coup coup) {
 
 void RetirerCoup(Coups * coups, Coup coup) {
     assert(EstPresent(*coups, coup));
-        while (!estVide()){
+        Coups temp = *coups;
+        while (!LC_estVide(coups->coups)){
             if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
                 ListeChainee liste = coups->coups;
-                Noeud noeud = *liste;
-                ListeChainee ls = noeud.listeSuivante;
+                //Noeud noeud = liste;
+                ListeChainee ls = liste->listeSuivante;
                 coups->coups = ls;
                 };
+                temp.coups = temp.coups->listeSuivante;
 
         }
-        Noeud noeud = *(coups->coups);
 }

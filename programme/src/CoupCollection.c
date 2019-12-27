@@ -8,12 +8,12 @@ void* fonctionCopierCoup(void* coup) {
     Coup * resultat = (Coup*)malloc(sizeof(Coup));
     memcpy((void*)resultat, coup, sizeof(Coup));
     return (void*)resultat; 
-};  
+}
 
 
 void fonctionLibererCoup(void * coup) {
     free(coup);
-};
+}
 
 
 int fonctionComparerCoup(void * coup1, void * coup2) {
