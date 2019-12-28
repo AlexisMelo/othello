@@ -1,0 +1,28 @@
+\begin{algorithme}
+	\small
+	\procedure
+	{Initialiser Plateau}
+	{\paramEntreeSortie p : Plateau}
+	{ObtenirTaille(p) : \naturelNonNul \\
+	blanc, noir, neutre : Couleur}
+	{
+	\affecter{neutre}{creerNeutre()}
+	\affecter{blanc}{creerBlanc()}
+	\affecter{noir}{creerNoir()}
+	\pour{i}{1}{ObtenirTaille(p)}{}{
+
+		\pour{j}{1}{ObtenirTaille(p)}{}{
+
+			\instruction{JouerCoup(plateau,Coup(neutre,Position(Ligne(i),Colonne(j))))}
+		}
+	}
+
+	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2))))}
+
+	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2 + 1))))}
+
+	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2 + 1))))}
+
+	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2))))}
+	}
+\end{algorithme}

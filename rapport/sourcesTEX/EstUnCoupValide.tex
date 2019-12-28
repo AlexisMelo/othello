@@ -1,0 +1,10 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{EstUnCoupValide}
+	{coupAJouer : Coup, coupsPossibles : Coups, p : Plateau}
+	{\booleen}
+	{
+	\retourner{EstPresent(coupsPossibles,coupAJouer) and ObtenirLigne(ObtenirPosition(coupAJouer)) <= ObtenirTaille(p) and ObtenirColonne(ObtenirPosition(coupAJouer)) <= ObtenirTaille(p) and EstPositionVide(p,ObtenirPosition(coupAJouer))}
+	}
+\end{algorithme}
