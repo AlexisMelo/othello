@@ -15,9 +15,9 @@ void TestPlateau()
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
-            couleur = obtenirCouleuropposee(couleur);
+            couleur = ObtenirCouleuropposee(couleur);
             Coup coup = creerCoup(creerPosition(ligne + i - 1,colonne + j - 1), couleur);
-            jouerCoup(plateau, coup);
+            JouerCoup(plateau, coup);
             Couleur res = obtenirCouleurDepuisPlateau(plateau, creerPosition(ligne + i - 1,colonne + j - 1));
             CU_ASSERT(estEgalCouleur(res, couleur));
         }

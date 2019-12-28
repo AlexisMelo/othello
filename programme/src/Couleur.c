@@ -40,7 +40,7 @@ Couleur CouleurNeutre() {
     return resultat;
 }
 
-Couleur obtenirCouleuropposee(Couleur couleur) {
+Couleur ObtenirCouleuropposee(Couleur couleur) {
     assert(!estNeutre(couleur));
     if (couleur.nom == Blanc){
         couleur.nom=Noir;

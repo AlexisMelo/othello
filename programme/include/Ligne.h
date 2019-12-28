@@ -14,7 +14,7 @@ typedef enum{Un, Deux, Trois, Quatre, Cinq, Six, Sept, Huit}Ligne;
  *
  *@returns numéro : int
 */
-int obtenirNumeroLigne(Ligne);
+int ObtenirNumeroLigne(Ligne);
 
 
 /**
@@ -26,7 +26,7 @@ int obtenirNumeroLigne(Ligne);
  * 
  * @returns Ligne
 */
-Ligne creerLigne(int);
+Ligne CreerLigne(int);
 
 
 /**
@@ -38,5 +38,5 @@ Ligne creerLigne(int);
  *
  * @returns booléen
 */
-bool estEgalLigne(Ligne ligne1, Ligne ligne2) ;
+EstEgalLigne(Ligne ligne1, Ligne ligne2) ;
 #endif

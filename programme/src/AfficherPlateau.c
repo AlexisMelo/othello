@@ -52,15 +52,15 @@ void InitialiserAffichagePlateau(){
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
             Coup coup = creerCoup(creerPosition(i, j), couleur);
-            jouerCoup(plateau, coup);
+            JouerCoup(plateau, coup);
         }
     }
     couleur = CouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            couleur = obtenirCouleuropposee(couleur);
+            couleur = ObtenirCouleuropposee(couleur);
             Coup coup = creerCoup(creerPosition(i, j), couleur);
-            jouerCoup(plateau, coup);
+            JouerCoup(plateau, coup);
             afficherPlateau(plateau);
             nanosleep(&ts, &ts);
             }
@@ -69,18 +69,18 @@ void InitialiserAffichagePlateau(){
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
             Coup coup = creerCoup(creerPosition(i, j), couleur);
-            jouerCoup(plateau, coup);
+            JouerCoup(plateau, coup);
             nanosleep(&ts, &ts);
             afficherPlateau(plateau);
         }
     }
     Coup coup = creerCoup(creerPosition(4,4), CouleurNoir());
-    jouerCoup(plateau, coup);
+    JouerCoup(plateau, coup);
     coup = creerCoup(creerPosition(4,5), CouleurBlanc());
-    jouerCoup(plateau, coup);
+    JouerCoup(plateau, coup);
     coup = creerCoup(creerPosition(5,4), CouleurBlanc());
-    jouerCoup(plateau, coup);
+    JouerCoup(plateau, coup);
     coup = creerCoup(creerPosition(5,5), CouleurNoir());
-    jouerCoup(plateau, coup);
+    JouerCoup(plateau, coup);
     afficherPlateau(plateau);
 }

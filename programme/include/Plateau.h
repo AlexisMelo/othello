@@ -28,7 +28,7 @@ Couleur * creerPlateau() ;
  *@param plateau : Plateau
  *@param coup : Coup à jouer
 */
-Couleur * jouerCoup(Couleur plateau[], Coup coup) ;
+Couleur * JouerCoup(Couleur plateau[], Coup coup) ;
 
 
 

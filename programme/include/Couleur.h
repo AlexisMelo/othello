@@ -37,7 +37,7 @@ Couleur CouleurNeutre() ;
  *
  * @returns Couleur opposée à celle passsée en entrée
 */
-Couleur obtenirCouleuropposee(Couleur couleur) ;
+Couleur ObtenirCouleuropposee(Couleur couleur) ;
 
 
 

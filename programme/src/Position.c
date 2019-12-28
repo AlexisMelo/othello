@@ -42,5 +42,5 @@ Position appliquerDirection(Position position, Direction direction){
 
 
 bool estEgalPosition(Position position1, Position position2) {
-    return estEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
+    return EstEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
 }
