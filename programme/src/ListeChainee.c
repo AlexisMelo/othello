@@ -29,13 +29,13 @@ void LC_ajouter(ListeChainee* pliste, void* element,EC_FonctionCopierDansCollect
     }
 }
 
-void * LC_obtenirElement(ListeChainee liste) {
+Coup * LC_obtenirElement(ListeChainee liste) {
     return (void *)liste->element;
 }
 
 ListeChainee LC_obtenirListeSuivante(ListeChainee liste){
     assert(!LC_estVide(liste));
-    return liste -> listeSuivante;
+    return liste->listeSuivante;
 }
 
 void LC_fixerListeSuivante(ListeChainee * liste1, ListeChainee liste2){

@@ -3,11 +3,13 @@
 #include "CoupCollection.h"
 #include "ListeChainee.h"
 #include<assert.h>
+#include<stdlib.h>
+#include<stdio.h>
 Coups CreerCoups() {
-    Coups resultat;
-    resultat.coups = listeChainee();
-    resultat.nbDeCoups = 0;
-    return resultat;
+    Coups * presultat = (Coups*)malloc(64*sizeof(Coup));
+    presultat->coups = listeChainee();
+    presultat->nbDeCoups = 0;
+    return *presultat;
 }
 
 void AjouterCoup(Coups * coups, Coup coup) {
@@ -49,10 +51,12 @@ bool EstPresent(Coups coups, Coup coup) {
     while (!LC_estVide(coups.coups) && !estUnCoupPresent){
             if (estEgalCoup(coup, COUPS_ObtenirCoup(coups))){
                 estUnCoupPresent = true;
-            } else {
-                coups.coups = LC_obtenirListeSuivante(coups.coups);
             }
-        }
+            if(LC_estVide(LC_obtenirListeSuivante(coups.coups))){
+                break;
+            }
+            coups.coups = LC_obtenirListeSuivante(coups.coups);
+    }
     return estUnCoupPresent;
 }
 

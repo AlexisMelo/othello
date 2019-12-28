@@ -18,7 +18,7 @@ typedef struct _Noeud
 ListeChainee listeChainee () ;
 bool LC_estVide(ListeChainee);
 void LC_ajouter(ListeChainee*,void*,EC_FonctionCopierDansCollection);
-void * LC_obtenirElement(ListeChainee);
+Coup * LC_obtenirElement(ListeChainee);
 ListeChainee  LC_obtenirListeSuivante (ListeChainee) ;
 void LC_fixerListeSuivante(ListeChainee *, ListeChainee) ;
 void LC_fixerElement(ListeChainee*,void*, EC_FonctionCopierDansCollection,EC_FonctionLibererDeCollection) ;
