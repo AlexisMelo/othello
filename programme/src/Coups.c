@@ -45,12 +45,15 @@ int ObtenirnombreDeCoups(Coups coups) {
 }
 
 bool EstPresent(Coups coups, Coup coup) {
-    while (!LC_estVide(coups.coups)){
+    bool estUnCoupPresent = false;
+    while (!LC_estVide(coups.coups) && !estUnCoupPresent){
             if (estEgalCoup(coup, COUPS_ObtenirCoup(coups))){
-                return true;
-            };
+                estUnCoupPresent = true;
+            } else {
+                coups.coups = LC_obtenirListeSuivante(coups.coups);
+            }
         }
-    return false;
+    return estUnCoupPresent;
 }
 
 void RetirerCoup(Coups * coups, Coup coup) {
