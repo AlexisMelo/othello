@@ -12,6 +12,7 @@ LIBDIR=programme/lib
 
 
 all : $(BINDIR)/$(EXEC)
+	$(TESTDIR)/$(TEST)
 	pwd
 	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory . ./rapport/sourcesTEX/Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex
 	find . -type f -name '*.log' -exec rm {} +
@@ -31,6 +32,7 @@ $(SRCDIR)/%.o : $(SRCDIR)/%.c
 
 
 tests :	$(TESTDIR)/$(TEST)
+
 $(TESTDIR)/test : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o
 	$(CC) -o $(TESTDIR)/test $^ -lcunit $(CFLAGS) -I$(TESTDIR)
 
