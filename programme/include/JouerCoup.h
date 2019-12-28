@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include"Plateau.h"
 #include"Coup.h"
+#include"Couleur.h"
 
 
 /**

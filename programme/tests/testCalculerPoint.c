@@ -57,14 +57,8 @@ for (int i = 1; i < TAILLE + 1; i++)
     jouerCoup(plateauDeJeu, coup);
 
 
-    coup = creerCoup(creerPosition(1,2), NOIR);
-    jouerCoup(plateauDeJeu, coup);
-    coup = creerCoup(creerPosition(1,3), BLANC);
-    jouerCoup(plateauDeJeu, coup);
-    coup = creerCoup(creerPosition(1,4), NEUTRE);
-    jouerCoup(plateauDeJeu, coup);
+    
 
-
-    CU_ASSERT(CalculerPoint(plateauDeJeu, NOIR) == 4);
-    CU_ASSERT(CalculerPoint(plateauDeJeu, BLANC) == 5);
+    CU_ASSERT(CalculerPoint(plateauDeJeu, NOIR) == 3);
+    CU_ASSERT(CalculerPoint(plateauDeJeu, BLANC) == 4);
 }

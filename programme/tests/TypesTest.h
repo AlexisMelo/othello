@@ -7,6 +7,7 @@
 #include"../include/Couleur.h"
 #include "testPlateau.h"
 #include "testCalculerPoint.h"
+#include "testJouerCoup.h"
 
 
 int main() ;
