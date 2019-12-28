@@ -4,6 +4,6 @@
 
 void TestLigne(){
     for (int i = 1; i<=TAILLE; i++) {
-        CU_ASSERT(obtenirNumeroLigne(creerLigne(i)) == i);
+        CU_ASSERT(ObtenirNumeroLigne(CreerLigne(i)) == i);
     }
 }

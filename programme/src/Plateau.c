@@ -9,35 +9,35 @@
 #include<stdio.h>
 
 
-Couleur * creerPlateau() {
+Couleur * CreerPlateau() {
     return(Couleur*)malloc(TAILLE*TAILLE*sizeof(Couleur*));
 }
         
 
 Couleur * JouerCoup(Couleur * plateau, Coup coup) {
-    Position positionDuCoup = obtenirPosition(coup);
-    int ligneDuCoup = obtenirNumeroLigne(obtenirLigne(positionDuCoup));
-    int colonneDuCoup = ObtenirNumeroColonne(obtenirColonne(positionDuCoup));
-    Couleur coul = obtenirCouleur(coup);
+    Position positionDuCoup = ObtenirPosition(coup);
+    int ligneDuCoup = ObtenirNumeroLigne(ObtenirLigne(positionDuCoup));
+    int colonneDuCoup = ObtenirNumeroColonne(ObtenirColonne(positionDuCoup));
+    Couleur coul = ObtenirCouleur(coup);
     plateau[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
     return plateau;
     }
 
 
-Couleur obtenirCouleurDepuisPlateau(Couleur * plateau, Position position) {
-    int ligneDeLaPosition = ObtenirNumeroColonne(obtenirLigne(position));
-    int colonneDeLaPosition = ObtenirNumeroColonne(obtenirColonne(position));
+Couleur ObtenirCouleurDepuisPlateau(Couleur * plateau, Position position) {
+    int ligneDeLaPosition = ObtenirNumeroColonne(ObtenirLigne(position));
+    int colonneDeLaPosition = ObtenirNumeroColonne(ObtenirColonne(position));
     return plateau[(ligneDeLaPosition-1)*TAILLE + (colonneDeLaPosition-1)];//plateau[colonneDeLaPosition][ligneDeLaPosition];
 }  
 
 
-bool estPositionVide(Couleur * plateau, Position position) {
-    Couleur couleurDeLaCase = obtenirCouleurDepuisPlateau(plateau, position);
+bool EstPositionVide(Couleur * plateau, Position position) {
+    Couleur couleurDeLaCase = ObtenirCouleurDepuisPlateau(plateau, position);
     return couleurDeLaCase.nom == Vide;
 }
 
 
 
-int obtenirTaille(Couleur * plateau) {
+int ObtenirTaille(Couleur * plateau) {
     return TAILLE;
 }

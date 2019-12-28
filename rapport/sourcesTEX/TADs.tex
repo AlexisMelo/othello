@@ -1,97 +1,150 @@
 \begin{tad}
 	\tadNom{Couleur}
+	\tadDependances{\booleen}
 	\tadDependances{Chaine de caractères}
 		\begin{tadOperations}{Couleur}
-		\tadOperation{Couleur}{\tadUnParam{Chaine de caractères}}{\tadUnParam{Couleur}}
-		\tadOperation{CouleurOpposée}{\tadUnParam{Couleur}}{\tadUnParam{Couleur}}
-			
+		\tadOperation{creerBlanc}{}{\tadUnParam{Couleur}}
+		\tadOperation{creerNoir}{}{\tadUnParam{Couleur}}
+		\tadOperation{creerNeutre}{}{\tadUnParam{Couleur}}
+		\tadOperationAvecPreconditions{ObtenirCouleurOpposée}{\tadUnParam{Couleur}}{\tadUnParam{Couleur}}
+		\tadOperation{EstNeutre}{\tadUnParam{Couleur}}{\tadUnParam{\booleen}}
+		\tadOperationAvecPreconditions{FixerCouleurOpposée}{\tadUnParam{Couleur x Couleur}}{\tadUnParam{Couleur}}
+
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{CouleurOpposée( CouleurOpposée( Couleur ))) = Couleur}
+		\tadAxiome{ObtenirCouleurOpposée(ObtenirCouleurOpposée(Couleur)) = Couleur}
 	\end{tadAxiomes}
+	\begin{tadPreconditions}{Couleur}
+		\tadPrecondition{ObtenirCouleurOpposée}{non EstNeutre(Couleur)}
+		\tadPrecondition{FixerCouleurOpposée}{Couleur $neq$ Couleur}
+	\end{tadPreconditions}
 \end{tad}
-	
+
 \begin{tad}
-	\tadNom{Pion}	
+	\tadNom{Pion [DEPRECATED]}
 	\tadDependances{Couleur}
 	\begin{tadOperations}{Pion}
 		\tadOperation{Pion}{\tadUnParam{Couleur}}{\tadUnParam{Pion}}
 		\tadOperation{ObtenirCouleur}{\tadUnParam{Pion}}{\tadUnParam{Couleur}}
-			\tadOperation{InverserCouleur}{\tadUnParam{Pion}}{\tadUnParam{Pion}}
+		\tadOperation{InverserCouleur}{\tadUnParam{Pion}}{\tadUnParam{Pion}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
 		\tadAxiome{InverserCouleur(InverserCouleur(Pion(Couleur))) = Pion}
 	\end{tadAxiomes}
 \end{tad}
-	
+
+\begin{tad}
+	\tadNom{Direction}
+	\begin{tadOperations}{Direction}
+		\tadOperation{CreerH}{}{Direction}
+		\tadOperation{CreerHD}{}{Direction}
+		\tadOperation{CreerD}{}{Direction}
+		\tadOperation{CreerBD}{}{Direction}
+		\tadOperation{CreerB}{}{Direction}
+		\tadOperation{CreerBG}{}{Direction}
+		\tadOperation{CreerG}{}{Direction}
+		\tadOperation{CreerHG}{}{Direction}
+		\tadOperation{ObtenirDecalageColonne}{Direction}{{-1,0,1}}
+		\tadOperation{ObtenirDecalageLigne}{Direction}{{-1,0,1}}
+	\end{tadOperations}
+\end{tad}
+
+\newpage
+\begin{tad}
+	\tadNom{Etat}
+	\begin{tadOperations}{Etat}
+		\tadOperation{CreerTermine}{}{Etat}
+		\tadOperation{CreerEnCours}{}{Etat}
+		\tadOperation{CreerBloque}{}{Etat}
+		\tadOperation{EtatDeLaPartie}{Plateau x Couleur}{Etat}
+	\end{tadOperations}
+\end{tad}
+
 \begin{tad}
 	\tadNom{Position}
-	\tadDependances{Colonne,Ligne}
+	\tadDependances{Colonne,Ligne,Direction,\booleen}
 	\begin{tadOperations}{Position}
 		\tadOperation{Position}{\tadUnParam{Colonne x Ligne}}{\tadUnParam{Position}}
+		\tadOperationAvecPreconditions{AppliquerDirection}{\tadUnParam{Position x Direction}}{\tadUnParam{Position}}
 		\tadOperation{FixerColonne}{\tadUnParam{Colonne}}{\tadUnParam{Position}}
 		\tadOperation{FixerLigne}{\tadUnParam{Ligne}}{\tadUnParam{Position}}
 		\tadOperation{ObtenirColonne}{\tadUnParam{Position}}{\tadUnParam{Colonne}}
 		\tadOperation{ObtenirLigne}{\tadUnParam{Position}}{\tadUnParam{Ligne}}
+		\tadOperation{estPositionValide}{\tadUnParam{Plateau x Position}}{\booleen}
 	\end{tadOperations}
+	\begin{tadPreconditions}{Position}
+		\tadPrecondition{AppliquerDirection}{estPositionValide(AppliquerDirection(Position,Direction))}
+	\end{tadPreconditions}
 \end{tad}
-	
+
 \begin{tad}
 	\tadNom{Coup}
-	\tadDependances{Position,Pion,Plateau}
+	\tadDependances{Position,Couleur,Plateau,\booleen}
 	\begin{tadOperations}{Coup}
-		\tadOperation{Coup}{\tadUnParam{Position x Pion}}{\tadUnParam{Coup}}
+		\tadOperationAvecPreconditions{Coup}{\tadUnParam{Position x Couleur}}{\tadUnParam{Coup}}
 		\tadOperation{ObtenirPosition}{\tadUnParam{Coup}}{\tadUnParam{Position}}
-		\tadOperation{ObtenirPion}{\tadUnParam{Coup}}{\tadUnParam{Pion}}
-		\tadOperation{EstValideCoup}{\tadUnParam{Plateau}}{\tadUnParam{Booleen}}
+		\tadOperation{ObtenirCouleur}{\tadUnParam{Coup}}{\tadUnParam{Couleur}}
+		\tadOperation{EstValideCoup}{\tadUnParam{Plateau}}{\tadUnParam{\booleen}}
 	\end{tadOperations}
+	\begin{tadPreconditions}{Coup}
+		\tadPrecondition{Coup}{non EstNeutre(Couleur)}
+	\end{tadPreconditions}
 \end{tad}
-	
-\begin{tad}
-	\tadNom{Plateau}
-	\tadDependances{Position,Coup,Plateau,Pion}
-	\begin{tadOperations}{Plateau}
-		\tadOperation{Plateau}{\tadUnParam{Naturel x Naturel}}{\tadUnParam{Plateau}}
-		\tadOperation{JouerCoup}{\tadUnParam{Plateau x Coup}}{\tadUnParam{Plateau}}
-		\tadOperation{ObtenirPion}{\tadUnParam{Plateau x Position}}{\tadUnParam{Pion}}
-		\tadOperation{CaseVide}{\tadUnParam{Plateau x Position}}{\tadUnParam{Booleen}}
-		\tadOperation{Remplacer}{\tadUnParam{Plateau x Position}}{\tadUnParam{Plateau}}
-	\end{tadOperations}
-	\begin{tadAxiomes}
-		\tadAxiome{ObtenirPion(JouerCoup(Plateau,Coup(Position,Pion)), Position) = Pion}
-		\tadAxiome{Remplacer(Remplacer(Plateau,Position),Position) = Plateau}
-	\end{tadAxiomes}
-\end{tad}
-	
+
 \begin{tad}
 	\tadNom{Coups}
+	\tadDependances{Coup,\booleen,\naturel}
 	\begin{tadOperations}{Coups}
-		\tadOperation{Coups}{}{\tadUnParam{Ensemble<Coup>}}
+		\tadOperation{Coups}{}{\tadUnParam{Ensemble$<$Coup$>$}}
 		\tadOperation{AjouterCoup}{\tadUnParam{Coups x Coup}}{\tadUnParam{Coups}}
-		\tadOperation{RetirerCoup}{\tadUnParam{Coups x Coup}}{\tadUnParam{Coups}}
-		\tadOperation{NombreCoups}{\tadUnParam{Coups}}{\tadUnParam{Naturel}}
+		\tadOperationAvecPreconditions{RetirerCoup}{\tadUnParam{Coups x Coup}}{\tadUnParam{Coups}}
+		\tadOperation{NombreCoups}{\tadUnParam{Coups}}{\tadUnParam{\naturel}}
+		\tadOperation{EstPresent}{\tadUnParam{Coups x Coup}}{\tadUnParam{\booleen}}
 	\end{tadOperations}
-		
+	\begin{tadPreconditions}{Coups}
+		\tadPrecondition{RetirerCoup}{EstPresent(Coups,Coup)}
+	\end{tadPreconditions}
 \end{tad}
-	
+
+\newpage
+\begin{tad}
+	\tadNom{Plateau}
+	\tadDependances{Position,Coup,Couleur,\booleen,\naturel}
+	\begin{tadOperations}{Plateau}
+		\tadOperation{Plateau}{\tadUnParam{\naturel}}{\tadUnParam{Plateau}}
+		\tadOperationAvecPreconditions{JouerCoup}{\tadUnParam{Plateau x Coup}}{\tadUnParam{Plateau}}
+		\tadOperation{ObtenirCouleur}{\tadUnParam{Plateau x Position}}{\tadUnParam{Couleur}}
+		\tadOperation{EstPositionVide}{\tadUnParam{Plateau x Position}}{\tadUnParam{\booleen}}
+		\tadOperation{ObtenirTaille}{\tadUnParam{Plateau}}{\tadUnParam{\naturel}}
+	\end{tadOperations}
+	\begin{tadAxiomes}
+		\tadAxiome{ObtenirCouleur(JouerCoup(Plateau,Coup(Position,Couleur)), Position) = Couleur}
+	\end{tadAxiomes}
+	\begin{tadPreconditions}{Plateau}
+		\tadPrecondition{JouerCoup}{EstPositionValide(Plateau,ObtenirPosition(Coup))}
+	\end{tadPreconditions}
+\end{tad}
+
+
+
 \begin{tad}
 	\tadNom{Ligne}
 	\begin{tadOperations}{Ligne}
-		\tadOperation{Ligne}{NaturelNonNul}{\tadUnParam{Ligne}}
-		\tadOperation{ObtenirNumeroLigne}{\tadUnParam{Ligne}}{\tadUnParam{NaturelNonNul}}
+		\tadOperation{Ligne}{1..Taille}{\tadUnParam{Ligne}}
+		\tadOperation{ObtenirNumeroLigne}{\tadUnParam{Ligne}}{\tadUnParam{1..Taille}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{ObtenirNumeroLigne(Ligne(NaturelNonNul)) = NaturelNonNul}
+		\tadAxiome{ObtenirNumeroLigne(Ligne(1..Taille)) = 1..Taille}
 	\end{tadAxiomes}
 \end{tad}
-	
+
 \begin{tad}
 	\tadNom{Colonne}
 	\begin{tadOperations}{Colonne}
-		\tadOperation{Colonne}{NaturelNonNul}{\tadUnParam{Colonne}}
-		\tadOperation{ObtenirNumeroColonne}{\tadUnParam{Colonne}}{\tadUnParam{NaturelNonNul}}
+		\tadOperation{Colonne}{1..Taille}{\tadUnParam{Colonne}}
+		\tadOperation{ObtenirNumeroColonne}{\tadUnParam{Colonne}}{\tadUnParam{1..Taille}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{ObtenirNumeroColonne(Colonne(NaturelNonNul)) = NaturelNonNul}
+		\tadAxiome{ObtenirNumeroColonne(Colonne(1..Taille)) = 1..Taille}
 		\end{tadAxiomes}
 \end{tad}

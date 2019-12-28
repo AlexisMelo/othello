@@ -8,29 +8,29 @@
 Couleur *plateau;
 
 void testAffichagePlateauAleatoire(){
-    plateau = creerPlateau();
+    plateau = CreerPlateau();
     Couleur couleur = CouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            couleur = obtenirCouleuropposee(couleur);
-            Coup coup = creerCoup(creerPosition(i, j), couleur);
-            jouerCoup(plateau, coup);
-            afficherPlateau(plateau);
+            couleur = ObtenirCouleuropposee(couleur);
+            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
+            JouerCoup(plateau, coup);
+            AfficherPlateau(plateau);
         }
     }
     //afficherPlateau(plateau);
 }
 
 void testAffichagePlateauVide(){
-    plateau = creerPlateau();
+    plateau = CreerPlateau();
     Couleur couleur = CouleurNeutre();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            Coup coup = creerCoup(creerPosition(i, j), couleur);
-            jouerCoup(plateau, coup);
+            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
+            JouerCoup(plateau, coup);
         }
     }
-    afficherPlateau(plateau);
+    AfficherPlateau(plateau);
 }
 
 int main(){

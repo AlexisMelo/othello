@@ -47,7 +47,7 @@ Couleur ObtenirCouleuropposee(Couleur couleur) ;
  * @param couleur : Couleur Blanc ou Noir
  *
  * @returns estNeutre : booléen
-*/bool estNeutre(Couleur couleur) ;
+*/bool EstNeutre(Couleur couleur) ;
 
 
 
@@ -60,5 +60,5 @@ Couleur ObtenirCouleuropposee(Couleur couleur) ;
  *
  * @returns Couleur opposée à celle passsée en entrée
 */
-bool estEgalCouleur(Couleur couleur1, Couleur couleur2) ;
+bool EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
 #endif

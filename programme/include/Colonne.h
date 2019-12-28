@@ -28,7 +28,7 @@ int ObtenirNumeroColonne(Colonne colonne);
  * 
  * @returns Colonne
 */
-Colonne creerColonne(int nb);
+Colonne CreerColonne(int nb);
 
 
 /**

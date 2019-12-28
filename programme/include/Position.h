@@ -23,7 +23,7 @@ typedef struct
  * 
  * @returns position : Position
 */
-Position creerPosition(Ligne ligne, Colonne colonne) ;
+Position CreerPosition(Ligne ligne, Colonne colonne) ;
 
 
 /**
@@ -33,7 +33,7 @@ Position creerPosition(Ligne ligne, Colonne colonne) ;
  * 
  * @returns ligne : Ligne
 */
-Ligne obtenirLigne(Position position) ;
+Ligne ObtenirLigne(Position position) ;
 
 
 /**
@@ -43,7 +43,7 @@ Ligne obtenirLigne(Position position) ;
  * 
  * @returns colonne : Colonne
 */
-Colonne obtenirColonne(Position position) ;
+Colonne ObtenirColonne(Position position) ;
 
 
 /**
@@ -53,7 +53,7 @@ Colonne obtenirColonne(Position position) ;
  * 
  * @returns estPositionValide : Booléen
 */
-bool estPositionValide(Position position) ;
+bool EstPositionValide(Position position) ;
 
 
 /**
@@ -86,7 +86,7 @@ void FixerColonne(Position * position, Colonne colonne) ;
  * @param Direction : Direction à appliquer
  * 
 */
-Position appliquerDirection(Position position, Direction direction) ;
+Position AppliquerDirection(Position position, Direction direction) ;
 
 
 /**
@@ -98,5 +98,5 @@ Position appliquerDirection(Position position, Direction direction) ;
 */
 
 
-bool estEgalPosition(Position position1, Position position2);
+bool EstEgalPosition(Position position1, Position position2);
 #endif
