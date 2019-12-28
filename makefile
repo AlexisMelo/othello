@@ -23,7 +23,7 @@ all : $(BINDIR)/$(EXEC)
 
 exec : $(BINDIR)/$(EXEC)
 
-$(BINDIR)/$(EXEC) : $(SRCDIR)/Othello.o $(SRCDIR)/menu.o $(SRCDIR)/menuGraphique.o $(SRCDIR)/menuLigneCommande.o
+$(BINDIR)/$(EXEC) : $(SRCDIR)/Othello.o $(SRCDIR)/menu.o $(SRCDIR)/menuGraphique.o $(SRCDIR)/menuLigneCommande.o $(SRCDIR)/Aide.o
 	$(CC)  -o $@ $^ $(LDFLAG)
 
 $(SRCDIR)/%.o : $(SRCDIR)/%.c

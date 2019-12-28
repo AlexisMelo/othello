@@ -9,6 +9,6 @@ void menuLigneCommande(int nbArguments, char ** arguments) {
     printf("Jouer partie IA vs IA avec profondeur %d\n", obtenirProfondeurIA(nbArguments,arguments));
   }
   else {
-    printf("affichage de l'aide");
+    MessageDAide();
   }
 }
