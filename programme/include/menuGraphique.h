@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "menu.h"
+#include "menuLigneCommande.h"
 
 /**
  * \fn void menuGraphique ()
