@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 void JouerCoup(Couleur * plateauDeJeu,Coup coupJoue){
- PoserPion(Couleur *plateauDeJeu,Coup coupJoue)
- CapturerPions(Couleur *plateauDeJeu, Coup coupJoue)
+ PoserPion(plateauDeJeu, coupJoue);
+ CapturerPions(plateauDeJeu, coupJoue);
 }
   

@@ -37,7 +37,7 @@ void TestJouerCoup(void){
 
     Couleur resultatAttendu = NOIR;
     Couleur resultatObtenu = obtenirCouleurDepuisPlateau(plateauDeJeu, creerPosition(1,2));
-    CU_ASSERT_EQUAL(resultatAttendu, resultatObtenu);
+    CU_ASSERT(estEgalCouleur(resultatAttendu, resultatObtenu));
 
 
 }
