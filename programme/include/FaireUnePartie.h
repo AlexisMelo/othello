@@ -2,7 +2,8 @@
 #define __FAIREUNEPARTIE__
 #include "GererPartie.h"
 #include "InitialiserPlateau.h"
-
+#include"Couleur.h"
+#include"Plateau.h"
 /**
  *@brief Permet de faire une partie
  *
