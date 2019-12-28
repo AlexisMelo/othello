@@ -3,6 +3,7 @@
 
 #include <string.h>
 #include <stdio.h>
+#include "menu.h"
 
 void menuLigneCommande(int nbArguments, char ** arguments);
 
