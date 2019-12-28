@@ -1,3 +1,4 @@
+#include"../include/GererPartie.h"
 void GererPartie(Couleur couleur,Couleur *plateau,void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *),Coup (*ObtenirCoupJ1)(Couleur,Couleur *),void (*ObtenirCoupJ2)(Couleur,Couleur *)){
   char* j1 = "En Cours";
   char* j2 = "En Cours";

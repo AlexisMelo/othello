@@ -2,7 +2,7 @@
 #include"../include/Position.h"
 #include"../include/Direction.h"
 
-Position creerPosition(Ligne ligne, Colonne colonne) {
+Position CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;
     position.ligne = ligne;
     position.colonne = colonne;
@@ -10,15 +10,15 @@ Position creerPosition(Ligne ligne, Colonne colonne) {
 }
 
 
-Ligne obtenirLigne(Position position) {
+Ligne ObtenirLigne(Position position) {
     return position.ligne;
 }
 
-Colonne obtenirColonne(Position position) {
+Colonne ObtenirColonne(Position position) {
     return position.colonne;
 }
 
-bool estPositionValide(Position position) {
+bool EstPositionValide(Position position) {
     Colonne colonne = obtenirColonne(position);
     Ligne ligne = obtenirLigne(position);
     return (colonne < 9) && (ligne < 9);
@@ -33,7 +33,7 @@ void FixerColonne(Position * position, Colonne colonne) {
 }
 
 
-Position appliquerDirection(Position position, Direction direction){
+Position AppliquerDirection(Position position, Direction direction){
     assert(estPositionValide(appliquerDirection(position, direction)));
         FixerLigne(&position, obtenirLigne(position) + obtenirDecalageLigne(direction));
         FixerColonne(&position, obtenirColonne(position) + obtenirDecalageColonne(direction));
@@ -41,6 +41,6 @@ Position appliquerDirection(Position position, Direction direction){
 }
 
 
-bool estEgalPosition(Position position1, Position position2) {
+bool EstEgalPosition(Position position1, Position position2) {
     return estEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
 }

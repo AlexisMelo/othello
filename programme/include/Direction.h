@@ -14,7 +14,7 @@ typedef enum{H, HD, D, BD, B, BG, G, HG}Direction;
  * @returns décalage : int
  * 
 */
-int obtenirDecalageLigne(Direction direction) ;
+int ObtenirDecalageLigne(Direction direction) ;
 
 
 
@@ -26,5 +26,5 @@ int obtenirDecalageLigne(Direction direction) ;
  * @returns décalage : int
  * 
 */
-int obtenirDecalageColonne(Direction direction) ;
+int ObtenirDecalageColonne(Direction direction) ;
 #endif

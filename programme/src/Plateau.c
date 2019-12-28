@@ -15,30 +15,30 @@ Couleur * creerPlateau() {
 }
         
 
-Couleur * jouerCoup(Couleur * plateau, Coup coup) {
-    Position positionDuCoup = obtenirPosition(coup);
+Couleur * JouerCoup(Couleur * plateau, Coup coup) {
+    Position positionDuCoup = ObtenirPosition(coup);
     int ligneDuCoup = obtenirNumeroLigne(obtenirLigne(positionDuCoup));
     int colonneDuCoup = ObtenirNumeroColonne(obtenirColonne(positionDuCoup));
-    Couleur coul = obtenirCouleur(coup);
+    Couleur coul = ObtenirCouleur(coup);
     plateau[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
     return plateau;
     }
 
 
-Couleur obtenirCouleurDepuisPlateau(Couleur * plateau, Position position) {
+Couleur ObtenirCouleurDepuisPlateau(Couleur * plateau, Position position) {
     int ligneDeLaPosition = ObtenirNumeroColonne(obtenirLigne(position));
     int colonneDeLaPosition = ObtenirNumeroColonne(obtenirColonne(position));
     return plateau[(ligneDeLaPosition-1)*TAILLE + (colonneDeLaPosition-1)];//plateau[colonneDeLaPosition][ligneDeLaPosition];
 }  
 
 
-bool estPositionVide(Couleur * plateau, Position position) {
+bool EstPositionVide(Couleur * plateau, Position position) {
     Couleur couleurDeLaCase = obtenirCouleurDepuisPlateau(plateau, position);
     return couleurDeLaCase.nom == Vide;
 }
 
 
 
-int obtenirTaille(Couleur * plateau) {
+int ObtenirTaille(Couleur * plateau) {
     return TAILLE;
 }

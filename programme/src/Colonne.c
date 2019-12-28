@@ -4,7 +4,7 @@
 #include<stdio.h>
 
 
-Colonne creerColonne(int numero){
+Colonne CreerColonne(int numero){
     Colonne * col;
     col = (Colonne*)malloc(sizeof(Colonne));
     *col = a;
@@ -42,10 +42,10 @@ int ObtenirNumeroColonne(Colonne colonne) {
     return colonne + 1;
 }
 
-bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
+bool EstEgalColonne(Colonne colonne1, Colonne colonne2) {
     return colonne1 == colonne2;}
 
-Colonne obtenirColonneDeChar(char caractere){
+Colonne ObtenirColonneDeChar(char caractere){
     Colonne * col;
     col = (Colonne*)malloc(sizeof(Colonne));
     col = a;

@@ -1,6 +1,6 @@
-#include<stdbool.h>
 #ifndef LIGNE_TYPE
 #define LIGNE_TYPE
+#include<stdbool.h>
 
 typedef enum{Un, Deux, Trois, Quatre, Cinq, Six, Sept, Huit}Ligne;
 
@@ -38,5 +38,5 @@ Ligne creerLigne(int);
  *
  * @returns booléen
 */
-bool estEgalLigne(Ligne ligne1, Ligne ligne2) ;
+bool EstEgalLigne(Ligne ligne1, Ligne ligne2) ;
 #endif

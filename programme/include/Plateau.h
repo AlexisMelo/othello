@@ -45,11 +45,11 @@ Couleur obtenirCouleurDepuisPlateau(Couleur * plateau, Position position) ;
  *@param position : Position que l'on veut vérifier
  *@returns : Booléen
 */
-bool estPositionVide(Couleur * plateau, Position position) ;
+bool EstPositionVide(Couleur * plateau, Position position) ;
 
 /** Fonction d'accès à la taille du plateau.
  * 
  *@param plateau : Plateau dont on veut la taille 
  *@returns : Taille dans un int
 */
-int obtenirTaille(Couleur * plateau) ;
+int ObtenirTaille(Couleur * plateau) ;

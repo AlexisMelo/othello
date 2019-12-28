@@ -11,7 +11,7 @@ Coups CreerCoups() {
 };
 
 void AjouterCoup(Coups * coups, Coup coup) {
-    LC_ajouter(&(coups->coups), &coup, fonctionCopierCoup);
+    LC_ajouter(&(coups->coups), &coup, FonctionCopierCoup);
     coups->nbDeCoups += 1;
 };
 

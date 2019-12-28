@@ -2,11 +2,11 @@
 #include<stdbool.h>
 #include<stdlib.h>
 
-int obtenirNumeroLigne(Ligne ligne) {
+int ObtenirNumeroLigne(Ligne ligne) {
     return ligne + 1;
 }
 
-bool estEgalLigne(Ligne ligne1, Ligne ligne2) {
+bool EstEgalLigne(Ligne ligne1, Ligne ligne2) {
     return ligne1 == ligne2;
 }
 
