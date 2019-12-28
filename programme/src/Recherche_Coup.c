@@ -4,12 +4,12 @@
 Coups rechercherTousLesCoups(Couleur * plateauDeJeu, Couleur joueurActuel) {
     Coups lesCoups = CreerCoups();
     int taille = obtenirTaille(plateauDeJeu);
-    for(int i=0 ; i < taille ; i++) {
-        for(int j=0 ; j < taille ; j++) {
+    for (int i = 1; i < taille + 1; i++) {
+        for (int j = 1; j < taille + 1; j++) {
             if (rechercherUnCoup(plateauDeJeu, joueurActuel, creerPosition(i,j))) {
-                AjouterCoup(&lesCoups, creerCoup(creerPosition(i,j), joueurActuel));
+                Coup unCoup = creerCoup(creerPosition(i,j), joueurActuel);
+                AjouterCoup(&lesCoups, unCoup);
             }
-
         }
     }
 return lesCoups;

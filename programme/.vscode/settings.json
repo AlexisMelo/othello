@@ -5,6 +5,7 @@
         "recherche_coup.h": "c",
         "parcourir_direction.h": "c",
         "testparcourirunedirection.h": "c",
-        "testcolonne.h": "c"
+        "testcolonne.h": "c",
+        "cunit.h": "c"
     }
 }
