@@ -4,15 +4,39 @@
 int HORIZONTAL_OFFSET = 2;
 int VERTICAL_OFFSET = 1;
 
+
+void SetTextColorToBlack(){
+    printf("\033[0;30m");
+}
+void SetTextColorToWhite(){
+    printf("\033[0;37m");
+}
+void ResetTextColor(){
+    printf("\033[0m");
+}
+
+
+void TextColorFromHexa(char hexa[]){
+    if (strcmp(hexa, "FF")==0){
+        SetTextColorToBlack();
+    };
+    if(strcmp(hexa, "00")==0){
+        SetTextColorToWhite();
+    }
+}
+
 void AppliquerDecalageHorizontal(){
     for (int hori = 0; hori<HORIZONTAL_OFFSET; hori++){
                 printf(" ");
             }
 }
+
+
 void AppliquerDecalageVertical(){
     for (int vert = 0; vert<VERTICAL_OFFSET; vert++){
                 printf("\n");
-            }
+        
+    }
 }
 void AfficherPlateau(Couleur * plateau){
     for (int i=1; i<=ObtenirTaille(plateau); i++){
@@ -25,8 +49,9 @@ void AfficherPlateau(Couleur * plateau){
         for (int j=1; j<=ObtenirTaille(plateau); j++){
             Couleur couleur = ObtenirCouleurDepuisPlateau(plateau, CreerPosition(i,j));
             AppliquerDecalageHorizontal();
+            TextColorFromHexa(couleur.hexa);
             printf("%c",couleur.symbole);
-            
+            ResetTextColor();
         }
         printf("|");
         if(i<8){
