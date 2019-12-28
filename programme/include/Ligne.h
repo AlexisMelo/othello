@@ -13,8 +13,9 @@ typedef enum{Un, Deux, Trois, Quatre, Cinq, Six, Sept, Huit}Ligne;
  *@param ligne : Ligne dont on veut le numéro
  *
  *@returns numéro : int
-*/
-int obtenirNumeroLigne(Ligne);
+ */
+
+int ObtenirNumeroLigne(Ligne);
 
 
 /**
@@ -26,7 +27,7 @@ int obtenirNumeroLigne(Ligne);
  * 
  * @returns Ligne
 */
-Ligne creerLigne(int);
+Ligne CreerLigne(int);
 
 
 /**

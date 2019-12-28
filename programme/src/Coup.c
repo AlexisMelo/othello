@@ -13,8 +13,8 @@ Coup * CreerCoupVide(){
 
 
 Coup CreerCoup(Position position, Couleur couleur){
-    assert(!estNeutre(couleur));
-    Coup * presultat = creerCoupVide();
+    assert(!EstNeutre(couleur));
+    Coup * presultat = CreerCoupVide();
     presultat->couleur = couleur;
     presultat->position = position;
     return *presultat;
@@ -23,7 +23,7 @@ Coup CreerCoup(Position position, Couleur couleur){
 
 
 bool EstEgalCoup(Coup coup1, Coup coup2) {
-    return estEgalCouleur(coup1.couleur, coup2.couleur) && estEgalPosition(coup1.position, coup2.position);
+    return EstEgalCouleur(coup1.couleur, coup2.couleur) && EstEgalPosition(coup1.position, coup2.position);
     }
 
 
@@ -38,5 +38,5 @@ Position ObtenirPosition(Coup coup){
 
 
 bool EstCoupValide(Coup coup){
-    return estPositionValide(coup.position) && !estNeutre(coup.couleur);
+    return  EstPositionValide(coup.position) && !EstNeutre(coup.couleur);
 }

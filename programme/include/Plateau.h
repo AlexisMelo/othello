@@ -17,7 +17,7 @@
  *@brief Constructeur du Plateau
  *@returns : Couleur *
 */
-Couleur * creerPlateau() ;
+Couleur * CreerPlateau() ;
 
 
 /**
@@ -27,7 +27,7 @@ Couleur * creerPlateau() ;
  *@param coup : Coup à jouer
  *@returns plateau mis à Jour : Couleur*
  */
-Couleur * jouerCoup(Couleur plateau[], Coup coup) ;
+Couleur * JouerCoup(Couleur plateau[], Coup coup) ;
 
 
 
@@ -37,7 +37,7 @@ Couleur * jouerCoup(Couleur plateau[], Coup coup) ;
  *@param position : Position à laquelle on regarde la couleur
  *@returns : Couleur
 */
-Couleur obtenirCouleurDepuisPlateau(Couleur * plateau, Position position) ;
+Couleur ObtenirCouleurDepuisPlateau(Couleur * plateau, Position position) ;
 
 /** 
  *@brief Vérifie si la position donnée du plateau est vide.

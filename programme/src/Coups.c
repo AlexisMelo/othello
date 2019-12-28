@@ -5,7 +5,7 @@
 #include<assert.h>
 Coups CreerCoups() {
     Coups resultat;
-    resultat.coups = listeChainee();
+    resultat.coups = CreerListeChainee();
     resultat.nbDeCoups = 0;
     return resultat;
 };
@@ -55,8 +55,8 @@ bool EstPresent(Coups coups, Coup coup) {
 
 void RetirerCoup(Coups * coups, Coup coup) {
     assert(EstPresent(*coups, coup));
-        while (!estVide()){
-            if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
+        while (!EstVide()){
+            if (EstEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
                 ListeChainee liste = coups->coups;
                 Noeud noeud = *liste;
                 ListeChainee ls = noeud.listeSuivante;

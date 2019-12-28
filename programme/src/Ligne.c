@@ -11,7 +11,7 @@ bool EstEgalLigne(Ligne ligne1, Ligne ligne2) {
 }
 
 
-Ligne creerLigne(int numero) {
+Ligne CreerLigne(int numero) {
     Ligne* lig;
     lig = (Ligne*)malloc(sizeof(Ligne));
     *lig = Un;
