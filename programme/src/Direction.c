@@ -1,6 +1,6 @@
 #include"Direction.h"
 
-int obtenirDecalageLigne(Direction direction) {
+int ObtenirDecalageLigne(Direction direction) {
       switch (direction)
     {
     case 0:
@@ -24,7 +24,7 @@ int obtenirDecalageLigne(Direction direction) {
     }
 }
 
-int obtenirDecalageColonne(Direction direction) {
+int ObtenirDecalageColonne(Direction direction) {
       switch (direction)
     {
     case 0:

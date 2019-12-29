@@ -6,15 +6,15 @@
 #include<assert.h>
 
 
-Coup * creerCoupVide(){
+Coup * CreerCoupVide(){
     Coup * presultat = (Coup *)malloc(sizeof(Coup));
     return presultat;
 }
 
 
-Coup creerCoup(Position position, Couleur couleur){
-    assert(!estNeutre(couleur));
-    Coup * presultat = creerCoupVide();
+Coup CreerCoup(Position position, Couleur couleur){
+    assert(!EstNeutre(couleur));
+    Coup * presultat = CreerCoupVide();
     presultat->couleur = couleur;
     presultat->position = position;
     return *presultat;
@@ -22,21 +22,21 @@ Coup creerCoup(Position position, Couleur couleur){
 
 
 
-bool estEgalCoup(Coup coup1, Coup coup2) {
-    return estEgalCouleur(coup1.couleur, coup2.couleur) && estEgalPosition(coup1.position, coup2.position);
+bool EstEgalCoup(Coup coup1, Coup coup2) {
+    return EstEgalCouleur(coup1.couleur, coup2.couleur) && EstEgalPosition(coup1.position, coup2.position);
     }
 
 
-Couleur obtenirCouleur(Coup coup){
+Couleur ObtenirCouleur(Coup coup){
     return coup.couleur;
 }
 
 
-Position obtenirPosition(Coup coup){
+Position ObtenirPosition(Coup coup){
     return coup.position;
 }
 
 
-bool estCoupValide(Coup coup){
-    return estPositionValide(coup.position) && !estNeutre(coup.couleur);
+bool EstCoupValide(Coup coup){
+    return  EstPositionValide(coup.position) && !EstNeutre(coup.couleur);
 }

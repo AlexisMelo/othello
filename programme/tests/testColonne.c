@@ -6,6 +6,6 @@
 
 void TestColonne(){
     for (int i = 1; i<=TAILLE; i++) {
-        CU_ASSERT(ObtenirNumeroColonne(creerColonne(i)) == i);
+        CU_ASSERT(ObtenirNumeroColonne(CreerColonne(i)) == i);
     }
 }

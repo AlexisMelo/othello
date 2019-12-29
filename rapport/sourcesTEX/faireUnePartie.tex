@@ -1,11 +1,13 @@
 \begin{algorithme}
 	\small
-	\procedure
+	\fonction
 	{FaireUnePartie}
-	{couleur = Couleur, ProfondeurIA = Naturel}
-	{plateau = Plateau}
+	{couleur : Couleur, AfficherPlateau : Procedure, ObtenirCoupJ1, ObtenirCoupJ2 : Fonction}
+	{Couleur}
+	{plateau : Plateau}
 	{
-	\affecter{plateau}{InitialiserPlateau()}
+	\affecter{plateau}{Plateau()}
+	\instruction{InitialiserPlateau(plateau)}
 	\tantque{non FinirLaPartie(couleur, plateau}{
 		\affecter{plateau}{JouerUnTour(plateau, niveau, couleur)}
 		\instruction afficherPlateau(plateau)

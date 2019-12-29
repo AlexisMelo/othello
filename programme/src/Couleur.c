@@ -40,8 +40,8 @@ Couleur CouleurNeutre() {
     return resultat;
 }
 
-Couleur obtenirCouleuropposee(Couleur couleur) {
-    assert(!estNeutre(couleur));
+Couleur ObtenirCouleuropposee(Couleur couleur) {
+    assert(!EstNeutre(couleur));
     if (couleur.nom == Blanc){
         couleur.nom=Noir;
         strcpy(couleur.hexa,"FF");
@@ -58,11 +58,11 @@ Couleur obtenirCouleuropposee(Couleur couleur) {
 }    
 
 
-bool estNeutre(Couleur couleur) {
+bool EstNeutre(Couleur couleur) {
     return ((couleur.nom == CouleurNeutre().nom) && (couleur.hexa == CouleurNeutre().hexa) && (couleur.symbole == CouleurNeutre().symbole));
 }
 
 
-bool estEgalCouleur(Couleur couleur1, Couleur couleur2) {
+bool EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
     return (((strcmp(couleur1.hexa, couleur2.hexa) == 0) && couleur1.nom == couleur2.nom && couleur1.symbole == couleur2.symbole));
 }
