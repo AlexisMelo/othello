@@ -3,36 +3,36 @@
 #include "testRechercheDesCoups.h"
 
 void testRechercheDesCoups() {
-    void * plateau = creerPlateau();
-    Couleur NOIR = CouleurNoir();
-    Couleur BLANC = CouleurBlanc();
-    Couleur NEUTRE = CouleurNeutre();
+    Couleur * plateau = creerPlateau();
+    Couleur Noir = CouleurNoir();
+    Couleur Blanc = CouleurBlanc();
+    Couleur Neutre = CouleurNeutre();
     Coups lesCoups = *CreerCoups();
     Coups lesCoupsTrouves = *CreerCoups();
     Ligne ligne = creerLigne(1);
     Colonne colonne = creerColonne(1);
-    Coup unCoup = creerCoup(creerPosition(ligne, colonne),NEUTRE);
+    Coup unCoup = creerCoup(creerPosition(ligne, colonne),Neutre);
 
     /* Initialisation du plateau */
     for (int i = 1; i < TAILLE + 1; i++)
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
-            unCoup = creerCoup(creerPosition(ligne + i - 1,colonne + j - 1), NEUTRE);
+            unCoup = creerCoup(creerPosition(ligne + i - 1,colonne + j - 1), Neutre);
             jouerCoup(plateau, unCoup);
         }
     }
     /* Creation d'un plateau de test */
-    unCoup = creerCoup(creerPosition(1,1), NOIR);
+    unCoup = creerCoup(creerPosition(1,1), Noir);
     jouerCoup(plateau, unCoup);
-    unCoup = creerCoup(creerPosition(1,2), BLANC);
+    unCoup = creerCoup(creerPosition(1,2), Blanc);
     jouerCoup(plateau, unCoup);
-    unCoup = creerCoup(creerPosition(2,2), BLANC);
+    unCoup = creerCoup(creerPosition(2,2), Blanc);
     jouerCoup(plateau, unCoup);
 
     /* Tests */
-    Coup coup1 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), NOIR);
-    Coup coup2 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), NOIR);
+    Coup coup1 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), Noir);
+    Coup coup2 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), Noir);
     Coups * plesCoups2 = CreerCoups();
     Coups * plesCoups3 = CreerCoups();
     AjouterCoup(plesCoups2, coup2);
@@ -48,8 +48,8 @@ void testRechercheDesCoups() {
     CU_ASSERT(estEgalCoup(coup1, coup2)); //passe// ca coince ici
     printf("bug that2");
     //ici la colonne et la ligne sont déjà modifiées / memory loss??
-    /* printf("%d|milieu:nom|", (plesCoups2->coups->element->couleur.nom));
-    printf("%s|milieu:hexa|", (plesCoups2->coups->element->couleur.hexa));
+    printf("%d|milieu:nom|", (COUPS_ObtenirCoup(*plesCoups2).position.colonne));
+    /*printf("%s|milieu:hexa|", (plesCoups2->coups->element->couleur.hexa));
     printf("%c|milieu:symb|", (plesCoups2->coups->element->couleur.symbole));
     printf("%d|milieu:colonne|", ObtenirNumeroColonne(plesCoups2->coups->element->position.colonne));
     printf("%d|milieu:ligne |", obtenirNumeroLigne(plesCoups2->coups->element->position.ligne)); */
@@ -63,7 +63,7 @@ void testRechercheDesCoups() {
     printf("%d|fin:colonne|", ObtenirNumeroColonne(plesCoups2->coups->element->position.colonne));
     printf("%d|fin:ligne|", obtenirNumeroLigne(plesCoups2->coups->element->position.ligne)); */
     CU_ASSERT(estEgalCoup(COUPS_ObtenirCoup(*plesCoups2), COUPS_ObtenirCoup(*plesCoups2))); //passe ???
-
+    printf("bug that4");
 
     // la suite des tests devrait etre resolu en resolvant le pb au dessus
 

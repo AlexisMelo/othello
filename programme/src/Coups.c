@@ -27,7 +27,7 @@ void AjouterCoup(Coups * coups, Coup coup) {
 */
 
 Coup COUPS_ObtenirCoup(Coups coups){
-    assert(coups.nbDeCoups != 0);
+    //assert(coups.nbDeCoups != 0);
     /* printf("\n");
     printf("%d|OO|", (coups.coups->element->couleur.nom));
     printf("%s|OO|", (coups.coups->element->couleur.hexa));
