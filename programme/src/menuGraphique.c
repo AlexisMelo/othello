@@ -8,10 +8,8 @@ void menuGraphique() {
   int choix;
 
   //choix de l'utilisateur pour type de partie ou affichage d'aide
-  do {
-    printf("Que voulez vous faire ?\n\n1 : Nouvelle partie mode standard\n2 : Nouvelle partie mode tournois\n3 : Affichage de l'aide\n");
-    scanf("%d",&choix);
-  } while((choix < 1) || (choix > 3));
+  printf("Que voulez vous faire ?\n\n1 : Nouvelle partie mode standard\n2 : Nouvelle partie mode tournois\n3 : Affichage de l'aide\n");
+  choix = saisieInteger(1,3);
 
   switch(choix) {
     case 1 :
@@ -29,10 +27,8 @@ void menuGraphique() {
   if (choix != 3) {
 
     //quelle couleur il prend
-    do {
-      printf("Quelle couleur voulez vous ?\n1 : Noir\n2 : Blanc\n");
-      scanf("%d",&choix);
-    } while((choix < 1) || (choix > 2));
+    printf("Quelle couleur voulez vous ?\n1 : Noir\n2 : Blanc\n");
+    choix = saisieInteger(1,2);
 
     switch (choix) {
       case 1 :
@@ -44,14 +40,13 @@ void menuGraphique() {
     }
 
     //difficulté de l'IA
-    do {
-      printf("Quelle difficulté pour l'Intelligence artificelle ? [Nombre entre 1 et 100 attendu]\n"); //remplacer 100 par le nombre où le temps de réfléxion dépasse les 10s exigées
-      scanf("%d",&choix);
-    } while((choix < 1) || (choix > 100));
+    printf("Quelle difficulté pour l'Intelligence artificelle ?\n[Nombre entre 1 et %d attendu, %d par défaut]\n",PRONDEUR_MAX_IA, PROFONDEUR_DEFAUT_IA);
+    choix = saisieInteger(1,PRONDEUR_MAX_IA);
 
-    printf("working");
-    arguments[3]=choix; // core dump ??
-    printf("not working");
+    char choixStr[sizeof(choix)];
+    sprintf(choixStr,"%d",choix);
+    arguments[3] = choixStr;
+
     //lancement du menu comme si c'était une ligne de commande
     menuLigneCommande(nbArguments,arguments);
   }

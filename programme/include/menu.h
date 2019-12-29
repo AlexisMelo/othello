@@ -2,9 +2,13 @@
 #define MENU
 
 #define PROFONDEUR_DEFAUT_IA 5
+#define PRONDEUR_MAX_IA 100 //nombre à partir duquel l'IA prend plus de 10 secondes à répondre
 
 #include <stdlib.h>
-#include <Aide.h>
+#include <string.h>
+#include <stdio.h>
+
+#include "Aide.h"
 
 /**
  * @fn int obtenirProfondeurIA (int nbArguments, char ** arguments)
@@ -16,5 +20,16 @@
  * @returns Retourne la profondeur de l'IA pendant le jeu
  */
 int obtenirProfondeurIA(int nbArguments, char ** arguments);
+
+/**
+ * @fn int saisieInteger (int min, int max)
+ * @brief Obtient un int entre deux bornes comprises à partir d'une saisie utilisateur
+ *
+ * @param min : borne minimale
+ * @param max : borne maximale
+ *
+ * @returns int saisi par l'utiliateur
+ */
+int saisieInteger(int min, int max);
 
 #endif
