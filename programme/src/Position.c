@@ -2,7 +2,7 @@
 #include"../include/Position.h"
 #include"../include/Direction.h"
 
-Position creerPosition(Ligne ligne, Colonne colonne) {
+Position CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;
     position.ligne = ligne;
     position.colonne = colonne;
@@ -10,37 +10,37 @@ Position creerPosition(Ligne ligne, Colonne colonne) {
 }
 
 
-Ligne obtenirLigne(Position position) {
+Ligne ObtenirLigne(Position position) {
     return position.ligne;
 }
 
-Colonne obtenirColonne(Position position) {
+Colonne ObtenirColonne(Position position) {
     return position.colonne;
 }
 
-bool estPositionValide(Position position) {
-    Colonne colonne = obtenirColonne(position);
-    Ligne ligne = obtenirLigne(position);
+bool EstPositionValide(Position position) {
+    Colonne colonne = ObtenirColonne(position);
+    Ligne ligne = ObtenirLigne(position);
     return (colonne < 9) && (ligne < 9);
 }
 
 void FixerLigne(Position * position, Ligne ligne) {
     position -> ligne = ligne;
-}
+}   
 
 void FixerColonne(Position * position, Colonne colonne) {
     position -> colonne = colonne;
 }
 
 
-Position appliquerDirection(Position position, Direction direction){
-    assert(estPositionValide(appliquerDirection(position, direction)));
-        FixerLigne(&position, obtenirLigne(position) + obtenirDecalageLigne(direction));
-        FixerColonne(&position, obtenirColonne(position) + obtenirDecalageColonne(direction));
+Position AppliquerDirection(Position position, Direction direction){
+        FixerLigne(&position, ObtenirLigne(position) + ObtenirDecalageLigne(direction));
+        FixerColonne(&position, ObtenirColonne(position) + ObtenirDecalageColonne(direction));
+        assert(EstPositionValide(position));
         return position;
 }
 
 
-bool estEgalPosition(Position position1, Position position2) {
-    return estEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
+bool EstEgalPosition(Position position1, Position position2) {
+    return EstEgalColonne(position1.colonne, position2.colonne) && EstEgalLigne(position1.ligne, position2.ligne);
 }
