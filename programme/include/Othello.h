@@ -2,8 +2,8 @@
 #define OTHELLO
 
 #include <stdio.h>
-#include "menuGraphique.h"
-#include "menuLigneCommande.h"
+#include "MenuGraphique.h"
+#include "MenuLigneCommande.h"
 
 /**
  * @fn int main (int nbArguments, char ** arguments)

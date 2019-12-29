@@ -1,7 +1,7 @@
 #ifndef MENU_LIGNE_COMMANDE
 #define MENU_LIGNE_COMMANDE
 
-#include "menu.h"
+#include "Menu.h"
 
 /**
  * @fn void menuLigneCommande (int nbArguments, char ** arguments)
@@ -10,6 +10,6 @@
  * @param nbArguments : nombre d'arguments en entrée du programme
  * @param arguments : les arguments en entrée du programme
  */
-void menuLigneCommande(int nbArguments, char ** arguments);
+void MenuLigneCommande(int nbArguments, char ** arguments);
 
 #endif

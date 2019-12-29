@@ -19,7 +19,7 @@
  *
  * @returns Retourne la profondeur de l'IA pendant le jeu
  */
-int obtenirProfondeurIA(int nbArguments, char ** arguments);
+int ObtenirProfondeurIA(int nbArguments, char ** arguments);
 
 /**
  * @fn int saisieInteger (int min, int max)
@@ -30,6 +30,6 @@ int obtenirProfondeurIA(int nbArguments, char ** arguments);
  *
  * @returns int saisi par l'utiliateur
  */
-int saisieInteger(int min, int max);
+int SaisieInteger(int min, int max);
 
 #endif

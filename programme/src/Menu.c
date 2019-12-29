@@ -1,13 +1,13 @@
-#include "menu.h"
+#include "Menu.h"
 
-int obtenirProfondeurIA(int nbArguments, char ** arguments) {
+int ObtenirProfondeurIA(int nbArguments, char ** arguments) {
   if (nbArguments == 4){
     return atoi(arguments[3]);
   }
   return PROFONDEUR_DEFAUT_IA;
 }
 
-int saisieInteger(int min, int max) {
+int SaisieInteger(int min, int max) {
   char *p, s[100];
   int n;
 

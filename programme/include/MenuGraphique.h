@@ -1,14 +1,14 @@
 #ifndef MENU_GRAPHIQUE
 #define MENU_GRAPHIQUE
 
-#include "menu.h"
-#include "menuLigneCommande.h"
+#include "Menu.h"
+#include "MenuLigneCommande.h"
 
 /**
  * \fn void menuGraphique ()
  * \brief Traitement de l'entrée du programme quand il est lancé sans arguments.
  *
  */
-void menuGraphique();
+void MenuGraphique();
 
 #endif
