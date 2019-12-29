@@ -1,6 +1,13 @@
 #ifndef MENU
 #define MENU
 
+#define COULEUR1 "noir"
+#define COULEUR2 "blanc"
+
+#define JOUEURVSJOUEUR "pvp"
+#define JOUEURVSIA "standard"
+#define IAVSIA "tournois"
+
 #define PROFONDEUR_DEFAUT_IA 5
 #define PRONDEUR_MAX_IA 100 //nombre à partir duquel l'IA prend plus de 10 secondes à répondre
 

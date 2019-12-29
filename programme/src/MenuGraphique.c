@@ -3,39 +3,42 @@
 void MenuGraphique() {
   //le but est de recomposer une ligne de commande comme si l'utilisateur l'avais directement saisie pour ensuite l'envoyer au menuLigneCommande
 
-  char * arguments[] = {"./Othello","","","",""};
+  char * arguments[] = {"./Othello","","",""};
   int nbArguments = 4;
   int choix;
 
   //choix de l'utilisateur pour type de partie ou affichage d'aide
-  printf("Que voulez vous faire ?\n\n1 : Nouvelle partie mode standard\n2 : Nouvelle partie mode tournois\n3 : Affichage de l'aide\n");
-  choix = SaisieInteger(1,3);
+  printf("Que voulez vous faire ?\n1 : Nouvelle partie %s (Joueur vs Joueur)\n2 : Nouvelle partie mode %s (Joueur vs IA)\n3 : Nouvelle partie mode %s (IA vs IA)\n4 : Affichage de l'aide\n", JOUEURVSJOUEUR, JOUEURVSIA, IAVSIA);
+  choix = SaisieInteger(1,4);
 
   switch(choix) {
     case 1 :
-      arguments[1] = "standard";
+      arguments[1] = JOUEURVSJOUEUR;
       break;
     case 2 :
-      arguments[1] = "tournois";
+      arguments[1] = JOUEURVSIA;
       break;
     case 3 :
+      arguments[1] = IAVSIA;
+      break;
+    case 4 :
       MessageDAide();
       break;
   }
 
   //si l'utilisateur veut faire une partie
-  if (choix != 3) {
+  if (choix != 4) {
 
     //quelle couleur il prend
-    printf("Quelle couleur voulez vous ?\n1 : Noir\n2 : Blanc\n");
+    printf("Quelle couleur voulez vous ?\n1 : %s\n2 : %s\n", COULEUR1, COULEUR2);
     choix = SaisieInteger(1,2);
 
     switch (choix) {
       case 1 :
-        arguments[2] = "noir";
+        arguments[2] = COULEUR1;
         break;
       case 2 :
-        arguments[2] = "blanc";
+        arguments[2] = COULEUR2;
         break;
     }
 
