@@ -7,7 +7,7 @@
 #include<stdbool.h>
 #include<assert.h>
 
-typedef struct 
+typedef struct _Position
 {
     Ligne ligne;
     Colonne colonne;
@@ -99,4 +99,7 @@ void appliquerDirection(Position * position, Direction direction) ;
 
 
 bool estEgalPosition(Position position1, Position position2);
+
+Position *fonctionCopierPosition(Position * pPos) ;
+
 #endif

@@ -12,34 +12,34 @@ bool estEgalLigne(Ligne ligne1, Ligne ligne2) {
 
 
 Ligne creerLigne(int numero) {
-    Ligne* lig;
-    lig = (Ligne*)malloc(sizeof(Ligne));
-    *lig = Un;
+    Ligne* plig;
+    plig = (Ligne*)malloc(sizeof(Ligne));
+    *plig = Un;
     switch (numero)
     {
     case 1:
-        *lig = Un;
-        return *lig;
+        *plig = Un;
+        return *plig;
     case 2:
-        *lig = Deux;
-        return *lig;
+        *plig = Deux;
+        return *plig;
     case 3:
-        *lig = Trois;
-        return *lig;
+        *plig = Trois;
+        return *plig;
     case 4:
-        *lig = Quatre;
-        return *lig;
+        *plig = Quatre;
+        return *plig;
     case 5:
-        *lig = Cinq;
-        return *lig;
+        *plig = Cinq;
+        return *plig;
     case 6:
-        *lig = Six;
-        return *lig;
+        *plig = Six;
+        return *plig;
     case 7:
-        *lig = Sept;
-        return *lig;
+        *plig = Sept;
+        return *plig;
     case 8:
-        *lig = Huit;
-        return *lig;
+        *plig = Huit;
+        return *plig;
     }
 }

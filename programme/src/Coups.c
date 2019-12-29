@@ -5,8 +5,9 @@
 #include<assert.h>
 #include<stdlib.h>
 #include<stdio.h>
+#include<string.h>
 Coups CreerCoups() {
-    Coups * presultat = (Coups*)malloc(64*sizeof(Coup));
+    Coups * presultat = (Coups*)malloc(64*sizeof(Coup)+sizeof(int));
     presultat->coups = listeChainee();
     presultat->nbDeCoups = 0;
     return *presultat;
@@ -14,7 +15,9 @@ Coups CreerCoups() {
 
 void AjouterCoup(Coups * coups, Coup coup) {
     LC_ajouter(&(coups->coups), &coup, fonctionCopierCoup);
+    //printf("Ajouter %d   AjouterFin", obtenirNumeroLigne(coups->coups->element->position.ligne));
     coups->nbDeCoups += 1;
+    //printf("Ajouter %d   AjouterFin", obtenirNumeroLigne(coups->coups->element->position.ligne));
 }
 
 /** Obtient le coup en tête de la liste chaînée de coups.
@@ -23,9 +26,16 @@ void AjouterCoup(Coups * coups, Coup coup) {
  * @returns Coup: Coup en tête
 */
 
-Coup COUPS_ObtenirCoup(Coups coups){
+Coup * COUPS_ObtenirCoup(Coups coups){
     assert(coups.nbDeCoups != 0);
-    return *(coups.coups->element);
+    Coup resultat = creerCoup(creerPosition(creerLigne(1),creerColonne(1)), CouleurNeutre());
+    Coup * presultat = (Coup*)malloc(sizeof(Coup));
+    memcpy(&(presultat->couleur.nom), &(coups.coups->element->couleur.nom), sizeof(int));
+    strcpy(presultat->couleur.hexa, coups.coups->element->couleur.hexa);
+    memcpy(&(presultat->couleur.symbole), &(coups.coups->element->couleur.symbole), sizeof(char));
+    memcpy(&(presultat->position.ligne), &(coups.coups->element->position.ligne), sizeof(int));
+    memcpy(&(presultat->position.colonne), &(coups.coups->element->position.colonne), sizeof(int)); 
+    return presultat;
 } 
 
 /** Supprime coup en tête de la liste chaînée de coups.
@@ -49,7 +59,7 @@ int ObtenirnombreDeCoups(Coups coups) {
 bool EstPresent(Coups coups, Coup coup) {
     bool estUnCoupPresent = false;
     while (!LC_estVide(coups.coups) && !estUnCoupPresent){
-            if (estEgalCoup(coup, COUPS_ObtenirCoup(coups))){
+            if (estEgalCoup(coup, *COUPS_ObtenirCoup(coups))){
                 estUnCoupPresent = true;
             }
             if(LC_estVide(LC_obtenirListeSuivante(coups.coups))){
@@ -64,7 +74,7 @@ void RetirerCoup(Coups * coups, Coup coup) {
     assert(EstPresent(*coups, coup));
         Coups temp = *coups;
         while (!LC_estVide(coups->coups)){
-            if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
+            if (estEgalCoup(coup, *COUPS_ObtenirCoup(*coups))){
                 ListeChainee liste = coups->coups;
                 //Noeud noeud = liste;
                 ListeChainee ls = liste->listeSuivante;

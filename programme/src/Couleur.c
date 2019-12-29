@@ -8,11 +8,11 @@
 
 
 Couleur * CouleurNulle() {
-    Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = nulle;
-    strcpy(resultat->hexa,"11");
-    resultat->symbole = '.';
-    return resultat;
+    Couleur * presultat = malloc(sizeof(Couleur));
+    presultat->nom = nulle;
+    strcpy(presultat->hexa,"11");
+    presultat->symbole = '.';
+    return presultat;
 }
 
 Couleur CouleurBlanc() {

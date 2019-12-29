@@ -8,16 +8,19 @@
  
 ListeChainee listeChainee(){
     errno = 0;
-    return NULL;
+    Noeud* pNoeud = (Noeud*)malloc(sizeof(Noeud));
+    pNoeud->element = NULL;
+    pNoeud->listeSuivante = NULL;
+    return pNoeud;
 }
 
 bool LC_estVide(ListeChainee liste){
     return(liste == NULL);
 }
 
-void LC_ajouter(ListeChainee* pliste, void* element,EC_FonctionCopierDansCollection copierElement){
+void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollection copierElement){
     ListeChainee pNoeud = (ListeChainee)malloc(sizeof(Noeud));
-    void* donnee = copierElement(element);
+    Coup* donnee = copierElement(element);
     if ((pNoeud!=NULL) || (donnee!=NULL)) {
         errno = 0;
         pNoeud->element = element;

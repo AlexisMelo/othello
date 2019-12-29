@@ -3,16 +3,23 @@
 #include "Couleur.h"
 #include "Coup.h"
 #include<stdlib.h>
+#include<stdio.h>
 
-void* fonctionCopierCoup(void* coup) {
-    Coup * resultat = (Coup*)malloc(sizeof(Coup));
-    memcpy((void*)resultat, coup, sizeof(Coup));
-    return (void*)resultat; 
+Coup* fonctionCopierCoup(Coup* pcoup) {
+    Coup * presultat = malloc(sizeof(Coup));
+    memcpy(&(presultat->couleur.nom), &(pcoup->couleur.nom), sizeof(int));
+    memcpy(&(presultat->couleur.hexa), &(pcoup->couleur.hexa), 2*sizeof(char));
+    memcpy(&(presultat->couleur.symbole), &(pcoup->couleur.symbole), sizeof(char));
+    memcpy(&(presultat->position.ligne), &(pcoup->position.ligne), sizeof(Ligne));
+    memcpy(&(presultat->position.colonne), &(pcoup->position.colonne), sizeof(Colonne));
+    //printf("//-%d-//fcc/,,\n", obtenirNumeroLigne(presultat->position.ligne));
+    //printf("//-%d-//fcc/,,\n", ObtenirNumeroColonne(presultat->position.colonne));  // check
+    return presultat; 
 }
 
 
-void fonctionLibererCoup(void * coup) {
-    free(coup);
+void fonctionLibererCoup(Coup * pcoup) {
+    free(pcoup);
 }
 
 

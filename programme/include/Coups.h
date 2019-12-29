@@ -50,7 +50,7 @@ int ObtenirnombreDeCoups(Coups) ;
  * @param coups :  Ensemble dont on veut obtenir le nombre de coups
  * @returns ListeChainée : coups
 */
-Coup COUPS_ObtenirCoup(Coups) ;
+Coup * COUPS_ObtenirCoup(Coups) ;
 
 
 /** Vérifie si un Coup est présent dans un ensemble Coups
