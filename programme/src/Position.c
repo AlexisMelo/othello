@@ -57,18 +57,5 @@ void appliquerDirection(Position * position, Direction direction){
 
 
 bool estEgalPosition(Position position1, Position position2) {
-    //printf("|pos|-%d-||,,\n", ObtenirNumeroColonne(position1.colonne));
-    //printf("|pos|-%d-||,,\n", ObtenirNumeroColonne(position2.colonne));
-    Position pos1cop = creerPosition(creerLigne(1), creerColonne(1));
-    pos1cop = *fonctionCopierPosition(&position1);
-    Position pos2cop = creerPosition(creerLigne(1), creerColonne(1));
-    pos2cop = *fonctionCopierPosition(&position2);
-    //printf("|pos|-%d-||,,\n", ObtenirNumeroColonne(position1.colonne));
-    //printf("|pos|-%d-||,,\n", ObtenirNumeroColonne(position2.colonne));
-    //printf("Not");
-    bool res = estEgalColonne(pos1cop.colonne, pos2cop.colonne) && estEgalLigne(pos1cop.ligne, pos2cop.ligne);
-    //printf("hing");
-    //printf("|pos|-%d-||,,\n", ObtenirNumeroColonne(position1.colonne));
-    //printf("|pos|-%d-||,,\n", ObtenirNumeroColonne(position2.colonne));
-    return res;
+    return estEgalColonne(position1.colonne, position2.colonne) && estEgalLigne(position1.ligne, position2.ligne);
     }
