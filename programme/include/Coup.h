@@ -10,6 +10,8 @@ typedef struct
     Couleur couleur;
 }Coup;
 
+Coup * creerCoupVide() ;
+
 
 /**
  * @brief Retourne un coup à partir d'une position et d'une couleur

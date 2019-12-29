@@ -1,4 +1,4 @@
-CC=gcc
+CC=gcc -g
 TEST=test
 TESTDIR = programme/tests
 INCLUDEDIR = programme/include

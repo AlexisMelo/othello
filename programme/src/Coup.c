@@ -9,6 +9,11 @@
 
 Coup * creerCoupVide(){
     Coup * presultat = (Coup *)malloc(sizeof(Coup));
+    presultat->couleur.nom = 1;
+    strcpy(presultat->couleur.hexa, "AA");
+    presultat->couleur.symbole = 'A';
+    presultat->position.ligne = 1;
+    presultat->position.colonne = 1;
     return presultat;
 }
 
@@ -28,11 +33,7 @@ bool estEgalCoup(Coup coup1, Coup coup2) {
     coup1cop = *fonctionCopierCoup(&coup1);
     Coup coup2cop = creerCoup(creerPosition(creerLigne(1), creerColonne(1)), CouleurNeutre());
     coup2cop = *fonctionCopierCoup(&coup2);
-    //printf("//-%d-//EEC/,,\n", obtenirNumeroLigne(coup1cop.position.ligne));
-    //printf("//-%d-//EEC/,,\n", ObtenirNumeroColonne(coup2cop.position.colonne));
     bool res = estEgalCouleur(coup1cop.couleur, coup2cop.couleur) && estEgalPosition(coup1cop.position, coup2cop.position);
-    //printf("//-%d-//EEC2/,,\n", obtenirNumeroLigne(coup1cop.position.ligne));
-    //printf("//-%d-//EEC2/,,\n", ObtenirNumeroColonne(coup2cop.position.colonne));  // check
     return res;
     }
 

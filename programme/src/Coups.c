@@ -6,18 +6,18 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-Coups CreerCoups() {
-    Coups * presultat = (Coups*)malloc(64*sizeof(Coup)+sizeof(int));
+Coups * CreerCoups() {
+    Coups * presultat = (Coups*)malloc(sizeof(Coups)+sizeof(int));
     presultat->coups = listeChainee();
     presultat->nbDeCoups = 0;
-    return *presultat;
+    return presultat;
 }
 
 void AjouterCoup(Coups * coups, Coup coup) {
     LC_ajouter(&(coups->coups), &coup, fonctionCopierCoup);
-    //printf("Ajouter %d   AjouterFin", obtenirNumeroLigne(coups->coups->element->position.ligne));
-    coups->nbDeCoups += 1;
-    //printf("Ajouter %d   AjouterFin", obtenirNumeroLigne(coups->coups->element->position.ligne));
+    //printf("Ajouter %d   AjouterFin", coups->coups->element->position.ligne);
+    coups->nbDeCoups = coups->nbDeCoups + 1;
+    //printf("Ajouter %d   AjouterFin", coups->coups->element->position.colonne);
 }
 
 /** Obtient le coup en tête de la liste chaînée de coups.
@@ -26,16 +26,28 @@ void AjouterCoup(Coups * coups, Coup coup) {
  * @returns Coup: Coup en tête
 */
 
-Coup * COUPS_ObtenirCoup(Coups coups){
+Coup COUPS_ObtenirCoup(Coups coups){
     assert(coups.nbDeCoups != 0);
-    Coup resultat = creerCoup(creerPosition(creerLigne(1),creerColonne(1)), CouleurNeutre());
+    /* printf("\n");
+    printf("%d|OO|", (coups.coups->element->couleur.nom));
+    printf("%s|OO|", (coups.coups->element->couleur.hexa));
+    printf("%c|OO|", (coups.coups->element->couleur.symbole));
+    printf("%d|OO|", ObtenirNumeroColonne(coups.coups->element->position.colonne));
+    printf("%d|OO|", obtenirNumeroLigne(coups.coups->element->position.ligne));
+    Coup resultat = creerCoup(creerPosition(creerLigne(1),creerColonne(1)), CouleurNeutre()); 
     Coup * presultat = (Coup*)malloc(sizeof(Coup));
     memcpy(&(presultat->couleur.nom), &(coups.coups->element->couleur.nom), sizeof(int));
     strcpy(presultat->couleur.hexa, coups.coups->element->couleur.hexa);
     memcpy(&(presultat->couleur.symbole), &(coups.coups->element->couleur.symbole), sizeof(char));
     memcpy(&(presultat->position.ligne), &(coups.coups->element->position.ligne), sizeof(int));
     memcpy(&(presultat->position.colonne), &(coups.coups->element->position.colonne), sizeof(int)); 
-    return presultat;
+     printf("\n");
+    printf("%d|O/O|", (presultat->couleur.nom));
+    printf("%s|O/O|", (presultat->couleur.hexa));
+    printf("%c|O/O|", (presultat->couleur.symbole));
+    printf("%d|O/O|", ObtenirNumeroColonne(presultat->position.colonne));
+    printf("%d|O/O|", obtenirNumeroLigne(presultat->position.ligne)); */
+    return *(coups.coups->element);  // *presultat;
 } 
 
 /** Supprime coup en tête de la liste chaînée de coups.
@@ -59,7 +71,7 @@ int ObtenirnombreDeCoups(Coups coups) {
 bool EstPresent(Coups coups, Coup coup) {
     bool estUnCoupPresent = false;
     while (!LC_estVide(coups.coups) && !estUnCoupPresent){
-            if (estEgalCoup(coup, *COUPS_ObtenirCoup(coups))){
+            if (estEgalCoup(coup, COUPS_ObtenirCoup(coups))){
                 estUnCoupPresent = true;
             }
             if(LC_estVide(LC_obtenirListeSuivante(coups.coups))){
@@ -74,7 +86,7 @@ void RetirerCoup(Coups * coups, Coup coup) {
     assert(EstPresent(*coups, coup));
         Coups temp = *coups;
         while (!LC_estVide(coups->coups)){
-            if (estEgalCoup(coup, *COUPS_ObtenirCoup(*coups))){
+            if (estEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
                 ListeChainee liste = coups->coups;
                 //Noeud noeud = liste;
                 ListeChainee ls = liste->listeSuivante;

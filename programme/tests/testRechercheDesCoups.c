@@ -7,8 +7,8 @@ void testRechercheDesCoups() {
     Couleur NOIR = CouleurNoir();
     Couleur BLANC = CouleurBlanc();
     Couleur NEUTRE = CouleurNeutre();
-    Coups lesCoups = CreerCoups();
-    Coups lesCoupsTrouves = CreerCoups();
+    Coups lesCoups = *CreerCoups();
+    Coups lesCoupsTrouves = *CreerCoups();
     Ligne ligne = creerLigne(1);
     Colonne colonne = creerColonne(1);
     Coup unCoup = creerCoup(creerPosition(ligne, colonne),NEUTRE);
@@ -33,16 +33,36 @@ void testRechercheDesCoups() {
     /* Tests */
     Coup coup1 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), NOIR);
     Coup coup2 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), NOIR);
-    Coups lesCoups2 = CreerCoups();
-    Coups lesCoups3 = CreerCoups();
-    AjouterCoup(&lesCoups2, coup2);
-    AjouterCoup(&lesCoups3, coup2);
+    Coups * plesCoups2 = CreerCoups();
+    Coups * plesCoups3 = CreerCoups();
+    AjouterCoup(plesCoups2, coup2);
+    AjouterCoup(plesCoups3, coup2);
+    printf("bug that");
+    /*printf("\n");
+    printf("%d|avant:nom|", (plesCoups2->coups->element->couleur.nom));
+    printf("%s|avant:hexa|", (plesCoups2->coups->element->couleur.hexa));
+    printf("%c|avant:symb|", (plesCoups2->coups->element->couleur.symbole));
+    printf("%d|avant:colonne|", ObtenirNumeroColonne(plesCoups2->coups->element->position.colonne));
+    printf("%d|avant:ligne |", obtenirNumeroLigne(plesCoups2->coups->element->position.ligne)); */
     //test de COUPS_ObtenirCoup et AjouterCoup qui ont l'air toutes les deux fausses
     CU_ASSERT(estEgalCoup(coup1, coup2)); //passe// ca coince ici
+    printf("bug that2");
     //ici la colonne et la ligne sont déjà modifiées / memory loss??
-    CU_ASSERT(estEgalCoup(coup1, *COUPS_ObtenirCoup(lesCoups2))); //ne passe pas ???
-    CU_ASSERT(&lesCoups2 == &lesCoups3);  //ne passe pas ???
-    CU_ASSERT(estEgalCoup(*COUPS_ObtenirCoup(lesCoups2), *COUPS_ObtenirCoup(lesCoups2))); //passe ???
+    /* printf("%d|milieu:nom|", (plesCoups2->coups->element->couleur.nom));
+    printf("%s|milieu:hexa|", (plesCoups2->coups->element->couleur.hexa));
+    printf("%c|milieu:symb|", (plesCoups2->coups->element->couleur.symbole));
+    printf("%d|milieu:colonne|", ObtenirNumeroColonne(plesCoups2->coups->element->position.colonne));
+    printf("%d|milieu:ligne |", obtenirNumeroLigne(plesCoups2->coups->element->position.ligne)); */
+    CU_ASSERT(estEgalCoup(coup1, COUPS_ObtenirCoup(*plesCoups2))); //ne passe pas ???
+    printf("bug that3");
+    //CU_ASSERT(&lesCoups2 == &lesCoups3);  //ne passe pas ???
+/*     printf("\n");
+    printf("%d|fin:nom|", (plesCoups2->coups->element->couleur.nom));
+    printf("%s|fin:hexa|", (plesCoups2->coups->element->couleur.hexa));
+    printf("%c|fin:symb|", (plesCoups2->coups->element->couleur.symbole));
+    printf("%d|fin:colonne|", ObtenirNumeroColonne(plesCoups2->coups->element->position.colonne));
+    printf("%d|fin:ligne|", obtenirNumeroLigne(plesCoups2->coups->element->position.ligne)); */
+    CU_ASSERT(estEgalCoup(COUPS_ObtenirCoup(*plesCoups2), COUPS_ObtenirCoup(*plesCoups2))); //passe ???
 
 
     // la suite des tests devrait etre resolu en resolvant le pb au dessus

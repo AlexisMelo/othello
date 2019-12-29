@@ -2,7 +2,7 @@
 #include"Parcourir_Direction.h"
 
 Coups rechercherTousLesCoups(Couleur * plateauDeJeu, Couleur joueurActuel) {
-    Coups lesCoups = CreerCoups();
+    Coups lesCoups = *CreerCoups();
     int taille = obtenirTaille(plateauDeJeu);
     for (int i = 1; i < taille + 1; i++) {
         for (int j = 1; j < taille + 1; j++) {

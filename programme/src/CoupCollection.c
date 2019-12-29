@@ -6,7 +6,7 @@
 #include<stdio.h>
 
 Coup* fonctionCopierCoup(Coup* pcoup) {
-    Coup * presultat = malloc(sizeof(Coup));
+    Coup * presultat = creerCoupVide();
     memcpy(&(presultat->couleur.nom), &(pcoup->couleur.nom), sizeof(int));
     memcpy(&(presultat->couleur.hexa), &(pcoup->couleur.hexa), 2*sizeof(char));
     memcpy(&(presultat->couleur.symbole), &(pcoup->couleur.symbole), sizeof(char));
