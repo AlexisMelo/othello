@@ -7,7 +7,7 @@ int obtenirNumeroLigne(Ligne ligne) {
 }
 
 bool estEgalLigne(Ligne ligne1, Ligne ligne2) {
-    return ligne1 == ligne2;
+    return obtenirNumeroLigne(ligne1) == obtenirNumeroLigne(ligne2);
 }
 
 

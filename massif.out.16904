@@ -1,0 +1,1549 @@
+desc: (none)
+cmd: ./programme/tests/test
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=167564
+mem_heap_B=16
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=169472
+mem_heap_B=206
+mem_heap_extra_B=74
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=172063
+mem_heap_B=698
+mem_heap_extra_B=222
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=173941
+mem_heap_B=1210
+mem_heap_extra_B=398
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=178817
+mem_heap_B=1214
+mem_heap_extra_B=418
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=182799
+mem_heap_B=1890
+mem_heap_extra_B=934
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=185969
+mem_heap_B=2082
+mem_heap_extra_B=1222
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=189402
+mem_heap_B=2282
+mem_heap_extra_B=1526
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=192316
+mem_heap_B=2466
+mem_heap_extra_B=1798
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=193901
+mem_heap_B=2562
+mem_heap_extra_B=1942
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=196540
+mem_heap_B=2714
+mem_heap_extra_B=2174
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=199454
+mem_heap_B=2898
+mem_heap_extra_B=2446
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=201039
+mem_heap_B=2994
+mem_heap_extra_B=2590
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=203928
+mem_heap_B=3154
+mem_heap_extra_B=2838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=205801
+mem_heap_B=3282
+mem_heap_extra_B=3022
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=208187
+mem_heap_B=3426
+mem_heap_extra_B=3238
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=211860
+mem_heap_B=3634
+mem_heap_extra_B=3558
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=214534
+mem_heap_B=3810
+mem_heap_extra_B=3814
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=216910
+mem_heap_B=3954
+mem_heap_extra_B=4030
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=220590
+mem_heap_B=4162
+mem_heap_extra_B=4350
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=222969
+mem_heap_B=4306
+mem_heap_extra_B=4566
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=225345
+mem_heap_B=4450
+mem_heap_extra_B=4782
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=227731
+mem_heap_B=4594
+mem_heap_extra_B=4998
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=230107
+mem_heap_B=4738
+mem_heap_extra_B=5214
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=234138
+mem_heap_B=5506
+mem_heap_extra_B=5638
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=238035
+mem_heap_B=5802
+mem_heap_extra_B=6062
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=240565
+mem_heap_B=6002
+mem_heap_extra_B=6342
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=243102
+mem_heap_B=6202
+mem_heap_extra_B=6622
+mem_stacks_B=0
+heap_tree=detailed
+n8: 6202 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 1400 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 1360 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 1208 0x10B570: estNeutre (Couleur.c:62)
+    n2: 664 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 152 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 152 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 152 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 152 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 152 0x10AC10: main (TypesTests.c:45)
+    n2: 544 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 32 in 4 places, all below massif's threshold (1.00%)
+   n1: 144 0x10B585: estNeutre (Couleur.c:62)
+    n1: 144 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 144 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 144 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 144 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 144 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 144 0x10AC10: main (TypesTests.c:45)
+   n0: 8 in 1 place, below massif's threshold (1.00%)
+  n0: 40 in 2 places, all below massif's threshold (1.00%)
+ n1: 1312 0x10AD46: creerCoupVide (Coup.c:11)
+  n2: 1312 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 288 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 288 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 288 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 288 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 288 0x10AC10: main (TypesTests.c:45)
+ n1: 1176 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n3: 1176 0x10AFB8: creerPosition (Position.c:16)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 152 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 152 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 152 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 152 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 152 0x10AC10: main (TypesTests.c:45)
+ n2: 1024 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+ n0: 162 in 4 places, all below massif's threshold (1.00%)
+ n1: 128 0x4873EE8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 128 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=246056
+mem_heap_B=6434
+mem_heap_extra_B=6942
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=248080
+mem_heap_B=6594
+mem_heap_extra_B=7166
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=250111
+mem_heap_B=6754
+mem_heap_extra_B=7390
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=252135
+mem_heap_B=6914
+mem_heap_extra_B=7614
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=254166
+mem_heap_B=7074
+mem_heap_extra_B=7838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=256190
+mem_heap_B=7234
+mem_heap_extra_B=8062
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=258221
+mem_heap_B=7394
+mem_heap_extra_B=8286
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=260245
+mem_heap_B=7554
+mem_heap_extra_B=8510
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=262276
+mem_heap_B=7714
+mem_heap_extra_B=8734
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=266319
+mem_heap_B=8034
+mem_heap_extra_B=9182
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=269823
+mem_heap_B=8306
+mem_heap_extra_B=9534
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=271575
+mem_heap_B=8442
+mem_heap_extra_B=9710
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=274165
+mem_heap_B=8642
+mem_heap_extra_B=9966
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=277580
+mem_heap_B=8818
+mem_heap_extra_B=10198
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=280504
+mem_heap_B=8898
+mem_heap_extra_B=10358
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=283722
+mem_heap_B=9418
+mem_heap_extra_B=10382
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=285657
+mem_heap_B=9578
+mem_heap_extra_B=10654
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=288700
+mem_heap_B=9818
+mem_heap_extra_B=10990
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=290724
+mem_heap_B=9978
+mem_heap_extra_B=11214
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=292755
+mem_heap_B=10138
+mem_heap_extra_B=11438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=294779
+mem_heap_B=10298
+mem_heap_extra_B=11662
+mem_stacks_B=0
+heap_tree=detailed
+n7: 10298 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 2760 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 2704 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 1976 0x10B570: estNeutre (Couleur.c:62)
+    n3: 1376 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 352 in 24 places, all below massif's threshold (1.00%)
+    n2: 600 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 88 in 5 places, all below massif's threshold (1.00%)
+   n1: 712 0x10B585: estNeutre (Couleur.c:62)
+    n2: 712 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 200 in 5 places, all below massif's threshold (1.00%)
+   n0: 16 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 2 places, all below massif's threshold (1.00%)
+ n1: 2752 0x10AD46: creerCoupVide (Coup.c:11)
+  n4: 2752 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n0: 368 in 23 places, all below massif's threshold (1.00%)
+   n1: 336 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 336 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 336 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 336 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 336 0x10AC10: main (TypesTests.c:45)
+ n1: 1952 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n4: 1952 0x10AFB8: creerPosition (Position.c:16)
+   n1: 512 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n0: 416 in 31 places, all below massif's threshold (1.00%)
+ n3: 1536 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x109BA0: testParcourirLesDirections (testParcourirLesDirections.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+ n0: 298 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=296393
+mem_heap_B=10426
+mem_heap_extra_B=11846
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=297990
+mem_heap_B=10554
+mem_heap_extra_B=12030
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=299587
+mem_heap_B=10690
+mem_heap_extra_B=12206
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=301371
+mem_heap_B=10818
+mem_heap_extra_B=12390
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=302978
+mem_heap_B=10946
+mem_heap_extra_B=12574
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=304582
+mem_heap_B=11074
+mem_heap_extra_B=12758
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=306179
+mem_heap_B=11210
+mem_heap_extra_B=12934
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=307956
+mem_heap_B=11338
+mem_heap_extra_B=13118
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=309570
+mem_heap_B=11466
+mem_heap_extra_B=13302
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=311167
+mem_heap_B=11594
+mem_heap_extra_B=13486
+mem_stacks_B=0
+heap_tree=detailed
+n7: 11594 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 3288 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 3232 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 2240 0x10B570: estNeutre (Couleur.c:62)
+    n4: 1640 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 432 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 432 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 432 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 432 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 432 0x10AC10: main (TypesTests.c:45)
+     n0: 184 in 23 places, all below massif's threshold (1.00%)
+    n2: 600 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 88 in 5 places, all below massif's threshold (1.00%)
+   n1: 976 0x10B585: estNeutre (Couleur.c:62)
+    n3: 976 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 432 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 432 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 432 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 432 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 432 0x10AC10: main (TypesTests.c:45)
+     n0: 32 in 4 places, all below massif's threshold (1.00%)
+   n0: 16 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 2 places, all below massif's threshold (1.00%)
+ n1: 3264 0x10AD46: creerCoupVide (Coup.c:11)
+  n4: 3264 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 848 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 848 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 848 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 848 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 848 0x10AC10: main (TypesTests.c:45)
+   n0: 368 in 23 places, all below massif's threshold (1.00%)
+ n1: 2208 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n5: 2208 0x10AFB8: creerPosition (Position.c:16)
+   n1: 512 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 432 0x109C19: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 432 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 432 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 432 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 432 0x10AC10: main (TypesTests.c:45)
+   n0: 240 in 30 places, all below massif's threshold (1.00%)
+ n3: 1536 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x109BA0: testParcourirLesDirections (testParcourirLesDirections.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+ n0: 298 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=312771
+mem_heap_B=11730
+mem_heap_extra_B=13662
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=314548
+mem_heap_B=11858
+mem_heap_extra_B=13846
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=316155
+mem_heap_B=11986
+mem_heap_extra_B=14030
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=317900
+mem_heap_B=12122
+mem_heap_extra_B=14206
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=319576
+mem_heap_B=12250
+mem_heap_extra_B=14366
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=321328
+mem_heap_B=12386
+mem_heap_extra_B=14542
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=323080
+mem_heap_B=12522
+mem_heap_extra_B=14718
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=324756
+mem_heap_B=12650
+mem_heap_extra_B=14878
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=326567
+mem_heap_B=12674
+mem_heap_extra_B=14926
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=328543
+mem_heap_B=12698
+mem_heap_extra_B=14974
+mem_stacks_B=0
+heap_tree=detailed
+n7: 12698 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3744 0x10AD46: creerCoupVide (Coup.c:11)
+  n4: 3744 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n0: 672 in 42 places, all below massif's threshold (1.00%)
+ n2: 3672 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 3616 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 2520 0x10B570: estNeutre (Couleur.c:62)
+    n4: 1872 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 336 in 42 places, all below massif's threshold (1.00%)
+    n2: 648 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 136 in 5 places, all below massif's threshold (1.00%)
+   n1: 1080 0x10B585: estNeutre (Couleur.c:62)
+    n3: 1080 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 56 in 7 places, all below massif's threshold (1.00%)
+   n0: 16 in 2 places, all below massif's threshold (1.00%)
+  n0: 56 in 2 places, all below massif's threshold (1.00%)
+ n1: 2448 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n5: 2448 0x10AFB8: creerPosition (Position.c:16)
+   n1: 512 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x109C19: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n0: 400 in 50 places, all below massif's threshold (1.00%)
+ n3: 1536 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x109BA0: testParcourirLesDirections (testParcourirLesDirections.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+ n0: 298 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=70
+#-----------
+time=330252
+mem_heap_B=12722
+mem_heap_extra_B=15022
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=332063
+mem_heap_B=12746
+mem_heap_extra_B=15070
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=334278
+mem_heap_B=13282
+mem_heap_extra_B=15126
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=335883
+mem_heap_B=13482
+mem_heap_extra_B=15414
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=337486
+mem_heap_B=13610
+mem_heap_extra_B=15598
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=339089
+mem_heap_B=13746
+mem_heap_extra_B=15774
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=340881
+mem_heap_B=13874
+mem_heap_extra_B=15958
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=342494
+mem_heap_B=14002
+mem_heap_extra_B=16142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=344104
+mem_heap_B=14130
+mem_heap_extra_B=16326
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=345707
+mem_heap_B=14266
+mem_heap_extra_B=16502
+mem_stacks_B=0
+heap_tree=detailed
+n7: 14266 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 4112 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 4040 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 2760 0x10B570: estNeutre (Couleur.c:62)
+    n4: 2048 0x10ADB5: creerCoup (Coup.c:22)
+     n0: 512 in 44 places, all below massif's threshold (1.00%)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+    n2: 712 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 200 in 5 places, all below massif's threshold (1.00%)
+   n1: 1256 0x10B585: estNeutre (Couleur.c:62)
+    n3: 1256 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 232 in 9 places, all below massif's threshold (1.00%)
+   n0: 24 in 3 places, all below massif's threshold (1.00%)
+  n0: 72 in 2 places, all below massif's threshold (1.00%)
+ n1: 4096 0x10AD46: creerCoupVide (Coup.c:11)
+  n5: 4096 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n0: 688 in 43 places, all below massif's threshold (1.00%)
+   n1: 336 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+    n1: 336 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 336 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 336 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 336 0x10AC10: main (TypesTests.c:45)
+ n1: 2632 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n5: 2632 0x10AFB8: creerPosition (Position.c:16)
+   n0: 584 in 53 places, all below massif's threshold (1.00%)
+   n1: 512 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x109C19: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+ n4: 2048 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x109BA0: testParcourirLesDirections (testParcourirLesDirections.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A187: testRechercheDesCoups (testRechercheDesCoups.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+ n0: 378 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=80
+#-----------
+time=347499
+mem_heap_B=14394
+mem_heap_extra_B=16686
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=349112
+mem_heap_B=14522
+mem_heap_extra_B=16870
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=350715
+mem_heap_B=14650
+mem_heap_extra_B=17054
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=352325
+mem_heap_B=14786
+mem_heap_extra_B=17230
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=354110
+mem_heap_B=14914
+mem_heap_extra_B=17414
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=355730
+mem_heap_B=15042
+mem_heap_extra_B=17598
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=357333
+mem_heap_B=15170
+mem_heap_extra_B=17782
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=358936
+mem_heap_B=15306
+mem_heap_extra_B=17958
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=360728
+mem_heap_B=15434
+mem_heap_extra_B=18142
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=362341
+mem_heap_B=15562
+mem_heap_extra_B=18326
+mem_stacks_B=0
+heap_tree=detailed
+n7: 15562 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 4632 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 4560 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 3024 0x10B570: estNeutre (Couleur.c:62)
+    n5: 2312 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 432 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+      n1: 432 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 432 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 432 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 432 0x10AC10: main (TypesTests.c:45)
+     n0: 344 in 43 places, all below massif's threshold (1.00%)
+    n2: 712 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 200 in 5 places, all below massif's threshold (1.00%)
+   n1: 1512 0x10B585: estNeutre (Couleur.c:62)
+    n4: 1512 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 424 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+      n1: 424 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 424 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 424 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 424 0x10AC10: main (TypesTests.c:45)
+     n0: 64 in 8 places, all below massif's threshold (1.00%)
+   n0: 24 in 3 places, all below massif's threshold (1.00%)
+  n0: 72 in 2 places, all below massif's threshold (1.00%)
+ n1: 4608 0x10AD46: creerCoupVide (Coup.c:11)
+  n5: 4608 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 848 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+    n1: 848 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 848 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 848 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 848 0x10AC10: main (TypesTests.c:45)
+   n0: 688 in 43 places, all below massif's threshold (1.00%)
+ n1: 2896 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n6: 2896 0x10AFB8: creerPosition (Position.c:16)
+   n1: 512 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x109C19: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 432 0x10A28E: testRechercheDesCoups (testRechercheDesCoups.c:21)
+    n1: 432 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 432 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 432 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 432 0x10AC10: main (TypesTests.c:45)
+   n0: 416 in 52 places, all below massif's threshold (1.00%)
+ n4: 2048 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x109BA0: testParcourirLesDirections (testParcourirLesDirections.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A187: testRechercheDesCoups (testRechercheDesCoups.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+ n0: 378 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=90
+#-----------
+time=363951
+mem_heap_B=15690
+mem_heap_extra_B=18510
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=365554
+mem_heap_B=15826
+mem_heap_extra_B=18686
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=367339
+mem_heap_B=15954
+mem_heap_extra_B=18870
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=369097
+mem_heap_B=16086
+mem_heap_extra_B=19050
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=94
+#-----------
+time=371176
+mem_heap_B=16302
+mem_heap_extra_B=19298
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=373387
+mem_heap_B=16495
+mem_heap_extra_B=19497
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=401077
+mem_heap_B=16972
+mem_heap_extra_B=19684
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=97
+#-----------
+time=418615
+mem_heap_B=16972
+mem_heap_extra_B=19684
+mem_stacks_B=0
+heap_tree=peak
+n7: 16972 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 4896 0x10AD46: creerCoupVide (Coup.c:11)
+  n5: 4864 0x10ADE5: creerCoup (Coup.c:23)
+   n1: 1024 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n1: 1024 0x10A99F: TestPlateau (testPlateau.c:19)
+    n1: 1024 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 1024 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 1024 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 1024 0x10AC10: main (TypesTests.c:45)
+   n0: 768 in 48 places, all below massif's threshold (1.00%)
+  n0: 32 in 1 place, below massif's threshold (1.00%)
+ n2: 4840 0x10B315: CouleurNulle (Couleur.c:11)
+  n3: 4768 0x10B437: CouleurNeutre (Couleur.c:36)
+   n2: 3144 0x10B570: estNeutre (Couleur.c:62)
+    n5: 2432 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A99F: TestPlateau (testPlateau.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 384 in 48 places, all below massif's threshold (1.00%)
+    n2: 712 0x10B4A2: obtenirCouleuropposee (Couleur.c:44)
+     n1: 512 0x10A970: TestPlateau (testPlateau.c:18)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 200 in 5 places, all below massif's threshold (1.00%)
+   n1: 1600 0x10B585: estNeutre (Couleur.c:62)
+    n4: 1600 0x10ADB5: creerCoup (Coup.c:22)
+     n1: 512 0x1093B2: testParcourirUneDirection (testParcourirUneDirection.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x109C25: testParcourirLesDirections (testParcourirLesDirections.c:19)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n1: 512 0x10A29D: testRechercheDesCoups (testRechercheDesCoups.c:21)
+      n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+        n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+         n0: 512 0x10AC10: main (TypesTests.c:45)
+     n0: 64 in 8 places, all below massif's threshold (1.00%)
+   n0: 24 in 3 places, all below massif's threshold (1.00%)
+  n0: 72 in 2 places, all below massif's threshold (1.00%)
+ n1: 3048 0x10AF7D: CreerPositionNulle (Position.c:9)
+  n6: 3048 0x10AFB8: creerPosition (Position.c:16)
+   n1: 512 0x1093A6: testParcourirUneDirection (testParcourirUneDirection.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x109C19: testParcourirLesDirections (testParcourirLesDirections.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A28E: testRechercheDesCoups (testRechercheDesCoups.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A993: TestPlateau (testPlateau.c:19)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n1: 512 0x10A9DD: TestPlateau (testPlateau.c:21)
+    n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+       n0: 512 0x10AC10: main (TypesTests.c:45)
+   n0: 488 in 59 places, all below massif's threshold (1.00%)
+ n4: 2048 0x10B618: creerPlateau (Plateau.c:13)
+  n1: 512 0x10932D: testParcourirUneDirection (testParcourirUneDirection.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x109BA0: testParcourirLesDirections (testParcourirLesDirections.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A187: testRechercheDesCoups (testRechercheDesCoups.c:6)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+  n1: 512 0x10A923: TestPlateau (testPlateau.c:10)
+   n1: 512 0x4874CC6: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+    n1: 512 0x4874EFC: ??? (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+     n1: 512 0x487536D: CU_run_all_tests (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+      n0: 512 0x10AC10: main (TypesTests.c:45)
+ n0: 1140 in 13 places, all below massif's threshold (1.00%)
+ n1: 616 0x4873A5D: CU_add_suite_with_setup_and_teardown (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 616 in 7 places, all below massif's threshold (1.00%)
+ n1: 384 0x4873EC8: CU_add_test (in /usr/lib/x86_64-linux-gnu/libcunit.so.1.0.1)
+  n0: 384 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=98
+#-----------
+time=420207
+mem_heap_B=15497
+mem_heap_extra_B=19271
+mem_stacks_B=0
+heap_tree=empty

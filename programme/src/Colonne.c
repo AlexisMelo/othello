@@ -45,5 +45,5 @@ int ObtenirNumeroColonne(Colonne colonne) {
 }
 
 bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
-    return colonne1 == colonne2;
+    return ObtenirNumeroColonne(colonne1) == ObtenirNumeroColonne(colonne2);
 }

@@ -21,7 +21,9 @@ Coup * creerCoupVide(){
 Coup creerCoup(Position position, Couleur couleur){
     assert(!estNeutre(couleur));
     Coup * presultat = creerCoupVide();
-    presultat->couleur = couleur;
+    presultat->couleur.nom = couleur.nom;
+    strcpy(presultat->couleur.hexa, couleur.hexa);
+    presultat->couleur.symbole = couleur.symbole;
     presultat->position = position;
     return *presultat;
 }
@@ -29,11 +31,6 @@ Coup creerCoup(Position position, Couleur couleur){
 
 
 bool estEgalCoup(Coup coup1, Coup coup2) {
-/*     Coup coup1cop = creerCoup(creerPosition(creerLigne(1), creerColonne(1)), CouleurNeutre());
-    coup1cop = *fonctionCopierCoup(&coup1);
-    Coup coup2cop = creerCoup(creerPosition(creerLigne(1), creerColonne(1)), CouleurNeutre());
-    coup2cop = *fonctionCopierCoup(&coup2);
-    bool res = estEgalCouleur(coup1cop.couleur, coup2cop.couleur) && estEgalPosition(coup1cop.position, coup2cop.position); */
     return (estEgalCouleur(coup1.couleur, coup2.couleur) && estEgalPosition(coup1.position, coup2.position));  // res;
     }
 
