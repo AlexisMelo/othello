@@ -3,48 +3,53 @@
 
 
 #include<stdbool.h>
-typedef enum {a, b, c, d, e, f, g, h}Colonne;
+#include<stdlib.h>
+#include<stdio.h>
+
+typedef enum {a, b, c, d, e, f, g, h} Colonne;
 
 #define KEY_ERROR 1;
 
-/**
- *@brief Retourne le nombre correspondant à la Colonne passée en entrée.
- *
- * Exemple : ObtenirNumeroColonne(colonne D) = 4
- * 
- *@param colonne : Colonne dont on veut le numéro
- *
- *@returns numéro : int
-*/
-int ObtenirNumeroColonne(Colonne colonne);
-
 
 /**
- * @brief Construit une colonne correspondant au numéro passée en entrée.
- * 
- * Exemple : creerColonne(2) => Colonne B
- * 
- * @param nb : int
- * 
- * @returns Colonne
+ * @brief Construit une colonne correspondant au numéro passé en entrée
+ *
+ * Exemple : COLONNE_ObtenirColonneDepuisInt(2) => Colonne b
+ *
+ * @param int Numéro dont on veut retrouver la colonne
+ *
+ * @returns Enumeration colonne correspondant au numéro
 */
-Colonne CreerColonne(int nb);
+Colonne COLONNE_ObtenirColonneDepuisInt(int colNum);
 
+/**
+ * @brief Construit une colonne correspondant au caractère passé en paramètre
+ *
+ * Exemple : COLONNE_ObtenirColonneDepuisChar('d') = Colonne d
+ *
+ * @param char Caractère que l'on veut transformer en colonne
+ *
+ * @returns Enumeration Colonne correspond au caractère
+*/
+Colonne COLONNE_ObtenirColonneDepuisChar(char colChar);
+
+/**
+ *@brief Obtient le numero réel d'une colonne
+ *
+ *@param colonne1 Colonne
+ *
+ *@returns Numéro de la colonne
+*/
+int COLONNE_ObtenirNumeroColonne(Colonne colonne);
 
 /**
  *@brief Retourne vrai si les Colonnes entrées sont identiques.
  *
- * @param colonne1 : Colonne
+ *@param colonne1 Colonne
+ *@param colonne2 Colonne
  *
- *@param colonne2: Colonne
- *
- * @returns booléen
+ *@returns booleen
 */
-bool estEgalColonne(Colonne colonne1, Colonne colonne2);
-
-
-
-Colonne ObtenirColonneDepuisChar(char colChar);
-
+bool COLONNE_EstEgalColonne(Colonne colonne1, Colonne colonne2);
 
 #endif

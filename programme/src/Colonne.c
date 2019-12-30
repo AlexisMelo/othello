@@ -1,103 +1,59 @@
-# include "../include/Colonne.h"
-#include<stdbool.h>
-#include<stdlib.h>
-#include<stdio.h>
+# include "Colonne.h"
 
+//amélioration : essayer de voir si polymorphisme existe en C car creerColonneDepuisInt et depuis char = même fonction
 
-Colonne CreerColonne(int numero){
-    Colonne * col;
-    col = (Colonne*)malloc(sizeof(Colonne));
-    *col = a;
-    switch (numero)
+Colonne COLONNE_ObtenirColonneDepuisInt(int colNum){
+    switch (colNum)
     {
     case 1:
-        *col = a;
-        return *col;
+        return a;
     case 2:
-        *col = b;
-        return *col;
+        return b;
     case 3:
-        *col = c;
-        return *col;
+        return c;
     case 4:
-        *col = d;
-        return *col;
+        return d;
     case 5:
-        *col = e;
-        return *col;
+        return e;
     case 6:
-        *col = f;
-        return *col;
+        return f;
     case 7:
-        *col = g;
-        return *col;
+        return g;
     case 8:
-        *col = h;
-        return *col;
+        return h;
+    default:
+        return -1;
     }
 }
 
-
-Colonne ObtenirColonneDepuisChar(char colChar){
+Colonne COLONNE_ObtenirColonneDepuisChar(char colChar){
     switch (colChar)
     {
     case 'a':
-        return 0;
+        return a;
     case 'b':
-        return 1;
+        return b;
     case 'c':
-        return 2;
+        return c;
     case 'd':
-        return 3;
+        return d;
     case 'e':
-        return 4;
+        return e;
     case 'f':
-        return 5;
+        return f;
     case 'g':
-        return 6;
+        return g;
     case 'h':
-        return 7;
+        return h;
     default:
         return -1;
-    }   
+    }
 }
 
-int ObtenirNumeroColonne(Colonne colonne) {
+int COLONNE_ObtenirNumeroColonne(Colonne colonne) {
     return colonne + 1;
 }
 
-bool EstEgalColonne(Colonne colonne1, Colonne colonne2) {
-    return colonne1 == colonne2;}
-
-Colonne ObtenirColonneDeChar(char caractere){
-    Colonne * col;
-    col = (Colonne*)malloc(sizeof(Colonne));
-    col = a;
-    switch (caractere)
-    {
-    case 'a':
-        *col = a;
-        return *col;
-    case 'b':
-        *col = b;
-        return *col;
-    case 'c':
-        *col = c;
-        return *col;
-    case 'd':
-        *col = d;
-        return *col;
-    case 'e':
-        *col = e;
-        return *col;
-    case 'f':
-        *col = f;
-        return *col;
-    case 'g':
-        *col = g;
-        return *col;
-    case 'h':
-        *col = h;
-        return *col;
-    }
-}   
+bool COLONNE_EstEgalColonne(Colonne colonne1, Colonne colonne2) {
+    return colonne1 == colonne2;
+}
