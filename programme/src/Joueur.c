@@ -1,6 +1,5 @@
 #include "Joueur.h"
 
-
 Joueur JOUEUR_CreerJoueurHumain(Couleur couleur) {
   Joueur resultat;
   resultat.profondeur = 0;
@@ -24,12 +23,12 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     scanf("%s", entree);
     char colonneLettre = entree[0];
     int ligneNombre = entree[1];
-  return CreerCoup(CreerPosition(ObtenirColonneDepuisChar(colonneLettre), CreerLigne(ligneNombre)),JOUEUR_ObtenirCouleur(j));
+  return COUP_CreerCoup(POSITION_CreerPosition(COLONNE_ObtenirColonneDepuisChar(colonneLettre), CreerLigne(ligneNombre)),JOUEUR_ObtenirCouleur(j));
 }
 
-Coup JOUEUR_SaisieCoupIA(Joueur j, Couleur * plateau) {
+Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {
   printf("unimplemented");
-  return CreerCoup(CreerPosition(0,0),JOUEUR_ObtenirCouleur(j));
+  return COUP_CreerCoup(POSITION_CreerPosition(0,0),JOUEUR_ObtenirCouleur(j));
 }
 
 Coup JOUEUR_ObtenirCoup(Joueur j, Couleur * plateau) {

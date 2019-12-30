@@ -2,10 +2,11 @@
 #define JOUEUR_TYPE
 
 #include <stdbool.h>
-#include "Couleur.h"
-#include "Coup.h"
 #include <stdlib.h>
 #include <stdio.h>
+
+#include "Couleur.h"
+#include "Coup.h"
 
 typedef struct {
   int profondeur;
@@ -49,7 +50,7 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j);
  *
  *@returns Coup construit à partir de la saisie
  */
-Coup JOUEUR_SaisieCoupIA(Joueur j, Couleur * plateau);
+Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau);
 
 /**
  * @brief Demande à une IA une position où elle veut jouer
