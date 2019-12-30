@@ -1,10 +1,24 @@
 #include "Menu.h"
 
-int ObtenirProfondeurIA(int nbArguments, char ** arguments) {
+int ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments) {
   if (nbArguments == 4){
     return atoi(arguments[3]);
   }
   return PROFONDEUR_DEFAUT_IA;
+}
+
+char * ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments) {
+  return arguments[2];
+}
+
+Couleur ObtenirCouleurDepuisString(char * couleur) {
+  if (strcmp(couleur, COULEUR_NOIRE)) {
+    return COULEUR_ObtenirCouleurBlanc();
+  }
+  else if (strcmp(couleur, COULEUR_BLANCHE)) {
+    return COULEUR_ObtenirCouleurNoir();
+  }
+  return COULEUR_ObtenirCouleurNeutre();
 }
 
 int SaisieInteger(int min, int max) {
