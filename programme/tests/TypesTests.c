@@ -5,6 +5,8 @@
 #include "testLigne.h"
 #include "testCouleur.h"
 #include "testPlateau.h"
+#include "testCoup.h"
+#include "testCoups.h"
 #include "testParcourirUneDirection.h"
 #include "testParcourirLesDirections.h"
 #include "testRechercheDesCoups.h"
@@ -24,23 +26,42 @@ int main(){
     CU_pSuite plateauSuite;
     CU_pSuite UneDirectionSuite;
     CU_pSuite LesDirectionsSuite;
-    CU_pSuite LesCoupsSuite;
+    CU_pSuite RechercheCoupSuite;
+    CU_pSuite CoupSuite;
+    CU_pSuite CoupsSuite;
+
     if (registryInitializationState == CUE_SUCCESS){
+
         colonneSuite = CU_add_suite("Colonne", NULL,NULL);
         ligneSuite = CU_add_suite("Ligne", NULL,NULL);
         couleurSuite = CU_add_suite("Couleur", NULL,NULL);
         plateauSuite = CU_add_suite("Plateau", NULL,NULL);
         UneDirectionSuite = CU_add_suite("UneDirection", NULL,NULL);
         LesDirectionsSuite = CU_add_suite("LesDirections", NULL,NULL);
-        LesCoupsSuite = CU_add_suite("LesCoups", NULL,NULL);
+        RechercheCoupSuite = CU_add_suite("RechercheCoup", NULL,NULL);
+        CoupSuite = CU_add_suite("Coup",NULL,NULL);
+        CoupsSuite = CU_add_suite("Coups",NULL,NULL);
+
         CU_ADD_TEST(colonneSuite,TestColonne);
+
         CU_ADD_TEST(ligneSuite,TestLigne);
+
         CU_ADD_TEST(couleurSuite,testBlanc);
         CU_ADD_TEST(couleurSuite,testNoir);
+
         CU_ADD_TEST(plateauSuite,TestPlateau);
+
         CU_ADD_TEST(UneDirectionSuite,testParcourirUneDirection);
+
         CU_ADD_TEST(LesDirectionsSuite,testParcourirLesDirections);
-        CU_ADD_TEST(LesCoupsSuite,testRechercheDesCoups);
+
+        //CU_ADD_TEST(RechercheCoupSuite,testRechercheDesCoups);
+
+        CU_ADD_TEST(CoupSuite,testEgaliteCoup);
+
+        CU_ADD_TEST(CoupsSuite,testCreerCoups);
+        CU_ADD_TEST(CoupsSuite,testAjoutCoups);
+
         CU_basic_set_mode(CU_BRM_NORMAL);
         CU_basic_run_tests();
         CU_cleanup_registry();
