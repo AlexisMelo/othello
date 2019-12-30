@@ -2,7 +2,7 @@
 #include"../include/Position.h"
 #include"../include/Direction.h"
 
-Position CreerPosition(Ligne ligne, Colonne colonne) {
+Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;
     position.ligne = ligne;
     position.colonne = colonne;
@@ -26,7 +26,7 @@ bool EstPositionValide(Position position) {
 
 void FixerLigne(Position * position, Ligne ligne) {
     position -> ligne = ligne;
-}   
+}
 
 void FixerColonne(Position * position, Colonne colonne) {
     position -> colonne = colonne;
@@ -41,6 +41,6 @@ Position AppliquerDirection(Position position, Direction direction){
 }
 
 
-bool EstEgalPosition(Position position1, Position position2) {
-    return EstEgalColonne(position1.colonne, position2.colonne) && EstEgalLigne(position1.ligne, position2.ligne);
+bool POSITION_EstEgalPosition(Position position1, Position position2) {
+    return COLONNE_EstEgalColonne(position1.colonne, position2.colonne) && EstEgalLigne(position1.ligne, position2.ligne);
 }
