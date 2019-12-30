@@ -15,7 +15,7 @@ ListeChainee listeChainee(){
 }
 
 bool LC_estVide(ListeChainee liste){
-    return(liste == NULL);
+    return(liste->element == NULL);
 }
 
 void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollection copierElement){
