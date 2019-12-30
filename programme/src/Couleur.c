@@ -1,68 +1,56 @@
-#include<stdbool.h>
-#include<assert.h>
-#include"../include/Couleur.h"
-#include<stdlib.h>
-#include<string.h>
+#include"Couleur.h"
 
-
-
-
-Couleur * CouleurNulle() {
+Couleur * COULEUR_PointeurCouleurNulle() {
     Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = nulle;
+    resultat->nom = Nulle;
     strcpy(resultat->hexa,"11");
     resultat->symbole = '.';
     return resultat;
 }
 
-Couleur CouleurBlanc() {
-    Couleur resultat = *CouleurNulle();
+Couleur COULEUR_ObtenirCouleurBlanc() {
+    Couleur resultat = *COULEUR_PointeurCouleurNulle();
     resultat.nom = Blanc;
-    strcpy(resultat.hexa, "00");
+    resultat.hexa = "00";
     resultat.symbole = 'O';
     return resultat;
 }
 
-Couleur CouleurNoir() {
-    Couleur resultat = *CouleurNulle();
+Couleur COULEUR_ObtenirCouleurNoir() {
+    Couleur resultat = *COULEUR_PointeurCouleurNulle();
     resultat.nom = Noir;
-    strcpy(resultat.hexa, "FF");
+    resultat.hexa = "FF";
     resultat.symbole = 'X';
     return resultat;
 }
 
 
-Couleur CouleurNeutre() {
-    Couleur resultat = *CouleurNulle();
+Couleur COULEUR_ObtenirCouleurNeutre() {
+    Couleur resultat = *COULEUR_PointeurCouleurNulle();
     resultat.nom = Vide;
-    strcpy(resultat.hexa, "01");
+    resultat.hexa = "01";
     resultat.symbole = ' ';
     return resultat;
 }
 
-Couleur ObtenirCouleuropposee(Couleur couleur) {
-    assert(!EstNeutre(couleur));
+Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) {
+    assert(!COULEUR_EstNeutre(couleur));
+
     if (couleur.nom == Blanc){
-        couleur.nom=Noir;
-        strcpy(couleur.hexa,"FF");
-        couleur.symbole='X';
-        return couleur;
+        return COULEUR_ObtenirCouleurNoir();
     }
     if (couleur.nom == Noir){
-        couleur.nom=Blanc;
-        strcpy(couleur.hexa,"00");
-        couleur.symbole='O';
-        return couleur;
+        return COULEUR_ObtenirCouleurBlanc();
     }
-    return CouleurNeutre();
-}    
-
-
-bool EstNeutre(Couleur couleur) {
-    return ((couleur.nom == CouleurNeutre().nom) && (couleur.hexa == CouleurNeutre().hexa) && (couleur.symbole == CouleurNeutre().symbole));
+    return COULEUR_ObtenirCouleurNeutre();
 }
 
 
-bool EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
-    return (((strcmp(couleur1.hexa, couleur2.hexa) == 0) && couleur1.nom == couleur2.nom && couleur1.symbole == couleur2.symbole));
+bool COULEUR_EstNeutre(Couleur couleur) {
+    return COULEUR_EstEgalCouleur(couleur, COULEUR_ObtenirCouleurNeutre());
+}
+
+
+bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
+    return (((strcmp(couleur1.hexa, couleur2.hexa) == 0) && (couleur1.nom == couleur2.nom) && (couleur1.symbole == couleur2.symbole)));
 }

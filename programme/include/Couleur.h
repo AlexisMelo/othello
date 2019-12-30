@@ -3,10 +3,14 @@
 
 #include<stdbool.h>
 #include<string.h>
+#include<stdlib.h>
+#include<assert.h>
+
+typedef enum { Vide, Blanc, Noir, Nulle } nomCouleur;
 
 typedef struct{
-    enum {Vide, Blanc, Noir, nulle}nom;
-    char hexa[3];
+    nomCouleur nom;
+    char * hexa;
     char symbole;
 }Couleur;
 
@@ -15,20 +19,20 @@ typedef struct{
  *
  * @returns Couleur avec Couleur.nom = Noir, Couleur.hexa = FF, Couleur.symbole = 'X'
 */
-Couleur CouleurNoir() ;
+Couleur COULEUR_ObtenirCouleurNoir() ;
 
 
 /**
  *@brief Retourne une Couleur blanche
  *@returns Couleur avec Couleur.nom = Blanc, Couleur.hexa = 00 , Couleur.symbole = '0'
 */
-Couleur CouleurBlanc() ;
+Couleur COULEUR_ObtenirCouleurBlanc() ;
 
 /**
  *@brief Retourne une Couleur neutre
  *@returns Couleur avec Couleur.nom = Vide, Couleur.hexa =01 , Couleur.symbole = ' '
 */
-Couleur CouleurNeutre() ;
+Couleur COULEUR_ObtenirCouleurNeutre() ;
 
 /**
  * @brief Retourne la couleur opposée à celle passée en entrée
@@ -37,7 +41,7 @@ Couleur CouleurNeutre() ;
  *
  * @returns Couleur opposée à celle passsée en entrée
 */
-Couleur ObtenirCouleuropposee(Couleur couleur) ;
+Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) ;
 
 
 
@@ -47,7 +51,7 @@ Couleur ObtenirCouleuropposee(Couleur couleur) ;
  * @param couleur : Couleur Blanc ou Noir
  *
  * @returns estNeutre : booléen
-*/bool EstNeutre(Couleur couleur) ;
+*/bool COULEUR_EstNeutre(Couleur couleur) ;
 
 
 
@@ -60,5 +64,5 @@ Couleur ObtenirCouleuropposee(Couleur couleur) ;
  *
  * @returns Couleur opposée à celle passsée en entrée
 */
-bool EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
+bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
 #endif
