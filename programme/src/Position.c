@@ -34,10 +34,15 @@ void FixerColonne(Position * position, Colonne colonne) {
 
 
 Position AppliquerDirection(Position position, Direction direction){
+        Position oldPos = position;
         FixerLigne(&position, ObtenirLigne(position) + ObtenirDecalageLigne(direction));
         FixerColonne(&position, ObtenirColonne(position) + ObtenirDecalageColonne(direction));
-        assert(EstPositionValide(position));
-        return position;
+        if(EstPositionValide(position)){;
+            return position;
+        }
+        else{
+            return oldPos;
+        };
 }
 
 
