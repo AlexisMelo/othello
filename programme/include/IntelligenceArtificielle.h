@@ -6,3 +6,4 @@
 #include"Coup.h"
 #include"Coups.h"
 #include"ListeChainee.h"
+#include"CoupCollection.h"
