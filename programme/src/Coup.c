@@ -1,4 +1,4 @@
-#include"Coup.h"
+#include "Coup.h"
 
 Coup COUP_CreerCoup(Position position, Couleur couleur){
     assert(!COULEUR_EstNeutre(couleur));

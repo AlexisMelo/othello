@@ -1,12 +1,12 @@
 #ifndef COUP_TYPE
 #define COUP_TYPE
 
+#include "Position.h"
+#include "Couleur.h"
+
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
-
-#include "Position.h"
-#include "Couleur.h"
 
 typedef struct
 {

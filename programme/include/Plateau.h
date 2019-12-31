@@ -3,9 +3,9 @@
 
 #include <stdbool.h>
 
-#include "Couleur.h"
 #include "Position.h"
 #include "Coup.h"
+#include "Couleur.h"
 #include "Colonne.h"
 #include "Ligne.h"
 

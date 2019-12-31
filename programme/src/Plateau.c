@@ -34,8 +34,8 @@ Couleur * PLATEAU_JouerCoup(Couleur * plateau, Coup coup) {
 }
 
 Couleur PLATEAU_ObtenirCouleurAvecPosition(Couleur * plateau, Position position) {
-    int ligneDeLaPosition = ObtenirNumeroColonne(ObtenirLigne(position));
-    int colonneDeLaPosition = ObtenirNumeroColonne(ObtenirColonne(position));
+    int ligneDeLaPosition = COLONNE_ObtenirNumeroColonne(POSITION_ObtenirLigne(position));
+    int colonneDeLaPosition = COLONNE_ObtenirNumeroColonne(POSITION_ObtenirColonne(position));
     return plateau[(ligneDeLaPosition-1)*TAILLE + (colonneDeLaPosition-1)];//plateau[colonneDeLaPosition][ligneDeLaPosition];
 }
 
