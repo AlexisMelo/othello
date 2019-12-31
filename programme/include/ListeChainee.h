@@ -1,13 +1,12 @@
 #ifndef LISTE_CHAINEE
 #define LISTE_CHAINEE
 #include<errno.h>
-#include"elementCollection.h"
 #include "Coup.h"
-struct _Noeud;
+struct Noeud;
 
-typedef struct _Noeud* ListeChainee;
+typedef struct Noeud* ListeChainee;
 
-typedef struct _Noeud
+typedef struct Noeud
 {
     Coup * element;
     ListeChainee listeSuivante;
@@ -15,6 +14,8 @@ typedef struct _Noeud
 
 #define ERREUR_MEMOIRE 1
 
+#include"CoupCollection.h"
+#include"elementCollection.h"
 ListeChainee listeChainee () ;
 bool LC_estVide(ListeChainee);
 void LC_ajouter(ListeChainee*,Coup*,EC_FonctionCopierDansCollection);

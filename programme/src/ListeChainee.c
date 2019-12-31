@@ -3,7 +3,6 @@
 #include<assert.h>
 #include<stdbool.h>
 #include"ListeChainee.h"
-#include"CoupCollection.h"
 
  
 ListeChainee listeChainee(){
@@ -20,8 +19,7 @@ bool LC_estVide(ListeChainee liste){
 
 void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollection copierElement){
     ListeChainee pNoeud = (ListeChainee)malloc(sizeof(Noeud));
-    Coup* donnee = copierElement(element);
-    if ((pNoeud!=NULL) || (donnee!=NULL)) {
+    if ((pNoeud!=NULL) || (element!=NULL)) {
         errno = 0;
         pNoeud->element = element;
         pNoeud->listeSuivante = *pliste;
@@ -33,7 +31,7 @@ void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollect
 }
 
 Coup * LC_obtenirElement(ListeChainee liste) {
-    return (void *)liste->element;
+    return liste->element;
 }
 
 ListeChainee LC_obtenirListeSuivante(ListeChainee liste){
@@ -48,8 +46,8 @@ void LC_fixerListeSuivante(ListeChainee * liste1, ListeChainee liste2){
 
 void LC_supprimerTete(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
     ListeChainee liste2 = LC_obtenirListeSuivante(*pliste);
-    LC_fixerListeSuivante(pliste, liste2);
-    liberer(pliste);
+    liberer(*pliste);
+    pliste = &liste2;
 }
 
 void LC_supprimer(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
@@ -57,7 +55,7 @@ void LC_supprimer(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
     do
     {
         ListeChainee temp = LC_obtenirListeSuivante(*pliste);
-        liberer(pliste);
+        liberer(*pliste);
         pliste = &temp;
     } while (!LC_estVide(*pliste));
 }
@@ -66,7 +64,7 @@ ListeChainee LC_copier(ListeChainee liste,EC_FonctionCopierDansCollection copier
     ListeChainee resultat = listeChainee();
     do
     {   ListeChainee temp = resultat;
-        temp->element = copier(liste->element);
+        temp = copier(liste);
         temp->listeSuivante = liste->listeSuivante;
         liste = LC_obtenirListeSuivante(liste);
         temp = LC_obtenirListeSuivante(temp);
@@ -78,7 +76,7 @@ int LC_egales(ListeChainee liste1, ListeChainee liste2 ,EC_FonctionComparaison c
     bool resultat = true;
     do
     {
-        if(!comparer(liste1->element, liste2->element)){
+        if(!comparer(liste1, liste2)){
             resultat = false;
         }
         liste1 = LC_obtenirListeSuivante(liste1);

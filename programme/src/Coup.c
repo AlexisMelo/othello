@@ -8,10 +8,11 @@
 
 
 Coup * creerCoupVide(){
-    Coup * presultat = (Coup *)malloc(sizeof(Coup));
+    Coup * presultat = (Coup *)malloc(sizeof(Coup));/* 
     presultat->couleur.nom = 1;
     strcpy(presultat->couleur.hexa, "AA");
-    presultat->couleur.symbole = 'A';
+    presultat->couleur.symbole = 'A'; */
+    presultat->couleur = CouleurNeutre();
     presultat->position.ligne = 1;
     presultat->position.colonne = 1;
     return presultat;

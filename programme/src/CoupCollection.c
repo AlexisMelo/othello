@@ -1,28 +1,25 @@
-#include "Coup.h"
-#include "Position.h"
-#include "Couleur.h"
-#include "Coup.h"
+#include"../include/CoupCollection.h"
 #include<stdlib.h>
 #include<stdio.h>
 
-Coup* fonctionCopierCoup(Coup* pcoup) {
-    Coup * presultat = creerCoupVide();
-    memcpy(&(presultat->couleur.nom), &(pcoup->couleur.nom), sizeof(int));
-    memcpy(&(presultat->couleur.hexa), &(pcoup->couleur.hexa), 2*sizeof(char));
-    memcpy(&(presultat->couleur.symbole), &(pcoup->couleur.symbole), sizeof(char));
-    memcpy(&(presultat->position.ligne), &(pcoup->position.ligne), sizeof(Ligne));
-    memcpy(&(presultat->position.colonne), &(pcoup->position.colonne), sizeof(Colonne));
+Noeud* fonctionCopierCoup(Noeud* pNoeud) {
+    Noeud * presultat = malloc(sizeof(Noeud));
+    memcpy(&(presultat->element->couleur.nom), &(pNoeud->element->couleur.nom), sizeof(int));
+    memcpy(&(presultat->element->couleur.hexa), &(pNoeud->element->couleur.hexa), 2*sizeof(char));
+    memcpy(&(presultat->element->couleur.symbole), &(pNoeud->element->couleur.symbole), sizeof(char));
+    memcpy(&(presultat->element->position.ligne), &(pNoeud->element->position.ligne), sizeof(Ligne));
+    memcpy(&(presultat->element->position.colonne), &(pNoeud->element->position.colonne), sizeof(Colonne));
     //printf("//-%d-//fcc/,,\n", obtenirNumeroLigne(presultat->position.ligne));
     //printf("//-%d-//fcc/,,\n", ObtenirNumeroColonne(presultat->position.colonne));  // check
     return presultat; 
 }
 
 
-void fonctionLibererCoup(Coup * pcoup) {
+void fonctionLibererCoup(Noeud * pcoup) {
     free(pcoup);
 }
 
 
-int fonctionComparerCoup(void * coup1, void * coup2) {
-    return estEgalCoup(*(Coup*)coup1, *(Coup*)coup2);
+int fonctionComparerCoup(Noeud * coup1, Noeud * coup2) {
+    return estEgalCoup(*coup1->element, *coup2->element);
 }

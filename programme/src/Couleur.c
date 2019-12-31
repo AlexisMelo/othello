@@ -10,6 +10,7 @@
 Couleur * CouleurNulle() {
     Couleur * presultat = malloc(sizeof(Couleur));
     presultat->nom = nulle;
+    presultat->hexa = malloc(sizeof(presultat->hexa)*3);
     strcpy(presultat->hexa,"11");
     presultat->symbole = '.';
     return presultat;
