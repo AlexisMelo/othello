@@ -1,7 +1,7 @@
 #include "Ligne.h"
 
 Ligne LIGNE_ObtenirLigneDepuisInt(int ligNum) {
-  switch (numero)
+  switch (ligNum)
   {
     case 1:
         return Un;
