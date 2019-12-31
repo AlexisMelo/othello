@@ -20,6 +20,7 @@ Couleur * jouerCoup(Couleur * plateau, Coup coup) {
     int ligneDuCoup = obtenirNumeroLigne(obtenirLigne(positionDuCoup));
     int colonneDuCoup = ObtenirNumeroColonne(obtenirColonne(positionDuCoup));
     Couleur coul = obtenirCouleur(coup);
+    //printf("%d  %d\n", ligneDuCoup, colonneDuCoup);
     plateau[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
     return plateau;
     }

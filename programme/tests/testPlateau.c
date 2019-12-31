@@ -20,10 +20,10 @@ void TestPlateau()
             jouerCoup(plateau, coup);
             Couleur res = obtenirCouleurDepuisPlateau(plateau, creerPosition(ligne + i - 1,colonne + j - 1));
             CU_ASSERT(estEgalCouleur(res, couleur));
-            printf("%d        %d      ", res.nom, couleur.nom);
+            /* printf("%d        %d      ", res.nom, couleur.nom);
             printf("%s        %s      ", res.hexa, couleur.hexa);
             printf("%c        %c      ", res.symbole, couleur.symbole); 
-            printf("\n");
+            printf("\n"); */
         }
     }
 }

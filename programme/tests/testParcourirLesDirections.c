@@ -16,7 +16,7 @@ void testParcourirLesDirections() {
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
-            coup = creerCoup(creerPosition(ligne + i - 1,colonne + j - 1), NEUTRE);
+            coup = creerCoup(creerPosition(i - 1,j - 1), NEUTRE);
             jouerCoup(plateau, coup);
         }
     }

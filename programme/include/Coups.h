@@ -44,11 +44,11 @@ void RetirerCoup(Coups*, Coup) ;
 int ObtenirnombreDeCoups(Coups) ;
 
 
-/** Donne la liste chaînée des coups dans l'ensemble Coups
+
+/** Obtient le coup en tête de la liste chaînée de coups.
  * 
- * 
- * @param coups :  Ensemble dont on veut obtenir le nombre de coups
- * @returns ListeChainée : coups
+ * @param coups : Coups dont obtenir le premier Coup.
+ * @returns Coup: Coup en tête
 */
 Coup COUPS_ObtenirCoup(Coups) ;
 

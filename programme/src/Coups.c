@@ -20,12 +20,6 @@ void AjouterCoup(Coups * coups, Coup coup) {
     //printf("Ajouter %d   AjouterFin", coups->coups->element->position.colonne);
 }
 
-/** Obtient le coup en tête de la liste chaînée de coups.
- * 
- * @param coups : Coups dont obtenir le premier Coup.
- * @returns Coup: Coup en tête
-*/
-
 Coup COUPS_ObtenirCoup(Coups coups){
     return *(coups.coups->element);
 }
