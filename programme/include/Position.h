@@ -15,7 +15,6 @@ typedef struct
     Colonne colonne;
 }Position;
 
-#include "Plateau.h"
 /**
  * @brief Obtenir une position à partir d'une Ligne et d'une Colonne
  *
