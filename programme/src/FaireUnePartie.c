@@ -1,6 +1,7 @@
-#include"../include/FaireUnePartie.h"
-void FaireUnePartie(Couleur couleur,void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *),Coup (*ObtenirCoupJ1)(Couleur,Couleur *),void (*ObtenirCoupJ2)(Couleur,Couleur *)){
-  Couleur *plateau;
-  InitialiserPlateau(plateau);
-  GererPartie(couleur,plateau,AficherResultat,AfficherPlateau,ObtenirCoupJ1,ObtenirCoupJ2);
+#include "FaireUnePartie.h"
+
+void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *), Joueur j1, Joueur j2){
+  Couleur* plateau = PLATEAU_CreerPlateau();
+  PLATEAU_InitialiserPlateau(plateau);
+  PARTIE_GererPartie(plateau,AficherResultat,AfficherPlateau,j1,j2);
 }
