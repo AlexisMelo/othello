@@ -58,10 +58,11 @@ Position COUP_ObtenirPosition(Coup coup) ;
  * Retourne vrai seulement si la position est dans les limites du plateau, et que la
  * Couleur n'est pas neutre
  *
- * @param coup : Coup
+ * @param plateau Couleur * plateau de jeu
+ * @param coup Coup
  *
- * @returns estCoupValide : bool
+ * @returns estCoupValide bool
 */
-bool COUP_EstCoupValide(Coup coup) ;
+bool COUP_EstCoupValide(Couleur * plateau, Coup coup) ;
 
 #endif

@@ -20,6 +20,6 @@ Position COUP_ObtenirPosition(Coup coup){
     return coup.position;
 }
 
-bool COUP_EstCoupValide(Coup coup){
-    return  EstPositionValide(coup.position) && !COULEUR_EstNeutre(coup.couleur);
+bool COUP_EstCoupValide(Couleur * plateau, Coup coup){
+    return  (bool) (POSITION_EstPositionValide(plateau, COUP_ObtenirPosition(coup)) && !COULEUR_EstNeutre(COUP_ObtenirCouleur(coup)));
 }
