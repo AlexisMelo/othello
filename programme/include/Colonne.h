@@ -1,7 +1,6 @@
 #ifndef COLONNE_TYPE
 #define COLONNE_TYPE
 
-
 #include<stdbool.h>
 #include<stdlib.h>
 #include<stdio.h>
@@ -34,21 +33,21 @@ Colonne COLONNE_ObtenirColonneDepuisInt(int colNum);
 Colonne COLONNE_ObtenirColonneDepuisChar(char colChar);
 
 /**
- *@brief Obtient le numero réel d'une colonne
+ * @brief Obtient le numero réel d'une colonne
  *
- *@param colonne1 Colonne
+ * @param colonne Colonne
  *
- *@returns Numéro de la colonne
+ * @returns Numéro de la colonne
 */
 int COLONNE_ObtenirNumeroColonne(Colonne colonne);
 
 /**
- *@brief Retourne vrai si les Colonnes entrées sont identiques.
+ * @brief Retourne vrai si les Colonnes entrées sont identiques.
  *
- *@param colonne1 Colonne
- *@param colonne2 Colonne
+ * @param colonne1 Colonne
+ * @param colonne2 Colonne
  *
- *@returns booleen
+ * @returns booleen
 */
 bool COLONNE_EstEgalColonne(Colonne colonne1, Colonne colonne2);
 
