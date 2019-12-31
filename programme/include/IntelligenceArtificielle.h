@@ -1,0 +1,8 @@
+#include "Plateau.h"
+#include "Couleur.h"
+#include "Ligne.h"
+#include"Colonne.h"
+#include"CalculerPoint.h"
+#include"Coup.h"
+#include"Coups.h"
+#include"ListeChainee.h"

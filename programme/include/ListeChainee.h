@@ -8,7 +8,7 @@ typedef Noeud * ListeChainee;
 
 typedef struct
 {
-    void * element;
+    Coup * element;
     ListeChainee listeSuivante;
 } Noeud;
 
