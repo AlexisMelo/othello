@@ -1,55 +1,71 @@
+#ifndef __PLATEAU__
+#define __PLATEAU__
+
+#include <stdbool.h>
+
 #include "Couleur.h"
 #include "Position.h"
 #include "Coup.h"
-#include<stdbool.h>
-
-
-
+#include "Colonne.h"
+#include "Ligne.h"
 
 #define TAILLE 8
 
-
-
 //typedef Couleur Plateau[TAILLE][TAILLE];
 
-
-/** 
- *@brief Constructeur du Plateau
- *@returns : Couleur *
+/**
+ * @brief Initialiser un plateau de jeu avec 4 cases du centre remplies et les autres neutres
+ *
+ * Exemple : PLATEAU_InitialiserPlateau(p)
+ *
+ * @param plateau Couleur * plateau de jeu
 */
-Couleur * CreerPlateau() ;
+void PLATEAU_InitialiserPlateau(Couleur * plateau);
 
+/**
+ * @brief Constructeur du Plateau
+ *
+ * @returns : Couleur * Pointeur de plateau avec allocation dynamique
+*/
+Couleur * PLATEAU_CreerPlateau() ;
 
 /**
  * @brief Joue un coup sur le plateau.
- * 
- *@param plateau : Couleur *
- *@param coup : Coup à jouer
- *@returns plateau mis à Jour : Couleur*
+ *
+ * @param plateau Couleur * plateau de jeu
+ * @param coup Coup à jouer
+ *
+ * @returns Plateau mis à jour avec le nouveau coup
  */
-Couleur * JouerCoup(Couleur plateau[], Coup coup) ;
+Couleur * PLATEAU_JouerCoup(Couleur * plateau, Coup coup) ;
 
-
-
-/** 
- *@brief Retourne la couleur du Plateau à cette Position.
- *@param plateau : Plateau actuel
- *@param position : Position à laquelle on regarde la couleur
- *@returns : Couleur
+/**
+ *@brief Retourne la couleur du Plateau à cette position
+ *
+ *@param plateau Couleur * plateau de jeu
+ *@param position Position de la case du plateau dont on veut la couleur
+ *
+ *@returns Couleur à la position donnée
 */
-Couleur ObtenirCouleurDepuisPlateau(Couleur * plateau, Position position) ;
+Couleur PLATEAU_ObtenirCouleurAvecPosition(Couleur * plateau, Position position) ;
 
-/** 
- *@brief Vérifie si la position donnée du plateau est vide.
- *@param plateau : Plateau actuel
- *@param position : Position que l'on veut vérifier
- *@returns : Booléen
+/**
+ * @brief Vérifie si la position donnée du plateau est libre, équivalent à savoir si la couleur est neutre
+ *
+ * @param plateau Couleur * plateau de jeu
+ * @param position Position que l'on veut vérifier
+ *
+ * @returns true si la position est libre, false sinon
 */
-bool EstPositionVide(Couleur * plateau, Position position) ;
+bool PLATEAU_EstPositionLibre(Couleur * plateau, Position position) ;
 
-/** Fonction d'accès à la taille du plateau.
- * 
- *@param plateau : Plateau dont on veut la taille 
- *@returns : Taille dans un int
+/**
+ * @brief Retourne la taille du plateau (sa largeur ou bien sa longueur car les deux sont égales)
+ *
+ * @param plateau Couleur * representant le plateau de jeu et dont on veut la taille
+ *
+ * @returns Integer donnant la taille du plateau
 */
-int ObtenirTaille(Couleur * plateau) ;
+int PLATEAU_ObtenirTaille(Couleur * plateau) ;
+
+#endif
