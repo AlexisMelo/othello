@@ -27,7 +27,7 @@ Couleur COULEUR_ObtenirCouleurNoir() {
 
 Couleur COULEUR_ObtenirCouleurNeutre() {
     Couleur resultat = *COULEUR_PointeurCouleurNulle();
-    resultat.nom = Vide;
+    resultat.nom = Neutre;
     resultat.hexa = "01";
     resultat.symbole = ' ';
     return resultat;

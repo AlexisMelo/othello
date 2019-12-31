@@ -6,7 +6,7 @@
 #include<stdlib.h>
 #include<assert.h>
 
-typedef enum { Vide, Blanc, Noir, Nulle } nomCouleur;
+typedef enum { Neutre, Blanc, Noir, Nulle } nomCouleur;
 
 typedef struct{
     nomCouleur nom;
