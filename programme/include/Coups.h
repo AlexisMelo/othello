@@ -5,7 +5,7 @@
 #include "ListeChainee.h"
 
 
-typedef struct
+typedef struct _Coups
 {
     ListeChainee coups;
     int nbDeCoups;
@@ -18,7 +18,7 @@ typedef struct
  * 
  * @returns coups : Coups
 */
-Coups CreerCoups() ;
+Coups * CreerCoups() ;
 
 
 
@@ -41,7 +41,7 @@ void RetirerCoup(Coups*, Coup) ;
  * @param coups :  Ensemble dont on veut obtenir le nombre de coups
  * @returns int : nbDeCoups
 */
-int NbCoups(Coups) ;
+int ObtenirnombreDeCoups(Coups) ;
 
 
 /** Donne la liste chaînée des coups dans l'ensemble Coups

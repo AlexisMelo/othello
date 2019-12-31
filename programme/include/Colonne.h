@@ -40,5 +40,11 @@ Colonne CreerColonne(int nb);
  *
  * @returns booléen
 */
-bool EstEgalColonne(Colonne colonne1, Colonne colonne2) ;
+bool estEgalColonne(Colonne colonne1, Colonne colonne2);
+
+
+
+Colonne ObtenirColonneDepuisChar(char colChar);
+
+
 #endif
