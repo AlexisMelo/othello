@@ -21,13 +21,13 @@ Couleur * CreerPlateau() ;
 
 
 /**
- * @brief Joue un coup sur le plateau.
+ * @brief Pose un pion sur le plateau.
  * 
  *@param plateau : Couleur *
  *@param coup : Coup à jouer
  *@returns plateau mis à Jour : Couleur*
  */
-Couleur * JouerCoup(Couleur plateau[], Coup coup) ;
+Couleur * PoserPion(Couleur plateau[], Coup coup) ;
 
 
 

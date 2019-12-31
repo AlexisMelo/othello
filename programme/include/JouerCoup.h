@@ -16,6 +16,6 @@
 */
 
 
-void JouerCoup(Couleur * plateauDeJeu,Coup coupJoue);
+void JouerCoup(Couleur * plateauDeJeu, Coup coupJoue);
 
 #endif
