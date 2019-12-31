@@ -11,7 +11,7 @@ int clean_suite_success(void) {
     return 0; 
 } */
 
-void TestJouerCoup(void){
+void TestJouerCoup(){
     void * plateauDeJeu = CreerPlateau();
     Couleur NOIR = CouleurNoir();
     Couleur BLANC = CouleurBlanc();
@@ -19,8 +19,7 @@ void TestJouerCoup(void){
     Coup coup;
     Ligne ligne = CreerLigne(1);
     Colonne colonne = CreerColonne(1);
-
-   for (int i = 1; i < TAILLE + 1; i++)
+    for (int i = 1; i < TAILLE + 1; i++)
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
@@ -28,19 +27,10 @@ void TestJouerCoup(void){
             JouerCoup(plateauDeJeu, coup);
         }
     }
-
-
     coup = CreerCoup(CreerPosition(1,2), NOIR);
     JouerCoup(plateauDeJeu, coup);
-    
-
-
     Couleur resultatAttendu = NOIR;
     Couleur resultatObtenu = CouleurNeutre();
     resultatObtenu = ObtenirCouleurDepuisPlateau(plateauDeJeu, CreerPosition(1,2));
-    CU_ASSERT(EstEgalCouleur(resultatAttendu, resultatObtenu));
-
-
+    CU_ASSERT(EstEgalCouleur(resultatAttendu, resultatObtenu))
 }
-    
-
