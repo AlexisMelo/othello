@@ -3,11 +3,7 @@
 
 #include <stdbool.h>
 
-#include "Position.h"
 #include "Coup.h"
-#include "Couleur.h"
-#include "Colonne.h"
-#include "Ligne.h"
 
 #define TAILLE 8
 
