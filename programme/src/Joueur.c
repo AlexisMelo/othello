@@ -23,7 +23,7 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     scanf("%s", entree);
     char colonneLettre = entree[0];
     int ligneNombre = entree[1];
-  return COUP_CreerCoup(POSITION_CreerPosition(COLONNE_ObtenirColonneDepuisChar(colonneLettre), CreerLigne(ligneNombre)),JOUEUR_ObtenirCouleur(j));
+  return COUP_CreerCoup(POSITION_CreerPosition(COLONNE_ObtenirColonneDepuisChar(colonneLettre), LIGNE_ObtenirLigneDepuisInt(ligneNombre)),JOUEUR_ObtenirCouleur(j));
 }
 
 Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {

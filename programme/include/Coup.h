@@ -3,13 +3,11 @@
 
 #include "Position.h"
 #include "Couleur.h"
-
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
 
-typedef struct
-{
+typedef struct{
     Position position;
     Couleur couleur;
 }Coup;
@@ -62,6 +60,6 @@ Position COUP_ObtenirPosition(Coup coup) ;
  *
  * @returns estCoupValide : bool
 */
-bool COUP_EstCoupValide(Coup coup) ;
+bool COUP_EstCoupValide(Couleur * plateau, Coup coup) ;
 
 #endif
