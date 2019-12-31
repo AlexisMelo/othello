@@ -1,19 +1,22 @@
 #ifndef POSITION_TYPE
 #define POSITION_TYPE
 
-#include "Ligne.h"
-#include "Colonne.h"
-#include "Direction.h"
-#include "Couleur.h"
-
 #include <stdbool.h>
 #include <assert.h>
+
+
+#include "Ligne.h"
+#include "Colonne.h"
 
 typedef struct
 {
     Ligne ligne;
     Colonne colonne;
 }Position;
+
+#include "Couleur.h"
+#include "Direction.h"
+
 /**
  * @brief Obtenir une position à partir d'une Ligne et d'une Colonne
  *
