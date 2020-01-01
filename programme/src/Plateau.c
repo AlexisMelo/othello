@@ -14,7 +14,7 @@ Couleur * CreerPlateau() {
 }
         
 
-Couleur * JouerCoup(Couleur * plateau, Coup coup) {
+Couleur * PoserPion(Couleur * plateau, Coup coup) {
     Position positionDuCoup = ObtenirPosition(coup);
     int ligneDuCoup = ObtenirNumeroLigne(ObtenirLigne(positionDuCoup));
     int colonneDuCoup = ObtenirNumeroColonne(ObtenirColonne(positionDuCoup));
