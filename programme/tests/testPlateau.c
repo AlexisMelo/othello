@@ -7,7 +7,7 @@
 #include "../include/Couleur.h"
 void TestPlateau()
 {
-    void * plateau = creerPlateau();
+    Couleur * plateau = creerPlateau();
     Couleur couleur = CouleurNoir();
     Ligne ligne = creerLigne(1);
     Colonne colonne = creerColonne(1);
@@ -26,4 +26,5 @@ void TestPlateau()
             printf("\n"); */
         }
     }
+    printf("%s",plateau[7*TAILLE + 2].hexa);
 }
