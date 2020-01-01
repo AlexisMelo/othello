@@ -1,7 +1,4 @@
-#include "Coup.h"
-#include "Position.h"
-#include "Couleur.h"
-#include "Coup.h"
+#include "../include/CoupCollection.h"
 #include<stdlib.h>
 
 void* FonctionCopierCoup(void* coup) {

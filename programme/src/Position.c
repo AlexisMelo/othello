@@ -1,4 +1,4 @@
-#include "Position.h"
+#include "../include/Position.h"
 #include "Plateau.h" // ne surtout pas déplacer !!! 
 
 Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) {

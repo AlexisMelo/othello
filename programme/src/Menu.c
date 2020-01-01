@@ -1,4 +1,4 @@
-#include "Menu.h"
+#include "../include/Menu.h"
 
 int ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments) {
   if (nbArguments == 4){

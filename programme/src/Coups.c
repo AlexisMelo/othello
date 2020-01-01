@@ -1,7 +1,4 @@
 #include "Coups.h"
-#include "Coup.h"
-#include "CoupCollection.h"
-#include "ListeChainee.h"
 #include<assert.h>
 Coups CreerCoups() {
     Coups resultat;

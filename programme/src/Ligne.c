@@ -1,4 +1,4 @@
-#include "Ligne.h"
+#include "../include/Ligne.h"
 
 Ligne LIGNE_ObtenirLigneDepuisInt(int ligNum) {
   switch (ligNum)

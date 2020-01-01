@@ -1,6 +1,8 @@
 #ifndef __GERERPARTIE__
 #define __GERERPARTIE__
-
+#include"Couleur.h"
+#include"Plateau.h"
+#include"JouerCoup.h"
 /**
  * @brief Permet de lancer une partie
  *

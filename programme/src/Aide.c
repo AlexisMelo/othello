@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Aide.h"
+#include "../include/Aide.h"
 
 void MessageDAide () {
 printf("Aide pour le joueur : \n \n");
