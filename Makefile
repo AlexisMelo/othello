@@ -9,6 +9,9 @@ CFLAGS = -Wall -pedantic
 INCFLAGS = -I$(INCLUDEDIR)
 
 all :
+
+all : $(BINDIR)/$(EXEC)
+	$(TESTDIR)/$(TEST)
 	pwd
 	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory . ./rapport/sourcesTEX/Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex
 	find . -type f -name '*.log' -exec rm {} +
@@ -16,7 +19,15 @@ all :
 	find . -type f -name '*.toc' -exec rm {} +
 	find . -type f -name '*.dvi' -exec rm {} +
 	find . -type f -name '*.aux' -exec rm {} +
-	
+
+exec : $(BINDIR)/$(EXEC)
+
+$(BINDIR)/$(EXEC) : $(SRCDIR)/Othello.o $(SRCDIR)/Menu.o $(SRCDIR)/MenuGraphique.o $(SRCDIR)/MenuLigneCommande.o $(SRCDIR)/Aide.o
+	$(CC)  -o $@ $^ $(LDFLAG)
+
+$(SRCDIR)/%.o : $(SRCDIR)/%.c
+	$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
+
 clean :
 	find . -type f -name '*.pdf' -exec rm {} +
 	find . -type f -name '*.log' -exec rm {} +
