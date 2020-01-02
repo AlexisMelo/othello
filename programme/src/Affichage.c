@@ -1,4 +1,4 @@
-#include"../include/AfficherPlateau.h"
+#include"../include/Affichage.h"
 
 void SetTextColorToBlack(){
     printf("\033[0;30m");
@@ -34,15 +34,15 @@ void AppliquerDecalageVertical(){
     }
 }
 void AFFICHAGE_AfficherPlateau(Couleur * plateau){
-    for (int i=1; i<=ObtenirTaille(plateau); i++){
+    for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
         AppliquerDecalageHorizontal();
         printf("-");
     };
     printf("\n");
-    for (int i=1; i<=ObtenirTaille(plateau); i++){
+    for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
         printf("|");
-        for (int j=1; j<=ObtenirTaille(plateau); j++){
-            Couleur couleur = ObtenirCouleurDepuisPlateau(plateau, CreerPosition(i,j));
+        for (int j=1; j<=PLATEAU_ObtenirTaille(plateau); j++){
+            Couleur couleur = PLATEAU_ObtenirCouleurAvecPosition(plateau, POSITION_CreerPosition(i,j));
             AppliquerDecalageHorizontal();
             TextColorFromHexa(couleur.hexa);
             printf("%c",couleur.symbole);
@@ -54,7 +54,7 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau){
         }
         printf("\n");
     }
-        for (int i=1; i<=ObtenirTaille(plateau); i++){
+        for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
             AppliquerDecalageHorizontal();
             printf("-");
     };
@@ -66,34 +66,34 @@ void InitialiserAffichagePlateau(){
     struct timespec ts;
     ts.tv_nsec = 9000000;
     ts.tv_sec = 0;
-    Couleur * plateau = CreerPlateau();
-    Couleur couleur = CouleurNeutre();
+    Couleur * plateau = PLATEAU_CreerPlateau();
+    Couleur couleur = COULEUR_ObtenirCouleurNeutre();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
         }
     }
-    couleur = CouleurNoir();
+    couleur = COULEUR_ObtenirCouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            couleur = ObtenirCouleuropposee(couleur);
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
+            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
             AFFICHAGE_AfficherPlateau(plateau);
             nanosleep(&ts, &ts);
             }
     };
-    couleur = CouleurNeutre();
+    couleur = COULEUR_ObtenirCouleurNeutre();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
             nanosleep(&ts, &ts);
             AFFICHAGE_AfficherPlateau(plateau);
         }
     }
-    InitialiserPlateau(plateau);
+    PLATEAU_InitialiserPlateau(plateau);
     AFFICHAGE_AfficherPlateau(plateau);
 }
 
