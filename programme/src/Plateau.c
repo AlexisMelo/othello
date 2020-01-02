@@ -11,7 +11,6 @@
 
 Couleur * CreerPlateau() {
     return(Couleur*)malloc(TAILLE*TAILLE*sizeof(Couleur*));
-;
 }
         
 

@@ -20,6 +20,6 @@ void TestPlateau()
             JouerCoup(plateau, coup);
             Couleur res = ObtenirCouleurDepuisPlateau(plateau, CreerPosition(ligne + i - 1,colonne + j - 1));
             CU_ASSERT(EstEgalCouleur(res, couleur));
-        }
+            }
     }
 }

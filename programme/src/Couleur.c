@@ -28,7 +28,7 @@ Couleur CouleurNoir() {
     Couleur resultat = *CouleurNulle();
     resultat.nom = Noir;
     strcpy(resultat.hexa, "FF");
-    resultat.symbole = 'X';
+    resultat.symbole = 'O';
     return resultat;
 }
 
@@ -46,7 +46,7 @@ Couleur ObtenirCouleuropposee(Couleur couleur) {
     if (couleur.nom == Blanc){
         couleur.nom=Noir;
         strcpy(couleur.hexa,"FF");
-        couleur.symbole='X';
+        couleur.symbole='0';
         return couleur;
     }
     if (couleur.nom == Noir){
