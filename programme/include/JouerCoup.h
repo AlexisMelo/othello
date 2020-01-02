@@ -5,6 +5,19 @@
 #include"Coup.h"
 #include"Couleur.h"
 
+/**
+ *@brief Capture les pions selon le pion posé.
+ * 
+ *@param plateauDeJeu : Couleur
+ *
+ *@param PositionDuCoupJoue : Position
+ *
+ *@param CouleurDuCoupJoue : Couleur
+ *
+*/
+
+void CapturerPions(Couleur **plateau, Position PositionDuCoupJoue, Couleur joueurActuel) ;
+
 
 /**
  *@brief Effectue un coup sur un plateau.
@@ -16,6 +29,6 @@
 */
 
 
-void JouerCoup(Couleur * plateauDeJeu,Coup coupJoue);
+void JouerCoup(Couleur * plateauDeJeu, Coup coupJoue);
 
 #endif

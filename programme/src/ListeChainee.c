@@ -4,82 +4,84 @@
 #include<stdbool.h>
 #include"../include/ListeChainee.h"
 
- 
-ListeChainee CreerListeChainee(){
+
+ListeChainee listeChainee(){
     errno = 0;
-    return NULL;
+    Noeud* pNoeud = (Noeud*)malloc(sizeof(Noeud));
+    pNoeud->element = NULL;
+    pNoeud->listeSuivante = NULL;
+    return pNoeud;
 }
 
-bool LC_EstVide(ListeChainee liste){
-    return(liste == NULL);
+bool LC_estVide(ListeChainee liste){
+    return(liste->element == NULL);
 }
 
-void LC_Ajouter(ListeChainee* pliste, void* element,EC_FonctionCopierDansCollection copierElement){
+void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollection copierElement){
     ListeChainee pNoeud = (ListeChainee)malloc(sizeof(Noeud));
-    void* donnee = copierElement(element);
+    Coup* donnee = copierElement(element);
     if ((pNoeud!=NULL) || (donnee!=NULL)) {
         errno = 0;
         pNoeud->element = element;
         pNoeud->listeSuivante = *pliste;
-        *pliste = *pNoeud;
+        *pliste = pNoeud;
     }
     else{
         errno = ERREUR_MEMOIRE;
     }
 }
 
-void * LC_ObtenirElement(ListeChainee liste) {
+Coup * LC_obtenirElement(ListeChainee liste) {
     return (void *)liste->element;
 }
 
-ListeChainee LC_ObtenirListeSuivante(ListeChainee liste){
-    assert(!estVide(liste));
-    return liste -> listeSuivante;
+ListeChainee LC_obtenirListeSuivante(ListeChainee liste){
+    assert(!LC_estVide(liste));
+    return liste->listeSuivante;
 }
 
-void LC_FixerListeSuivante(ListeChainee liste1, ListeChainee liste2){
-    assert(!estVide(liste1));
-    liste1 -> listeSuivante  = liste2;
-    return liste1;
+void LC_fixerListeSuivante(ListeChainee * liste1, ListeChainee liste2){
+    assert(!LC_estVide(*liste1));
+    (*liste1)->listeSuivante  = liste2;
 }
 
-void LC_SupprimerTete(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
-    ListeChainee liste2 = obtenirListeSuivante(*pliste);
-    fixerListeSuivante(*pliste, liste2);
+void LC_supprimerTete(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
+    ListeChainee liste2 = LC_obtenirListeSuivante(*pliste);
+    LC_fixerListeSuivante(pliste, liste2);
     liberer(pliste);
 }
 
-void LC_Supprimer(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
-    assert(!estVide(*pliste));
+void LC_supprimer(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
+    assert(!LC_estVide(*pliste));
     do
     {
-        ListeChainee temp = obtenirListeSuivante(*pliste);
+        ListeChainee temp = LC_obtenirListeSuivante(*pliste);
         liberer(pliste);
         pliste = &temp;
-    } while (!estVide(*pliste));
+    } while (!LC_estVide(*pliste));
 }
 
-ListeChainee LC_Copier(ListeChainee liste,EC_FonctionCopierDansCollection copier) {
+ListeChainee LC_copier(ListeChainee liste,EC_FonctionCopierDansCollection copier) {
     ListeChainee resultat = listeChainee();
     do
     {   ListeChainee temp = resultat;
         temp->element = copier(liste->element);
         temp->listeSuivante = liste->listeSuivante;
-        liste = obtenirListeSuivante(liste);
-        temp = obtenirListeSuivante(temp);
-    } while (!estvide(liste));
+        liste = LC_obtenirListeSuivante(liste);
+        temp = LC_obtenirListeSuivante(temp);
+    } while (!LC_estVide(liste));
     return resultat;
 }
 
-int LC_Egales(ListeChainee liste1, ListeChainee liste2 ,EC_FonctionComparaison comparer) {
+int LC_egales(ListeChainee liste1, ListeChainee liste2 ,EC_FonctionComparaison comparer) {
     bool resultat = true;
     do
     {
         if(!comparer(liste1->element, liste2->element)){
             resultat = false;
         }
-        liste1 = obtenirListeSuivante(liste1);
-        liste2 = obtenirListeSuivante(liste2);
-    } while (!estVide(liste1) && !estvide(liste2) && (resultat));
+        liste1 = LC_obtenirListeSuivante(liste1);
+        liste2 = LC_obtenirListeSuivante(liste2);
+    } while (!LC_estVide(liste1) && !LC_estVide(liste2) && (resultat));
     return resultat;
 }

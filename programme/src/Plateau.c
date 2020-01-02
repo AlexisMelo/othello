@@ -10,8 +10,6 @@ void PLATEAU_InitialiserPlateau(Couleur * p){
   for (int i=1;i<=PLATEAU_ObtenirTaille(p);i++){
     for (int j=1;j<=PLATEAU_ObtenirTaille(p);j++){
       PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j)),neutre));
-    }
-  }
 
   //initialisation des 4 premiers coups
   PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2),  COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2)), blanc));
