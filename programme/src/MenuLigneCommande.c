@@ -15,7 +15,8 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
     j1 = JOUEUR_CreerJoueurHumain(couleurJ1);
     j2 = JOUEUR_CreerJoueurHumain(couleurJ2);
 
-    printf("Jouer partie Joueur vs Joueur avec profondeur %d\n", ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie  //et ne pas demander la profondeur 
+    printf("Jouer partie Joueur vs Joueur avec profondeur %d\n", ObtenirProfondeurIADepuisArguments(nbArguments,arguments));
+
   }
   else if (strcmp(arguments[1], JOUEURVSIA) == 0) {
 

@@ -35,6 +35,6 @@ void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *),void (*AfficherPl
  *
  *@returns booléen
 */
-void GererPartie(Couleur,Couleur *,void (*AfficherResultat)(Plateau),void (*AfficherPlateau)(Plateau),Coup (*ObtenirCoupJ1)(Couleur,Plateau),void (*ObtenirCoupJ2)(Couleur,Plateau));
+void PARTIE_GererPartie(Couleur,Couleur *,void (*AfficherResultat)(Plateau),void (*AfficherPlateau)(Plateau),Coup (*ObtenirCoupJ1)(Couleur,Plateau),void (*ObtenirCoupJ2)(Couleur,Plateau));
 
 #endif
