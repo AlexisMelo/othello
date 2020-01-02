@@ -6,7 +6,6 @@
 
 typedef struct{
     enum {Vide, Blanc, Noir, nulle}nom;
-    char hexa[3];
     char symbole;
 }Couleur;
 
