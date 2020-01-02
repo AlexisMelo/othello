@@ -18,7 +18,7 @@
  *
  *@returns booléen 
 */
-bool parcourirLesDirections (Couleur * plateauDeJeu, Position positionDuCoup, Couleur joueurActuel);
+bool ParcourirLesDirections (Couleur * plateauDeJeu, Position positionDuCoup, Couleur joueurActuel);
 
 /**
  *@brief Retourne un booléen pour savoir si la direction est valide, i.e il y a capture de pion(s)
@@ -33,5 +33,5 @@ bool parcourirLesDirections (Couleur * plateauDeJeu, Position positionDuCoup, Co
  *
  *@returns booléen 
 */
-bool parcourirUneDirection (Couleur * plateauDeJeu, Position positionDuCoup, Direction uneDirection, Couleur joueurActuel);
+bool ParcourirUneDirection (Couleur * plateauDeJeu, Position positionDuCoup, Direction uneDirection, Couleur joueurActuel);
 #endif

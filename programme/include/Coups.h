@@ -1,6 +1,8 @@
 #ifndef COUPS_TYPE
 #define COUPS_TYPE
 #include "Coup.h"
+#include "CoupCollection.h"
+#include "ListeChainee.h"   
 #include<stdbool.h>
 #include "ListeChainee.h"
 

@@ -1,17 +1,9 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
 #include <string.h>
-#include "testColonne.h"
-#include "testLigne.h"
-#include "testCouleur.h"
-#include "testPlateau.h"
-#include "testCoup.h"
-#include "testCoups.h"
-#include "testParcourirUneDirection.h"
-#include "testParcourirLesDirections.h"
-#include "testRechercheDesCoups.h"
 #include "../include/Colonne.h"
 #include "../include/Ligne.h"
+#include "TypesTest.h"
 
 
 #define CU_ADD_TEST(suite, test) (CU_add_test(suite, #test, (CU_TestFunc)test))
@@ -57,10 +49,10 @@ int main(){
 
         //CU_ADD_TEST(RechercheCoupSuite,testRechercheDesCoups);
 
-        CU_ADD_TEST(CoupSuite,testEgaliteCoup);
+        //CU_ADD_TEST(CoupSuite,testEgaliteCoup);
 
-        CU_ADD_TEST(CoupsSuite,testCreerCoups);
-        CU_ADD_TEST(CoupsSuite,testAjoutCoups);
+        //CU_ADD_TEST(CoupsSuite,testCreerCoups);
+        //CU_ADD_TEST(CoupsSuite,testAjoutCoups);
 
         CU_basic_set_mode(CU_BRM_NORMAL);
         CU_basic_run_tests();

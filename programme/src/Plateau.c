@@ -14,20 +14,12 @@ Couleur * CreerPlateau() {
 }
         
 
-<<<<<<< HEAD
-Couleur * jouerCoup(Couleur * plateau, Coup coup) {
-    Position positionDuCoup = obtenirPosition(coup);
-    int ligneDuCoup = obtenirNumeroLigne(obtenirLigne(positionDuCoup));
-    int colonneDuCoup = ObtenirNumeroColonne(obtenirColonne(positionDuCoup));
-    Couleur coul = obtenirCouleur(coup);
-    //printf("%d  %d\n", ligneDuCoup, colonneDuCoup);
-=======
 Couleur * PoserPion(Couleur * plateau, Coup coup) {
     Position positionDuCoup = ObtenirPosition(coup);
     int ligneDuCoup = ObtenirNumeroLigne(ObtenirLigne(positionDuCoup));
     int colonneDuCoup = ObtenirNumeroColonne(ObtenirColonne(positionDuCoup));
     Couleur coul = ObtenirCouleur(coup);
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
+    //printf("%d  %d\n", ligneDuCoup, colonneDuCoup);
     plateau[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
     return plateau;
     }

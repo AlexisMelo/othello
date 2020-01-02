@@ -20,12 +20,7 @@ bool LC_estVide(ListeChainee liste){
 
 void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollection copierElement){
     ListeChainee pNoeud = (ListeChainee)malloc(sizeof(Noeud));
-<<<<<<< HEAD
     if ((pNoeud!=NULL) || (element!=NULL)) {
-=======
-    Coup* donnee = copierElement(element);
-    if ((pNoeud!=NULL) || (donnee!=NULL)) {
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
         errno = 0;
         pNoeud->element = element;
         pNoeud->listeSuivante = *pliste;
@@ -37,11 +32,7 @@ void LC_ajouter(ListeChainee* pliste, Coup* element,EC_FonctionCopierDansCollect
 }
 
 Coup * LC_obtenirElement(ListeChainee liste) {
-<<<<<<< HEAD
     return liste->element;
-=======
-    return (void *)liste->element;
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 }
 
 ListeChainee LC_obtenirListeSuivante(ListeChainee liste){
@@ -56,13 +47,8 @@ void LC_fixerListeSuivante(ListeChainee * liste1, ListeChainee liste2){
 
 void LC_supprimerTete(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
     ListeChainee liste2 = LC_obtenirListeSuivante(*pliste);
-<<<<<<< HEAD
     liberer(*pliste);
     pliste = &liste2;
-=======
-    LC_fixerListeSuivante(pliste, liste2);
-    liberer(pliste);
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 }
 
 void LC_supprimer(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
@@ -70,11 +56,7 @@ void LC_supprimer(ListeChainee* pliste, EC_FonctionLibererDeCollection liberer){
     do
     {
         ListeChainee temp = LC_obtenirListeSuivante(*pliste);
-<<<<<<< HEAD
         liberer(*pliste);
-=======
-        liberer(pliste);
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
         pliste = &temp;
     } while (!LC_estVide(*pliste));
 }

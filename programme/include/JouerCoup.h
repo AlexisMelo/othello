@@ -4,6 +4,7 @@
 #include"Plateau.h"
 #include"Coup.h"
 #include"Couleur.h"
+#include"Parcourir_Direction.h"
 
 /**
  *@brief Capture les pions selon le pion posé.

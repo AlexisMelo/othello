@@ -1,19 +1,19 @@
 #ifndef POSITION_TYPE
 #define POSITION_TYPE
 
-#include "../include/Ligne.h"
-#include "../include/Direction.h"
-#include "../include/Colonne.h"
-#include "../include/Coup.h"
+#include "Ligne.h"
+#include "Direction.h"
+#include "Colonne.h"
 #include<stdbool.h>
 #include<assert.h>
 
-typedef struct _Position
+typedef struct Position
 {
     Ligne ligne;
     Colonne colonne;
 }Position;
 
+#include "Coup.h"
 
 /**
  * @brief Construit une Position à partir d'une Ligne et d'une Colonne
@@ -87,11 +87,7 @@ void FixerColonne(Position * position, Colonne colonne) ;
  * @param Direction : Direction à appliquer
  * 
 */
-<<<<<<< HEAD
-void appliquerDirection(Position * position, Direction direction) ;
-=======
 Position AppliquerDirection(Position position, Direction direction) ;
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 
 
 /**
@@ -103,12 +99,8 @@ Position AppliquerDirection(Position position, Direction direction) ;
 */
 
 
-<<<<<<< HEAD
-bool estEgalPosition(Position position1, Position position2);
+bool EstEgalPosition(Position position1, Position position2);
 
 Position *fonctionCopierPosition(Position * pPos) ;
 
-=======
-bool EstEgalPosition(Position position1, Position position2);
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 #endif

@@ -40,7 +40,7 @@ Colonne CreerColonne(int nb);
  *
  * @returns booléen
 */
-bool estEgalColonne(Colonne colonne1, Colonne colonne2);
+bool EstEgalColonne(Colonne colonne1, Colonne colonne2);
 
 
 

@@ -12,12 +12,7 @@ Position * CreerPositionNulle(){
         return positionptr;
 }
 
-Position ObtenirPosition(Coup coup){
-    return coup
-}
-
-
-Position creerPosition(Ligne ligne, Colonne colonne) {
+Position CreerPosition(Ligne ligne, Colonne colonne) {
     Position position = *CreerPositionNulle();
     position.ligne = ligne;
     position.colonne = colonne;

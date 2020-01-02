@@ -5,7 +5,7 @@
 #include"Plateau.h"
 #include"Couleur.h"
 #include"Coups.h"
-#include"obtenirCoup.h"
+#include"ObtenirCoupJoueur.h"
 
 /**
  *@brief Retourne un coup valide entree par un IA/Joueur
@@ -18,6 +18,6 @@
  *
  *@returns Coup (un coup valide)
 */
-Coup obtenirCoupValide (Couleur joueurActuel, Plateau plateauDeJeu, Coup *(obtenirCoup)(Couleur joueurActuel));
+Coup obtenirCoupValide (Couleur joueurActuel, Couleur * plateauDeJeu, Coup *(obtenirCoup)(Couleur joueurActuel));
 
 #endif

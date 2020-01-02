@@ -1,31 +1,31 @@
 #include"Parcourir_Direction.h"
 
-bool parcourirLesDirections (Couleur * plateauDeJeu, Position positionDuCoup, Couleur joueurActuel) {
-    return (parcourirUneDirection (plateauDeJeu, positionDuCoup, HG, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, H, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, HD, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, D, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, BD, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, B, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, BG, joueurActuel)
-            || parcourirUneDirection (plateauDeJeu, positionDuCoup, G, joueurActuel));
+bool ParcourirLesDirections (Couleur * plateauDeJeu, Position positionDuCoup, Couleur joueurActuel) {
+    return (ParcourirUneDirection (plateauDeJeu, positionDuCoup, HG, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, H, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, HD, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, D, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, BD, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, B, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, BG, joueurActuel)
+            || ParcourirUneDirection (plateauDeJeu, positionDuCoup, G, joueurActuel));
 }
 
 
-bool parcourirUneDirection (Couleur * plateauDeJeu, Position positionDuCoup, Direction uneDirection, Couleur joueurActuel) {
+bool ParcourirUneDirection (Couleur * plateauDeJeu, Position positionDuCoup, Direction uneDirection, Couleur joueurActuel) {
     bool ligneEnCours, directionValide;
     ligneEnCours = false;
     directionValide = false;
-    appliquerDirection (&positionDuCoup, uneDirection);
-    if (estPositionValide(positionDuCoup) && estEgalCouleur(obtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup), obtenirCouleuropposee(joueurActuel))) {
+    AppliquerDirection(positionDuCoup, uneDirection);
+    if (EstPositionValide(positionDuCoup) && EstEgalCouleur(ObtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup), ObtenirCouleuropposee(joueurActuel))) {
         ligneEnCours = true;
         while (!directionValide && ligneEnCours) {
-            appliquerDirection (&positionDuCoup, uneDirection);
-            if (estPositionValide(positionDuCoup)) {
-                if (estPositionVide (plateauDeJeu, positionDuCoup)) {
+            AppliquerDirection (positionDuCoup, uneDirection);
+            if (EstPositionValide(positionDuCoup)) {
+                if (EstPositionVide (plateauDeJeu, positionDuCoup)) {
                     ligneEnCours = false;
                 } else {
-                    if (estEgalCouleur(obtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup), joueurActuel)) {
+                    if (EstEgalCouleur(ObtenirCouleurDepuisPlateau(plateauDeJeu, positionDuCoup), joueurActuel)) {
                         directionValide = true;
                     }
                 }

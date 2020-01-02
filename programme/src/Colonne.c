@@ -68,10 +68,6 @@ int ObtenirNumeroColonne(Colonne colonne) {
     return colonne + 1;
 }
 
-<<<<<<< HEAD
-bool estEgalColonne(Colonne colonne1, Colonne colonne2) {
-    return ObtenirNumeroColonne(colonne1) == ObtenirNumeroColonne(colonne2);
-=======
 bool EstEgalColonne(Colonne colonne1, Colonne colonne2) {
     return colonne1 == colonne2;}
 
@@ -106,5 +102,4 @@ Colonne ObtenirColonneDeChar(char caractere){
         *col = h;
         return *col;
     }
->>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 }
