@@ -1,0 +1,1364 @@
+# callgrind format
+version: 1
+creator: xtree-1
+pid: 724
+cmd: ./programme/tests/testTypes
+
+positions: line
+event: curB : currently allocated Bytes
+event: curBk : currently allocated Blocks
+events: curB  curBk 
+fl=(1) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/tests/TypesTests.c
+fn=(1) main
+29
+cfi=(2) UnknownFile???
+cfn=(2) CU_add_suite_with_setup_and_teardown
+calls=0 0
+29 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3) CU_run_all_tests
+calls=0 0
+58 32 8
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4) UnknownFn???
+calls=0 0
+0 32 8
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 32 8
+fl=(2)
+fn=(4)
+0
+cfi=(3) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/tests/testLigne.c
+cfn=(5) TestLigne
+calls=0 7
+0 32 8
+fl=(3)
+fn=(5)
+7
+cfi=(4) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/src/Ligne.c
+cfn=(6) CreerLigne
+calls=0 16
+7 32 8
+fl=(4)
+fn=(6)
+16 32 8
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 16 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 16 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 16 1
+fl=(2)
+fn=(4)
+0
+cfi=(5) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/tests/testPlateau.c
+cfn=(7) TestPlateau
+calls=0 19
+0 16 1
+fl=(5)
+fn=(7)
+19
+cfi=(6) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/src/Coup.c
+cfn=(8) CreerCoup
+calls=0 26
+19 16 1
+fl=(6)
+fn=(8)
+26
+cfi=(6)
+cfn=(9) creerCoupVide
+calls=0 11
+26 16 1
+fl=(6)
+fn=(9)
+11 16 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(7) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/tests/testCouleur.c
+cfn=(10) testNoir
+calls=0 15
+0 8 1
+fl=(7)
+fn=(10)
+15
+cfi=(8) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/src/Couleur.c
+cfn=(11) ObtenirCouleuropposee
+calls=0 45
+15 8 1
+fl=(8)
+fn=(11)
+45
+cfi=(8)
+cfn=(12) EstNeutre
+calls=0 63
+45 8 1
+fl=(8)
+fn=(12)
+63
+cfi=(8)
+cfn=(13) CouleurNeutre
+calls=0 37
+63 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14) CouleurNulle
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 32 8
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 32 8
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 32 8
+fl=(2)
+fn=(4)
+0
+cfi=(9) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/tests/testColonne.c
+cfn=(15) TestColonne
+calls=0 9
+0 32 8
+fl=(9)
+fn=(15)
+9
+cfi=(10) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/src/Colonne.c
+cfn=(16) CreerColonne
+calls=0 9
+9 32 8
+fl=(10)
+fn=(16)
+9 32 8
+
+fl=(1)
+fn=(1)
+42
+cfi=(2)
+cfn=(17) CU_add_test
+calls=0 0
+42 9 1
+fl=(2)
+fn=(17)
+0 9 1
+
+fl=(1)
+fn=(1)
+35
+cfi=(2)
+cfn=(2)
+calls=0 0
+35 6 1
+fl=(2)
+fn=(2)
+0 6 1
+
+fl=(1)
+fn=(1)
+32
+cfi=(2)
+cfn=(2)
+calls=0 0
+32 14 1
+fl=(2)
+fn=(2)
+0 14 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 19
+0 8 1
+fl=(5)
+fn=(7)
+19
+cfi=(6)
+cfn=(8)
+calls=0 26
+19 8 1
+fl=(6)
+fn=(8)
+26
+cfi=(6)
+cfn=(9)
+calls=0 15
+26 8 1
+fl=(6)
+fn=(9)
+15
+cfi=(8)
+cfn=(13)
+calls=0 37
+15 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14)
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(10)
+calls=0 15
+0 8 1
+fl=(7)
+fn=(10)
+15
+cfi=(8)
+cfn=(11)
+calls=0 45
+15 8 1
+fl=(8)
+fn=(11)
+45
+cfi=(8)
+cfn=(12)
+calls=0 63
+45 8 1
+fl=(8)
+fn=(12)
+63
+cfi=(8)
+cfn=(13)
+calls=0 37
+63 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14)
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+44
+cfi=(2)
+cfn=(17)
+calls=0 0
+44 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+37
+cfi=(2)
+cfn=(17)
+calls=0 0
+37 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+29
+cfi=(2)
+cfn=(2)
+calls=0 0
+29 8 1
+fl=(2)
+fn=(2)
+0 8 1
+
+fl=(1)
+fn=(1)
+33
+cfi=(2)
+cfn=(2)
+calls=0 0
+33 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 56 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 56 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 56 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(10)
+calls=0 17
+0 56 1
+fl=(7)
+fn=(10)
+17
+cfi=(2)
+cfn=(18) CU_assertImplementation
+calls=0 0
+17 56 1
+fl=(2)
+fn=(18)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 56 1
+fl=(2)
+fn=(4)
+0 56 1
+
+fl=(1)
+fn=(1)
+14
+cfi=(2)
+cfn=(19) CU_initialize_registry
+calls=0 0
+14 16 1
+fl=(2)
+fn=(19)
+0
+cfi=(2)
+cfn=(20) CU_create_new_registry
+calls=0 0
+0 16 1
+fl=(2)
+fn=(20)
+0 16 1
+
+fl=(1)
+fn=(1)
+30
+cfi=(2)
+cfn=(2)
+calls=0 0
+30 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+44
+cfi=(2)
+cfn=(17)
+calls=0 0
+44 12 1
+fl=(2)
+fn=(17)
+0 12 1
+
+fl=(1)
+fn=(1)
+37
+cfi=(2)
+cfn=(17)
+calls=0 0
+37 12 1
+fl=(2)
+fn=(17)
+0 12 1
+
+fl=(1)
+fn=(1)
+27
+cfi=(2)
+cfn=(2)
+calls=0 0
+27 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 11
+0 8 1
+fl=(5)
+fn=(7)
+11
+cfi=(8)
+cfn=(21) CouleurNoir
+calls=0 28
+11 8 1
+fl=(8)
+fn=(21)
+28
+cfi=(8)
+cfn=(14)
+calls=0 11
+28 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 30 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 30 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 30 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(10)
+calls=0 17
+0 30 1
+fl=(7)
+fn=(10)
+17
+cfi=(2)
+cfn=(18)
+calls=0 0
+17 30 1
+fl=(2)
+fn=(18)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 30 1
+fl=(2)
+fn=(4)
+0 30 1
+
+fl=(1)
+fn=(1)
+46
+cfi=(2)
+cfn=(17)
+calls=0 0
+46 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+39
+cfi=(2)
+cfn=(17)
+calls=0 0
+39 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+33
+cfi=(2)
+cfn=(2)
+calls=0 0
+33 14 1
+fl=(2)
+fn=(2)
+0 14 1
+
+fl=(1)
+fn=(1)
+30
+cfi=(2)
+cfn=(2)
+calls=0 0
+30 8 1
+fl=(2)
+fn=(2)
+0 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 4 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 4 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 4 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 12
+0 4 1
+fl=(5)
+fn=(7)
+12
+cfi=(4)
+cfn=(6)
+calls=0 16
+12 4 1
+fl=(4)
+fn=(6)
+16 4 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 28 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 28 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 28 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(10)
+calls=0 17
+0 28 1
+fl=(7)
+fn=(10)
+17
+cfi=(2)
+cfn=(18)
+calls=0 0
+17 28 1
+fl=(2)
+fn=(18)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 28 1
+fl=(2)
+fn=(4)
+0 28 1
+
+fl=(1)
+fn=(1)
+34
+cfi=(2)
+cfn=(2)
+calls=0 0
+34 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+46
+cfi=(2)
+cfn=(17)
+calls=0 0
+46 26 1
+fl=(2)
+fn=(17)
+0 26 1
+
+fl=(1)
+fn=(1)
+39
+cfi=(2)
+cfn=(17)
+calls=0 0
+39 10 1
+fl=(2)
+fn=(17)
+0 10 1
+
+fl=(1)
+fn=(1)
+27
+cfi=(2)
+cfn=(2)
+calls=0 0
+27 8 1
+fl=(2)
+fn=(2)
+0 8 1
+
+fl=(1)
+fn=(1)
+31
+cfi=(2)
+cfn=(2)
+calls=0 0
+31 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 4 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 4 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 4 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 13
+0 4 1
+fl=(5)
+fn=(7)
+13
+cfi=(10)
+cfn=(16)
+calls=0 9
+13 4 1
+fl=(10)
+fn=(16)
+9 4 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(22) testBlanc
+calls=0 7
+0 8 1
+fl=(7)
+fn=(22)
+7
+cfi=(8)
+cfn=(23) CouleurBlanc
+calls=0 20
+7 8 1
+fl=(8)
+fn=(23)
+20
+cfi=(8)
+cfn=(14)
+calls=0 11
+20 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 512 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 512 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 512 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 10
+0 512 1
+fl=(5)
+fn=(7)
+10
+cfi=(11) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/src/Plateau.c
+cfn=(24) CreerPlateau
+calls=0 13
+10 512 1
+fl=(11)
+fn=(24)
+13 512 1
+
+fl=(1)
+fn=(1)
+41
+cfi=(2)
+cfn=(17)
+calls=0 0
+41 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+28
+cfi=(2)
+cfn=(2)
+calls=0 0
+28 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+48
+cfi=(2)
+cfn=(17)
+calls=0 0
+48 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 18
+0 8 1
+fl=(5)
+fn=(7)
+18
+cfi=(8)
+cfn=(11)
+calls=0 45
+18 8 1
+fl=(8)
+fn=(11)
+45
+cfi=(8)
+cfn=(12)
+calls=0 63
+45 8 1
+fl=(8)
+fn=(12)
+63
+cfi=(8)
+cfn=(13)
+calls=0 37
+63 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14)
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(22)
+calls=0 8
+0 8 1
+fl=(7)
+fn=(22)
+8
+cfi=(8)
+cfn=(11)
+calls=0 45
+8 8 1
+fl=(8)
+fn=(11)
+45
+cfi=(8)
+cfn=(12)
+calls=0 63
+45 8 1
+fl=(8)
+fn=(12)
+63
+cfi=(8)
+cfn=(13)
+calls=0 37
+63 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14)
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+34
+cfi=(2)
+cfn=(2)
+calls=0 0
+34 5 1
+fl=(2)
+fn=(2)
+0 5 1
+
+fl=(1)
+fn=(1)
+41
+cfi=(2)
+cfn=(17)
+calls=0 0
+41 10 1
+fl=(2)
+fn=(17)
+0 10 1
+
+fl=(1)
+fn=(1)
+31
+cfi=(2)
+cfn=(2)
+calls=0 0
+31 13 1
+fl=(2)
+fn=(2)
+0 13 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 19
+0 8 1
+fl=(5)
+fn=(7)
+19
+cfi=(12) /home/zhack/Documents/INSA/Algo/project-othello-lmmss/programme/src/Position.c
+cfn=(25) CreerPosition
+calls=0 16
+19 8 1
+fl=(12)
+fn=(25)
+16
+cfi=(12)
+cfn=(26) CreerPositionNulle
+calls=0 9
+16 8 1
+fl=(12)
+fn=(26)
+9 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(22)
+calls=0 8
+0 8 1
+fl=(7)
+fn=(22)
+8
+cfi=(8)
+cfn=(11)
+calls=0 45
+8 8 1
+fl=(8)
+fn=(11)
+45
+cfi=(8)
+cfn=(12)
+calls=0 63
+45 8 1
+fl=(8)
+fn=(12)
+63
+cfi=(8)
+cfn=(13)
+calls=0 37
+63 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14)
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+48
+cfi=(2)
+cfn=(17)
+calls=0 0
+48 27 1
+fl=(2)
+fn=(17)
+0 27 1
+
+fl=(1)
+fn=(1)
+35
+cfi=(2)
+cfn=(2)
+calls=0 0
+35 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+28
+cfi=(2)
+cfn=(2)
+calls=0 0
+28 6 1
+fl=(2)
+fn=(2)
+0 6 1
+
+fl=(1)
+fn=(1)
+42
+cfi=(2)
+cfn=(17)
+calls=0 0
+42 48 1
+fl=(2)
+fn=(17)
+0 48 1
+
+fl=(1)
+fn=(1)
+32
+cfi=(2)
+cfn=(2)
+calls=0 0
+32 88 1
+fl=(2)
+fn=(2)
+0 88 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(5)
+cfn=(7)
+calls=0 19
+0 8 1
+fl=(5)
+fn=(7)
+19
+cfi=(6)
+cfn=(8)
+calls=0 25
+19 8 1
+fl=(6)
+fn=(8)
+25
+cfi=(8)
+cfn=(12)
+calls=0 63
+25 8 1
+fl=(8)
+fn=(12)
+63
+cfi=(8)
+cfn=(13)
+calls=0 37
+63 8 1
+fl=(8)
+fn=(13)
+37
+cfi=(8)
+cfn=(14)
+calls=0 11
+37 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+fl=(1)
+fn=(1)
+58
+cfi=(2)
+cfn=(3)
+calls=0 0
+58 8 1
+fl=(2)
+fn=(3)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(2)
+cfn=(4)
+calls=0 0
+0 8 1
+fl=(2)
+fn=(4)
+0
+cfi=(7)
+cfn=(10)
+calls=0 14
+0 8 1
+fl=(7)
+fn=(10)
+14
+cfi=(8)
+cfn=(21)
+calls=0 28
+14 8 1
+fl=(8)
+fn=(21)
+28
+cfi=(8)
+cfn=(14)
+calls=0 11
+28 8 1
+fl=(8)
+fn=(14)
+11 8 1
+
+totals: 2134 67

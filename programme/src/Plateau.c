@@ -10,7 +10,9 @@
 
 
 Couleur * CreerPlateau() {
-    return(Couleur*)malloc(TAILLE*TAILLE*sizeof(Couleur*));
+/*     Couleur plateau[TAILLE*TAILLE];
+    return plateau; */
+    return(Couleur*)malloc(TAILLE*TAILLE*sizeof(Couleur));
 }
         
 
@@ -19,7 +21,6 @@ Couleur * PoserPion(Couleur * plateau, Coup coup) {
     int ligneDuCoup = ObtenirNumeroLigne(ObtenirLigne(positionDuCoup));
     int colonneDuCoup = ObtenirNumeroColonne(ObtenirColonne(positionDuCoup));
     Couleur coul = ObtenirCouleur(coup);
-    //printf("%d  %d\n", ligneDuCoup, colonneDuCoup);
     plateau[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
     return plateau;
     }

@@ -16,11 +16,11 @@ void ResetTextColor(){
 }
 
 
-void TextColorFromHexa(char hexa[]){
-    if (strcmp(hexa, "FF")==0){
+void TextColorFromName(int nb){
+    if (nb == 2){
         SetTextColorToBlack();
     };
-    if(strcmp(hexa, "00")==0){
+    if (nb == 1){
         SetTextColorToWhite();
     }
 }
@@ -49,7 +49,7 @@ void AfficherPlateau(Couleur * plateau){
         for (int j=1; j<=ObtenirTaille(plateau); j++){
             Couleur couleur = ObtenirCouleurDepuisPlateau(plateau, CreerPosition(i,j));
             AppliquerDecalageHorizontal();
-            TextColorFromHexa(couleur.hexa);
+            TextColorFromName(couleur.nom);
             printf("%c",couleur.symbole);
             ResetTextColor();
         }

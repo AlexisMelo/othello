@@ -5,12 +5,14 @@
 #include <CUnit/CUnit.h>
 #include "testPlateau.h"
 #include "../include/Couleur.h"
+#include "../include/AfficherPlateau.h"
 void TestPlateau()
 {
     Couleur * plateau = CreerPlateau();
     Couleur couleur = CouleurNoir();
     Ligne ligne = CreerLigne(1);
     Colonne colonne = CreerColonne(1);
+    AfficherPlateau(plateau);
     for (int i = 1; i < TAILLE + 1; i++)
     {
         for (int j = 1; j < TAILLE + 1; j++)
