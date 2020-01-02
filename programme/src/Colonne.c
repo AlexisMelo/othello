@@ -100,4 +100,4 @@ Colonne ObtenirColonneDeChar(char caractere){
         *col = h;
         return *col;
     }
-}   
+}

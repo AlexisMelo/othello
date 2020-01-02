@@ -11,8 +11,8 @@ void InitialiserPlateau(Couleur *p){
       JouerCoup(p,CreerCoup(CreerPosition(CreerLigne(i),CreerColonne(j)),neutre));
     }
   }
-  JouerCoup(p,creerCoup(creerPosition(creerLigne(ObtenirTaille(p)/2),creerColonne(ObtenirTaille(p)/2)), blanc));
-  JouerCoup(p,creerCoup(creerPosition(creerLigne(ObtenirTaille(p)/2+1),creerColonne(ObtenirTaille(p)/2+1)), blanc));
-  JouerCoup(p,creerCoup(creerPosition(creerLigne(ObtenirTaille(p)/2),creerColonne(ObtenirTaille(p)/2+1)), blanc));
-  JouerCoup(p,Coupcreer(vPosition(creerLigne(ObtenirTaille(p)/2+1),creerColonne(ObtenirTaille(p)/2)), blanc));
+  JouerCoup(p,CreerCoup(CreerPosition(CreerLigne(ObtenirTaille(p)/2),CreerColonne(ObtenirTaille(p)/2)), noir));
+  JouerCoup(p,CreerCoup(CreerPosition(CreerLigne(ObtenirTaille(p)/2+1),CreerColonne(ObtenirTaille(p)/2+1)), noir));
+  JouerCoup(p,CreerCoup(CreerPosition(CreerLigne(ObtenirTaille(p)/2),CreerColonne(ObtenirTaille(p)/2+1)), blanc));
+  JouerCoup(p,CreerCoup(CreerPosition(CreerLigne(ObtenirTaille(p)/2+1),CreerColonne(ObtenirTaille(p)/2)), blanc));
 }
