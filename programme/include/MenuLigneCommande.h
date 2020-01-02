@@ -3,6 +3,7 @@
 
 #include "Menu.h"
 #include "Joueur.h"
+#include "AfficherPlateau.h"
 
 /**
  * @fn void menuLigneCommande (int nbArguments, char ** arguments)

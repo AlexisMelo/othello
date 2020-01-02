@@ -17,7 +17,7 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
 
     printf("Jouer partie Joueur vs Joueur avec profondeur %d\n", ObtenirProfondeurIADepuisArguments(nbArguments,arguments));
 
-    PARTIE_FaireUnePartie(AfficherResultat, AfficherPlateau, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, j1, j2);
   }
   else if (strcmp(arguments[1], JOUEURVSIA) == 0) {
 

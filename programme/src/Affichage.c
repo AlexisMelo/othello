@@ -1,9 +1,4 @@
 #include"../include/AfficherPlateau.h"
-#include<stdio.h>
-#include<time.h>
-int HORIZONTAL_OFFSET = 2;
-int VERTICAL_OFFSET = 1;
-
 
 void SetTextColorToBlack(){
     printf("\033[0;30m");
@@ -35,10 +30,10 @@ void AppliquerDecalageHorizontal(){
 void AppliquerDecalageVertical(){
     for (int vert = 0; vert<VERTICAL_OFFSET; vert++){
                 printf("\n");
-        
+
     }
 }
-void AfficherPlateau(Couleur * plateau){
+void AFFICHAGE_AfficherPlateau(Couleur * plateau){
     for (int i=1; i<=ObtenirTaille(plateau); i++){
         AppliquerDecalageHorizontal();
         printf("-");
@@ -67,7 +62,7 @@ void AfficherPlateau(Couleur * plateau){
 }
 
 void InitialiserAffichagePlateau(){
-    
+
     struct timespec ts;
     ts.tv_nsec = 9000000;
     ts.tv_sec = 0;
@@ -85,7 +80,7 @@ void InitialiserAffichagePlateau(){
             couleur = ObtenirCouleuropposee(couleur);
             Coup coup = CreerCoup(CreerPosition(i, j), couleur);
             JouerCoup(plateau, coup);
-            AfficherPlateau(plateau);
+            AFFICHAGE_AfficherPlateau(plateau);
             nanosleep(&ts, &ts);
             }
     };
@@ -95,9 +90,13 @@ void InitialiserAffichagePlateau(){
             Coup coup = CreerCoup(CreerPosition(i, j), couleur);
             JouerCoup(plateau, coup);
             nanosleep(&ts, &ts);
-            AfficherPlateau(plateau);
+            AFFICHAGE_AfficherPlateau(plateau);
         }
     }
     InitialiserPlateau(plateau);
-    AfficherPlateau(plateau);
+    AFFICHAGE_AfficherPlateau(plateau);
+}
+
+void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau) {
+  printf("fin de partie");
 }
