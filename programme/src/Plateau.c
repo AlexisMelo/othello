@@ -12,7 +12,7 @@ void PLATEAU_InitialiserPlateau(Couleur * p){
       PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j)),neutre));
     }
   }
-  
+
   //initialisation des 4 premiers coups
   PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2),  COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2)), blanc));
   PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2+1),COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2+1)), blanc));
@@ -46,4 +46,15 @@ bool PLATEAU_EstPositionLibre(Couleur * plateau, Position position) {
 
 int PLATEAU_ObtenirTaille(Couleur * plateau) {
     return TAILLE;
+}
+
+bool PLATEAU_EstRempli(Couleur * plateau) {
+  for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
+      for (int j=1; j<=PLATEAU_ObtenirTaille(plateau); j++){
+          if (PLATEAU_EstPositionLibre(plateau, POSITION_CreerPosition(i,j))) {
+            return false;
+          }
+      }
+  }
+  return true;
 }

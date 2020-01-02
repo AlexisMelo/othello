@@ -65,4 +65,13 @@ bool PLATEAU_EstPositionLibre(Couleur * plateau, Position position) ;
 */
 int PLATEAU_ObtenirTaille(Couleur * plateau) ;
 
+/**
+ * @brief Permet de savoir si le plateau est rempli
+ *
+ * @param plateau Couleur * plateau de jeu
+ *
+ * @returns true si le plateau est rempli, false sinon
+*/
+bool PLATEAU_EstRempli(Couleur * plateau);
+
 #endif
