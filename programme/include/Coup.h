@@ -18,7 +18,7 @@ Coup * creerCoupVide() ;
  *
  * @returns coup : Coup
 */
-Coup creerCoup(Position position, Couleur couleur) ;
+Coup CreerCoup(Position position, Couleur couleur) ;
 
 /**
  * @brief Permet d'accéder à la Couleur d'un Coup
@@ -27,7 +27,7 @@ Coup creerCoup(Position position, Couleur couleur) ;
  * 
  * @returns Couleur du coup passé en entrée
 */
-Couleur obtenirCouleur(Coup coup) ;
+Couleur ObtenirCouleur(Coup coup) ;
 
 
 /**
@@ -37,7 +37,7 @@ Couleur obtenirCouleur(Coup coup) ;
  * 
  * @returns Position du coup passé en entrée
 */
-Position obtenirPosition(Coup coup) ;
+Position ObtenirPosition(Coup coup) ;
 
 
 
@@ -51,7 +51,7 @@ Position obtenirPosition(Coup coup) ;
  * 
  * @returns estCoupValide : bool
 */
-bool estCoupValide(Coup coup) ;
+bool EstCoupValide(Coup coup) ;
 
 
 
@@ -64,5 +64,5 @@ bool estCoupValide(Coup coup) ;
  * 
  * @returns estEgal : bool
 */
-bool estEgalCoup(Coup coup1, Coup coup2) ;
+bool EstEgalCoup(Coup coup1, Coup coup2) ;
 #endif

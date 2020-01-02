@@ -14,38 +14,52 @@ Coup * creerCoupVide(){
     presultat->couleur.symbole = 'A'; */
     presultat->couleur = CouleurNeutre();
     presultat->position.ligne = 1;
-    presultat->position.colonne = 1;
-    return presultat;
+    presultat->position.colonne = 1;/* 
+Coup * CreerCoupVide(){
+    Coup * presultat = (Coup *)malloc(sizeof(Coup));
+    return presultat; */
 }
 
 
+<<<<<<< HEAD
 Coup creerCoup(Position position, Couleur couleur){
     assert(!estNeutre(couleur));
     Coup * presultat = creerCoupVide();
     presultat->couleur.nom = couleur.nom;
     strcpy(presultat->couleur.hexa, couleur.hexa);
     presultat->couleur.symbole = couleur.symbole;
+=======
+Coup CreerCoup(Position position, Couleur couleur){
+    assert(!EstNeutre(couleur));
+    Coup * presultat = CreerCoupVide();
+    presultat->couleur = couleur;
+>>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
     presultat->position = position;
     return *presultat;
 }
 
 
 
+<<<<<<< HEAD
 bool estEgalCoup(Coup coup1, Coup coup2) {
     return (estEgalCouleur(coup1.couleur, coup2.couleur) && estEgalPosition(coup1.position, coup2.position));  // res;
+=======
+bool EstEgalCoup(Coup coup1, Coup coup2) {
+    return EstEgalCouleur(coup1.couleur, coup2.couleur) && EstEgalPosition(coup1.position, coup2.position);
+>>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
     }
 
 
-Couleur obtenirCouleur(Coup coup){
+Couleur ObtenirCouleur(Coup coup){
     return coup.couleur;
 }
 
 
-Position obtenirPosition(Coup coup){
+Position ObtenirPosition(Coup coup){
     return coup.position;
 }
 
 
-bool estCoupValide(Coup coup){
-    return estPositionValide(coup.position) && !estNeutre(coup.couleur);
+bool EstCoupValide(Coup coup){
+    return  EstPositionValide(coup.position) && !EstNeutre(coup.couleur);
 }

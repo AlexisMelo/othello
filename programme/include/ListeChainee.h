@@ -1,12 +1,22 @@
 #ifndef LISTE_CHAINEE
 #define LISTE_CHAINEE
 #include<errno.h>
+<<<<<<< HEAD
 #include "Coup.h"
 struct Noeud;
 
 typedef struct Noeud* ListeChainee;
 
 typedef struct Noeud
+=======
+#include"elementCollection.h"
+#include "Coup.h"
+struct _Noeud;
+
+typedef struct _Noeud* ListeChainee;
+
+typedef struct _Noeud
+>>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 {
     Coup * element;
     ListeChainee listeSuivante;

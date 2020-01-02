@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 
+<<<<<<< HEAD
 Noeud* fonctionCopierCoup(Noeud* pNoeud) {
     Noeud * presultat = malloc(sizeof(Noeud));
     memcpy(&(presultat->element->couleur.nom), &(pNoeud->element->couleur.nom), sizeof(int));
@@ -22,4 +23,20 @@ void fonctionLibererCoup(Noeud * pcoup) {
 
 int fonctionComparerCoup(Noeud * coup1, Noeud * coup2) {
     return estEgalCoup(*coup1->element, *coup2->element);
+=======
+void* FonctionCopierCoup(void* coup) {
+    Coup * resultat = (Coup*)malloc(sizeof(Coup));
+    memcpy((void*)resultat, coup, sizeof(Coup));
+    return (void*)resultat; 
+};  
+
+
+void FonctionLibererCoup(void * coup) {
+    free(coup);
+};
+
+
+int FonctionComparerCoup(void * coup1, void * coup2) {
+    return estEgalCoup(*(Coup*)coup1, *(Coup*)coup2);
+>>>>>>> ce0d436729dc23cfa530bd2b88cc21623e88cd43
 }

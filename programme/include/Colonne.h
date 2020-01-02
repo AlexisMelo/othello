@@ -28,7 +28,7 @@ int ObtenirNumeroColonne(Colonne colonne);
  * 
  * @returns Colonne
 */
-Colonne creerColonne(int nb);
+Colonne CreerColonne(int nb);
 
 
 /**
@@ -40,5 +40,11 @@ Colonne creerColonne(int nb);
  *
  * @returns booléen
 */
-bool estEgalColonne(Colonne colonne1, Colonne colonne2) ;
+bool estEgalColonne(Colonne colonne1, Colonne colonne2);
+
+
+
+Colonne ObtenirColonneDepuisChar(char colChar);
+
+
 #endif

@@ -12,3 +12,6 @@
 *.odg#
 *.toc
 *.out
+programme/bin/Othello
+programme/tests/test
+.vscode

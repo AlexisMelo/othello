@@ -6,7 +6,6 @@
 
 typedef struct{
     enum {Vide, Blanc, Noir, nulle}nom;
-    char * hexa;
     char symbole;
 }Couleur;
 
@@ -37,7 +36,7 @@ Couleur CouleurNeutre() ;
  *
  * @returns Couleur opposée à celle passsée en entrée
 */
-Couleur obtenirCouleuropposee(Couleur couleur) ;
+Couleur ObtenirCouleuropposee(Couleur couleur) ;
 
 
 
@@ -47,7 +46,7 @@ Couleur obtenirCouleuropposee(Couleur couleur) ;
  * @param couleur : Couleur Blanc ou Noir
  *
  * @returns estNeutre : booléen
-*/bool estNeutre(Couleur couleur) ;
+*/bool EstNeutre(Couleur couleur) ;
 
 
 
@@ -60,5 +59,5 @@ Couleur obtenirCouleuropposee(Couleur couleur) ;
  *
  * @returns Couleur opposée à celle passsée en entrée
 */
-bool estEgalCouleur(Couleur couleur1, Couleur couleur2) ;
+bool EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
 #endif

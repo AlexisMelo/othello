@@ -1,5 +1,9 @@
+   \subsection{Analyse descendante}	
 	\begin{algorithme}
-	\signaturefonction{faireUnePartie}{premier joueur: Couleur, profondeur : Naturel}{\textbf{Couleur}}
+	\signaturefonction{faireUnePartie}{premier joueur: Couleur, AfficherPlateau: Procedure,ObtenirCoupJ1 : Fonction,ObtenirCoupJ2 : Fonction}{\textbf{Couleur}}
+	\end{algorithme}
+	\begin{algorithme}
+	\signaturefonction{GererPartie}{couleur : Couleur, AfficherPlateau : Fonction, ObtenirCoupJoueur : Fonction, calculPoint : Fonction}{\textbf{Couleur}}
 	\end{algorithme}
 	\begin{algorithme}
 	\signaturefonction{InitialiserPlateau}{}{\textbf{Plateau}}
@@ -8,19 +12,19 @@
 	\signatureprocedure{AfficherPlateau}{\paramEntree plateauDeJeu : Plateau}
 	\end{algorithme}
 	\begin{algorithme}
-	\signaturefonction{JouerUnTour}{plateauDeJeu : Plateau,profondeur :  Naturel, joueurActuel : Couleur}{\textbf{Coup}}
+	\signaturefonction{JouerUnTour}{plateauDeJeu : Plateau, obtenirCoup : Fonction, Couleur : Couleur}{\textbf{Plateau}}
 	\end{algorithme}
 	\begin{algorithme}
-	\signaturefonction{obtenirCoupValide}{joueurActuel : Couleur, plateauDeJeu : Plateau}{\textbf{Coup}}
+	\signaturefonction{obtenirCoupValide}{joueurActuel : Couleur, obtnirCoup : Fonction, plateauDeJeu : Plateau}{\textbf{Coup}}
 	\end{algorithme}
 	\begin{algorithme}
-	\signaturefonction{obtenirCoupIA}{joueurActuel : Couleur, plateauDeJeu : Plateau, profondeur :Naturel}{\textbf{Coup}}
+	\signaturefonction{EstUncoupValide}{coup : Coup coupsPossibles : Coups}{\textbf{\booleen}}
 	\end{algorithme}
 	\begin{algorithme}
 	\signaturefonction{obtenirCoupJoueur}{joueurActuel : Couleur}{\textbf{Coup}}
 	\end{algorithme}
 	\begin{algorithme}
-	\signaturefonction{estUnCoupValide}{coupJoué : Coup, coupsPossibles : Coups}{\booleen}
+	\signaturefonction{ChercherTousLesCoups}{joueur : Couleur, plateau : Plateau}{\textbf{Coups}}
 	\end{algorithme}
 	\begin{algorithme}
 	\signaturefonction{chercherTousLesCoups}{plateauDeJeu : Plateau, joueurActuel : Couleur}{\textbf{Coups}}
@@ -32,7 +36,7 @@
 	\signaturefonction{jouerCoup}{plateauDeJeu: Plateau, coupJoué : Coup}{\textbf{Plateau}}
 	\end{algorithme}
 	\begin{algorithme}
-	\signaturefonction{CapturePion}{coupJoué : Coup, plateauDeJeu : Plateau}{\textbf{Ensemble de pion}}
+	\signaturefonction{CapturerPions}{coupJoué : Coup, plateauDeJeu : Plateau}{\textbf{Plateau}}
 	\end{algorithme}
 	\begin{algorithme}
 	\signaturefonction{finirLaPartie}{joueurActuel : Couleur, plateauDeJeu : Plateau}{\naturel}
