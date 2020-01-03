@@ -27,7 +27,7 @@
  *
  * @returns Retourne la profondeur de l'IA pendant le jeu
  */
-int ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments);
+int MENU_ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments);
 
 /**
  * @fn int saisieInteger (int min, int max)
@@ -38,7 +38,7 @@ int ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments);
  *
  * @returns int saisi par l'utiliateur
  */
-int SaisieInteger(int min, int max);
+int MENU_SaisieInteger(int min, int max);
 
 /**
  * @fn int ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments)
@@ -48,6 +48,6 @@ int SaisieInteger(int min, int max);
  *
  * @returns char* String correspond au nom d'une couleur
  */
-char * ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments);
+char * MENU_ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments);
 
 #endif
