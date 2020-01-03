@@ -6,6 +6,9 @@
 #include<stdlib.h>
 #include<assert.h>
 
+#define COULEUR_BLANCHE "blanc"
+#define COULEUR_NOIRE "noir"
+
 typedef enum { Neutre, Blanc, Noir, Nulle } nomCouleur;
 
 typedef struct{

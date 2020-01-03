@@ -46,14 +46,14 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
   while(!partieTerminee){
     j1PeutJouer = PARTIE_JoueurPeutJouer(plateau, premierJoueur); // à améliorer en stockant chercherTousLesCoups et le faire passer dans le cas où il peut jouer
     if (j1PeutJouer){
-        JouerUnTour(plateau,premierJoueur);
+        PARTIE_JouerUnTour(plateau,premierJoueur);
         AfficherPlateau(plateau);
         partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
      }
 
     j2PeutJouer = PARTIE_JoueurPeutJouer(plateau, secondJoueur);
     if (j2PeutJouer){
-        JouerUnTour(plateau,secondJoueur);
+        PARTIE_JouerUnTour(plateau,secondJoueur);
         AfficherPlateau(plateau);
     }
     partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);

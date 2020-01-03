@@ -2,7 +2,7 @@
 
 Couleur * COULEUR_PointeurCouleurNulle() {
     Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = nulle;
+    resultat->nom = Nulle;
     resultat->symbole = '.';
     return resultat;
 }
