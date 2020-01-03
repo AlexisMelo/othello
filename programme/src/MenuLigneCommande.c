@@ -25,6 +25,9 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
     j2 = JOUEUR_CreerJoueurIA(couleurJ2, profondeurIA);
 
     printf("Jouer partie Joueur vs IA avec profondeur %d\n", ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
+
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, j1, j2);
+
   }
   else if (strcmp(arguments[1], IAVSIA) == 0) {
 
@@ -32,6 +35,9 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
     j2 = JOUEUR_CreerJoueurIA(couleurJ2, profondeurIA);
 
     printf("Jouer partie IA vs IA avec profondeur %d\n", ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
+
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, j1, j2);
+
   }
   else {
     MessageDAide();

@@ -16,7 +16,7 @@
  * @param JoueurJ1 Premier joueur
  * @param JoueurJ2 Second joueur
 */
-void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *), Joueur j1, Joueur j2);
+void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void (*AfficherPlateau)(Couleur *), Joueur j1, Joueur j2);
 
 /**
  *@brief Permet de gérer une partie cad alterner les tours, savoir si elle est finie, etc...
@@ -27,7 +27,7 @@ void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *),void (*AfficherPl
  * @param JoueurJ2 Second joueur
  * @param plateau Couleur * Plateau de jeu initialisé
 */
-void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *),Joueur j1 ,Joueur j2,Couleur * plateau);
+void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void (*AfficherPlateau)(Couleur *),Joueur j1 ,Joueur j2,Couleur * plateau);
 
 /**
  * @brief Initialise les valeurs des pointeurs premierJoueur et secondJoueur avec les valeurs de j1 et de j2, sachant que

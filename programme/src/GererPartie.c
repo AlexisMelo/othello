@@ -22,19 +22,19 @@ bool PARTIE_EstPartieTerminee(Couleur * plateau, bool j1PeutJouer, bool j2PeutJo
 }
 
 bool PARTIE_JoueurPeutJouer(Couleur * plateau, Joueur joueur) {
-  if (COUPS_ObtenirNombreDeCoups(plateau, JOUEUR_ObtenirCouleur(joueur)) == 0) {
+  if (COUPS_ObtenirNombreDeCoups(rechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur))) == 0) {
     return false;
   }
   return true;
 }
 
-void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *), Joueur j1, Joueur j2){
+void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void (*AfficherPlateau)(Couleur *), Joueur j1, Joueur j2){
   Couleur* plateau = PLATEAU_CreerPlateau();
   PLATEAU_InitialiserPlateau(plateau);
   PARTIE_GererPartie(AfficherResultat,AfficherPlateau,j1,j2,plateau);
 }
 
-void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *),void (*AfficherPlateau)(Couleur *),Joueur j1 ,Joueur j2,Couleur * plateau) {
+void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void (*AfficherPlateau)(Couleur *),Joueur j1 ,Joueur j2,Couleur * plateau) {
   bool j1PeutJouer = true;
   bool j2PeutJouer = true;
 
@@ -59,5 +59,5 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *),void (*AfficherPlate
     partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
   }
 
-  AfficherResultat(plateau);
+  AfficherResultat(plateau,j1,j2);
 }
