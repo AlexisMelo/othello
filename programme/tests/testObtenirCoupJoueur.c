@@ -1,6 +1,6 @@
-#include"../include/ObtenirCoupJoueur.h"
+#include"../include/JOUEUR_SaisirCoupHumain.h"
 #include <CUnit/CUnit.h>
-#include "testObtenirCoupJoueur.h"
+#include "testJOUEUR_SaisirCoupHumain.h"
 #include<stdio.h>
 int init_suite_success(void) { 
     return 0; 
@@ -10,7 +10,7 @@ int clean_suite_success(void) {
     return 0; 
 }
 
-void TestObtenirCoupJoueur(void){
+void TestJOUEUR_SaisirCoupHumain(void){
     
     }
 

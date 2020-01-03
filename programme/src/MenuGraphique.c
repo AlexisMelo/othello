@@ -1,4 +1,4 @@
-#include "MenuGraphique.h"
+#include "../include/MenuGraphique.h"
 
 void MenuGraphique() {
   //le but est de recomposer une ligne de commande comme si l'utilisateur l'avais directement saisie pour ensuite l'envoyer au menuLigneCommande
@@ -30,15 +30,15 @@ void MenuGraphique() {
   if (choix != 4) {
 
     //quelle couleur il prend
-    printf("Quelle couleur voulez vous ?\n1 : %s\n2 : %s\n", COULEUR1, COULEUR2);
+    printf("Quelle couleur voulez vous ?\n1 : %s\n2 : %s\n", COULEUR_NOIRE, COULEUR_BLANCHE);
     choix = SaisieInteger(1,2);
 
     switch (choix) {
       case 1 :
-        arguments[2] = COULEUR1;
+        arguments[2] = COULEUR_NOIRE;
         break;
       case 2 :
-        arguments[2] = COULEUR2;
+        arguments[2] = COULEUR_BLANCHE;
         break;
     }
 

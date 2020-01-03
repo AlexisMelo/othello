@@ -1,10 +1,14 @@
-#include "Menu.h"
+#include "../include/Menu.h"
 
-int ObtenirProfondeurIA(int nbArguments, char ** arguments) {
+int ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments) {
   if (nbArguments == 4){
     return atoi(arguments[3]);
   }
   return PROFONDEUR_DEFAUT_IA;
+}
+
+char * ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments) {
+  return arguments[2];
 }
 
 int SaisieInteger(int min, int max) {

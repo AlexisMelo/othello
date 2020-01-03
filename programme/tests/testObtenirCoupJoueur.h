@@ -1,3 +1,3 @@
 #include "../include/Couleur.h"
 
-void TestObtenirCoupJoueur() ;
+void TestJOUEUR_SaisirCoupHumain() ;

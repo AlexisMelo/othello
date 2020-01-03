@@ -2,6 +2,9 @@
 #define MENU_LIGNE_COMMANDE
 
 #include "Menu.h"
+#include "Joueur.h"
+#include "Affichage.h"
+#include "GererPartie.h"
 
 /**
  * @fn void menuLigneCommande (int nbArguments, char ** arguments)

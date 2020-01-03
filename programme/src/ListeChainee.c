@@ -2,10 +2,9 @@
 #include<errno.h>
 #include<assert.h>
 #include<stdbool.h>
-#include"ListeChainee.h"
-#include"CoupCollection.h"
+#include"../include/ListeChainee.h"
 
- 
+
 ListeChainee listeChainee(){
     errno = 0;
     Noeud* pNoeud = (Noeud*)malloc(sizeof(Noeud));

@@ -1,15 +1,14 @@
 #ifndef COUP_COLLECTION
 #define COUP_COLLECTION
+
+#include <stdlib.h>
+
 #include "Coup.h"
-#include "Position.h"
-#include "Couleur.h"
-#include"ListeChainee.h"
-#include"elementCollection.h"
-Noeud* fonctionCopierCoup(Noeud*);
-void fonctionLibererCoup(Noeud*);
-int fonctionComparerCoup(Noeud*, Noeud*);
-/* 
-void* FonctionCopierCoup(void*);
-void* FonctionLibererCoup(void*);
-int FonctionComparerCoup(void*, void*); */
+
+void* COUPCOLLECTION_FonctionCopierCoup(void* coup);
+
+void COUPCOLLECTION_FonctionLibererCoup(void* coup);
+
+bool COUPCOLLECTION_FonctionComparerCoup(void * coup1, void * coup2);
+
 #endif

@@ -1,4 +1,4 @@
-#include "Othello.h"
+#include "../include/Othello.h"
 
 int main(int nbArguments, char ** arguments) {
   if (nbArguments == 1) {
