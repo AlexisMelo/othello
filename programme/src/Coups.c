@@ -25,7 +25,7 @@ void COUPS_RetirerCoup(Coups *pCoups){
   pCoups->nbCoups--;
 }
 
-unsigned int COUPS_NbCoups(Coups coups){
+unsigned int COUPS_ObtenirNombreDeCoups(Coups coups){
   return coups.nbCoups;
 }
 
@@ -35,7 +35,7 @@ Coup COUPS_ObtenirCoup(Coups coups){
 
 bool COUPS_EstPresent(Coups coups, Coup coup)
 {
-  for (unsigned int i = 0; i < COUPS_NbCoups(coups); i++) {
+  for (unsigned int i = 0; i < COUPS_ObtenirNombreDeCoups(coups); i++) {
     if(COUP_EstEgalCoup(coup,coups.lesCoups[i])) {
       return true;
     }

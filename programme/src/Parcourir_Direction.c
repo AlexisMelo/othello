@@ -15,7 +15,7 @@ bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur * plateau, Coup coup,
 
     Position nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(coup), direction);
 
-    if (!POSITION_EstPositionValide(plateau, nouvellePosition)) { // la position n'existe pas sur le plateau
+    if (!PLATEAU_EstPositionValide(plateau, nouvellePosition)) { // la position n'existe pas sur le plateau
       return false;
     }
 
@@ -31,7 +31,7 @@ bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur * plateau, Coup coup,
 
         nouvellePosition = POSITION_AppliquerDirection(nouvellePosition, direction);
 
-        limitePlateauAtteinte = !POSITION_EstPositionValide(plateau, nouvellePosition);
+        limitePlateauAtteinte = !PLATEAU_EstPositionValide(plateau, nouvellePosition);
 
         if (!limitePlateauAtteinte) {
 

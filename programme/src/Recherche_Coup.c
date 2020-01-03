@@ -7,7 +7,7 @@ Coups RECHERCHECOUP_RechercherTousLesCoups(Couleur * plateau, Couleur couleurJou
 
     for (int i = 1; i <= taillePlateau; i++) {
         for (int j = 1; j <= taillePlateau; j++) {
-            unCoup = COUP_CreerCoup(CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),LIGNE_ObtenirColonneDepuisInt(j)));
+            unCoup = COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j)), couleurJoueurActuel);
             if (RECHERCHECOUP_EstCoupValide(plateau, unCoup)) {
                 COUPS_AjouterCoup(&lesCoups, unCoup);
             }
@@ -17,7 +17,7 @@ return lesCoups;
 }
 
 bool RECHERCHECOUP_EstCoupValide(Couleur * plateau, Coup coup) {
-    if (!POSITION_EstPositionValide(plateau, COUP_ObtenirPosition(coup))) {
+    if (!PLATEAU_EstPositionValide(plateau, COUP_ObtenirPosition(coup))) {
       return false;
     }
 
@@ -29,10 +29,10 @@ bool RECHERCHECOUP_EstCoupValide(Couleur * plateau, Coup coup) {
 
 }
 
-Coup RECHERCHECOUP_ObtenirCoupValide (Joueur joueur, Couleur * plateau){
+Coup RECHERCHECOUP_ObtenirCoupValide (Couleur * plateau, Joueur joueur){
     Coups lesCoups;
     Coup unCoup;
-    lesCoups = RECHERCHE_RechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur));
+    lesCoups = RECHERCHECOUP_RechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur));
     bool estCoupValide = false;
     while (!estCoupValide) {
         unCoup = JOUEUR_ObtenirCoup(joueur, plateau);

@@ -5,6 +5,7 @@
 
 #include "Position.h"
 #include "Coup.h"
+#include "Parcourir_Direction.h"
 
 #define TAILLE 8
 
@@ -93,6 +94,8 @@ int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur);
  * @returns vraie si la position existe sur le plateau
 */
 bool PLATEAU_EstPositionValide(Couleur * plateau, Position position) ;
+
+void PLATEAU_CapturerPions(Couleur * plateau, Coup coup);
 
 void PLATEAU_CapturerPionsDansDirection(Couleur * plateau, Coup coup, Direction direction);
 #endif

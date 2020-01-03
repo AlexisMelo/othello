@@ -2,7 +2,6 @@
 #define __GERERPARTIE__
 #include "Couleur.h"
 #include "Plateau.h"
-#include "JouerCoup.h"
 #include "Joueur.h"
 #include "Coups.h"
 #include "Recherche_Coup.h"

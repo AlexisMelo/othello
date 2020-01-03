@@ -1,12 +1,9 @@
 #ifndef RECHERCHE_COUP
 #define RECHERCHE_COUP
 
-#include<stdbool.h>
-#include"Plateau.h"
-#include"Couleur.h"
-#include"Coups.h"
-#include"Position.h"
-#include"Parcourir_Direction.h"
+#include "Coups.h"
+#include "Joueur.h"
+#include "Plateau.h"
 
 /**
  *@brief Retourne tous les coups possibles pour un Joueur

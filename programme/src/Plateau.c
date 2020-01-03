@@ -95,7 +95,7 @@ void PLATEAU_CapturerPionsDansDirection(Couleur * plateau, Coup coup, Direction 
 
   if(RECHERCHEDIRECTIONS_CoupPossibleDansDirection(plateau, coup, direction)){
       nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(coup), direction);
-      while((PLATEAU_EstPositionValide(plateau, nouvellePosition)) && (!EstEgalCouleur(COUP_ObtenirCouleur(coup), PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition)))){
+      while((PLATEAU_EstPositionValide(plateau, nouvellePosition)) && (!COULEUR_EstEgalCouleur(COUP_ObtenirCouleur(coup), PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition)))){
           nouveauCoup = COUP_CreerCoup(nouvellePosition ,COUP_ObtenirCouleur(coup));
           PLATEAU_JouerCoup(plateau,nouveauCoup);
           nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(nouveauCoup), direction);

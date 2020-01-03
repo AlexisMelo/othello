@@ -2,10 +2,9 @@
 #define PARCOURIR_DIRECTION
 
 #include<stdbool.h>
-#include"Plateau.h"
-#include"Couleur.h"
-#include"Position.h"
-#include"Direction.h"
+
+#include "Couleur.h"
+#include "Coup.h"
 
 /**
  *@brief Retourne un booléen pour savoir si au moins une direction est valide

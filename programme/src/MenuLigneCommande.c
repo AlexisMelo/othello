@@ -5,7 +5,7 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
   Joueur j1;
   Joueur j2;
 
-  Couleur couleurJ1 = COULEUR_ObtenirCouleurDepuisString(ObtenirStringCouleurPremierJoueurDepuisArguments(arguments));
+  Couleur couleurJ1 = COULEUR_ObtenirCouleurDepuisString(MENU_ObtenirStringCouleurPremierJoueurDepuisArguments(arguments));
   Couleur couleurJ2 = COULEUR_ObtenirCouleurOpposee(couleurJ1);
 
   int profondeurIA = MENU_ObtenirProfondeurIADepuisArguments(nbArguments, arguments);
