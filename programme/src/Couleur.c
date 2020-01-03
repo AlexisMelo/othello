@@ -61,3 +61,7 @@ Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur) {
   }
   return COULEUR_ObtenirCouleurNeutre();
 }
+
+char COULEUR_ObtenirSymbole(Couleur couleur) {
+  return couleur.symbole;
+}
