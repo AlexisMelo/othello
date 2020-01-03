@@ -5,7 +5,6 @@
 #include "../include/Ligne.h"
 #include "TypesTest.h"
 
-
 #define CU_ADD_TEST(suite, test) (CU_add_test(suite, #test, (CU_TestFunc)test))
 
 
@@ -34,22 +33,22 @@ int main(){
         CoupSuite = CU_add_suite("Coup",NULL,NULL);
         CoupsSuite = CU_add_suite("Coups",NULL,NULL);
 
-        CU_ADD_TEST(colonneSuite,TestColonne);
+        // CU_ADD_TEST(colonneSuite,TestColonne);
 
-        CU_ADD_TEST(ligneSuite,TestLigne);
+        // CU_ADD_TEST(ligneSuite,TestLigne);
 
-        CU_ADD_TEST(couleurSuite,testBlanc);
-        CU_ADD_TEST(couleurSuite,testNoir);
+        // CU_ADD_TEST(couleurSuite,testBlanc);
+        // CU_ADD_TEST(couleurSuite,testNoir);
 
-        CU_ADD_TEST(plateauSuite,TestPlateau);
+        // CU_ADD_TEST(plateauSuite,TestPlateau);
 
-        CU_ADD_TEST(UneDirectionSuite,testParcourirUneDirection);
+        // CU_ADD_TEST(UneDirectionSuite,testParcourirUneDirection);
 
-        CU_ADD_TEST(LesDirectionsSuite,testParcourirLesDirections);
+        // CU_ADD_TEST(LesDirectionsSuite,testParcourirLesDirections);
 
-        //CU_ADD_TEST(RechercheCoupSuite,testRechercheDesCoups);
+        CU_ADD_TEST(RechercheCoupSuite,testRechercheDesCoups);
 
-        //CU_ADD_TEST(CoupSuite,testEgaliteCoup);
+        // CU_ADD_TEST(CoupSuite,testEgaliteCoup);
 
         //CU_ADD_TEST(CoupsSuite,testCreerCoups);
         //CU_ADD_TEST(CoupsSuite,testAjoutCoups);
