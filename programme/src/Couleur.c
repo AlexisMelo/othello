@@ -55,3 +55,14 @@ bool COULEUR_EstNeutre(Couleur couleur) {
 bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
     return (((strcmp(couleur1.hexa, couleur2.hexa) == 0) && (couleur1.nom == couleur2.nom) && (couleur1.symbole == couleur2.symbole)));
 }
+
+
+Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur) {
+  if (strcmp(couleur, COULEUR_NOIRE)) {
+    return COULEUR_ObtenirCouleurBlanc();
+  }
+  else if (strcmp(couleur, COULEUR_BLANCHE)) {
+    return COULEUR_ObtenirCouleurNoir();
+  }
+  return COULEUR_ObtenirCouleurNeutre();
+}

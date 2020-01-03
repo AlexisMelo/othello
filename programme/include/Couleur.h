@@ -21,7 +21,6 @@ typedef struct{
 */
 Couleur COULEUR_ObtenirCouleurNoir() ;
 
-
 /**
  *@brief Retourne une Couleur blanche
  *@returns Couleur avec Couleur.nom = Blanc, Couleur.hexa = 00 , Couleur.symbole = '0'
@@ -43,8 +42,6 @@ Couleur COULEUR_ObtenirCouleurNeutre() ;
 */
 Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) ;
 
-
-
 /**
  * @brief Retourne Vrai si la couleur entrée est la Couleur Neutre.
  *
@@ -52,8 +49,6 @@ Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) ;
  *
  * @returns estNeutre : booléen
 */bool COULEUR_EstNeutre(Couleur couleur) ;
-
-
 
 /**
  * @brief Retourne vrai si les couleurs entrées sont identiques.
@@ -65,4 +60,15 @@ Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) ;
  * @returns Couleur opposée à celle passsée en entrée
 */
 bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
+
+/**
+ * @fn int ObtenirCouleurDepuisString(char * couleur)
+ * @brief Obtenir une structure Couleur depuis un string correspondant à son nom
+ *
+ * @param char* String correspondant au nom de la couleur
+ *
+ * @returns Couleur Structure Couleur
+ */
+Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur);
+
 #endif
