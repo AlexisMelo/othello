@@ -2,9 +2,7 @@
 
 Couleur * COULEUR_PointeurCouleurNulle() {
     Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = Nulle;
-    resultat->hexa = malloc(sizeof(resultat->hexa));
-    strcpy(resultat->hexa,"11");
+    resultat->nom = nulle;
     resultat->symbole = '.';
     return resultat;
 }
@@ -12,7 +10,6 @@ Couleur * COULEUR_PointeurCouleurNulle() {
 Couleur COULEUR_ObtenirCouleurBlanc() {
     Couleur resultat = *COULEUR_PointeurCouleurNulle();
     resultat.nom = Blanc;
-    resultat.hexa = "00";
     resultat.symbole = 'O';
     return resultat;
 }
@@ -20,7 +17,6 @@ Couleur COULEUR_ObtenirCouleurBlanc() {
 Couleur COULEUR_ObtenirCouleurNoir() {
     Couleur resultat = *COULEUR_PointeurCouleurNulle();
     resultat.nom = Noir;
-    resultat.hexa = "FF";
     resultat.symbole = 'X';
     return resultat;
 }
@@ -29,7 +25,6 @@ Couleur COULEUR_ObtenirCouleurNoir() {
 Couleur COULEUR_ObtenirCouleurNeutre() {
     Couleur resultat = *COULEUR_PointeurCouleurNulle();
     resultat.nom = Neutre;
-    resultat.hexa = "01";
     resultat.symbole = ' ';
     return resultat;
 }
@@ -53,7 +48,7 @@ bool COULEUR_EstNeutre(Couleur couleur) {
 
 
 bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
-    return (((strcmp(couleur1.hexa, couleur2.hexa) == 0) && (couleur1.nom == couleur2.nom) && (couleur1.symbole == couleur2.symbole)));
+    return (couleur1.nom == couleur2.nom) && (couleur1.symbole == couleur2.symbole);
 }
 
 

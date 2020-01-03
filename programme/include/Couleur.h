@@ -10,7 +10,6 @@ typedef enum { Neutre, Blanc, Noir, Nulle } nomCouleur;
 
 typedef struct{
     nomCouleur nom;
-    char * hexa;
     char symbole;
 }Couleur;
 

@@ -1,5 +1,6 @@
 CC=gcc
-TEST=test
+TESTT=testTypes
+TESTA=testAff
 TESTDIR = programme/tests
 INCLUDEDIR = programme/include
 SRCDIR = programme/src
@@ -8,8 +9,6 @@ INCFLAGS = -I$(INCLUDEDIR)
 BINDIR=programme/bin
 EXEC=Othello
 LIBDIR=programme/lib
-
-
 
 all : $(BINDIR)/$(EXEC)
 	$(TESTDIR)/$(TEST)
@@ -29,15 +28,19 @@ $(BINDIR)/$(EXEC) : $(SRCDIR)/CoupCollection.o $(SRCDIR)/Coups.o $(SRCDIR)/Gerer
 $(SRCDIR)/%.o : $(SRCDIR)/%.c
 	$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
 
+tests :	$(TESTDIR)/$(TESTT)		$(TESTDIR)/$(TESTA)
 
+$(TESTDIR)/testAff : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/testAffichage.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/AfficherPlateau.o $(SRCDIR)/InitialiserPlateau.o $(SRCDIR)/JouerCoup.o
+		$(CC) -o $(TESTDIR)/testAff $^ -lcunit $(CFLAGS) -I$(TESTDIR)
 
-tests :	$(TESTDIR)/$(TEST)
-
-$(TESTDIR)/test : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o
-	$(CC) -o $(TESTDIR)/test $^ -lcunit $(CFLAGS) -I$(TESTDIR)
+$(TESTDIR)/testTypes : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/JouerCoup.o
+		$(CC) -o $(TESTDIR)/testTypes $^ -lcunit $(CFLAGS) -I$(TESTDIR)
 
 $(TESTDIR)/%.o : $(TESTDIR)/%.c
-	$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
+		$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)programme/tests/testAff
+
+$(SRCDIR)/%.o : $(SRCDIR)/%.c
+		$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
 
 clean :
 	find . -type f -name '*.pdf' -exec rm {} +
