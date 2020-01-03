@@ -1,66 +1,66 @@
 #ifndef COUP_TYPE
 #define COUP_TYPE
 
-#include"Position.h"
-#include"Couleur.h"
+#include "Position.h"
+#include "Couleur.h"
+#include <stdlib.h>
+#include <stdbool.h>
+#include <assert.h>
 
-typedef struct
-{
+typedef struct{
     Position position;
     Couleur couleur;
 }Coup;
 
+/**
+ * @brief Crée un coup à partir d'une position et d'une couleur
+ *
+ * @params position Position où le coup doit être joué
+ * @params couleur Couleur du joueur qui joue le coup
+ *
+ * @returns Coup à jouer
+*/
+Coup COUP_CreerCoup(Position position, Couleur couleur) ;
 
 /**
- * @brief Retourne un coup à partir d'une position et d'une couleur
+ * @brief Détermine si deux coups sont identiques
  *
- * @returns coup : Coup
+ * @param coup1 Coup
+ * @param coup2 Coup
+ *
+ * @returns true si les coups sont égaux, false sinon
 */
-Coup CreerCoup(Position position, Couleur couleur) ;
+bool COUP_EstEgalCoup(Coup coup1, Coup coup2) ;
 
 /**
  * @brief Permet d'accéder à la Couleur d'un Coup
  *
  * @param coup : Coup
- * 
+ *
  * @returns Couleur du coup passé en entrée
 */
-Couleur ObtenirCouleur(Coup coup) ;
-
+Couleur COUP_ObtenirCouleur(Coup coup) ;
 
 /**
  * @brief Permet d'accéder à la Position d'un Coup
  *
  * @param coup : Coup
- * 
+ *
  * @returns Position du coup passé en entrée
 */
-Position ObtenirPosition(Coup coup) ;
-
-
+Position COUP_ObtenirPosition(Coup coup) ;
 
 /**
  * @brief Détermine si un coup est valide
- * 
+ *
  * Retourne vrai seulement si la position est dans les limites du plateau, et que la
  * Couleur n'est pas neutre
  *
- * @param coup : Coup
- * 
- * @returns estCoupValide : bool
+ * @param plateau Couleur * plateau de jeu
+ * @param coup Coup
+ *
+ * @returns estCoupValide bool
 */
-bool EstCoupValide(Coup coup) ;
+bool COUP_EstCoupValide(Couleur * plateau, Coup coup) ;
 
-
-
-/**
- * @brief Détermine si deux coups sont identiques
- * 
- * @param coup1 : Coup
- * 
- * @param coup2 : Coup
- * 
- * @returns estEgal : bool
-*/
-bool EstEgalCoup(Coup coup1, Coup coup2) ;
 #endif

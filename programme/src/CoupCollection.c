@@ -1,21 +1,15 @@
-#include "Coup.h"
-#include "Position.h"
-#include "Couleur.h"
-#include "Coup.h"
-#include<stdlib.h>
+#include "../include/CoupCollection.h"
 
-void* FonctionCopierCoup(void* coup) {
+void* COUPCOLLECTION_FonctionCopierCoup(void* coup) {
     Coup * resultat = (Coup*)malloc(sizeof(Coup));
     memcpy((void*)resultat, coup, sizeof(Coup));
-    return (void*)resultat; 
-};  
+    return (void*)resultat;
+}
 
-
-void FonctionLibererCoup(void * coup) {
+void COUPCOLLECTION_FonctionLibererCoup(void * coup) {
     free(coup);
-};
+}
 
-
-int FonctionComparerCoup(void * coup1, void * coup2) {
-    return estEgalCoup(*(Coup*)coup1, *(Coup*)coup2);
+bool COUPCOLLECTION_FonctionComparerCoup(void * coup1, void * coup2) {
+    return COUP_EstEgalCoup(*(Coup*)coup1, *(Coup*)coup2);
 }

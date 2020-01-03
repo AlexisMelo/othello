@@ -1,42 +1,38 @@
 #ifndef LIGNE_TYPE
 #define LIGNE_TYPE
+
 #include<stdbool.h>
 
-typedef enum{Un, Deux, Trois, Quatre, Cinq, Six, Sept, Huit}Ligne;
-
-
-/**
- *@brief Retourne le nombre correspondant à la Ligne passée en entrée.
- *
- * Exemple : ObtenirNumeroLigne(Ligne D) = 4
- * 
- *@param ligne : Ligne dont on veut le numéro
- *
- *@returns numéro : int
- */
-int ObtenirNumeroLigne(Ligne);
-
+typedef enum {Un, Deux, Trois, Quatre, Cinq, Six, Sept, Huit} Ligne;
 
 /**
- * @brief Construit une Ligne correspondant au numéro passée en entrée.
- * 
- * Exemple : creerLigne(2) => Ligne B
- * 
- * @param nb : int
- * 
- * @returns Ligne
+ * @brief Construit une ligne correspondant au numéro passé en entrée
+ *
+ * Exemple : LIGNE_ObtenirLigneDepuisInt(2) => ligne 3
+ *
+ * @param int Numéro dont on veut retrouver la ligne
+ *
+ * @returns Enumeration ligne correspondant au numéro
 */
-Ligne CreerLigne(int);
-
+Ligne LIGNE_ObtenirLigneDepuisInt(int ligNum);
 
 /**
- *@brief Retourne vrai si les Lignes entrées sont identiques.
+ * @brief Obtient le numero réel d'une ligne
  *
- * @param ligne1 : Ligne
+ * @param ligne Ligne
  *
- *@param ligne2: Ligne
+ * @returns Numéro de la ligne
+*/
+int LIGNE_ObtenirNumeroLigne(Ligne ligne);
+
+/**
+ * @brief Retourne vrai si les Lignes entrées sont identiques.
+ *
+ * @param ligne1 Ligne
+ * @param ligne2 Ligne
  *
  * @returns booléen
 */
-bool EstEgalLigne(Ligne ligne1, Ligne ligne2) ;
+bool LIGNE_EstEgalLigne(Ligne ligne1, Ligne ligne2);
+
 #endif

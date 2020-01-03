@@ -1,102 +1,94 @@
 #ifndef POSITION_TYPE
 #define POSITION_TYPE
 
-#include "../include/Ligne.h"
-#include "../include/Direction.h"
-#include "../include/Colonne.h"
-#include<stdbool.h>
-#include<assert.h>
+#include <stdbool.h>
+#include <assert.h>
 
-typedef struct 
+
+#include "Ligne.h"
+#include "Colonne.h"
+
+typedef struct
 {
     Ligne ligne;
     Colonne colonne;
 }Position;
 
+#include "Couleur.h"
+#include "Direction.h"
 
 /**
- * @brief Construit une Position à partir d'une Ligne et d'une Colonne
- * 
- * @param ligne : Ligne
- * 
- * @param colonne : Colonne
- * 
- * @returns position : Position
+ * @brief Obtenir une position à partir d'une Ligne et d'une Colonne
+ *
+ * @param ligne Ligne
+ *
+ * @param colonne Colonne
+ *
+ * @returns structure position
 */
-Position CreerPosition(Ligne ligne, Colonne colonne) ;
-
+Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) ;
 
 /**
  * @brief Retourne la ligne de la Position passée en entrée
- * 
- * @param position : Position
- * 
- * @returns ligne : Ligne
+ *
+ * @param position Position dont on souhaite connaitre la ligne
+ *
+ * @returns ligne de la position
 */
-Ligne ObtenirLigne(Position position) ;
-
+Ligne POSITION_ObtenirLigne(Position position) ;
 
 /**
  * @brief Retourne la colonne de la Position passée en entrée
- * 
- * @param position : Position
- * 
- * @returns colonne : Colonne
+ *
+ * @param position Position dont on souhaite connaitre la colonne
+ *
+ * @returns colonne de la position
 */
-Colonne ObtenirColonne(Position position) ;
-
+Colonne POSITION_ObtenirColonne(Position position) ;
 
 /**
- * @brief vérifie si la position passée en entrée est valide
- * 
- * @param position Position
- * 
- * @returns estPositionValide : Booléen
+ * @brief Vérifie si la position passée en entrée est valide par rapport à un plateau, cad qu'elle existe sur le dit plateau
+ *
+ * @param plateau Couleur * correspondant au plateau de jeu
+ * @param position Position que l'on souhaite tester
+ *
+ * @returns vraie si la position existe sur le plateau
 */
-bool EstPositionValide(Position position) ;
-
-
-/**
- * @brief Fixe la ligne de la position
- * 
- * @param position : Position
- * 
- * @param Ligne : Ligne à appliquer
- * 
-*/
-void FixerLigne(Position * position, Ligne ligne) ;
-
+bool POSITION_EstPositionValide(Couleur * plateau, Position position) ;
 
 /**
  * @brief Fixe la ligne de la position
- * 
- * @param position : Position
- * 
- * @param colonne : Colonne à appliquer
- * 
+ *
+ * @param position Position que l'on souhaite modifier
+ * @param ligne Nouvelle ligne
 */
-void FixerColonne(Position * position, Colonne colonne) ;
-
+void POSITION_FixerLigne(Position * position, Ligne ligne) ;
 
 /**
- * @brief applique une directionà la position
- * 
- * @param position : Position
- * 
- * @param Direction : Direction à appliquer
- * 
+ * @brief Fixe la colonne de la position
+ *
+ * @param position Position que l'on souhaite modifier
+ * @param colonne Nouvelle colonne
 */
-Position AppliquerDirection(Position position, Direction direction) ;
+void POSITION_FixerColonne(Position * position, Colonne colonne) ;
 
+/**
+ * @brief applique une direction à la position
+ *
+ * @param position Position de départ que l'on souhaite modifier
+ * @param direction Direction à appliquer sur position
+ *
+ * @returns Nouvelle position avec la direction appliquée
+*/
+Position POSITION_AppliquerDirection(Position position, Direction direction) ;
 
 /**
  * @brief Vérifie si les positions sont égales
- * 
- * @param position1 : Position
- * @param position2 : Position
- * @returns bool : 
+ *
+ * @param position1 Position
+ * @param position2 Position
+ * @returns true si les deux positions sont égales, false sinon
 */
+bool POSITION_EstEgalPosition(Position position1, Position position2);
 
-
-bool EstEgalPosition(Position position1, Position position2);
 #endif

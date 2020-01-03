@@ -1,42 +1,25 @@
-#include"../include/Coup.h"
-#include"../include/Position.h"
-#include"../include/Couleur.h"
-#include<stdlib.h>
-#include<stdbool.h>
-#include<assert.h>
+#include "../include/Coup.h"
 
-
-Coup * CreerCoupVide(){
-    Coup * presultat = (Coup *)malloc(sizeof(Coup));
-    return presultat;
+Coup COUP_CreerCoup(Position position, Couleur couleur){
+    assert(!COULEUR_EstNeutre(couleur));
+    Coup resultat;
+    resultat.couleur = couleur;
+    resultat.position = position;
+    return resultat;
 }
 
-
-Coup CreerCoup(Position position, Couleur couleur){
-    assert(!EstNeutre(couleur));
-    Coup * presultat = CreerCoupVide();
-    presultat->couleur = couleur;
-    presultat->position = position;
-    return *presultat;
-}
-
-
-
-bool EstEgalCoup(Coup coup1, Coup coup2) {
-    return EstEgalCouleur(coup1.couleur, coup2.couleur) && EstEgalPosition(coup1.position, coup2.position);
+bool COUP_EstEgalCoup(Coup coup1, Coup coup2) {
+    return COULEUR_EstEgalCouleur(coup1.couleur, coup2.couleur) && POSITION_EstEgalPosition(coup1.position, coup2.position);
     }
 
-
-Couleur ObtenirCouleur(Coup coup){
+Couleur COUP_ObtenirCouleur(Coup coup){
     return coup.couleur;
 }
 
-
-Position ObtenirPosition(Coup coup){
+Position COUP_ObtenirPosition(Coup coup){
     return coup.position;
 }
 
-
-bool EstCoupValide(Coup coup){
-    return  EstPositionValide(coup.position) && !EstNeutre(coup.couleur);
+bool COUP_EstCoupValide(Couleur * plateau, Coup coup){
+    return  (bool) (POSITION_EstPositionValide(plateau, COUP_ObtenirPosition(coup)) && !COULEUR_EstNeutre(COUP_ObtenirCouleur(coup)));
 }

@@ -1,51 +1,41 @@
-#include<stdbool.h>
-#include"../include/Position.h"
-#include"../include/Direction.h"
+#include "../include/Position.h"
+#include "Plateau.h" // ne surtout pas déplacer !!!
 
-Position CreerPosition(Ligne ligne, Colonne colonne) {
+Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;
     position.ligne = ligne;
     position.colonne = colonne;
     return position;
 }
 
-
-Ligne ObtenirLigne(Position position) {
+Ligne POSITION_ObtenirLigne(Position position) {
     return position.ligne;
 }
 
-Colonne ObtenirColonne(Position position) {
+Colonne POSITION_ObtenirColonne(Position position) {
     return position.colonne;
 }
 
-bool EstPositionValide(Position position) {
-    Colonne colonne = ObtenirColonne(position);
-    Ligne ligne = ObtenirLigne(position);
-    return (colonne < 9) && (ligne < 9);
+bool POSITION_EstPositionValide(Couleur * plateau, Position position) {
+    Colonne colonne = POSITION_ObtenirColonne(position);
+    Ligne ligne = POSITION_ObtenirLigne(position);
+    return (COLONNE_ObtenirNumeroColonne(colonne) <= PLATEAU_ObtenirTaille(plateau)) && (LIGNE_ObtenirNumeroLigne(ligne) <= PLATEAU_ObtenirTaille(plateau)) && (COLONNE_ObtenirNumeroColonne(colonne) >= 1) && (LIGNE_ObtenirNumeroLigne(ligne) >= 1);
 }
 
-void FixerLigne(Position * position, Ligne ligne) {
-    position -> ligne = ligne;
-}   
-
-void FixerColonne(Position * position, Colonne colonne) {
-    position -> colonne = colonne;
+void POSITION_FixerLigne(Position * position, Ligne ligne) {
+    position->ligne = ligne;
 }
 
-
-Position AppliquerDirection(Position position, Direction direction){
-        Position oldPos = position;
-        FixerLigne(&position, ObtenirLigne(position) + ObtenirDecalageLigne(direction));
-        FixerColonne(&position, ObtenirColonne(position) + ObtenirDecalageColonne(direction));
-        if(EstPositionValide(position)){;
-            return position;
-        }
-        else{
-            return oldPos;
-        };
+void POSITION_FixerColonne(Position * position, Colonne colonne) {
+    position->colonne = colonne;
 }
 
+Position POSITION_AppliquerDirection(Position position, Direction direction){
+        POSITION_FixerLigne(&position, LIGNE_ObtenirLigneDepuisInt(LIGNE_ObtenirNumeroLigne(POSITION_ObtenirLigne(position)) + ObtenirDecalageLigne(direction)));
+        POSITION_FixerColonne(&position, COLONNE_ObtenirColonneDepuisInt(COLONNE_ObtenirNumeroColonne(POSITION_ObtenirColonne(position)) + ObtenirDecalageColonne(direction)));
+        return position;
+}
 
-bool EstEgalPosition(Position position1, Position position2) {
-    return EstEgalColonne(position1.colonne, position2.colonne) && EstEgalLigne(position1.ligne, position2.ligne);
+bool POSITION_EstEgalPosition(Position position1, Position position2) {
+    return COLONNE_EstEgalColonne(POSITION_ObtenirColonne(position1), POSITION_ObtenirColonne(position2)) && LIGNE_EstEgalLigne(POSITION_ObtenirLigne(position1), POSITION_ObtenirLigne(position2));
 }
