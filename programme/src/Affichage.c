@@ -97,6 +97,34 @@ void InitialiserAffichagePlateau(){
     AFFICHAGE_AfficherPlateau(plateau);
 }
 
-void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau) {
-  printf("fin de partie");
+void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) {
+  int scorej1 = PLATEAU_CalculerPoints(plateau, JOUEUR_ObtenirCouleur(j1));
+  int scorej2 = PLATEAU_CalculerPoints(plateau, JOUEUR_ObtenirCouleur(j2));
+
+  printf("Score du Joueur 1 ( %c ) : %dpts\n", COULEUR_ObtenirSymbole(JOUEUR_ObtenirCouleur(j1)), scorej1);
+  printf("Score du Joueur 2 ( %c ) : %dpts\n", COULEUR_ObtenirSymbole(JOUEUR_ObtenirCouleur(j2)), scorej2);
+  printf("--------------------------------");
+
+  char * vainqueur;
+
+  if (scorej1 == scorej2) {
+    printf("Résultat : Egalité !\n", );
+  }
+  else {
+    if (scorej1 > scorej2) {
+      vainqueur = "Joueur 1";
+    }
+    else (scorej2 > scorej1) {
+      vainqueur = "Joueur 2";
+    }
+    printf("Résultat : %s vainqueur !",vainqueur);
+  }
+
+}
+
+void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Joueur j2) {
+  //pour l'instant aucun affichage de fin de partie nécessaire en mode tournois
+}
+void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau) {
+  //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
 }
