@@ -3,9 +3,9 @@
 void testEgaliteCoup() {
   Couleur noir = CouleurNoir();
 
-  Coup coup1 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), noir);
-  Coup coup2 = creerCoup(creerPosition(creerLigne(1),creerColonne(3)), noir);
+  Coup coup1 = CreerCoup(CreerPosition(CreerLigne(1),CreerColonne(3)), noir);
+  Coup coup2 = CreerCoup(CreerPosition(CreerLigne(1),CreerColonne(3)), noir);
 
-  CU_ASSERT(estEgalCoup(coup1, coup2));
+  CU_ASSERT(EstEgalCoup(coup1, coup2));
 
 }
