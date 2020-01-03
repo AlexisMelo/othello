@@ -52,7 +52,7 @@ Coup COUPS_ObtenirCoup(const Coups coups);
  * \param coups la liste de coups dont on veut le nombre de coups
  * \return unsigned int
  */
-unsigned int COUPS_NbCoups(Coups coups);
+unsigned int COUPS_ObtenirNombreDeCoups(Coups coups);
 
 bool COUPS_EstPresent(Coups coups, Coup coup);
 

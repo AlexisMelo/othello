@@ -43,6 +43,6 @@ bool RECHERCHECOUP_EstCoupValide(Couleur * plateau, Coup coup);
  *
  *@returns Coup (un coup valide)
 */
-Coup RECHERCHECOUP_ObtenirCoupValide (Joueur joueur, Couleur * plateau);
+Coup RECHERCHECOUP_ObtenirCoupValide (Couleur * plateau, Joueur joueur);
 
 #endif

@@ -24,7 +24,7 @@ void PLATEAU_InitialiserPlateau(Couleur * plateau){
 }
 
 Couleur * PLATEAU_CreerPlateau() {
-    Couleur plateau[TAILLE*TAILLE]= malloc(TAILLE*TAILLE*sizeof(Couleur));
+    Couleur * plateau = malloc(TAILLE*TAILLE*sizeof(Couleur));
     return plateau;
     //return(Couleur(*)[64])malloc(TAILLE*TAILLE*sizeof(Couleur));
 }
@@ -35,7 +35,6 @@ void PLATEAU_JouerCoup(Couleur * plateau, Coup coup) {
   int colonneDuCoup = COLONNE_ObtenirNumeroColonne(POSITION_ObtenirColonne(positionDuCoup));
   Couleur coul = COUP_ObtenirCouleur(coup);
   plateau[(ligneDuCoup-1)*PLATEAU_ObtenirTaille(plateau) + (colonneDuCoup-1)] = coul;
-  return plateau;
 }
 
 Couleur PLATEAU_ObtenirCouleurAvecPosition(Couleur * plateau, Position position) {
