@@ -34,7 +34,7 @@ Couleur * PLATEAU_CreerPlateau() ;
  *
  * @returns Plateau mis à jour avec le nouveau coup
  */
-Couleur * PLATEAU_JouerCoup(Couleur * plateau, Coup coup) ;
+void PLATEAU_JouerCoup(Couleur * plateau, Coup coup);
 
 /**
  *@brief Retourne la couleur du Plateau à cette position

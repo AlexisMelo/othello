@@ -1,6 +1,6 @@
 #include "../include/Plateau.h"
 
-void PLATEAU_InitialiserPlateau(Couleur (*pPlateau)[64]){
+void PLATEAU_InitialiserPlateau(Couleur * plateau){
   Couleur neutre, blanc, noir;
   neutre=COULEUR_ObtenirCouleurNeutre();
   blanc=COULEUR_ObtenirCouleurBlanc();
@@ -10,21 +10,21 @@ void PLATEAU_InitialiserPlateau(Couleur (*pPlateau)[64]){
   //memcpy(pPlateau, &Plateau,TAILLE*TAILLE*sizeof(Couleur));
 
   //initialisation de toutes les cases du plateau avec une couleur neutre
-  for (int i=1;i<=PLATEAU_ObtenirTaille(p);i++){
-    for (int j=1;j<=PLATEAU_ObtenirTaille(p);j++){
-      PLATEAU_JouerCoup(pPlateau,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j)),neutre));
+  for (int i=1;i<=PLATEAU_ObtenirTaille(plateau);i++){
+    for (int j=1;j<=PLATEAU_ObtenirTaille(plateau);j++){
+      PLATEAU_JouerCoup(plateau,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j)),neutre));
     }
   }
 
   //initialisation des 4 premiers coups
-  PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2),  COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2)), blanc));
-  PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2+1),COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2+1)), blanc));
-  PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2),  COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2+1)), noir));
-  PLATEAU_JouerCoup(p,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(p)/2+1),COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(p)/2)), noir));
+  PLATEAU_JouerCoup(plateau,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2),  COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2)), blanc));
+  PLATEAU_JouerCoup(plateau,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2+1),COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2+1)), blanc));
+  PLATEAU_JouerCoup(plateau,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2),  COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2+1)), noir));
+  PLATEAU_JouerCoup(plateau,COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2+1),COLONNE_ObtenirColonneDepuisInt(PLATEAU_ObtenirTaille(plateau)/2)), noir));
 }
 
-Couleur ** PLATEAU_CreerPlateau() {
-    Couleur (*plateau)[TAILLE*TAILLE]= (Couleur **)malloc(TAILLE*TAILLE*sizeof(Couleur));
+Couleur * PLATEAU_CreerPlateau() {
+    Couleur plateau[TAILLE*TAILLE]= malloc(TAILLE*TAILLE*sizeof(Couleur));
     return plateau;
     //return(Couleur(*)[64])malloc(TAILLE*TAILLE*sizeof(Couleur));
 }

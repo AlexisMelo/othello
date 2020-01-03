@@ -8,7 +8,7 @@
 
 /**
  *@brief Capture les pions selon le pion posé.
- * 
+ *
  *@param plateauDeJeu : Couleur
  *
  *@param PositionDuCoupJoue : Position
@@ -17,12 +17,12 @@
  *
 */
 
-void CapturerPions(Couleur (*plateau)[64], Position PositionDuCoupJoue, Couleur joueurActuel) ;
+void CapturerPions(Couleur * plateau, Position PositionDuCoupJoue, Couleur joueurActuel) ;
 
 
 /**
  *@brief Effectue un coup sur un plateau.
- * 
+ *
  *@param plateauDeJeu : Couleur
  *
  *@param coupJoue : Coup
@@ -30,6 +30,6 @@ void CapturerPions(Couleur (*plateau)[64], Position PositionDuCoupJoue, Couleur 
 */
 
 
-void JouerCoup(Couleur (*plateauDeJeu)[64], Coup coupJoue);
+void JouerCoup(Couleur * plateau, Coup coupJoue);
 
 #endif

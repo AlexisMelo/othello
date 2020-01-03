@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void CapturerPions(Couleur (*plateau)[64], Position PositionDuCoupJoue, Couleur joueurActuel){
+void CapturerPions(Couleur * plateau, Position PositionDuCoupJoue, Couleur joueurActuel){
     if(ParcourirUneDirection(*plateau, PositionDuCoupJoue, H, joueurActuel)){
         AppliquerDirection(PositionDuCoupJoue, H);
         while((EstPositionValide(PositionDuCoupJoue)) && (!EstEgalCouleur(joueurActuel, ObtenirCouleurDepuisPlateau(*plateau, PositionDuCoupJoue)))){
@@ -55,7 +55,7 @@ void CapturerPions(Couleur (*plateau)[64], Position PositionDuCoupJoue, Couleur 
 }
 
 
-void JouerCoup(Couleur (*plateauDeJeu)[64],Coup coupJoue){
+void JouerCoup(Couleur * plateau, Coup coupJoue){
  //printf("%p,- %p", &plateauDeJeu, plateauDeJeu);
  PoserPion(plateauDeJeu, coupJoue);
  CapturerPions(plateauDeJeu, coupJoue.position, coupJoue.couleur);
