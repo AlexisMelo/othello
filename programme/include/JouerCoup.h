@@ -17,7 +17,7 @@
  *
 */
 
-void CapturerPions(Couleur **plateau, Position PositionDuCoupJoue, Couleur joueurActuel) ;
+void CapturerPions(Couleur (*plateau)[64], Position PositionDuCoupJoue, Couleur joueurActuel) ;
 
 
 /**
@@ -30,6 +30,6 @@ void CapturerPions(Couleur **plateau, Position PositionDuCoupJoue, Couleur joueu
 */
 
 
-void JouerCoup(Couleur * plateauDeJeu, Coup coupJoue);
+void JouerCoup(Couleur (*plateauDeJeu)[64], Coup coupJoue);
 
 #endif

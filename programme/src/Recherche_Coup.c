@@ -9,7 +9,7 @@ Coups rechercherTousLesCoups(Couleur * plateauDeJeu, Couleur joueurActuel) {
         for (int j = 1; j < taille + 1; j++) {
             if (rechercherUnCoup(plateauDeJeu, joueurActuel, CreerPosition(i,j))) {
                 unCoup = CreerCoup(CreerPosition(i,j), joueurActuel);
-                AjouterCoup(&lesCoups, unCoup);
+                AjouterCoup(lesCoups, unCoup);
             }
         }
     }

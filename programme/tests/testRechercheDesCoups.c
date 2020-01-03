@@ -3,7 +3,8 @@
 #include "testRechercheDesCoups.h"
 
 void testRechercheDesCoups() {
-    Couleur * plateau = CreerPlateau();
+    Couleur (*pPlateau)[64] = CreerPlateau();
+    InitPlateau(pPlateau);
     Couleur Noir = CouleurNoir();
     Couleur Blanc = CouleurBlanc();
     Coups lesCoups = *CreerCoups();
@@ -13,11 +14,11 @@ void testRechercheDesCoups() {
     //InitPlateau(plateau);
     /* Creation d'un plateau de test */
     Coup unCoup = CreerCoup(CreerPosition(1,1), Noir);
-    JouerCoup(plateau, unCoup);
+    JouerCoup(pPlateau, unCoup);
     unCoup = CreerCoup(CreerPosition(1,2), Blanc);
-    JouerCoup(plateau, unCoup);
+    JouerCoup(pPlateau, unCoup);
     unCoup = CreerCoup(CreerPosition(2,2), Blanc);
-    JouerCoup(plateau, unCoup);
+    JouerCoup(pPlateau, unCoup);
 
     /* Tests */
     Coup coup1 = CreerCoup(CreerPosition(CreerLigne(1),CreerColonne(3)), Noir);

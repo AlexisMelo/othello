@@ -22,7 +22,7 @@ Coup * CreerCoupVide(){
 
 
 Coup CreerCoup(Position position, Couleur couleur){
-    assert(!EstNeutre(couleur));
+    //assert(!EstNeutre(couleur));
     Coup * presultat = creerCoupVide();
     presultat->couleur.nom = couleur.nom;/* 
     strcpy(presultat->couleur.hexa, couleur.hexa); */

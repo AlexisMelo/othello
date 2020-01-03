@@ -38,7 +38,7 @@ void AppliquerDecalageVertical(){
         
     }
 }
-void AfficherPlateau(Couleur * plateau){
+void AfficherPlateau(Couleur (*plateau)[64]){
     for (int i=1; i<=ObtenirTaille(plateau); i++){
         AppliquerDecalageHorizontal();
         printf("-");
@@ -71,7 +71,7 @@ void InitialiserAffichagePlateau(){
     struct timespec ts;
     ts.tv_nsec = 9000000;
     ts.tv_sec = 0;
-    Couleur * plateau = CreerPlateau();
+    Couleur (*plateau)[64] = CreerPlateau();
     Couleur couleur = CouleurNeutre();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){

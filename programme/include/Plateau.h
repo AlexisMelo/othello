@@ -19,7 +19,7 @@
 */
 Couleur ** CreerPlateau() ;
 
-void InitPlateau(Couleur ** pPlateau);  
+void InitPlateau(Couleur (*pPlateau)[64]);  
 
 /**
  * @brief Pose un pion sur le plateau.
@@ -28,7 +28,7 @@ void InitPlateau(Couleur ** pPlateau);
  *@param coup : Coup à jouer
  *@returns plateau mis à Jour : Couleur*
  */
-Couleur * PoserPion(Couleur plateau[], Coup coup) ;
+void PoserPion(Couleur (*plateau)[64], Coup coup) ;
 
 
 
@@ -38,19 +38,18 @@ Couleur * PoserPion(Couleur plateau[], Coup coup) ;
  *@param position : Position à laquelle on regarde la couleur
  *@returns : Couleur
 */
-Couleur ObtenirCouleurDepuisPlateau(Couleur * plateau, Position position) ;
-
+Couleur ObtenirCouleurDepuisPlateau(Couleur (*plateau)[64], Position position) ;
 /** 
  *@brief Vérifie si la position donnée du plateau est vide.
  *@param plateau : Plateau actuel
  *@param position : Position que l'on veut vérifier
  *@returns : Booléen
 */
-bool EstPositionVide(Couleur * plateau, Position position) ;
+bool EstPositionVide(Couleur (*pPlateau)[64], Position position) ;
 
 /** Fonction d'accès à la taille du plateau.
  * 
  *@param plateau : Plateau dont on veut la taille 
  *@returns : Taille dans un int
 */
-int ObtenirTaille(Couleur * plateau) ;
+int ObtenirTaille(Couleur (*plateau)[64]) ;

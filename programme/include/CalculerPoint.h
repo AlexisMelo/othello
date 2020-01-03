@@ -16,6 +16,6 @@
 */
 
 
-int CalculerPoint(Couleur * p, Couleur couleur);
+int CalculerPoint(Couleur (*plateau)[64], Couleur couleur);
 
 #endif

@@ -10,43 +10,44 @@
 
 
 Couleur ** CreerPlateau() {
-/*     Couleur plateau[TAILLE*TAILLE];
-    return plateau; */
-    return(Couleur**)malloc(TAILLE*TAILLE*sizeof(Couleur));
+    Couleur (*plateau)[TAILLE*TAILLE]= (Couleur **)malloc(TAILLE*TAILLE*sizeof(Couleur));
+    return plateau;
+    //return(Couleur(*)[64])malloc(TAILLE*TAILLE*sizeof(Couleur));
 }
 
 
-void InitPlateau(Couleur * (pPlateau)[64]){
+void InitPlateau(Couleur (*pPlateau)[64]){
     Couleur Plateau[64] = {{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},};
-    printf("%p; %p", Plateau, pPlateau);
     memcpy(pPlateau, &Plateau,TAILLE*TAILLE*sizeof(Couleur));
 }
         
 
-Couleur * PoserPion(Couleur * plateau, Coup coup) {
+void PoserPion(Couleur (*pPlateau)[64], Coup coup) {
     Position positionDuCoup = ObtenirPosition(coup);
+    Couleur * ptr;
     int ligneDuCoup = ObtenirNumeroLigne(ObtenirLigne(positionDuCoup));
     int colonneDuCoup = ObtenirNumeroColonne(ObtenirColonne(positionDuCoup));
     Couleur coul = ObtenirCouleur(coup);
-    plateau[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
-    return plateau;
+//    (*pPlateau)[(ligneDuCoup-1)*TAILLE + (colonneDuCoup-1)] = coul;
+    (*pPlateau)[((ligneDuCoup-1)*TAILLE + colonneDuCoup-1)] = coul;//*sizeof(Couleur);
+    printf("hi");
     }
 
 
-Couleur ObtenirCouleurDepuisPlateau(Couleur * plateau, Position position) {
+Couleur ObtenirCouleurDepuisPlateau(Couleur (*plateau)[64], Position position) {
     int ligneDeLaPosition = ObtenirNumeroColonne(ObtenirLigne(position));
     int colonneDeLaPosition = ObtenirNumeroColonne(ObtenirColonne(position));
-    return plateau[(ligneDeLaPosition-1)*TAILLE + (colonneDeLaPosition-1)];//plateau[colonneDeLaPosition][ligneDeLaPosition];
+    return *plateau[(ligneDeLaPosition-1)*TAILLE + (colonneDeLaPosition-1)];//plateau[colonneDeLaPosition][ligneDeLaPosition];
 }  
 
 
-bool EstPositionVide(Couleur * plateau, Position position) {
-    Couleur couleurDeLaCase = ObtenirCouleurDepuisPlateau(plateau, position);
+bool EstPositionVide(Couleur (*pPlateau)[64], Position position) {
+    Couleur couleurDeLaCase = ObtenirCouleurDepuisPlateau(pPlateau, position);
     return couleurDeLaCase.nom == Vide;
 }
 
 
 
-int ObtenirTaille(Couleur * plateau) {
+int ObtenirTaille(Couleur (*plateau)[64]) {
     return TAILLE;
 }

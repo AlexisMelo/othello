@@ -8,7 +8,7 @@
 Couleur *plateau;
 
 void testAffichagePlateauAleatoire(){
-    plateau = CreerPlateau();
+    plateau = *CreerPlateau();
     Couleur couleur = CouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){

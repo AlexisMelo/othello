@@ -9,6 +9,6 @@
 #include"JouerCoup.h"
 #include"InitialiserPlateau.h"
 
-void AfficherPlateau(Couleur * plateau) ;
+void AfficherPlateau(Couleur (*plateau)[64]) ;
 void InitialiserAffichagePlateau() ;
 #endif

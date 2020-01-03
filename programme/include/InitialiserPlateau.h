@@ -1,7 +1,7 @@
 #ifndef __INITIALISERPLATEAU__
 #define __INITIALISERPLATAEU__
 #include "Couleur.h"
-#include "Plateau.h"
+#include "Plateau.h"    
 #include "Coup.h"
 #include "JouerCoup.h"
 #include "Position.h"
@@ -13,5 +13,5 @@
  * 
  *@param Couleur * : nom du plateau qu'on veut initialiser
 */
-void InitialiserPlateau(Couleur *);
+void InitialiserPlateau(Couleur (*p)[64]);
 #endif

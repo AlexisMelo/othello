@@ -1,7 +1,7 @@
 #include"../include/InitialiserPlateau.h"
 
 
-void InitialiserPlateau(Couleur *p){
+void InitialiserPlateau(Couleur (*p)[64]){
   Couleur neutre, blanc, noir;
   neutre=CouleurNeutre();
   blanc=CouleurBlanc();
