@@ -17,7 +17,7 @@
  *@brief Constructeur du Plateau
  *@returns : Couleur *
 */
-Couleur * CreerPlateau() ;
+Couleur ** CreerPlateau() ;
 
 void InitPlateau(Couleur ** pPlateau);  
 

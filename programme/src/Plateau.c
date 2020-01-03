@@ -9,17 +9,17 @@
 #include<stdio.h>
 
 
-Couleur * CreerPlateau() {
+Couleur ** CreerPlateau() {
 /*     Couleur plateau[TAILLE*TAILLE];
     return plateau; */
-    return(Couleur*)malloc(TAILLE*TAILLE*sizeof(Couleur));
+    return(Couleur**)malloc(TAILLE*TAILLE*sizeof(Couleur));
 }
 
 
-void InitPlateau(Couleur ** pPlateau){
+void InitPlateau(Couleur * (pPlateau)[64]){
     Couleur Plateau[64] = {{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},{0,'.'},};
-    printf("%ld", sizeof(Couleur));
-    memcpy(*pPlateau, Plateau,TAILLE*TAILLE*sizeof(Couleur));
+    printf("%p; %p", Plateau, pPlateau);
+    memcpy(pPlateau, &Plateau,TAILLE*TAILLE*sizeof(Couleur));
 }
         
 
