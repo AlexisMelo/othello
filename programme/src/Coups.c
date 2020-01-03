@@ -36,7 +36,7 @@ Coup COUPS_ObtenirCoup(Coups coups){
 bool COUPS_EstPresent(Coups coups, Coup coup)
 {
   for (unsigned int i = 0; i < COUPS_NbCoups(coups); i++) {
-    if(equals(coup,coups.lesCoups[i])) {
+    if(COUP_EstEgalCoup(coup,coups.lesCoups[i])) {
       return true;
     }
   }
