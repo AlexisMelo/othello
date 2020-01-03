@@ -9,6 +9,7 @@
 void TestPlateau()
 {
     Couleur * plateau = CreerPlateau();
+    InitPlateau(&plateau);
     Couleur couleur = CouleurNoir();
     Ligne ligne = CreerLigne(1);
     Colonne colonne = CreerColonne(1);

@@ -3,6 +3,7 @@
 #include "Couleur.h"
 #include "Plateau.h"
 #include "Coup.h"
+#include "JouerCoup.h"
 #include "Position.h"
 
 /**

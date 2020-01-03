@@ -19,6 +19,7 @@
 */
 Couleur * CreerPlateau() ;
 
+void InitPlateau(Couleur ** pPlateau);  
 
 /**
  * @brief Pose un pion sur le plateau.
