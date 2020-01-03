@@ -50,14 +50,4 @@ int SaisieInteger(int min, int max);
  */
 char * ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments);
 
-/**
- * @fn int ObtenirCouleurDepuisString(char * couleur)
- * @brief Obtenir depuis une structure Couleur depuis un string correspond à son nom
- *
- * @param char* String correspond au nom de la couleur
- *
- * @returns Couleur Structure Couleur
- */
-Couleur ObtenirCouleurDepuisString(char * couleur);
-
 #endif

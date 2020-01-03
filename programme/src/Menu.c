@@ -11,16 +11,6 @@ char * ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments) {
   return arguments[2];
 }
 
-Couleur ObtenirCouleurDepuisString(char * couleur) {
-  if (strcmp(couleur, COULEUR_NOIRE)) {
-    return COULEUR_ObtenirCouleurBlanc();
-  }
-  else if (strcmp(couleur, COULEUR_BLANCHE)) {
-    return COULEUR_ObtenirCouleurNoir();
-  }
-  return COULEUR_ObtenirCouleurNeutre();
-}
-
 int SaisieInteger(int min, int max) {
   char *p, s[100];
   int n;
