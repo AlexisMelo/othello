@@ -74,4 +74,14 @@ int PLATEAU_ObtenirTaille(Couleur * plateau) ;
 */
 bool PLATEAU_EstRempli(Couleur * plateau);
 
+/**
+ *@brief Retourne le nombre de points d'une couleur sur un plateau donné
+ *
+ *@param p Couleur * plateau de jeu
+ *@param couleur Couleur dont on souhaite connaitre le nombre de points
+ *
+ *@returns Nombre de point de la couleur donnée
+*/
+int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur);
+
 #endif

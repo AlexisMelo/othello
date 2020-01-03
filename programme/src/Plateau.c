@@ -58,3 +58,16 @@ bool PLATEAU_EstRempli(Couleur * plateau) {
   }
   return true;
 }
+
+int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur){
+  int points=0;
+  int i, j;
+  for(i=1;i<=PLATEAU_ObtenirTaille(p);i++){
+    for(j=1;j<=PLATEAU_ObtenirTaille(p);j++){
+      if(COULEUR_EstEgalCouleur(couleur,PLATEAU_ObtenirCouleurAvecPosition(p,POSITION_CreerPosition(i,j)))){
+	    points=points+1;
+      }
+    }
+  }
+  return points;
+}
