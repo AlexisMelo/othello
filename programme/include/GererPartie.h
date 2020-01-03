@@ -5,6 +5,7 @@
 #include "JouerCoup.h"
 #include "Joueur.h"
 #include "Coups.h"
+#include "Recherche_Coup.h"
 
 /**
  * @brief Permet de lancer une partie
@@ -39,5 +40,7 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
  * @param j2 Joueur numéro 2
 */
 void PARTIE_SetOrdreJoueurs(Joueur* premierJoueur, Joueur* secondJoueur, Joueur j1, Joueur j2);
+
+void PARTIE_JouerUnTour(Couleur * plateau, Joueur joueur);
 
 #endif
