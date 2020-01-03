@@ -1,13 +1,13 @@
 #include "obtenirCoupValide.h"
 
-Coup obtenirCoupValide (Couleur joueurActuel, Plateau plateauDeJeu, Coup *(obtenirCoup){
+Coup obtenirCoupValide (Joueur joueur, Couleur * plateau){
     Coups lesCoups;
     Coup unCoup;
-    lesCoups = rechercherTousLesCoups(plateauDeJeu, joueurActuel);
-    bool unCoupValide = false;
-    while (!unCoupValide) {
-        unCoup = obtenirCoup(Couleur joueurActuel);
-        unCoupValide = EstPresent(lesCoups, unCoup);
+    lesCoups = RECHERCHE_RechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur));
+    bool estCoupValide = false;
+    while (!estCoupValide) {
+        unCoup = JOUEUR_ObtenirCoup(joueur, plateau);
+        estCoupValide = COUPS_EstPresent(lesCoups, unCoup);
     }
     return unCoup;
 }

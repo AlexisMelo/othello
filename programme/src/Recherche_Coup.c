@@ -1,26 +1,42 @@
-#include"Recherche_Coup.h"
-#include"Parcourir_Direction.h"
+#include "Recherche_Coup.h"
 
-Coups rechercherTousLesCoups(Couleur * plateauDeJeu, Couleur joueurActuel) {
-    Coups * lesCoups = CreerCoups();
+Coups RECHERCHECOUP_RechercherTousLesCoups(Couleur * plateau, Couleur couleurJoueurActuel) {
+    Coups lesCoups = COUPS_CreerCoups();
     Coup unCoup;
-    int taille = ObtenirTaille(plateauDeJeu);
-    for (int i = 1; i < taille + 1; i++) {
-        for (int j = 1; j < taille + 1; j++) {
-            if (rechercherUnCoup(plateauDeJeu, joueurActuel, CreerPosition(i,j))) {
-                unCoup = CreerCoup(CreerPosition(i,j), joueurActuel);
-                AjouterCoup(lesCoups, unCoup);
+    int taillePlateau = PLATEAU_ObtenirTaille(plateau);
+
+    for (int i = 1; i <= taillePlateau; i++) {
+        for (int j = 1; j <= taillePlateau; j++) {
+            unCoup = COUP_CreerCoup(CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),LIGNE_ObtenirColonneDepuisInt(j)));
+            if (RECHERCHECOUP_EstCoupValide(plateau, unCoup)) {
+                COUPS_AjouterCoup(&lesCoups, unCoup);
             }
         }
     }
-return *lesCoups;
+return lesCoups;
 }
 
-bool rechercherUnCoup (Couleur * plateauDeJeu, Couleur joueurActuel, Position positionDuCoup) {
-    if (EstPositionVide(plateauDeJeu, positionDuCoup)) {
-        return(ParcourirLesDirections (plateauDeJeu, positionDuCoup, joueurActuel));
+bool RECHERCHECOUP_EstCoupValide(Couleur * plateau, Coup coup) {
+    if (!POSITION_EstPositionValide(plateau, COUP_ObtenirPosition(coup))) {
+      return false;
     }
-    else {
-        return (false);
+
+    if (!PLATEAU_EstPositionLibre(plateau, COUP_ObtenirPosition(coup))) {
+      return false;
     }
+
+    return RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque(plateau, coup);
+
+}
+
+Coup RECHERCHECOUP_ObtenirCoupValide (Joueur joueur, Couleur * plateau){
+    Coups lesCoups;
+    Coup unCoup;
+    lesCoups = RECHERCHE_RechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur));
+    bool estCoupValide = false;
+    while (!estCoupValide) {
+        unCoup = JOUEUR_ObtenirCoup(joueur, plateau);
+        estCoupValide = COUPS_EstPresent(lesCoups, unCoup);
+    }
+    return unCoup;
 }
