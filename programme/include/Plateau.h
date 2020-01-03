@@ -84,4 +84,15 @@ bool PLATEAU_EstRempli(Couleur * plateau);
 */
 int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur);
 
+/**
+ * @brief Vérifie si la position passée en entrée est valide par rapport à un plateau, cad qu'elle existe sur le dit plateau
+ *
+ * @param plateau Couleur * correspondant au plateau de jeu
+ * @param position Position que l'on souhaite tester
+ *
+ * @returns vraie si la position existe sur le plateau
+*/
+bool PLATEAU_EstPositionValide(Couleur * plateau, Position position) ;
+
+void PLATEAU_CapturerPionsDansDirection(Couleur * plateau, Coup coup, Direction direction);
 #endif

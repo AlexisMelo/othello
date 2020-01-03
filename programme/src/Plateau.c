@@ -75,3 +75,36 @@ int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur){
   }
   return points;
 }
+
+void PLATEAU_CapturerPions(Couleur * plateau, Coup coup){
+
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, H);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, HD);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, D);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, BD);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, B);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, BG);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, G);
+  PLATEAU_CapturerPionsDansDirection(plateau, coup, HG);
+
+}
+
+void PLATEAU_CapturerPionsDansDirection(Couleur * plateau, Coup coup, Direction direction) {
+  Position nouvellePosition;
+  Coup nouveauCoup;
+
+  if(RECHERCHEDIRECTIONS_CoupPossibleDansDirection(plateau, coup, direction)){
+      nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(coup), direction);
+      while((PLATEAU_EstPositionValide(plateau, nouvellePosition)) && (!EstEgalCouleur(COUP_ObtenirCouleur(coup), PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition)))){
+          nouveauCoup = COUP_CreerCoup(nouvellePosition ,COUP_ObtenirCouleur(coup));
+          PLATEAU_JouerCoup(plateau,nouveauCoup);
+          nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(nouveauCoup), direction);
+      };
+  };
+}
+
+bool PLATEAU_EstPositionValide(Couleur * plateau, Position position) {
+    Colonne colonne = POSITION_ObtenirColonne(position);
+    Ligne ligne = POSITION_ObtenirLigne(position);
+    return (COLONNE_ObtenirNumeroColonne(colonne) <= PLATEAU_ObtenirTaille(plateau)) && (LIGNE_ObtenirNumeroLigne(ligne) <= PLATEAU_ObtenirTaille(plateau)) && (COLONNE_ObtenirNumeroColonne(colonne) >= 1) && (LIGNE_ObtenirNumeroLigne(ligne) >= 1);
+}

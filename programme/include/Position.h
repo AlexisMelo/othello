@@ -4,7 +4,6 @@
 #include <stdbool.h>
 #include <assert.h>
 
-
 #include "Ligne.h"
 #include "Colonne.h"
 
@@ -45,16 +44,6 @@ Ligne POSITION_ObtenirLigne(Position position) ;
  * @returns colonne de la position
 */
 Colonne POSITION_ObtenirColonne(Position position) ;
-
-/**
- * @brief Vérifie si la position passée en entrée est valide par rapport à un plateau, cad qu'elle existe sur le dit plateau
- *
- * @param plateau Couleur * correspondant au plateau de jeu
- * @param position Position que l'on souhaite tester
- *
- * @returns vraie si la position existe sur le plateau
-*/
-bool POSITION_EstPositionValide(Couleur * plateau, Position position) ;
 
 /**
  * @brief Fixe la ligne de la position
