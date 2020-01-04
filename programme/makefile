@@ -7,8 +7,7 @@ BINDIR= bin
 EXEC= Othello
 LIBDIR= lib
 TESTDIR= tests
-DOCHTMLDIR = html
-DOCLATEXDIR = latex
+DOCDIR = ../doc
 
 all : directories
 	$(MAKE) prg
@@ -46,5 +45,4 @@ clean :
 	rm -rf $(BINDIR)
 	rm -rf $(LIBDIR)
 	rm -rf $(SRCDIR)/*.o
-	rm -rf $(DOCHTMLDIR)
-	rm -rf $(DOCLATEXDIR)
+	rm -rf $(DOCDIR)
