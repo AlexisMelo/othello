@@ -7,12 +7,18 @@ BINDIR= bin
 EXEC= Othello
 LIBDIR= lib
 TESTDIR= tests
+DOCHTMLDIR = html
+DOCLATEXDIR = latex
 
-all :
-	$(MAKE) clean
+all : directories
 	$(MAKE) prg
-	$(MAKE) tests
 	$(MAKE) doc
+	$(MAKE) tests
+
+directories : $(BINDIR)
+
+$(BINDIR) :
+	mkdir -p $(BINDIR)
 
 prg : $(BINDIR)/$(EXEC)
 
@@ -32,10 +38,13 @@ $(TESTDIR)/testTypes : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR
 
 $(TESTDIR)/%.o : $(TESTDIR)/%.c
 		$(CC) -o $@ -c $< $(CFLAGS) $(INCFLAGS)
-		
+
 doc :
+	doxygen Doxyfile
 
 clean :
-	rm -rf $(BINDIR)/*
-	rm -rf $(LIBDIR)/*
+	rm -rf $(BINDIR)
+	rm -rf $(LIBDIR)
 	rm -rf $(SRCDIR)/*.o
+	rm -rf $(DOCHTMLDIR)
+	rm -rf $(DOCLATEXDIR)

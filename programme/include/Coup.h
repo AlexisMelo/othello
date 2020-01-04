@@ -1,3 +1,10 @@
+/**
+ * @file Coup.h
+ *
+ * Fichier contenant la définition du type Coup et de ses fonctions associées
+ *
+*/
+
 #ifndef COUP_TYPE
 #define COUP_TYPE
 
@@ -17,12 +24,12 @@ typedef struct{
 
 
 /**
- * @brief Crée un coup à partir d'une position et d'une couleur
+ * Crée un coup à partir d'une position et d'une couleur
  *
- * @params position Position où le coup doit être joué
- * @params couleur Couleur du joueur qui joue le coup
+ * \param position Position où le coup doit être joué
+ * \param couleur Couleur du joueur qui joue le coup
  *
- * @returns Coup à jouer
+ * \return Coup à jouer
 */
 Coup COUP_CreerCoup(Position position, Couleur couleur) ;
 
