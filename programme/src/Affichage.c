@@ -36,34 +36,27 @@ void AppliquerDecalageVertical(){
 
     }
 }
-void AFFICHAGE_AfficherPlateau(Couleur * plateau){
-    for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
-        AppliquerDecalageHorizontal();
-        printf("-");
-    };
-    printf("\n");
-    for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
-        printf("|");
-        for (int j=1; j<=PLATEAU_ObtenirTaille(plateau); j++){
-            Couleur couleur = PLATEAU_ObtenirCouleurAvecPosition(plateau, POSITION_CreerPosition(i,j));
-            AppliquerDecalageHorizontal();
-            TextColor(couleur);
-            printf("%c",couleur.symbole);
-            ResetTextColor();
-        }
-        printf("|");
-        if(i<8){
-            AppliquerDecalageVertical();
-        }
-        printf("\n");
-    }
-        for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
-            AppliquerDecalageHorizontal();
-            printf("-");
-    };
-    printf("\n");
-}
+void AFFICHAGE_AfficherPlateau(Couleur * plateau)
+{
+	int i, j;
+  Position pos;
 
+	printf("       a  b  c  d  e  f  g  h\n");
+
+	for(i=1; i<=TAILLE; i++)
+	{
+		printf(" %d ", i);
+		for(j=1; j<=TAILLE; j++)
+		{
+
+      pos = POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i), COLONNE_ObtenirColonneDepuisInt(j));
+      TextColor(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos));
+      printf(" %c ",COULEUR_ObtenirSymbole(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos)));
+
+		}
+		printf("\n");
+	}
+}
 void InitialiserAffichagePlateau(){
 
     struct timespec ts;

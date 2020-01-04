@@ -43,6 +43,8 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
   Joueur premierJoueur, secondJoueur;
   PARTIE_SetOrdreJoueurs(&premierJoueur, &secondJoueur, j1, j2);
 
+  AfficherPlateau(plateau);
+
   while(!partieTerminee){
     j1PeutJouer = PARTIE_JoueurPeutJouer(plateau, premierJoueur); // à améliorer en stockant chercherTousLesCoups et le faire passer dans le cas où il peut jouer
     if (j1PeutJouer){

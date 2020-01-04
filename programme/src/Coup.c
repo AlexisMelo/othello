@@ -1,7 +1,6 @@
 #include "../include/Coup.h"
 
 Coup COUP_CreerCoup(Position position, Couleur couleur){
-    assert(!COULEUR_EstNeutre(couleur));
     Coup resultat;
     resultat.couleur = couleur;
     resultat.position = position;
