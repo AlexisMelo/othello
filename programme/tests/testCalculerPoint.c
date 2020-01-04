@@ -4,16 +4,16 @@
 #include "testCalculerPoint.h"
 #include "../include/Couleur.h"
 
-/* int init_suite_success(void){ 
-    return 0; 
+/* int init_suite_success(void){
+    return 0;
 }
 
-int clean_suite_success(void){ 
-    return 0; 
+int clean_suite_success(void){
+    return 0;
 } */
 
 void TestCalculerPoint(void){
-    void * plateauDeJeu = CreerPlateau();
+    void * plateauDeJeu = PLATEAU_CreerPlateau();
     Couleur NOIR = CouleurNoir();
     Couleur BLANC = CouleurBlanc();
     Couleur NEUTRE = CouleurNeutre();
@@ -57,7 +57,7 @@ for (int i = 1; i < TAILLE + 1; i++)
     PoserPion(plateauDeJeu, coup);
 
 
-    
+
 
     CU_ASSERT(CalculerPoint(plateauDeJeu, NOIR) == 3);
     CU_ASSERT(CalculerPoint(plateauDeJeu, BLANC) == 4);
