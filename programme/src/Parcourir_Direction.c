@@ -48,5 +48,5 @@ bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur * plateau, Coup coup,
 
     }
 
-    return caseVideRencontree;
+    return maCouleurRencontree;//caseVideRencontree;
 }
