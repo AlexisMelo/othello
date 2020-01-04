@@ -23,8 +23,6 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     scanf("%s", entree);
     int ligneNombre = strtol(&entree[0], NULL, 10);
     char colonneLettre = entree[1];
-    printf("%d ewtb", ligneNombre);
-    //printf("%d %d %d", JOUEUR_ObtenirCouleur(j).nom, COLONNE_ObtenirColonneDepuisChar(colonneLettre), LIGNE_ObtenirLigneDepuisInt(ligneNombre));
   return COUP_CreerCoup(POSITION_CreerPosition(COLONNE_ObtenirColonneDepuisChar(colonneLettre), LIGNE_ObtenirLigneDepuisInt(ligneNombre)),JOUEUR_ObtenirCouleur(j));
 }
 
