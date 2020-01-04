@@ -37,7 +37,6 @@ Coup RECHERCHECOUP_ObtenirCoupValide (Couleur * plateau, Joueur joueur){
     while (!estCoupValide) {
         unCoup = JOUEUR_ObtenirCoup(joueur, plateau);
         estCoupValide = COUPS_EstPresent(lesCoups, unCoup);
-        printf("estCoupValide %d", estCoupValide);
     }
     return unCoup;
 }
