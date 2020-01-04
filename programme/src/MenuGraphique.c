@@ -9,7 +9,7 @@ void MenuGraphique() {
 
   //choix de l'utilisateur pour type de partie ou affichage d'aide
   printf("Que voulez vous faire ?\n1 : Nouvelle partie %s (Joueur vs Joueur)\n2 : Nouvelle partie mode %s (Joueur vs IA)\n3 : Nouvelle partie mode %s (IA vs IA)\n4 : Affichage de l'aide\n", JOUEURVSJOUEUR, JOUEURVSIA, IAVSIA);
-  choix = SaisieInteger(1,4);
+  choix = MENU_SaisieInteger(1,4);
 
   switch(choix) {
     case 1 :
@@ -31,7 +31,7 @@ void MenuGraphique() {
 
     //quelle couleur il prend
     printf("Quelle couleur voulez vous ?\n1 : %s\n2 : %s\n", COULEUR_NOIRE, COULEUR_BLANCHE);
-    choix = SaisieInteger(1,2);
+    choix = MENU_SaisieInteger(1,2);
 
     switch (choix) {
       case 1 :
@@ -44,7 +44,7 @@ void MenuGraphique() {
 
     //difficulté de l'IA
     printf("Quelle difficulté pour l'Intelligence artificelle ?\n[Nombre entre 1 et %d attendu, %d par défaut]\n",PRONDEUR_MAX_IA, PROFONDEUR_DEFAUT_IA);
-    choix = SaisieInteger(1,PRONDEUR_MAX_IA);
+    choix = MENU_SaisieInteger(1,PRONDEUR_MAX_IA);
 
     char choixStr[sizeof(choix)];
     sprintf(choixStr,"%d",choix);

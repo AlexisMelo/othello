@@ -21,9 +21,9 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     entree = (char*)malloc(5*sizeof(char));
     printf("A quelle position voulez vous jouer ?");
     scanf("%s", entree);
-    char colonneLettre = entree[0];
-    int ligneNombre = entree[1];
-  return COUP_CreerCoup(POSITION_CreerPosition(COLONNE_ObtenirColonneDepuisChar(colonneLettre), LIGNE_ObtenirLigneDepuisInt(ligneNombre)),JOUEUR_ObtenirCouleur(j));
+    int ligneNombre = strtol(&entree[0], NULL, 10);
+    char colonneLettre = entree[1];
+  return COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(ligneNombre), COLONNE_ObtenirColonneDepuisChar(colonneLettre)),JOUEUR_ObtenirCouleur(j));
 }
 
 Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {

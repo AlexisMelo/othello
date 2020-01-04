@@ -6,6 +6,9 @@
 #include<stdlib.h>
 #include<assert.h>
 
+#define COULEUR_BLANCHE "blanc"
+#define COULEUR_NOIRE "noir"
+
 typedef enum { Neutre, Blanc, Noir, Nulle } nomCouleur;
 
 typedef struct{
@@ -69,5 +72,7 @@ bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
  * @returns Couleur Structure Couleur
  */
 Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur);
+
+char COULEUR_ObtenirSymbole(Couleur couleur);
 
 #endif

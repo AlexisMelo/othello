@@ -1,9 +1,5 @@
 #include "Plateau.h"
-#include "Couleur.h"
-#include "Ligne.h"
-#include"Colonne.h"
-#include"CalculerPoint.h"
-#include"Coup.h"
-#include"Coups.h"
-#include"ListeChainee.h"
-#include"CoupCollection.h"
+#include "Joueur.h"
+#include "Coups.h"
+
+int IA_MinMax(Couleur * plateau, Couleur couleur, int profondeurDepart);

@@ -1,0 +1,11 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "files.associations": {
+        "recherche_coup.h": "c",
+        "parcourir_direction.h": "c",
+        "testparcourirunedirection.h": "c",
+        "testcolonne.h": "c",
+        "cunit.h": "c"
+    }
+}

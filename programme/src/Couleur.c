@@ -2,7 +2,7 @@
 
 Couleur * COULEUR_PointeurCouleurNulle() {
     Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = nulle;
+    resultat->nom = Nulle;
     resultat->symbole = '.';
     return resultat;
 }
@@ -60,4 +60,8 @@ Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur) {
     return COULEUR_ObtenirCouleurNoir();
   }
   return COULEUR_ObtenirCouleurNeutre();
+}
+
+char COULEUR_ObtenirSymbole(Couleur couleur) {
+  return couleur.symbole;
 }

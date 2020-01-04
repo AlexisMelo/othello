@@ -11,12 +11,15 @@ void ResetTextColor(){
 }
 
 
-void TextColorFromHexa(char hexa[]){
-    if (strcmp(hexa, "FF")==0){
-        SetTextColorToBlack();
-    };
-    if(strcmp(hexa, "00")==0){
-        SetTextColorToWhite();
+void TextColor(Couleur couleur){
+    if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurNoir())) {
+      SetTextColorToBlack();
+    }
+    else if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurBlanc())) {
+      SetTextColorToWhite();
+    }
+    else {
+      ResetTextColor();
     }
 }
 
@@ -33,34 +36,27 @@ void AppliquerDecalageVertical(){
 
     }
 }
-void AFFICHAGE_AfficherPlateau(Couleur * plateau){
-    for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
-        AppliquerDecalageHorizontal();
-        printf("-");
-    };
-    printf("\n");
-    for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
-        printf("|");
-        for (int j=1; j<=PLATEAU_ObtenirTaille(plateau); j++){
-            Couleur couleur = PLATEAU_ObtenirCouleurAvecPosition(plateau, POSITION_CreerPosition(i,j));
-            AppliquerDecalageHorizontal();
-            TextColorFromHexa(couleur.hexa);
-            printf("%c",couleur.symbole);
-            ResetTextColor();
-        }
-        printf("|");
-        if(i<8){
-            AppliquerDecalageVertical();
-        }
-        printf("\n");
-    }
-        for (int i=1; i<=PLATEAU_ObtenirTaille(plateau); i++){
-            AppliquerDecalageHorizontal();
-            printf("-");
-    };
-    printf("\n");
-}
+void AFFICHAGE_AfficherPlateau(Couleur * plateau)
+{
+	int i, j;
+  Position pos;
 
+	printf("    a  b  c  d  e  f  g      h\n");
+
+	for(i=1; i<=TAILLE; i++)
+	{
+		printf(" %d ", i);
+		for(j=1; j<=TAILLE; j++)
+		{
+
+      pos = POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i), COLONNE_ObtenirColonneDepuisInt(j));
+      TextColor(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos));
+      printf(" %c ",COULEUR_ObtenirSymbole(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos)));
+
+		}
+		printf("\n");
+	}
+}
 void InitialiserAffichagePlateau(){
 
     struct timespec ts;
@@ -108,13 +104,13 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) 
   char * vainqueur;
 
   if (scorej1 == scorej2) {
-    printf("Résultat : Egalité !\n", );
+    printf("Résultat : Egalité !\n");
   }
   else {
     if (scorej1 > scorej2) {
       vainqueur = "Joueur 1";
     }
-    else (scorej2 > scorej1) {
+    else {
       vainqueur = "Joueur 2";
     }
     printf("Résultat : %s vainqueur !",vainqueur);
@@ -125,6 +121,6 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) 
 void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Joueur j2) {
   //pour l'instant aucun affichage de fin de partie nécessaire en mode tournois
 }
-void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau) {
+void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
 }

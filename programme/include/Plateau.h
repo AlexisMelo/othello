@@ -5,6 +5,7 @@
 
 #include "Position.h"
 #include "Coup.h"
+#include "Parcourir_Direction.h"
 
 #define TAILLE 8
 
@@ -34,7 +35,7 @@ Couleur * PLATEAU_CreerPlateau() ;
  *
  * @returns Plateau mis à jour avec le nouveau coup
  */
-Couleur * PLATEAU_JouerCoup(Couleur * plateau, Coup coup) ;
+void PLATEAU_JouerCoup(Couleur * plateau, Coup coup);
 
 /**
  *@brief Retourne la couleur du Plateau à cette position
@@ -84,4 +85,17 @@ bool PLATEAU_EstRempli(Couleur * plateau);
 */
 int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur);
 
+/**
+ * @brief Vérifie si la position passée en entrée est valide par rapport à un plateau, cad qu'elle existe sur le dit plateau
+ *
+ * @param plateau Couleur * correspondant au plateau de jeu
+ * @param position Position que l'on souhaite tester
+ *
+ * @returns vraie si la position existe sur le plateau
+*/
+bool PLATEAU_EstPositionValide(Couleur * plateau, Position position) ;
+
+void PLATEAU_CapturerPions(Couleur * plateau, Coup coup);
+
+void PLATEAU_CapturerPionsDansDirection(Couleur * plateau, Coup coup, Direction direction);
 #endif

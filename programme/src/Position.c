@@ -1,5 +1,4 @@
 #include "../include/Position.h"
-#include "Plateau.h" // ne surtout pas déplacer !!!
 
 Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;
@@ -16,15 +15,29 @@ Colonne POSITION_ObtenirColonne(Position position) {
     return position.colonne;
 }
 
-bool POSITION_EstPositionValide(Couleur * plateau, Position position) {
-    Colonne colonne = POSITION_ObtenirColonne(position);
-    Ligne ligne = POSITION_ObtenirLigne(position);
-    return (COLONNE_ObtenirNumeroColonne(colonne) <= PLATEAU_ObtenirTaille(plateau)) && (LIGNE_ObtenirNumeroLigne(ligne) <= PLATEAU_ObtenirTaille(plateau)) && (COLONNE_ObtenirNumeroColonne(colonne) >= 1) && (LIGNE_ObtenirNumeroLigne(ligne) >= 1);
-}
-
 void POSITION_FixerLigne(Position * position, Ligne ligne) {
     position->ligne = ligne;
 }
+/**
+Position * fonctionCopierPosition(Position * pPos){
+    Position * presultat = malloc(sizeof(Position));
+    memcpy(&(presultat->ligne), &(pPos->ligne), sizeof(int));
+    memcpy(&(presultat->colonne), &(pPos->colonne), sizeof(int));
+    return presultat;
+}
+
+Position AppliquerDirection(Position position, Direction direction){
+        Position oldPos = position;
+        FixerLigne(&position, ObtenirLigne(position) + ObtenirDecalageLigne(direction));
+        FixerColonne(&position, ObtenirColonne(position) + ObtenirDecalageColonne(direction));
+        if(EstPositionValide(position)){
+            return position;
+        }
+        else{
+            return oldPos;
+        }
+}
+**/
 
 void POSITION_FixerColonne(Position * position, Colonne colonne) {
     position->colonne = colonne;

@@ -1,7 +1,6 @@
 #include "../include/Coup.h"
 
 Coup COUP_CreerCoup(Position position, Couleur couleur){
-    assert(!COULEUR_EstNeutre(couleur));
     Coup resultat;
     resultat.couleur = couleur;
     resultat.position = position;
@@ -21,5 +20,5 @@ Position COUP_ObtenirPosition(Coup coup){
 }
 
 bool COUP_EstCoupValide(Couleur * plateau, Coup coup){
-    return  (bool) (POSITION_EstPositionValide(plateau, COUP_ObtenirPosition(coup)) && !COULEUR_EstNeutre(COUP_ObtenirCouleur(coup)));
+    return  (bool) (PLATEAU_EstPositionValide(plateau, COUP_ObtenirPosition(coup)) && !COULEUR_EstNeutre(COUP_ObtenirCouleur(coup)));
 }
