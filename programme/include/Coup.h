@@ -3,6 +3,7 @@
 
 #include "Position.h"
 #include "Couleur.h"
+
 #include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
@@ -11,6 +12,9 @@ typedef struct{
     Position position;
     Couleur couleur;
 }Coup;
+
+#include "Plateau.h"
+
 
 /**
  * @brief Crée un coup à partir d'une position et d'une couleur

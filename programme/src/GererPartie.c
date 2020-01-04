@@ -22,7 +22,7 @@ bool PARTIE_EstPartieTerminee(Couleur * plateau, bool j1PeutJouer, bool j2PeutJo
 }
 
 bool PARTIE_JoueurPeutJouer(Couleur * plateau, Joueur joueur) {
-  if (COUPS_ObtenirNombreDeCoups(rechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur))) == 0) {
+  if (COUPS_ObtenirNombreDeCoups(RECHERCHECOUP_RechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur))) == 0) {
     return false;
   }
   return true;
@@ -46,18 +46,24 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
   while(!partieTerminee){
     j1PeutJouer = PARTIE_JoueurPeutJouer(plateau, premierJoueur); // à améliorer en stockant chercherTousLesCoups et le faire passer dans le cas où il peut jouer
     if (j1PeutJouer){
-        JouerUnTour(plateau,j1PeutJouer);
+        PARTIE_JouerUnTour(plateau,premierJoueur);
         AfficherPlateau(plateau);
         partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
      }
 
     j2PeutJouer = PARTIE_JoueurPeutJouer(plateau, secondJoueur);
     if (j2PeutJouer){
-        JouerUnTour(plateau,j2PeutJouer);
+        PARTIE_JouerUnTour(plateau,secondJoueur);
         AfficherPlateau(plateau);
     }
     partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
   }
 
   AfficherResultat(plateau,j1,j2);
+}
+
+void PARTIE_JouerUnTour(Couleur * plateau, Joueur joueur) {
+  Coup coupAJouer = RECHERCHECOUP_ObtenirCoupValide(plateau, joueur);
+  PLATEAU_JouerCoup(plateau, coupAJouer);
+  PLATEAU_CapturerPions(plateau, coupAJouer);
 }

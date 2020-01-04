@@ -1,6 +1,7 @@
 #include "Couleur.h"
 #include "Plateau.h"
 #include "time.h"
+#include "Joueur.h"
 
 #define HORIZONTAL_OFFSET 2
 #define VERTICAL_OFFSET 1

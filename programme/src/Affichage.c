@@ -11,12 +11,15 @@ void ResetTextColor(){
 }
 
 
-void TextColorFromHexa(char hexa[]){
-    if (strcmp(hexa, "FF")==0){
-        SetTextColorToBlack();
-    };
-    if(strcmp(hexa, "00")==0){
-        SetTextColorToWhite();
+void TextColor(Couleur couleur){
+    if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurNoir())) {
+      SetTextColorToBlack();
+    }
+    else if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurBlanc())) {
+      SetTextColorToWhite();
+    }
+    else {
+      ResetTextColor();
     }
 }
 
@@ -44,7 +47,7 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau){
         for (int j=1; j<=PLATEAU_ObtenirTaille(plateau); j++){
             Couleur couleur = PLATEAU_ObtenirCouleurAvecPosition(plateau, POSITION_CreerPosition(i,j));
             AppliquerDecalageHorizontal();
-            TextColorFromHexa(couleur.hexa);
+            TextColor(couleur);
             printf("%c",couleur.symbole);
             ResetTextColor();
         }
@@ -108,13 +111,13 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) 
   char * vainqueur;
 
   if (scorej1 == scorej2) {
-    printf("Résultat : Egalité !\n", );
+    printf("Résultat : Egalité !\n");
   }
   else {
     if (scorej1 > scorej2) {
       vainqueur = "Joueur 1";
     }
-    else (scorej2 > scorej1) {
+    else {
       vainqueur = "Joueur 2";
     }
     printf("Résultat : %s vainqueur !",vainqueur);
@@ -125,6 +128,6 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) 
 void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Joueur j2) {
   //pour l'instant aucun affichage de fin de partie nécessaire en mode tournois
 }
-void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau) {
+void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
 }

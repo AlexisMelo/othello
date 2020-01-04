@@ -1,60 +1,44 @@
 #include "Coups.h"
+#include <stdio.h>
 
-Coups * COUPS_CreerCoups() {
-    Coups * presultat = (Coups*)malloc(sizeof(Coups)+sizeof(int));
-    presultat->coups = listeChainee();
-    presultat->nbDeCoups = 0;
-    return presultat;
+Coups COUPS_CreerCoups(){
+  Coups coups;
+  coups.nbCoups = 0;
+  return coups;
 }
 
-void COUPS_AjouterCoup(Coups * coups, Coup coup) {
-    LC_ajouter(&(coups->coups), &coup, COUPCOLLECTION_FonctionCopierCoup);
-    //printf("Ajouter %d   AjouterFin", coups->coups->element->position.ligne);
-    coups->nbDeCoups += 1;
-    //printf("Ajouter %d   AjouterFin", coups->coups->element->position.colonne);
+bool COUPS_EstVide(Coups coups){
+  return (coups.nbCoups == 0);
+}
+
+void COUPS_AjouterCoup(Coups *pCoups, Coup coup){
+    pCoups->lesCoups[pCoups->nbCoups] = coup;
+    pCoups->nbCoups++;
+
+}
+
+void COUPS_RetirerCoup(Coups *pCoups){
+  Coup* tab = pCoups->lesCoups;
+  for (int i = 1; i < pCoups->nbCoups; i++) {
+    tab[i-1] = tab[i];
+  }
+  pCoups->nbCoups--;
+}
+
+unsigned int COUPS_ObtenirNombreDeCoups(Coups coups){
+  return coups.nbCoups;
 }
 
 Coup COUPS_ObtenirCoup(Coups coups){
-    return *(coups.coups->element);  // *presultat;
+  return coups.lesCoups[0];
 }
 
-void COUPS_SupprimerCoupEnTete(Coups * coups){
-    Noeud noeud = *(coups->coups);
-    ListeChainee ls = noeud.listeSuivante;
-    coups->coups = ls;
-    coups->nbDeCoups -= 1;
-    COUPCOLLECTION_FonctionLibererCoup(&noeud);
-}
-
-int COUPS_ObtenirNombreDeCoups(Coups coups) {
-    return coups.nbDeCoups;
-}
-
-bool COUPS_EstPresent(Coups coups, Coup coup) {
-    bool estUnCoupPresent = false;
-    while (!LC_estVide(coups.coups) && !estUnCoupPresent){
-            if (EstEgalCoup(coup, COUPS_ObtenirCoup(coups))){
-                estUnCoupPresent = true;
-            }
-            if(LC_estVide(LC_obtenirListeSuivante(coups.coups))){
-                break;
-            }
-            coups.coups = LC_obtenirListeSuivante(coups.coups);
+bool COUPS_EstPresent(Coups coups, Coup coup)
+{
+  for (unsigned int i = 0; i < COUPS_ObtenirNombreDeCoups(coups); i++) {
+    if(COUP_EstEgalCoup(coup,coups.lesCoups[i])) {
+      return true;
     }
-    return estUnCoupPresent;
-}
-
-void COUPS_RetirerCoup(Coups * coups, Coup coup) {
-    assert(EstPresent(*coups, coup));
-        Coups temp = *coups;
-        while (!LC_estVide(coups->coups)){
-            if (COUP_estEgalCoup(coup, COUPS_ObtenirCoup(*coups))){
-                ListeChainee liste = coups->coups;
-                //Noeud noeud = liste;
-                ListeChainee ls = liste->listeSuivante;
-                coups->coups = ls;
-                };
-                temp.coups = temp.coups->listeSuivante;
-
-        }
+  }
+  return false;
 }
