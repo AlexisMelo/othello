@@ -41,7 +41,7 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 	int i, j;
   Position pos;
 
-	printf("       a  b  c  d  e  f  g  h\n");
+	printf("    a  b  c  d  e  f  g      h\n");
 
 	for(i=1; i<=TAILLE; i++)
 	{
