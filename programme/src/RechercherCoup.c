@@ -1,4 +1,4 @@
-#include "Recherche_Coup.h"
+#include "RechercherCoup.h"
 
 Coups RECHERCHECOUP_RechercherTousLesCoups(Couleur * plateau, Couleur couleurJoueurActuel) {
     Coups lesCoups = COUPS_CreerCoups();

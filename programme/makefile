@@ -21,7 +21,7 @@ $(BINDIR) :
 
 prg : directories $(BINDIR)/$(EXEC)
 
-$(BINDIR)/$(EXEC) : $(SRCDIR)/IntelligenceArtificielle.o $(SRCDIR)/ParcourirDirection.o $(SRCDIR)/Recherche_Coup.o $(SRCDIR)/Coups.o $(SRCDIR)/GererPartie.o $(SRCDIR)/Affichage.o $(SRCDIR)/Position.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/Coup.o $(SRCDIR)/Othello.o $(SRCDIR)/Ligne.o $(SRCDIR)/Colonne.o $(SRCDIR)/Menu.o $(SRCDIR)/MenuGraphique.o $(SRCDIR)/MenuLigneCommande.o $(SRCDIR)/Joueur.o  $(SRCDIR)/Couleur.o
+$(BINDIR)/$(EXEC) : $(SRCDIR)/IntelligenceArtificielle.o $(SRCDIR)/ParcourirDirection.o $(SRCDIR)/RechercherCoup.o $(SRCDIR)/Coups.o $(SRCDIR)/GererPartie.o $(SRCDIR)/Affichage.o $(SRCDIR)/Position.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/Coup.o $(SRCDIR)/Othello.o $(SRCDIR)/Ligne.o $(SRCDIR)/Colonne.o $(SRCDIR)/Menu.o $(SRCDIR)/MenuGraphique.o $(SRCDIR)/MenuLigneCommande.o $(SRCDIR)/Joueur.o  $(SRCDIR)/Couleur.o
 	$(CC)  -o $@ $^ $(LDFLAG)
 
 $(SRCDIR)/%.o : $(SRCDIR)/%.c

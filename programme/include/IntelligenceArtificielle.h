@@ -9,7 +9,7 @@
 #include "Plateau.h"
 #include "Joueur.h"
 #include "Coups.h"
-#include "Recherche_Coup.h"
+#include "RechercherCoup.h"
 #include "Couleur.h"
 
 /**

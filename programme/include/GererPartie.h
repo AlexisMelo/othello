@@ -11,7 +11,7 @@
 #include "Plateau.h"
 #include "Joueur.h"
 #include "Coups.h"
-#include "Recherche_Coup.h"
+#include "RechercherCoup.h"
 
 /**
  * Permet de lancer une partie. Cette fonction initialise le plateau de jeu et
