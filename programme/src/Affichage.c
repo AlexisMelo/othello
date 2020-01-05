@@ -41,7 +41,7 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 	int i, j;
   Position pos;
 
-	printf("    a  b  c  d  e  f  g      h\n");
+	printf("    a  b  c  d  e  f  g  h\n");
 
 	for(i=1; i<=TAILLE; i++)
 	{
@@ -123,4 +123,15 @@ void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Jou
 }
 void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
+}
+
+void AFFICHAGE_AfficherCoupJoue(Coup coupJoue){
+  char ligne[2] = "\0";
+  char colonne[2] = "\0";
+  ligne[0] = '0'+LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne);
+  colonne[0] = COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne);
+  //sprintf(ligne, LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne));
+  //sprintf(colonne, COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne));
+  printf("%s", strcat(strcat(ligne, colonne), "\n"));
+  fflush(stdout);
 }

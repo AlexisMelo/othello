@@ -17,7 +17,7 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
 
     printf("Jouer partie Joueur vs Joueur avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments));
 
-    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, j1, j2);
   }
   else if (strcmp(arguments[1], JOUEURVSIA) == 0) {
 
@@ -26,7 +26,7 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
 
     printf("Jouer partie Joueur vs IA avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
 
-    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, j1, j2);
 
   }
   else if (strcmp(arguments[1], IAVSIA) == 0) {
@@ -36,7 +36,7 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
 
     printf("Jouer partie IA vs IA avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
 
-    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, AFFICHAGE_AfficherCoupJoue, j1, j2);
 
   }
   else {

@@ -2,7 +2,7 @@
 #include "Plateau.h"
 #include "time.h"
 #include "Joueur.h"
-
+#include<stdlib.h>
 #define HORIZONTAL_OFFSET 2
 #define VERTICAL_OFFSET 1
 
@@ -21,7 +21,7 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau) ;
 void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau);
 
 void InitialiserAffichagePlateau() ;
-
+void AFFICHAGE_AfficherCoupJoue(Coup coupJoue) ;
 /**
  * @brief Affichage des résultats de fin d'une partie
  *

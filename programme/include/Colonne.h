@@ -32,6 +32,8 @@ Colonne COLONNE_ObtenirColonneDepuisInt(int colNum);
 */
 Colonne COLONNE_ObtenirColonneDepuisChar(char colChar);
 
+
+char COLONNE_ObtenirCharDepuisColonne(Colonne c) ;
 /**
  * @brief Obtient le numero réel d'une colonne
  *

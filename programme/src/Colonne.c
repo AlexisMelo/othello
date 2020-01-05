@@ -49,6 +49,29 @@ Colonne COLONNE_ObtenirColonneDepuisChar(char colChar){
         return -1;
     }
 }
+char COLONNE_ObtenirCharDepuisColonne(Colonne colonne){
+switch (colonne)
+    {
+    case a:
+        return 'a';
+    case b:
+        return 'b';
+    case c:
+        return 'c';
+    case d:
+        return 'd';
+    case e:
+        return 'e';
+    case f:
+        return 'f';
+    case g:
+        return 'g';
+    case h:
+        return 'h';
+    default:
+        return -1;
+    }
+}
 
 int COLONNE_ObtenirNumeroColonne(Colonne colonne) {
     return colonne + 1;
