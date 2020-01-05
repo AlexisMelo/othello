@@ -39,14 +39,14 @@ typedef struct{
 Coup COUP_CreerCoup(Position position, Couleur couleur) ;
 
 /**
- * Détermine si deux Coups sont identiques.
+ * Détermine si deux Coup sont identiques.
  *
  * \param coup1 Premier Coup à comparer.
  * \param coup2 Deuxième Coup à comparer.
  *
- * \return true si les Coups sont égaux, false sinon.
+ * \return true si les Coup sont égaux, false sinon.
 */
-bool COUP_EstEgalCoup(Coup coup1, Coup coup2) ;
+bool COUP_SontEgauxCoups(Coup coup1, Coup coup2) ;
 
 /**
  * Permet d'accéder au champs couleur d'une instance de Coup.

@@ -1,5 +1,4 @@
 #include "Coups.h"
-#include <stdio.h>
 
 Coups COUPS_CreerCoups(){
   Coups coups;
@@ -36,7 +35,7 @@ Coup COUPS_ObtenirCoup(Coups coups){
 bool COUPS_EstPresent(Coups coups, Coup coup)
 {
   for (unsigned int i = 0; i < COUPS_ObtenirNombreDeCoups(coups); i++) {
-    if(COUP_EstEgalCoup(coup,coups.lesCoups[i])) {
+    if(COUP_SontEgauxCoups(coup,coups.lesCoups[i])) {
       return true;
     }
   }

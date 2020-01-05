@@ -1,5 +1,11 @@
-#ifndef COULEUR_TYPE
-#define COULEUR_TYPE
+/**
+ * \file Couleur.h
+ *
+ * Fichier contenant la définition du type Couleur, l'enum nomCouleur et de leurs fonctions associées.
+*/
+
+#ifndef __COULEUR_TYPE__
+#define __COULEUR_TYPE__
 
 #include<stdbool.h>
 #include<string.h>
@@ -9,70 +15,91 @@
 #define COULEUR_BLANCHE "blanc"
 #define COULEUR_NOIRE "noir"
 
-typedef enum { Neutre, Blanc, Noir, Nulle } nomCouleur;
+/**
+ * \enum nomCouleur
+ *
+ * L'énumeration nomCouleur permet de définir un ensemble de valeurs possibles pour le nom des couleurs.
+*/
+typedef enum { Neutre, Blanc, Noir } nomCouleur;
 
+/**
+ * \struct Couleur
+ *
+ * Le type Couleur permet de symboliser un pion. La couleur possède un nom et un symbole,
+ * le symbole est utilisé lors des affichages pour représenter la couleur.
+*/
 typedef struct{
-    nomCouleur nom;
-    char symbole;
+    nomCouleur nom; /*!< Nom de la couleur. */
+    char symbole; /*!< Symbole représentant la couleur. */
 }Couleur;
 
 /**
- *  Retourne une Couleur noire
+ * Crée une Couleur noire.
  *
- * \return Couleur avec Couleur.nom = Noir, Couleur.hexa = FF, Couleur.symbole = 'X'
+ * \return Instance de Couleur noire.
 */
 Couleur COULEUR_ObtenirCouleurNoir() ;
 
 /**
- * Retourne une Couleur blanche
- *\return Couleur avec Couleur.nom = Blanc, Couleur.hexa = 00 , Couleur.symbole = '0'
+ * Crée une Couleur blanche.
+ *
+ * \return Instance de Couleur blanche.
 */
 Couleur COULEUR_ObtenirCouleurBlanc() ;
 
 /**
- * Retourne une Couleur neutre
- *\return Couleur avec Couleur.nom = Vide, Couleur.hexa =01 , Couleur.symbole = ' '
+ * Crée une Couleur neutre.
+ *
+ * \return Instance de Couleur neutre.
 */
 Couleur COULEUR_ObtenirCouleurNeutre() ;
 
 /**
- *  Retourne la couleur opposée à celle passée en entrée
+ * Retourne la Couleur opposée à celle passée en entrée.
  *
- * \param couleur : Couleur Blanc ou Noir
+ * \example COULEUR_ObtenirCouleurOpposee(instanceNoir) = instanceBlanc
  *
- * \return Couleur opposée à celle passsée en entrée
+ * \param couleur Couleur dont on souhaite obtenir la couleur opposée.
+ *
+ * \return Instance de la Couleur opposée à celle passée en entrée.
 */
 Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) ;
 
 /**
- *  Retourne Vrai si la couleur entrée est la Couleur Neutre.
+ * Détermine si la Couleur passée en entrée est une couleur neutre.
  *
- * \param couleur : Couleur Blanc ou Noir
+ * \param couleur Couleur dont on souhaite vérifier la neutralité.
  *
- * \return estNeutre : booléen
-*/bool COULEUR_EstNeutre(Couleur couleur) ;
+ * \return true si la Couleur est neutre, false sinon.
+*/
+bool COULEUR_EstNeutre(Couleur couleur) ;
 
 /**
- *  Retourne vrai si les couleurs entrées sont identiques.
+ * Détermine si les Couleur sont identiques.
  *
- * \param couleur1 : Couleur
+ * \param couleur1 Première Couleur à comparer.
+ * \param couleur2 Seconde Couleur à comparer.
  *
- * \param couleur2 : Couleur
- *
- * \return Couleur opposée à celle passsée en entrée
+ * \return true si les Couleur sont identiques, false sinon.
 */
 bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
 
 /**
- * @fn int ObtenirCouleurDepuisString(char * couleur)
- *  Obtenir une structure Couleur depuis un string correspondant à son nom
+ * Obtient une instance de Couleur grâce à un String indiquant son nom.
  *
- * \param char* String correspondant au nom de la couleur
+ * \param couleur String correspondant au nom de la couleur que l'on souhaite obtenir.
  *
- * \return Couleur Structure Couleur
+ * \return Instance de couleur.
  */
 Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur);
 
+/**
+ * Permet d'accéder au champs symbole d'une instance de Couleur.
+ *
+ * \param couleur Couleur dont on souhaite obtenir le symbole.
+ *
+ * \return Caractère de la Couleur.
+*/
 char COULEUR_ObtenirSymbole(Couleur couleur);
 
 #endif

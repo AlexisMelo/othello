@@ -1,21 +1,14 @@
-#include"../include/Couleur.h"
-
-Couleur * COULEUR_PointeurCouleurNulle() {
-    Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = Nulle;
-    resultat->symbole = '.';
-    return resultat;
-}
+#include"Couleur.h"
 
 Couleur COULEUR_ObtenirCouleurBlanc() {
-    Couleur resultat = *COULEUR_PointeurCouleurNulle();
+    Couleur resultat;
     resultat.nom = Blanc;
     resultat.symbole = 'O';
     return resultat;
 }
 
 Couleur COULEUR_ObtenirCouleurNoir() {
-    Couleur resultat = *COULEUR_PointeurCouleurNulle();
+    Couleur resultat;
     resultat.nom = Noir;
     resultat.symbole = 'X';
     return resultat;
@@ -23,7 +16,7 @@ Couleur COULEUR_ObtenirCouleurNoir() {
 
 
 Couleur COULEUR_ObtenirCouleurNeutre() {
-    Couleur resultat = *COULEUR_PointeurCouleurNulle();
+    Couleur resultat;
     resultat.nom = Neutre;
     resultat.symbole = ' ';
     return resultat;

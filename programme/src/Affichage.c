@@ -1,25 +1,25 @@
-#include"../include/Affichage.h"
+#include"Affichage.h"
 
-void SetTextColorToBlack(){
+void P_AFFICHAGE_SetP_AFFICHAGE_TextColorToBlack(){
     printf("\033[0;30m");
 }
-void SetTextColorToWhite(){
+void P_AFFICHAGE_SetP_AFFICHAGE_TextColorToWhite(){
     printf("\033[0;37m");
 }
-void ResetTextColor(){
+void P_AFFICHAGE_ResetP_AFFICHAGE_TextColor(){
     printf("\033[0m");
 }
 
 
-void TextColor(Couleur couleur){
+void P_AFFICHAGE_TextColor(Couleur couleur){
     if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurNoir())) {
-      SetTextColorToBlack();
+      P_AFFICHAGE_SetP_AFFICHAGE_TextColorToBlack();
     }
     else if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurBlanc())) {
-      SetTextColorToWhite();
+      P_AFFICHAGE_SetP_AFFICHAGE_TextColorToWhite();
     }
     else {
-      ResetTextColor();
+      P_AFFICHAGE_ResetP_AFFICHAGE_TextColor();
     }
 }
 
@@ -37,7 +37,7 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 		{
 
       pos = POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i), COLONNE_ObtenirColonneDepuisInt(j));
-      TextColor(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos));
+      P_AFFICHAGE_TextColor(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos));
       printf(" %c ",COULEUR_ObtenirSymbole(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos)));
 
 		}

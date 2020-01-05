@@ -1,4 +1,4 @@
-#include "../include/Coup.h"
+#include "Coup.h"
 
 Coup COUP_CreerCoup(Position position, Couleur couleur){
     Coup resultat;
@@ -7,7 +7,7 @@ Coup COUP_CreerCoup(Position position, Couleur couleur){
     return resultat;
 }
 
-bool COUP_EstEgalCoup(Coup coup1, Coup coup2) {
+bool COUP_SontEgauxCoups(Coup coup1, Coup coup2) {
     return COULEUR_EstEgalCouleur(coup1.couleur, coup2.couleur) && POSITION_EstEgalPosition(coup1.position, coup2.position);
     }
 
