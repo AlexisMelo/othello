@@ -1,53 +1,66 @@
 \subsection{TAD Position}
 \begin{algorithme}
-	\signaturefonction{position}{c : Colonne, l : Ligne}{Position}
-	\signatureprocedure{appliquerDirection}{\paramEntreeSortie unePostion : Position, \paramEntree uneDirection : Direction}
-	\signaturefonction{fixerColonne}{c : Colonne, l : Ligne}{Position}
-	\signaturefonction{fixerLigne}{c : Colonne}{Position}
-	\signaturefonction{obtenirColonne}{unePostion : Position}{Colonne}
-	\signaturefonction{obtenirLigne}{unePostion : Position}{Ligne}
-	\signaturefonction{estPositionValide}{unPlateauDeJeu : Plateau, unePostion : Position}{\booleen}
+	\signaturefonction{CreerPosition}{c : Colonne, l : Ligne}{Position}
+	\signatureprocedure{AppliquerDirection}{\paramEntreeSortie unePostion : Position, \paramEntree uneDirection : Direction}
+	\signaturefonction{FixerColonne}{c : Colonne, l : Ligne}{Position}
+	\signaturefonction{FixerLigne}{c : Colonne}{Position}
+	\signaturefonction{ObtenirColonne}{unePostion : Position}{Colonne}
+	\signaturefonction{ObtenirLigne}{unePostion : Position}{Ligne}
+	\signaturefonction{EstEgalPosition}{position1, position2 : Position}{\booleen}
 \end{algorithme}
 
 
 \subsection{TAD Coup}
 \begin{algorithme}
-	\signaturefonction{coup}{unePostion : Position, uneCouleur : Couleur}{Coup}
-	\signaturefonction{obtenirPosition}{unCoup : Coup}{Position}
-	\signaturefonction{obtenirCouleur}{unCoup : Coup}{Couleur}
-	\signaturefonction{estValideCoup}{unPlateauDeJeu : Plateau}{\booleen}
+	\signaturefonction{CreerCoup}{unePostion : Position, uneCouleur : Couleur}{Coup}
+	\signaturefonction{ObtenirPosition}{unCoup : Coup}{Position}
+	\signaturefonction{ObtenirCouleur}{unCoup : Coup}{Couleur}
+	\signaturefonction{EstCoupValide}{unPlateau : Plateau}{\booleen}
+	\signaturefonction{EstEgalCoup}{coup1, coup2 : Coup}{\booleen}
 \end{algorithme}
 
 
 \subsection{TAD Coups}
 \begin{algorithme}
-	\signaturefonction{coups}{}{Ensemble $<$Coup$>$}
-	\signatureprocedure{ajouterCoup}{\paramEntreeSortie lesCoups : Coups, \paramEntree unCoup : Coup}
-	\signatureprocedure{retirerCoup}{\paramEntreeSortie lesCoups : Coups, \paramEntree unCoup : Coup}
-	\signaturefonction{nombreCoups}{lesCoups : Coups}{\naturel}
-	\signaturefonction{estPresent}{lesCoups : Coups, unCoup : Coup}{\booleen}
+	\signaturefonction{CreerCoups}{}{Ensemble $<$Coup$>$} \\
+	Nous prendrons pour la suite :  Coups = Ensemble $<$Coup$>$
+	\signaturefonction{EstVide}{lesCoups : Coups}{\booleen}
+	\signatureprocedure{AjouterCoup}{\paramEntreeSortie lesCoups : Coups, \paramEntree unCoup : Coup}
+	\signatureprocedure{RetirerCoup}{\paramEntreeSortie lesCoups : Coups, \paramEntree unCoup : Coup}
+	\signaturefonction{ObtenirCoup}{lesCoups : Coups}{Coup}
+	\signaturefonction{ObtenirNombreDeCoups}{lesCoups : Coups}{\naturel}
+	\signaturefonction{EstPresent}{lesCoups : Coups, unCoup : Coup}{\booleen}
 \end{algorithme}
 
 
 \subsection{TAD Plateau}
 \begin{algorithme}
-	\signaturefonction{plateau}{taille : \naturel}{Plateau}
-	\signatureprocedure{jouerCoup}{\paramEntreeSortie unPlateauDeJeu : Plateau, \paramEntree unCoup : Coup}
-	\signaturefonction{obtenirCouleur}{unPlateauDeJeu : Plateau, unePosition : Position}{Couleur}
-	\signaturefonction{estPositionVide}{unPlateauDeJeu : Plateau, unePosition : Position}{\booleen}
-	\signaturefonction{obtenirTaille}{unPlateauDeJeu : Plateau}{\naturel}
+	\signaturefonction{CreerPlateau}{}{Plateau}
+	\signatureprocedure{InitialiserPlateau}{\paramEntreeSortie unPlateau : Plateau}
+	\signatureprocedure{JouerCoup}{\paramEntreeSortie unPlateau : Plateau, \paramEntree unCoup : Coup}
+	\signaturefonction{ObtenirCouleurAvecPosition}{unPlateau : Plateau, unePosition : Position}{Couleur}
+	\signaturefonction{EstPositionLibre}{unPlateau : Plateau, unePosition : Position}{\booleen}
+	\signaturefonction{ObtenirTaille}{unPlateau : Plateau}{\naturel}
+	\signaturefonction{EstRempli}{unPlateau : Plateau}{\booleen}
+	\signaturefonction{CalculerPoints}{unPlateau : Plateau, uneCouleur : Couleur}{\naturel}
+	\signaturefonction{EstPositionValide}{unPlateau : Plateau, unePosition : Position}{\booleen}
+	\signatureprocedure{CapturerPions}{\paramEntreeSortie unPlateau : Plateau, \paramEntree unCoup : Coup}
+	\signatureprocedure{CapturerPionsDansDirections}{\paramEntreeSortie unPlateau : Plateau, \paramEntree unCoup : Coup, \paramEntree uneDirection : Direction}
 \end{algorithme}
 
 
 \subsection{TAD Ligne}
 \begin{algorithme}
-	\signaturefonction{ligne}{uneTaille : 1 .. Taille}{Ligne}
-	\signaturefonction{obtenirNumeroLigne}{l : Ligne}{1 .. Taille}
+	\signaturefonction{ObtenirLigneDepuisInt}{ligNum : 1 .. Taille}{Ligne}
+	\signaturefonction{ObtenirNumeroLigne}{l : Ligne}{1 .. Taille}
+	\signaturefonction{EstEgalLigne}{l1, l2 : Ligne}{\booleen}
 \end{algorithme}
 
 
 \subsection{TAD Colonne}
 \begin{algorithme}
-	\signaturefonction{colonne}{uneTaille : 1 .. Taille}{Colonne}
-	\signaturefonction{obtenirNumeroColonne}{c : Colonne}{1 .. Taille}
+	\signaturefonction{ObtenirColonneDepuisInt}{colNum : 1 .. Taille}{Colonne}
+	\signaturefonction{ObtenirColonneDepuisInt}{colChar : Char}{Colonne}
+	\signaturefonction{ObtenirNumeroColonne}{c : Colonne}{1 .. Taille}
+	\signaturefonction{EstEgalColonne}{c1, c2 : Colonne}{\booleen}
 \end{algorithme}
