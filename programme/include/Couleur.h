@@ -73,6 +73,6 @@ bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
  */
 Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur);
 
-char COULEUR_ObtenirSymbole(Couleur couleur);
-
+char COULEUR_ObtenirSymbole(Couleur couleur) ;
+char * COULEUR_ObtenirStr(Couleur couleur) ;
 #endif

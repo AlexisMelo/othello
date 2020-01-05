@@ -65,3 +65,8 @@ Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur) {
 char COULEUR_ObtenirSymbole(Couleur couleur) {
   return couleur.symbole;
 }
+
+char * COULEUR_ObtenirStr(Couleur couleur) {
+    if(COULEUR_EstEgalCouleur(couleur, COULEUR_ObtenirCouleurBlanc())){return "blanc";};
+    if(COULEUR_EstEgalCouleur(couleur, COULEUR_ObtenirCouleurNoir())){return "noir";};
+}

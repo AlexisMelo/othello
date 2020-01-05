@@ -119,7 +119,23 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) 
 }
 
 void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Joueur j2) {
-  //pour l'instant aucun affichage de fin de partie nécessaire en mode tournois
+  int scorej1 = PLATEAU_CalculerPoints(plateau, JOUEUR_ObtenirCouleur(j1));
+  int scorej2 = PLATEAU_CalculerPoints(plateau, JOUEUR_ObtenirCouleur(j2));
+  if (scorej1 == scorej2) {
+    printf("nulle\n");
+  }
+  else {
+    if (scorej1 > scorej2) {
+      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j1)));
+      }
+    else {
+    if(scorej1 < scorej2){
+      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j2)));
+    }
+    else {
+    printf("nulle\n");}
+    }
+  } 
 }
 void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
