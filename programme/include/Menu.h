@@ -15,38 +15,37 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "Aide.h"
 #include "Couleur.h"
 
 /**
  * @fn int ObtenirProfondeurIADepuisArguments (int nbArguments, char ** arguments)
- * @brief Obtient la profondeur de l'IA passée en paramètre ou bien une profondeur par défaut
+ *  Obtient la profondeur de l'IA passée en paramètre ou bien une profondeur par défaut
  *
- * @param nbArguments : nombre d'arguments en entrée du programme
- * @param arguments : Arguments en entrée du programme
+ * \param nbArguments : nombre d'arguments en entrée du programme
+ * \param arguments : Arguments en entrée du programme
  *
- * @returns Retourne la profondeur de l'IA pendant le jeu
+ * \return Retourne la profondeur de l'IA pendant le jeu
  */
 int MENU_ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments);
 
 /**
  * @fn int saisieInteger (int min, int max)
- * @brief Obtient un int entre deux bornes comprises à partir d'une saisie utilisateur
+ *  Obtient un int entre deux bornes comprises à partir d'une saisie utilisateur
  *
- * @param min : borne minimale
- * @param max : borne maximale
+ * \param min : borne minimale
+ * \param max : borne maximale
  *
- * @returns int saisi par l'utiliateur
+ * \return int saisi par l'utiliateur
  */
 int MENU_SaisieInteger(int min, int max);
 
 /**
  * @fn int ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments)
- * @brief Obtenir depuis la liste des arguments du main le string correspondant à la couleur du premier joueur
+ *  Obtenir depuis la liste des arguments du main le string correspondant à la couleur du premier joueur
  *
- * @param arguments Arguments en entrée du programme
+ * \param arguments Arguments en entrée du programme
  *
- * @returns char* String correspond au nom d'une couleur
+ * \return char* String correspond au nom d'une couleur
  */
 char * MENU_ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments);
 

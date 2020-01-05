@@ -17,66 +17,66 @@ typedef struct
 #include "Direction.h"
 
 /**
- * @brief Obtenir une position à partir d'une Ligne et d'une Colonne
+ *  Obtenir une position à partir d'une Ligne et d'une Colonne
  *
- * @param ligne Ligne
+ * \param ligne Ligne
  *
- * @param colonne Colonne
+ * \param colonne Colonne
  *
- * @returns structure position
+ * \return structure position
 */
 Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) ;
 
 /**
- * @brief Retourne la ligne de la Position passée en entrée
+ *  Retourne la ligne de la Position passée en entrée
  *
- * @param position Position dont on souhaite connaitre la ligne
+ * \param position Position dont on souhaite connaitre la ligne
  *
- * @returns ligne de la position
+ * \return ligne de la position
 */
 Ligne POSITION_ObtenirLigne(Position position) ;
 
 /**
- * @brief Retourne la colonne de la Position passée en entrée
+ *  Retourne la colonne de la Position passée en entrée
  *
- * @param position Position dont on souhaite connaitre la colonne
+ * \param position Position dont on souhaite connaitre la colonne
  *
- * @returns colonne de la position
+ * \return colonne de la position
 */
 Colonne POSITION_ObtenirColonne(Position position) ;
 
 /**
- * @brief Fixe la ligne de la position
+ *  Fixe la ligne de la position
  *
- * @param position Position que l'on souhaite modifier
- * @param ligne Nouvelle ligne
+ * \param position Position que l'on souhaite modifier
+ * \param ligne Nouvelle ligne
 */
 void POSITION_FixerLigne(Position * position, Ligne ligne) ;
 
 /**
- * @brief Fixe la colonne de la position
+ *  Fixe la colonne de la position
  *
- * @param position Position que l'on souhaite modifier
- * @param colonne Nouvelle colonne
+ * \param position Position que l'on souhaite modifier
+ * \param colonne Nouvelle colonne
 */
 void POSITION_FixerColonne(Position * position, Colonne colonne) ;
 
 /**
- * @brief applique une direction à la position
+ *  applique une direction à la position
  *
- * @param position Position de départ que l'on souhaite modifier
- * @param direction Direction à appliquer sur position
+ * \param position Position de départ que l'on souhaite modifier
+ * \param direction Direction à appliquer sur position
  *
- * @returns Nouvelle position avec la direction appliquée
+ * \return Nouvelle position avec la direction appliquée
 */
 Position POSITION_AppliquerDirection(Position position, Direction direction) ;
 
 /**
- * @brief Vérifie si les positions sont égales
+ *  Vérifie si les positions sont égales
  *
- * @param position1 Position
- * @param position2 Position
- * @returns true si les deux positions sont égales, false sinon
+ * \param position1 Position
+ * \param position2 Position
+ * \return true si les deux positions sont égales, false sinon
 */
 bool POSITION_EstEgalPosition(Position position1, Position position2);
 

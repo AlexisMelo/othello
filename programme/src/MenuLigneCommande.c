@@ -40,6 +40,6 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
 
   }
   else {
-    MessageDAide();
+    AFFICHAGE_MessageAide();
   }
 }

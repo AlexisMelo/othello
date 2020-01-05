@@ -2,11 +2,10 @@
  * \file Coup.h
  *
  * Fichier contenant la définition du type Coup et de ses fonctions associées.
- *
 */
 
-#ifndef COUP_TYPE
-#define COUP_TYPE
+#ifndef __COUP_TYPE__
+#define __COUP_TYPE__
 
 #include "Position.h"
 #include "Couleur.h"

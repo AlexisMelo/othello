@@ -4,7 +4,7 @@ void MenuGraphique() {
   //le but est de recomposer une ligne de commande comme si l'utilisateur l'avais directement saisie pour ensuite l'envoyer au menuLigneCommande
 
   char * arguments[] = {"./Othello","","",""};
-  int nbArguments = 4;
+  int nbArguments = 3;
   int choix;
 
   //choix de l'utilisateur pour type de partie ou affichage d'aide
@@ -22,7 +22,7 @@ void MenuGraphique() {
       arguments[1] = IAVSIA;
       break;
     case 4 :
-      MessageDAide();
+      AFFICHAGE_MessageAide();
       break;
   }
 
@@ -43,12 +43,14 @@ void MenuGraphique() {
     }
 
     //difficulté de l'IA
-    printf("Quelle difficulté pour l'Intelligence artificelle ?\n[Nombre entre 1 et %d attendu, %d par défaut]\n",PRONDEUR_MAX_IA, PROFONDEUR_DEFAUT_IA);
-    choix = MENU_SaisieInteger(1,PRONDEUR_MAX_IA);
-
-    char choixStr[sizeof(choix)];
-    sprintf(choixStr,"%d",choix);
-    arguments[3] = choixStr;
+    if (choix != 1) {
+      printf("Quelle difficulté pour l'Intelligence artificelle ?\n[Nombre entre 1 et %d attendu, %d par défaut]\n",PRONDEUR_MAX_IA, PROFONDEUR_DEFAUT_IA);
+      choix = MENU_SaisieInteger(1,PRONDEUR_MAX_IA);
+      char choixStr[sizeof(choix)];
+      sprintf(choixStr,"%d",choix);
+      arguments[3] = choixStr;
+      nbArguments = 4;
+    }
 
     //lancement du menu comme si c'était une ligne de commande
     MenuLigneCommande(nbArguments,arguments);

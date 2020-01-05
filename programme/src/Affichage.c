@@ -23,25 +23,12 @@ void TextColor(Couleur couleur){
     }
 }
 
-void AppliquerDecalageHorizontal(){
-    for (int hori = 0; hori<HORIZONTAL_OFFSET; hori++){
-                printf(" ");
-            }
-}
-
-
-void AppliquerDecalageVertical(){
-    for (int vert = 0; vert<VERTICAL_OFFSET; vert++){
-                printf("\n");
-
-    }
-}
 void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 {
 	int i, j;
   Position pos;
 
-	printf("    a  b  c  d  e  f  g      h\n");
+	printf("    a  b  c  d  e  f  g  h\n");
 
 	for(i=1; i<=TAILLE; i++)
 	{
@@ -56,41 +43,6 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 		}
 		printf("\n");
 	}
-}
-void InitialiserAffichagePlateau(){
-
-    struct timespec ts;
-    ts.tv_nsec = 9000000;
-    ts.tv_sec = 0;
-    Couleur * plateau = PLATEAU_CreerPlateau();
-    Couleur couleur = COULEUR_ObtenirCouleurNeutre();
-    for (int i=1; i<= 8; i++){
-        for (int j=1; j<= 8; j++){
-            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
-            PLATEAU_JouerCoup(plateau, coup);
-        }
-    }
-    couleur = COULEUR_ObtenirCouleurNoir();
-    for (int i=1; i<= 8; i++){
-        for (int j=1; j<= 8; j++){
-            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
-            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
-            PLATEAU_JouerCoup(plateau, coup);
-            AFFICHAGE_AfficherPlateau(plateau);
-            nanosleep(&ts, &ts);
-            }
-    };
-    couleur = COULEUR_ObtenirCouleurNeutre();
-    for (int i=1; i<= 8; i++){
-        for (int j=1; j<= 8; j++){
-            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
-            PLATEAU_JouerCoup(plateau, coup);
-            nanosleep(&ts, &ts);
-            AFFICHAGE_AfficherPlateau(plateau);
-        }
-    }
-    PLATEAU_InitialiserPlateau(plateau);
-    AFFICHAGE_AfficherPlateau(plateau);
 }
 
 void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) {
@@ -123,4 +75,20 @@ void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Jou
 }
 void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
+}
+
+void AFFICHAGE_MessageAide() {
+printf("Aide pour le joueur : \n \n");
+printf("Deux modes de jeu sont disponibles : \n");
+printf("- Mode Standard : (blanc | noir [profondeur > 1]) \n");
+printf("     - Permet de jouer contre l""ordinateur en lui donnant les blancs ou les noirs \n");
+printf("     - Par defaut [profondeur> = 5] \n \n");
+printf("- Mode Tournoi : (blanc | noir [profondeur > 1] \n");
+printf("     - Permet de faire jouer le programme dans un mode ""tournoi"" en lui donnant les blancs ou les noirs \n");
+printf("     - Par defaut [profondeur = 5] \n \n");
+printf("Comment poser un pion sur le plateau ? \n");
+printf("     - Ecrire le chiffre de la ligne puis la lettre de la colonne \n");
+printf("         ex : ""7e"" \n");
+printf("     - Ligne de ""1"" a ""8"" \n");
+printf("     - Colonne de ""a"" a ""h"" \n");
 }
