@@ -51,7 +51,7 @@ bool COUP_SontEgauxCoups(Coup coup1, Coup coup2) ;
 /**
  * Permet d'accéder au champs couleur d'une instance de Coup.
  *
- * \param coup Coup dont on souhaite obtenir la couleur.
+ * \param coup Coup dont on souhaite obtenir la Couleur.
  *
  * \return Couleur du Coup.
 */
@@ -60,7 +60,7 @@ Couleur COUP_ObtenirCouleur(Coup coup) ;
 /**
  * Permet d'accéder au champs position d'une instance de Coup.
  *
- * \param coup Coup dont on souhaite obtenir la position.
+ * \param coup Coup dont on souhaite obtenir la Position.
  *
  * \return Position du Coup.
 */

@@ -35,7 +35,7 @@ Coup RECHERCHECOUP_ObtenirCoupValide (Couleur * plateau, Joueur joueur){
     lesCoups = RECHERCHECOUP_RechercherTousLesCoups(plateau, JOUEUR_ObtenirCouleur(joueur));
     bool estCoupValide = false;
     while (!estCoupValide) {
-        unCoup = JOUEUR_ObtenirCoup(joueur, plateau);
+        unCoup = JOUEUR_SaisirCoup(joueur, plateau);
         estCoupValide = COUPS_EstPresent(lesCoups, unCoup);
     }
     return unCoup;

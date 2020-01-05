@@ -1,5 +1,6 @@
-#ifndef PARCOURIR_DIRECTION
-#define PARCOURIR_DIRECTION
+
+#ifndef __PARCOURIR_DIRECTION__
+#define __PARCOURIR_DIRECTION__
 
 #include<stdbool.h>
 

@@ -1,5 +1,11 @@
-#ifndef MENU
-#define MENU
+/**
+ * \file Menu.h
+ *
+ * Fichier contenant la définition les fonctions utilisées par les fichiers MenuGraphique et MenuLigneCommande.
+*/
+
+#ifndef __MENU__
+#define __MENU__
 
 #define COULEUR_NOIRE "noir"
 #define COULEUR_BLANCHE "blanc"
@@ -18,34 +24,31 @@
 #include "Couleur.h"
 
 /**
- * @fn int ObtenirProfondeurIADepuisArguments (int nbArguments, char ** arguments)
- *  Obtient la profondeur de l'IA passée en paramètre ou bien une profondeur par défaut
+ *  Obtient la profondeur de l'IA passée en paramètre ou bien une profondeur par défaut.
  *
- * \param nbArguments : nombre d'arguments en entrée du programme
- * \param arguments : Arguments en entrée du programme
+ * \param nbArguments Nombre d'arguments en entrée du programme.
+ * \param arguments Arguments en entrée du programme.
  *
- * \return Retourne la profondeur de l'IA pendant le jeu
+ * \return Profondeur de l'IA obtenue en paramètre.
  */
 int MENU_ObtenirProfondeurIADepuisArguments(int nbArguments, char ** arguments);
 
 /**
- * @fn int saisieInteger (int min, int max)
- *  Obtient un int entre deux bornes comprises à partir d'une saisie utilisateur
+ *  Obtient un integer entre deux bornes comprises à partir d'une saisie utilisateur.
  *
- * \param min : borne minimale
- * \param max : borne maximale
+ * \param min Borne minimale.
+ * \param max Borne maximale.
  *
- * \return int saisi par l'utiliateur
+ * \return Integer saisi par l'utilisateur.
  */
 int MENU_SaisieInteger(int min, int max);
 
 /**
- * @fn int ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments)
- *  Obtenir depuis la liste des arguments du main le string correspondant à la couleur du premier joueur
+ * Obtient depuis la liste des arguments du main le String correspondant à la couleur du premier Joueur.
  *
- * \param arguments Arguments en entrée du programme
+ * \param arguments Arguments en entrée du programme.
  *
- * \return char* String correspond au nom d'une couleur
+ * \return String correspondant au nom d'une couleur.
  */
 char * MENU_ObtenirStringCouleurPremierJoueurDepuisArguments(char ** arguments);
 

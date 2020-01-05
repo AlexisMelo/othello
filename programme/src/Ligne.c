@@ -28,6 +28,6 @@ int LIGNE_ObtenirNumeroLigne(Ligne ligne) {
     return ligne + 1;
 }
 
-bool LIGNE_EstEgalLigne(Ligne ligne1, Ligne ligne2) {
+bool LIGNE_SontEgalesLignes(Ligne ligne1, Ligne ligne2) {
     return ligne1 == ligne2;
 }
