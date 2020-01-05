@@ -14,6 +14,8 @@ typedef struct {
   bool estIA;
 } Joueur;
 
+#include "IntelligenceArtificielle.h"
+
 /**
  * @brief Initialise une structure pour un joueur humain
  *
