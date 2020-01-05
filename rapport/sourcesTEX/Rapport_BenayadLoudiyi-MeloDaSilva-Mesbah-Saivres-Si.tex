@@ -1,9 +1,9 @@
-%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
 \documentclass[french]{extarticle}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
 \usepackage{color}
 \addtolength{\oddsidemargin}{-.8in}
 \addtolength{\evensidemargin}{-.8in}
@@ -34,10 +34,10 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{fancyhdr}
-\lhead{TITRE DOCUMENT}
+\lhead{Rapport projet Othello}
 \chead{}
 \rhead{}
-\lfoot{AUTEURS - AUTEURS}
+\lfoot{ASI3 2019-2020}
 \cfoot{Page \thepage}
 \rfoot{\today}
 \usepackage{fancyvrb}
@@ -47,48 +47,38 @@
 \makeatother
 
 \begin{document}
-\rhead{\includegraphics[height=1cm]{./rapport/sourcesIMAGES/Logo_INSARouen.png}}
-\title{TITRE}
-\author{AUTEURS - RU Siu - MELO DA SILVA Alexis - MESBAH Zacharia - SAIVRES
-Jerôme - SI Ruixu}
+\rhead{\includegraphics[height=1cm]{./sourcesIMAGES/Logo_INSARouen.png}}
+\title{Rapport de Projet\\
+	Projet Othello}
+\author{MELO DA SILVA Alexis - MESBAH Zacharia\\
+SAIVRES Jerôme - SI Ruixu}
 \date{2019 - 2020}
 \maketitle
 \newpage
-\tableofcontents{}
+\tableofcontents
 \newpage
-\section{TADs}
-\input{rapport/sourcesTEX/TADs}
-
+\part{TADs}
+\input{./sourcesTEX/TADs}
 \newpage
 \section{Analyse descendante}
-\input{rapport/sourcesTEX/analyse_descendante}
+\input{./sourcesTEX/analyse_descendante}
 \newpage
 \section{Conception preliminaire}
-\input{rapport/sourcesTEX/signaturesTAD1}
-\input{rapport/sourcesTEX/signaturesTAD2}
-\input{rapport/sourcesTEX/signatures}
+\input{./sourcesTEX/signaturesTAD1}
+\input{./sourcesTEX/signaturesTAD2}
+\input{./sourcesTEX/signatures}
 \newpage
 \section{Types}
-\input{rapport/sourcesTEX/Types}
+\input{./sourcesTEX/Types}
 \newpage
 \section{Conception détaillée}
-
-\input{rapport/sourcesTEX/initialiserPlateau}
-
-\input{rapport/sourcesTEX/faireUnePartie}
-
-\input{rapport/sourcesTEX/plateauRempli}
-
-\input{rapport/sourcesTEX/etatDeLaPartie}
-
-\input{rapport/sourcesTEX/coupValideExiste}
-
-\input{rapport/sourcesTEX/jouerUnTour}
-
-\input{rapport/sourcesTEX/rechercherTousLesCoups}
-
-\input{rapport/sourcesTEX/obtenirCoupJoueur}
-
-\input{rapport/sourcesTEX/calculPoint}
-
+\input{./sourcesTEX/initialiserPlateau}
+\input{./sourcesTEX/faireUnePartie}
+\input{./sourcesTEX/plateauRempli}
+\input{./sourcesTEX/etatDeLaPartie}
+\input{./sourcesTEX/coupValideExiste}
+\input{./sourcesTEX/jouerUnTour}
+\input{./sourcesTEX/rechercherTousLesCoups}
+\input{./sourcesTEX/obtenirCoupJoueur}
+\input{./sourcesTEX/calculPoint}
 \end{document}
