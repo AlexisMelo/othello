@@ -47,6 +47,17 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2);
  */
 void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Joueur j2);
 
+/**
+ * Affiche un message d'aide concernant l'utilisation du programme et les règles du jeu.
+ */
 void AFFICHAGE_MessageAide();
+
+/**
+ * Affiche un Coup quand il est joué. Utile nottament pour envoyer le Coup sur la sortie standard
+ * en mode tournois.
+ *
+ * \param coupJoue Coup qui doit être affiché
+ */
+void AFFICHAGE_AfficherCoupJoue(Coup coupJoue);
 
 #endif

@@ -42,6 +42,8 @@ Colonne COLONNE_ObtenirColonneDepuisInt(int colNum);
 */
 Colonne COLONNE_ObtenirColonneDepuisChar(char colChar);
 
+
+char COLONNE_ObtenirCharDepuisColonne(Colonne c) ;
 /**
  * Obtient le numero réel d'une Colonne. L'énumeration en C commence à 0 alors
  * que nous travaillons avec des ligne et des Colonne dont les indices commencent à 1.
