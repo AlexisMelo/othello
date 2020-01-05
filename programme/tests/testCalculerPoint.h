@@ -1,7 +1,7 @@
-#include "../include/CalculerPoint.h"
-#include "../include/Plateau.h"
-#include "../include/Couleur.h"
-#include "../include/Coup.h"
-#include "../include/Position.h"
+#include "CalculerPoint.h"
+#include "Plateau.h"
+#include "Couleur.h"
+#include "Coup.h"
+#include "Position.h"
 
 void TestCalculerPoint() ;

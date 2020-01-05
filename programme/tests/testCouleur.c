@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"../include/Couleur.h"
+#include"Couleur.h"
 #include "testCouleur.h"
 #include <CUnit/CUnit.h>
 #include <string.h>

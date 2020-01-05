@@ -1,21 +1,14 @@
-#include"../include/Couleur.h"
-
-Couleur * COULEUR_PointeurCouleurNulle() {
-    Couleur * resultat = malloc(sizeof(Couleur));
-    resultat->nom = Nulle;
-    resultat->symbole = '.';
-    return resultat;
-}
+#include"Couleur.h"
 
 Couleur COULEUR_ObtenirCouleurBlanc() {
-    Couleur resultat = *COULEUR_PointeurCouleurNulle();
+    Couleur resultat;
     resultat.nom = Blanc;
     resultat.symbole = 'O';
     return resultat;
 }
 
 Couleur COULEUR_ObtenirCouleurNoir() {
-    Couleur resultat = *COULEUR_PointeurCouleurNulle();
+    Couleur resultat;
     resultat.nom = Noir;
     resultat.symbole = 'X';
     return resultat;
@@ -23,7 +16,7 @@ Couleur COULEUR_ObtenirCouleurNoir() {
 
 
 Couleur COULEUR_ObtenirCouleurNeutre() {
-    Couleur resultat = *COULEUR_PointeurCouleurNulle();
+    Couleur resultat;
     resultat.nom = Neutre;
     resultat.symbole = ' ';
     return resultat;
@@ -43,11 +36,11 @@ Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) {
 
 
 bool COULEUR_EstNeutre(Couleur couleur) {
-    return COULEUR_EstEgalCouleur(couleur, COULEUR_ObtenirCouleurNeutre());
+    return COULEUR_SontEgalesCouleurs(couleur, COULEUR_ObtenirCouleurNeutre());
 }
 
 
-bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
+bool COULEUR_SontEgalesCouleurs(Couleur couleur1, Couleur couleur2) {
     return (couleur1.nom == couleur2.nom) && (couleur1.symbole == couleur2.symbole);
 }
 

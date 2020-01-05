@@ -1,4 +1,4 @@
-#include "../include/Position.h"
+#include "Position.h"
 
 Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;
@@ -49,6 +49,6 @@ Position POSITION_AppliquerDirection(Position position, Direction direction){
         return position;
 }
 
-bool POSITION_EstEgalPosition(Position position1, Position position2) {
-    return COLONNE_EstEgalColonne(POSITION_ObtenirColonne(position1), POSITION_ObtenirColonne(position2)) && LIGNE_EstEgalLigne(POSITION_ObtenirLigne(position1), POSITION_ObtenirLigne(position2));
+bool POSITION_SontEgalesPositions(Position position1, Position position2) {
+    return COLONNE_SontEgalesColonnes(POSITION_ObtenirColonne(position1), POSITION_ObtenirColonne(position2)) && LIGNE_SontEgalesLignes(POSITION_ObtenirLigne(position1), POSITION_ObtenirLigne(position2));
 }

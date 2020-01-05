@@ -1,12 +1,11 @@
 /**
- * @file Coup.h
+ * \file Coup.h
  *
- * Fichier contenant la définition du type Coup et de ses fonctions associées
- *
+ * Fichier contenant la définition du type Coup et de ses fonctions associées.
 */
 
-#ifndef COUP_TYPE
-#define COUP_TYPE
+#ifndef __COUP_TYPE__
+#define __COUP_TYPE__
 
 #include "Position.h"
 #include "Couleur.h"
@@ -15,62 +14,66 @@
 #include <stdbool.h>
 #include <assert.h>
 
+/**
+ * \struct Coup
+ *
+ * Le type Coup permet de jouer une couleur à une position. Le Coup est composé
+ * d'une position et d'une couleur. Lorsque ce Coup est considéré comme joué,
+ * alors la couleur qu'il contient est insérée à la position donnée sur le plateau de jeu.
+*/
 typedef struct{
-    Position position;
-    Couleur couleur;
+    Position position; /*!< Position où le Coup doit être joué. */
+    Couleur couleur; /*!< Couleur du joueur qui joue le Coup. */
 }Coup;
 
 #include "Plateau.h"
 
-
 /**
- * Crée un coup à partir d'une position et d'une couleur
+ * Crée un Coup.
  *
- * \param position Position où le coup doit être joué
- * \param couleur Couleur du joueur qui joue le coup
+ * \param position Position où le Coup doit être joué.
+ * \param couleur Couleur du joueur qui joue le Coup.
  *
- * \return Coup à jouer
+ * \return Instance de Coup.
 */
 Coup COUP_CreerCoup(Position position, Couleur couleur) ;
 
 /**
- * @brief Détermine si deux coups sont identiques
+ * Détermine si deux Coup sont identiques.
  *
- * @param coup1 Coup
- * @param coup2 Coup
+ * \param coup1 Premier Coup à comparer.
+ * \param coup2 Deuxième Coup à comparer.
  *
- * @returns true si les coups sont égaux, false sinon
+ * \return true si les Coup sont égaux, false sinon.
 */
-bool COUP_EstEgalCoup(Coup coup1, Coup coup2) ;
+bool COUP_SontEgauxCoups(Coup coup1, Coup coup2) ;
 
 /**
- * @brief Permet d'accéder à la Couleur d'un Coup
+ * Permet d'accéder au champs couleur d'une instance de Coup.
  *
- * @param coup : Coup
+ * \param coup Coup dont on souhaite obtenir la Couleur.
  *
- * @returns Couleur du coup passé en entrée
+ * \return Couleur du Coup.
 */
 Couleur COUP_ObtenirCouleur(Coup coup) ;
 
 /**
- * @brief Permet d'accéder à la Position d'un Coup
+ * Permet d'accéder au champs position d'une instance de Coup.
  *
- * @param coup : Coup
+ * \param coup Coup dont on souhaite obtenir la Position.
  *
- * @returns Position du coup passé en entrée
+ * \return Position du Coup.
 */
 Position COUP_ObtenirPosition(Coup coup) ;
 
 /**
- * @brief Détermine si un coup est valide
+ * Détermine si un Coup est valide. Il est considéré valide quand la position
+ * est elle même valide par rapport au plateau, et si la couleur du Coup n'est pas neutre.
  *
- * Retourne vrai seulement si la position est dans les limites du plateau, et que la
- * Couleur n'est pas neutre
+ * \param plateau Plateau de jeu.
+ * \param coup Coup dont on souhaite tester la validité.
  *
- * @param plateau Couleur * plateau de jeu
- * @param coup Coup
- *
- * @returns estCoupValide bool
+ * \return true si le Coup est valide, false sinon.
 */
 bool COUP_EstCoupValide(Couleur * plateau, Coup coup) ;
 

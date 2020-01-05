@@ -1,3 +1,3 @@
-#include"../include/Parcourir_Direction.h"
+#include"Parcourir_Direction.h"
 
 void testParcourirUneDirection() ;

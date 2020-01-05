@@ -1,6 +1,6 @@
-#include "../include/MenuLigneCommande.h"
+#include "MenuLigneCommande.h"
 
-void MenuLigneCommande(int nbArguments, char ** arguments) {
+void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
 
   Joueur j1;
   Joueur j2;
@@ -40,6 +40,6 @@ void MenuLigneCommande(int nbArguments, char ** arguments) {
 
   }
   else {
-    MessageDAide();
+    AFFICHAGE_MessageAide();
   }
 }
