@@ -1,6 +1,6 @@
 #include "../include/MenuGraphique.h"
 
-void MenuGraphique() {
+void MENU_G_MenuGraphique() {
   //le but est de recomposer une ligne de commande comme si l'utilisateur l'avais directement saisie pour ensuite l'envoyer au menuLigneCommande
 
   char * arguments[] = {"./Othello","","",""};
@@ -38,7 +38,7 @@ void MenuGraphique() {
       arguments[3] = choixStr;
       nbArguments = 4;
     }
-    
+
     //quelle couleur il prend
     printf("Quelle couleur voulez vous ?\n1 : %s\n2 : %s\n", COULEUR_NOIRE, COULEUR_BLANCHE);
     choix = MENU_SaisieInteger(1,2);
@@ -55,6 +55,6 @@ void MenuGraphique() {
 
 
     //lancement du menu comme si c'était une ligne de commande
-    MenuLigneCommande(nbArguments,arguments);
+    MENU_LC_MenuLigneCommande(nbArguments,arguments);
   }
 }

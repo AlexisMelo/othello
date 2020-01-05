@@ -19,7 +19,7 @@ bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur * plateau, Coup coup,
       return false;
     }
 
-    if (!COULEUR_EstEgalCouleur(PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition), COULEUR_ObtenirCouleurOpposee(COUP_ObtenirCouleur(coup)))) { //la couleur de la case dans la nouvelle position n'est pas de couleur opposée à la couleur de base
+    if (!COULEUR_SontEgalesCouleurs(PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition), COULEUR_ObtenirCouleurOpposee(COUP_ObtenirCouleur(coup)))) { //la couleur de la case dans la nouvelle position n'est pas de couleur opposée à la couleur de base
       return false;
     }
 
@@ -35,7 +35,7 @@ bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur * plateau, Coup coup,
 
         if (!limitePlateauAtteinte) {
 
-          if (COULEUR_EstEgalCouleur(PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition), COUP_ObtenirCouleur(coup))) {
+          if (COULEUR_SontEgalesCouleurs(PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition), COUP_ObtenirCouleur(coup))) {
             maCouleurRencontree = true;
           }
           else {

@@ -82,7 +82,7 @@ bool COULEUR_EstNeutre(Couleur couleur) ;
  *
  * \return true si les Couleur sont identiques, false sinon.
 */
-bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
+bool COULEUR_SontEgalesCouleurs(Couleur couleur1, Couleur couleur2) ;
 
 /**
  * Obtient une instance de Couleur grâce à un String indiquant son nom.

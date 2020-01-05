@@ -1,45 +1,45 @@
-#ifndef RECHERCHE_COUP
-#define RECHERCHE_COUP
+/**
+ * \file Recherche_Coup.h
+ *
+ * Fichier contenant la définition des fonctions pour rechercher des Coup possibles.
+*/
+
+#ifndef __RECHERCHE_COUP__
+#define __RECHERCHE_COUP__
 
 #include "Coups.h"
 #include "Joueur.h"
 #include "Plateau.h"
 
 /**
- * Retourne tous les coups possibles pour un Joueur
+ * Crée une instance de Coups avec tous les Coup possibles pour une Couleur donnée.
  *
- *\param plateauDeJeu : C'est le plateau de jeu
+ * \param plateau Plateau de jeu.
+ * \param couleur Couleur du Joueur dont on souhaite trouver les Coups.
  *
- *\param JoueurActuel : Joueur qui joue son tour, il est représenté par une couleur
- *
- *\return Coups
+ * \return Instance de Coups.
 */
-Coups RECHERCHECOUP_RechercherTousLesCoups(Couleur * plateau, Couleur couleurJoueurActuel);
+Coups RECHERCHECOUP_RechercherTousLesCoups(Couleur * plateau, Couleur couleur);
 
 /**
- * Retourne un booléen pour savoir si un coup est possible ou pas
+ * Détermine si un Coup est valide. On admet un Coup valide un Coup dont la Position est valide,
+ * dont la Position est libre, et qui permet de capturer au moins 1 pion.
  *
- *\param plateauDeJeu : C'est le plateau de jeu
+ * \param plateau Plateau de jeu.
+ * \param coup Coup dont on souhaite déterminer la validité.
  *
- *\param JoueurActuel : Joueur qui joue son tour, il est représenté par une couleur
- *
- *\param positionDuCoup : Position du coup qu'on souhaite évaluer
- *
- *\return booléen
+ * \return true si le Coup est valide, false sinon.
 */
 bool RECHERCHECOUP_EstCoupValide(Couleur * plateau, Coup coup);
 
 /**
- * Retourne un coup valide entree par un IA/Joueur
+ * Permet d'obtenir un Coup forcément valide de la part d'un Joueur.
  *
- *\param JoueurActuel : Joueur qui joue son tour, il est représenté par une couleur
+ * \param plateau Plateau de jeu.
+ * \param joueur Joueur dont on souhaite obtenir le Coup.
  *
- *\param plateauDeJeu : C'est le plateau de jeu
- *
- *\param obtenirCoup : fonction qui recupere un coup, IA ou Joueur
- *
- *\return Coup (un coup valide)
-*/
+ * \return Instance de Coup obtenue par la saisie.
+ */
 Coup RECHERCHECOUP_ObtenirCoupValide (Couleur * plateau, Joueur joueur);
 
 #endif

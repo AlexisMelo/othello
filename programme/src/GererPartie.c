@@ -8,7 +8,7 @@ bool P_PARTIE_JoueurPeutJouer(Couleur * plateau, Joueur joueur) {
 }
 
 void PARTIE_SetOrdreJoueurs(Joueur* premierJoueur, Joueur* secondJoueur, Joueur j1, Joueur j2) {
-  if (COULEUR_EstEgalCouleur(JOUEUR_ObtenirCouleur(j1), COULEUR_ObtenirCouleurNoir())) {
+  if (COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(j1), COULEUR_ObtenirCouleurNoir())) {
     *premierJoueur = j1;
     *secondJoueur = j2;
   }

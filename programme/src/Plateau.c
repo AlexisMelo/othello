@@ -45,7 +45,7 @@ Couleur PLATEAU_ObtenirCouleurAvecPosition(Couleur * plateau, Position position)
 
 bool PLATEAU_EstPositionLibre(Couleur * plateau, Position position) {
     Couleur couleurDeLaCase = PLATEAU_ObtenirCouleurAvecPosition(plateau, position);
-    return COULEUR_EstEgalCouleur(couleurDeLaCase,COULEUR_ObtenirCouleurNeutre());
+    return COULEUR_SontEgalesCouleurs(couleurDeLaCase,COULEUR_ObtenirCouleurNeutre());
 }
 
 int PLATEAU_ObtenirTaille(Couleur * plateau) {
@@ -68,7 +68,7 @@ int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur){
   int i, j;
   for(i=1;i<=PLATEAU_ObtenirTaille(p);i++){
     for(j=1;j<=PLATEAU_ObtenirTaille(p);j++){
-      if(COULEUR_EstEgalCouleur(couleur,PLATEAU_ObtenirCouleurAvecPosition(p,POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j))))){
+      if(COULEUR_SontEgalesCouleurs(couleur,PLATEAU_ObtenirCouleurAvecPosition(p,POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j))))){
 	    points=points+1;
       }
     }
@@ -95,7 +95,7 @@ void PLATEAU_CapturerPionsDansDirection(Couleur * plateau, Coup coup, Direction 
 
   if(RECHERCHEDIRECTIONS_CoupPossibleDansDirection(plateau, coup, direction)){
       nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(coup), direction);
-      while((PLATEAU_EstPositionValide(plateau, nouvellePosition)) && (!COULEUR_EstEgalCouleur(COUP_ObtenirCouleur(coup), PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition)))){
+      while((PLATEAU_EstPositionValide(plateau, nouvellePosition)) && (!COULEUR_SontEgalesCouleurs(COUP_ObtenirCouleur(coup), PLATEAU_ObtenirCouleurAvecPosition(plateau, nouvellePosition)))){
           nouveauCoup = COUP_CreerCoup(nouvellePosition ,COUP_ObtenirCouleur(coup));
           PLATEAU_JouerCoup(plateau,nouveauCoup);
           nouvellePosition = POSITION_AppliquerDirection(COUP_ObtenirPosition(nouveauCoup), direction);

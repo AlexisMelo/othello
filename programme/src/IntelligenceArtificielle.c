@@ -20,7 +20,7 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
         if (profondeurDepart == 0){
             return PLATEAU_CalculerPoints(plateau, joueurActuel);
         }
-        if(COULEUR_EstEgalCouleur(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)){
+        if(COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)){
           PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));
           pts = P_IA_Max(P_IA_MinMaxExplorationRecursive(JoueurAMaximiser, COULEUR_ObtenirCouleurOpposee(joueurActuel), plateau, profondeurDepart-1),pts);
         COUPS_RetirerCoup(&coupsPossibles);

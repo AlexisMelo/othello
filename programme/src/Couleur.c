@@ -36,11 +36,11 @@ Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) {
 
 
 bool COULEUR_EstNeutre(Couleur couleur) {
-    return COULEUR_EstEgalCouleur(couleur, COULEUR_ObtenirCouleurNeutre());
+    return COULEUR_SontEgalesCouleurs(couleur, COULEUR_ObtenirCouleurNeutre());
 }
 
 
-bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) {
+bool COULEUR_SontEgalesCouleurs(Couleur couleur1, Couleur couleur2) {
     return (couleur1.nom == couleur2.nom) && (couleur1.symbole == couleur2.symbole);
 }
 

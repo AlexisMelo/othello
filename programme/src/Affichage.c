@@ -12,10 +12,10 @@ void P_AFFICHAGE_ResetP_AFFICHAGE_TextColor(){
 
 
 void P_AFFICHAGE_TextColor(Couleur couleur){
-    if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurNoir())) {
+    if (COULEUR_SontEgalesCouleurs(couleur,COULEUR_ObtenirCouleurNoir())) {
       P_AFFICHAGE_SetP_AFFICHAGE_TextColorToBlack();
     }
-    else if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurBlanc())) {
+    else if (COULEUR_SontEgalesCouleurs(couleur,COULEUR_ObtenirCouleurBlanc())) {
       P_AFFICHAGE_SetP_AFFICHAGE_TextColorToWhite();
     }
     else {

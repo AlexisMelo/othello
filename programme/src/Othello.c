@@ -2,10 +2,10 @@
 
 int main(int nbArguments, char ** arguments) {
   if (nbArguments == 1) {
-    MenuGraphique();
+    MENU_G_MenuGraphique();
   }
   else {
-    MenuLigneCommande(nbArguments, arguments);
+    MENU_LC_MenuLigneCommande(nbArguments, arguments);
   }
   return 0;
 }

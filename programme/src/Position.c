@@ -49,6 +49,6 @@ Position POSITION_AppliquerDirection(Position position, Direction direction){
         return position;
 }
 
-bool POSITION_EstEgalPosition(Position position1, Position position2) {
+bool POSITION_SontEgalesPositions(Position position1, Position position2) {
     return COLONNE_SontEgalesColonnes(POSITION_ObtenirColonne(position1), POSITION_ObtenirColonne(position2)) && LIGNE_SontEgalesLignes(POSITION_ObtenirLigne(position1), POSITION_ObtenirLigne(position2));
 }

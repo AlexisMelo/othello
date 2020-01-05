@@ -1,37 +1,36 @@
+/**
+ * \file Parcourir_Direction.h
+ *
+ * Fichier contenant la définition de fonctions pour parcourir un plateau dans
+ * des directions données et voir si un coup est possible.
+*/
 
 #ifndef __PARCOURIR_DIRECTION__
 #define __PARCOURIR_DIRECTION__
 
-#include<stdbool.h>
+#include <stdbool.h>
 
 #include "Couleur.h"
 #include "Coup.h"
 
 /**
- * Retourne un booléen pour savoir si au moins une direction est valide
+ * Détermine si un Coup permet de capturer des pions dans au moins une Direction.
  *
- *\param plateauDeJeu : C'est le plateau de jeu
+ *\param plateauDeJeu Plateau de jeu.
+ *\param coup Coup dont on souhaite déterminer l'influence sur le plateau.
  *
- *\param positionDuCoup : Position du coup qu'on souhaite évaluer
- *
- *\param JoueurActuel : Joueur qui joue son tour, il est représenté par une couleur
- *
- *\return booléen
+ *\return true si le Coup permet la capture de pions, false sinon.
 */
 bool RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque(Couleur * plateau, Coup coup);
 
 /**
- * Retourne un booléen pour savoir si la direction est valide, i.e il y a capture de pion(s)
+ * Détermine si un Coup permet de capturer des pions dans une Direction donnée.
  *
- *\param plateauDeJeu : C'est le plateau de jeu
+ * \param plateauDeJeu Plateau de jeu.
+ * \param coup Coup dont on souhaite déterminer l'influence sur le plateau.
+ * \param direction Direction dans laquelle on recherche la capture potentielle de pions.
  *
- *\param positionDuCoup : Position du coup qu'on souhaite évaluer
- *
- *\param uneDirection : Direction dans laquelle on parcourt le plateau
- *
- *\param JoueurActuel : Joueur qui joue son tour, il est représenté par une couleur
- *
- *\return booléen
+ * \return true si le Coup permet la capture de pions, false sinon.
 */
 bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur * plateau, Coup coup, Direction direction);
 

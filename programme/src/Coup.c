@@ -8,7 +8,7 @@ Coup COUP_CreerCoup(Position position, Couleur couleur){
 }
 
 bool COUP_SontEgauxCoups(Coup coup1, Coup coup2) {
-    return COULEUR_EstEgalCouleur(coup1.couleur, coup2.couleur) && POSITION_EstEgalPosition(coup1.position, coup2.position);
+    return COULEUR_SontEgalesCouleurs(coup1.couleur, coup2.couleur) && POSITION_SontEgalesPositions(coup1.position, coup2.position);
     }
 
 Couleur COUP_ObtenirCouleur(Coup coup){
