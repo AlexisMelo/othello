@@ -1,3 +1,4 @@
+\subsection{TAD Couleur}
 \begin{tad}
 	\tadNom{Couleur}
 	\tadDependances{\booleen, Chaine de caractères}
@@ -9,8 +10,6 @@
 		\tadOperation{EstNeutre}{\tadUnParam{Couleur}}{\tadUnParam{\booleen}}
 		\tadOperation{EstEgalCouleur}{Couleur x Couleur}{\tadUnParam{\booleen}}
 		\tadOperation{ObtenirCouleurDepuisString}{\tadUnParam{CDC}}{\tadUnParam{Couleur}}
-		
-
 	\end{tadOperations}
 	\begin{tadAxiomes}
 		\tadAxiome{ObtenirCouleurOpposée(ObtenirCouleurOpposée(Couleur)) = Couleur}
@@ -21,8 +20,7 @@
 	\end{tadPreconditions}
 \end{tad}
 
-\vspace*{1cm}
-
+\subsection{TAD Direction}
 \begin{tad}
 	\tadNom{Direction}
 	\begin{tadOperations}{Direction}
@@ -39,8 +37,7 @@
 	\end{tadOperations}
 \end{tad}
 
-\newpage
-
+\subsection{TAD Position}
 \begin{tad}
 	\tadNom{Position}
 	\tadDependances{Colonne, Ligne, Direction, \booleen}
@@ -58,8 +55,7 @@
 	\end{tadPreconditions}
 \end{tad}
 
-\vspace*{1cm}
-
+\subsection{TAD Coup}
 \begin{tad}
 	\tadNom{Coup}
 	\tadDependances{Position, Couleur, Plateau, \booleen}
@@ -75,8 +71,7 @@
 	\end{tadPreconditions}
 \end{tad}
 
-\vspace*{1cm}
-
+\subsection{TAD Coups}
 \begin{tad}
 	\tadNom{Coups}
 	\tadDependances{Coup,\booleen,\naturel}
@@ -94,8 +89,7 @@
 	\end{tadPreconditions}
 \end{tad}
 
-\newpage
-
+\subsection{TAD Plateau}
 \begin{tad}
 	\tadNom{Plateau}
 	\tadDependances{Position, Coup, Couleur, \booleen, \naturel}
@@ -120,8 +114,7 @@
 	\end{tadPreconditions}
 \end{tad}
 
-\vspace*{1cm}
-
+\subsection{TAD Ligne}
 \begin{tad}
 	\tadNom{Ligne}
 	\begin{tadOperations}{Ligne}
@@ -134,8 +127,7 @@
 	\end{tadAxiomes}
 \end{tad}
 
-\vspace*{1cm}
-
+\subsection{TAD Colonne}
 \begin{tad}
 	\tadNom{Colonne}
 	\begin{tadOperations}{Colonne}
