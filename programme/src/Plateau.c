@@ -68,7 +68,7 @@ int PLATEAU_CalculerPoints(Couleur * p, Couleur couleur){
   int i, j;
   for(i=1;i<=PLATEAU_ObtenirTaille(p);i++){
     for(j=1;j<=PLATEAU_ObtenirTaille(p);j++){
-      if(COULEUR_EstEgalCouleur(couleur,PLATEAU_ObtenirCouleurAvecPosition(p,POSITION_CreerPosition(i,j)))){
+      if(COULEUR_EstEgalCouleur(couleur,PLATEAU_ObtenirCouleurAvecPosition(p,POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i),COLONNE_ObtenirColonneDepuisInt(j))))){
 	    points=points+1;
       }
     }

@@ -15,3 +15,9 @@
 programme/bin/Othello
 programme/tests/test
 .vscode
+/programme/.vscode
+/html
+/bin
+/doc
+*.bak
+/latex
