@@ -1,7 +1,7 @@
-#include"../include/AfficherPlateau.h"
-#include"../include/Position.h"
-#include"../include/Plateau.h"
-#include"../include/Coup.h"
+#include"AfficherPlateau.h"
+#include"Position.h"
+#include"Plateau.h"
+#include"Coup.h"
 #include<stdlib.h>
 #include<stdio.h>
 #include<time.h>

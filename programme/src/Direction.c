@@ -1,4 +1,4 @@
-#include"../include/Direction.h"
+#include"Direction.h"
 
 int ObtenirDecalageLigne(Direction direction) {
       switch (direction)

@@ -77,6 +77,6 @@ int COLONNE_ObtenirNumeroColonne(Colonne colonne) {
     return colonne + 1;
 }
 
-bool COLONNE_EstEgalColonne(Colonne colonne1, Colonne colonne2) {
+bool COLONNE_SontEgalesColonnes(Colonne colonne1, Colonne colonne2) {
     return colonne1 == colonne2;
 }

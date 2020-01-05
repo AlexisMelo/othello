@@ -1,4 +1,4 @@
-#include "../include/Joueur.h"
+#include "Joueur.h"
 
 Joueur JOUEUR_CreerJoueurHumain(Couleur couleur) {
   Joueur resultat;
@@ -33,7 +33,7 @@ Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {
   return coup;
 }
 
-Coup JOUEUR_ObtenirCoup(Joueur j, Couleur * plateau) {
+Coup JOUEUR_SaisirCoup(Joueur j, Couleur * plateau) {
   if (JOUEUR_EstIA(j)) {
     return JOUEUR_SaisirCoupIA(j,plateau);
   }

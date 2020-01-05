@@ -1,5 +1,11 @@
-#ifndef COULEUR_TYPE
-#define COULEUR_TYPE
+/**
+ * \file Couleur.h
+ *
+ * Fichier contenant la définition du type Couleur, l'enum nomCouleur et de leurs fonctions associées.
+*/
+
+#ifndef __COULEUR_TYPE__
+#define __COULEUR_TYPE__
 
 #include<stdbool.h>
 #include<string.h>
@@ -9,70 +15,92 @@
 #define COULEUR_BLANCHE "blanc"
 #define COULEUR_NOIRE "noir"
 
-typedef enum { Neutre, Blanc, Noir, Nulle } nomCouleur;
+/**
+ * \enum nomCouleur
+ *
+ * L'énumeration nomCouleur permet de définir un ensemble de valeurs possibles pour le nom des couleurs.
+*/
+typedef enum { Neutre, Blanc, Noir } nomCouleur;
 
+/**
+ * \struct Couleur
+ *
+ * Le type Couleur permet de symboliser un pion. La couleur possède un nom et un symbole,
+ * le symbole est utilisé lors des affichages pour représenter la couleur.
+*/
 typedef struct{
-    nomCouleur nom;
-    char symbole;
+    nomCouleur nom; /*!< Nom de la couleur. */
+    char symbole; /*!< Symbole représentant la couleur. */
 }Couleur;
 
 /**
- * @brief Retourne une Couleur noire
+ * Crée une Couleur noire.
  *
- * @returns Couleur avec Couleur.nom = Noir, Couleur.hexa = FF, Couleur.symbole = 'X'
+ * \return Instance de Couleur noire.
 */
 Couleur COULEUR_ObtenirCouleurNoir() ;
 
 /**
- *@brief Retourne une Couleur blanche
- *@returns Couleur avec Couleur.nom = Blanc, Couleur.hexa = 00 , Couleur.symbole = '0'
+ * Crée une Couleur blanche.
+ *
+ * \return Instance de Couleur blanche.
 */
 Couleur COULEUR_ObtenirCouleurBlanc() ;
 
 /**
- *@brief Retourne une Couleur neutre
- *@returns Couleur avec Couleur.nom = Vide, Couleur.hexa =01 , Couleur.symbole = ' '
+ * Crée une Couleur neutre.
+ *
+ * \return Instance de Couleur neutre.
 */
 Couleur COULEUR_ObtenirCouleurNeutre() ;
 
 /**
- * @brief Retourne la couleur opposée à celle passée en entrée
+ * Retourne la Couleur opposée à celle passée en entrée.
  *
- * @param couleur : Couleur Blanc ou Noir
+ * \example COULEUR_ObtenirCouleurOpposee(instanceNoir) = instanceBlanc
  *
- * @returns Couleur opposée à celle passsée en entrée
+ * \param couleur Couleur dont on souhaite obtenir la couleur opposée.
+ *
+ * \return Instance de la Couleur opposée à celle passée en entrée.
 */
 Couleur COULEUR_ObtenirCouleurOpposee(Couleur couleur) ;
 
 /**
- * @brief Retourne Vrai si la couleur entrée est la Couleur Neutre.
+ * Détermine si la Couleur passée en entrée est une couleur neutre.
  *
- * @param couleur : Couleur Blanc ou Noir
+ * \param couleur Couleur dont on souhaite vérifier la neutralité.
  *
- * @returns estNeutre : booléen
-*/bool COULEUR_EstNeutre(Couleur couleur) ;
-
-/**
- * @brief Retourne vrai si les couleurs entrées sont identiques.
- *
- * @param couleur1 : Couleur
- *
- * @param couleur2 : Couleur
- *
- * @returns Couleur opposée à celle passsée en entrée
+ * \return true si la Couleur est neutre, false sinon.
 */
-bool COULEUR_EstEgalCouleur(Couleur couleur1, Couleur couleur2) ;
+bool COULEUR_EstNeutre(Couleur couleur) ;
 
 /**
- * @fn int ObtenirCouleurDepuisString(char * couleur)
- * @brief Obtenir une structure Couleur depuis un string correspondant à son nom
+ * Détermine si les Couleur sont identiques.
  *
- * @param char* String correspondant au nom de la couleur
+ * \param couleur1 Première Couleur à comparer.
+ * \param couleur2 Seconde Couleur à comparer.
  *
- * @returns Couleur Structure Couleur
+ * \return true si les Couleur sont identiques, false sinon.
+*/
+bool COULEUR_SontEgalesCouleurs(Couleur couleur1, Couleur couleur2) ;
+
+/**
+ * Obtient une instance de Couleur grâce à un String indiquant son nom.
+ *
+ * \param couleur String correspondant au nom de la couleur que l'on souhaite obtenir.
+ *
+ * \return Instance de couleur.
  */
 Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur);
 
-char COULEUR_ObtenirSymbole(Couleur couleur) ;
 char * COULEUR_ObtenirStr(Couleur couleur) ;
+/**
+ * Permet d'accéder au champs symbole d'une instance de Couleur.
+ *
+ * \param couleur Couleur dont on souhaite obtenir le symbole.
+ *
+ * \return Caractère de la Couleur.
+*/
+char COULEUR_ObtenirSymbole(Couleur couleur);
+
 #endif

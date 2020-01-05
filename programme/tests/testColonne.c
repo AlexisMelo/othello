@@ -1,4 +1,4 @@
-#include"../include/Colonne.h"
+#include"Colonne.h"
 #include <CUnit/CUnit.h>
 #include "testColonne.h"
 #include<stdio.h>
