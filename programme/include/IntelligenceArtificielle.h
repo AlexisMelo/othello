@@ -6,6 +6,6 @@
 #include "Recherche_Coup.h"
 #include "Couleur.h"
 
-Coup IA_MinMax(Couleur * plateau, Joueur joueurAMaximiser);
+Coup IA_MinMax(Couleur * plateau, Joueur joueurAMaximiser, int profondeur);
 int IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel, Couleur * plateau, int profondeurDepart) ;
 #endif
