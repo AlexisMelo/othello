@@ -1,5 +1,5 @@
 /**
- * \file Parcourir_Direction.h
+ * \file ParcourirDirection.h
  *
  * Fichier contenant la définition de fonctions pour parcourir un plateau dans
  * des directions données et voir si un coup est possible.

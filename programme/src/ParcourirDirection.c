@@ -1,4 +1,4 @@
-#include"Parcourir_Direction.h"
+#include"ParcourirDirection.h"
 
 bool RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque(Couleur * plateau, Coup coup) {
     return (RECHERCHEDIRECTIONS_CoupPossibleDansDirection(plateau, coup, HG)

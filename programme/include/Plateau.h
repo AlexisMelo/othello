@@ -11,7 +11,7 @@
 
 #include "Position.h"
 #include "Coup.h"
-#include "Parcourir_Direction.h"
+#include "ParcourirDirection.h"
 
 #define TAILLE 8 // taille d'un plateau
 

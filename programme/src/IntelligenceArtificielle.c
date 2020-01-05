@@ -1,4 +1,4 @@
-#include"IntelligenceArtificielle.h"
+#include "IntelligenceArtificielle.h"
 
 int P_IA_Max(int a, int b) {
   if (a>b) return a;
