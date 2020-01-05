@@ -15,10 +15,6 @@ typedef struct {
 } Joueur;
 
 #include "IntelligenceArtificielle.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> 2e53bd8850cae02db3c69fd90ac5aa8f55d343d9
 /**
  * @brief Initialise une structure pour un joueur humain
  *
