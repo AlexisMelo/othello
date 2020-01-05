@@ -1,5 +1,5 @@
 /**
- * \file Recherche_Coup.h
+ * \file RechercherCoup.h
  *
  * Fichier contenant la définition des fonctions pour rechercher des Coup possibles.
 */

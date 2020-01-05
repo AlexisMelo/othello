@@ -1,10 +1,10 @@
 /**
  * \file Coups.h
  *
+ * Fichier contenant la définition du type Coups et de ses fonctions associées.
+ *
  * \author Léo Pacary
  * \author Alexis Melo Da Silva
- *
- * Fichier contenant la définition du type Coups et de ses fonctions associées.
 */
 
 #ifndef __COUPS_TYPE__

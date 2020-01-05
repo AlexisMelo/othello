@@ -1,7 +1,7 @@
 /**
  * \file MenuLigneCommande.h
  *
- * Fichier contenant la définition de fonctions permettant d'avoir un menu graphique pour lancer le jeu.
+ * Fichier contenant la définition de fonctions permettant d'avoir un menu en ligne de commande pour lancer le jeu.
 */
 
 #ifndef __MENU_LIGNE_COMMANDE__
