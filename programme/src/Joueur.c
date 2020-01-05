@@ -27,8 +27,10 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
 }
 
 Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {
-  printf("unimplemented");
-  return COUP_CreerCoup(POSITION_CreerPosition(0,0),JOUEUR_ObtenirCouleur(j));
+  Couleur * copiePlateau = PLATEAU_CreerPlateau();
+  memcpy(copiePlateau, plateau, PLATEAU_ObtenirTaille(plateau)*PLATEAU_ObtenirTaille(plateau) * sizeof(Couleur)) ;
+  Coup coup = IA_MinMax(copiePlateau, j);
+  return coup;
 }
 
 Coup JOUEUR_ObtenirCoup(Joueur j, Couleur * plateau) {
