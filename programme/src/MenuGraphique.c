@@ -1,4 +1,4 @@
-#include "../include/MenuGraphique.h"
+#include "MenuGraphique.h"
 
 void MENU_G_MenuGraphique() {
   //le but est de recomposer une ligne de commande comme si l'utilisateur l'avais directement saisie pour ensuite l'envoyer au menuLigneCommande

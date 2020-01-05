@@ -1,4 +1,4 @@
-#include "../include/Position.h"
+#include "Position.h"
 
 Position POSITION_CreerPosition(Ligne ligne, Colonne colonne) {
     Position position;

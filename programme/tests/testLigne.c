@@ -1,4 +1,4 @@
-#include"../include/Ligne.h"
+#include"Ligne.h"
 #include<CUnit/CUnit.h>
 #include"testLigne.h"
 

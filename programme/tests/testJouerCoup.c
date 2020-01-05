@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <CUnit/CUnit.h>
 #include "testJouerCoup.h"
-#include "../include/Couleur.h"
+#include "Couleur.h"
 /* int init_suite_success(void) { 
     return 0; 
 }

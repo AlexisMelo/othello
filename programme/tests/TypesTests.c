@@ -1,8 +1,8 @@
 #include <CUnit/CUnit.h>
 #include <CUnit/Basic.h>
 #include <string.h>
-#include "../include/Colonne.h"
-#include "../include/Ligne.h"
+#include "Colonne.h"
+#include "Ligne.h"
 #include "TypesTest.h"
 
 #define CU_ADD_TEST(suite, test) (CU_add_test(suite, #test, (CU_TestFunc)test))

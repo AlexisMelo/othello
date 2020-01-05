@@ -1,4 +1,4 @@
-#include "../include/MenuLigneCommande.h"
+#include "MenuLigneCommande.h"
 
 void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
 

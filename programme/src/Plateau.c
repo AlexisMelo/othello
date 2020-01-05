@@ -1,4 +1,4 @@
-#include "../include/Plateau.h"
+#include "Plateau.h"
 
 void PLATEAU_InitialiserPlateau(Couleur * plateau){
   Couleur neutre, blanc, noir;

@@ -1,4 +1,4 @@
-#include "../include/Joueur.h"
+#include "Joueur.h"
 
 Joueur JOUEUR_CreerJoueurHumain(Couleur couleur) {
   Joueur resultat;
