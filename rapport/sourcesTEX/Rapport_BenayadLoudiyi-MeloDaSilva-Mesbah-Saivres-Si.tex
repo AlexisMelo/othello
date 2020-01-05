@@ -1,141 +1,42 @@
-\documentclass[french]{extarticle}
-\usepackage{rapport/lib/algorithmeUTF8}
-\usepackage[utf8]{inputenc}
-\usepackage[top=2.5cm, bottom=2.5cm, left=1.5cm, right=1.5cm]{geometry}
-\usepackage{graphicx}
-\usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage{fullpage}
-\usepackage{color}
-\usepackage[table]{xcolor}
-\usepackage{listings}
-\usepackage{moreverb}
-\definecolor{darkWhite}{rgb}{0.94,0.94,0.94}
-\lstset{
-  aboveskip=3mm,
-  belowskip=-2mm,
-  backgroundcolor=\color{darkWhite},
-  basicstyle=\footnotesize,
-  breakatwhitespace=false,
-  breaklines=true,
-  captionpos=b,
-  commentstyle=\color{red},
-  deletekeywords={...},
-  escapeinside={\%*}{*)},
-  extendedchars=true,
-  framexleftmargin=16pt,
-  framextopmargin=3pt,
-  framexbottommargin=6pt,
-  frame=tb,
-  inputencoding=utf8,
-  keepspaces=true,
-  keywordstyle=\color{blue},
-  language=C,
-  literate=
-  {²}{{\textsuperscript{2}}}1
-  {⁴}{{\textsuperscript{4}}}1
-  {⁶}{{\textsuperscript{6}}}1
-  {⁸}{{\textsuperscript{8}}}1
-  {°}{{\textsuperscript{o}}}1
-  {€}{{\euro{}}}1
-  {ö}{{\"{o}}}1
-  {ä}{{\"{a}}}1
-  {ü}{{\"{u}}}1
-  {é}{{\'{e}}}1
-  {è}{{\`{e}}}1
-  {ê}{{\^{e}}}1
-  {ë}{{\¨{e}}}1
-  {É}{{\'{E}}}1
-  {Ê}{{\^{E}}}1
-  {û}{{\^{u}}}1
-  {ù}{{\`{u}}}1
-  {â}{{\^{a}}}1
-  {à}{{\`{a}}}1
-  {á}{{\'{a}}}1
-  {ã}{{\~{a}}}1
-  {Á}{{\'{A}}}1
-  {Â}{{\^{A}}}1
-  {Ã}{{\~{A}}}1
-  {ç}{{\c{c}}}1
-  {Ç}{{\c{C}}}1
-  {õ}{{\~{o}}}1
-  {ó}{{\'{o}}}1
-  {ô}{{\^{o}}}1
-  {Õ}{{\~{O}}}1
-  {Ó}{{\'{O}}}1
-  {Ô}{{\^{O}}}1
-  {î}{{\^{i}}}1
-  {Î}{{\^{I}}}1
-  {í}{{\'{i}}}1
-  {Í}{{\~{Í}}}1,
-  morekeywords={*,...},
-  numbers=left,
-  numbersep=10pt,
-  numberstyle=\tiny\color{black},
-  rulecolor=\color{black},
-  showspaces=false,
-  showstringspaces=false,
-  showtabs=false,
-  stepnumber=1,
-  stringstyle=\color{gray},
-  tabsize=4,
-  title=\lstname,
-}
-\usepackage{newunicodechar}
-\newunicodechar{ﬁ}{fi}
-\usepackage[unicode=true,pdfusetitle,bookmarks=true,bookmarksnumbered=false,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]{hyperref}
-\hypersetup{linkcolor=blue,urlcolor=blue}
-\setcounter{tocdepth}{4}
-
+\input{./sourcesTEX/Preambule}
 
 \begin{document}
-\title{Département ASI / ITI de l'INSA Rouen \\
-	Algorithmique et programmation avancée en C\\
-	Rapport de Projet\\
-	Projet Othello}
-\author{MELO DA SILVA Alexis - MESBAH Zacharia\\
-SAIVRES Jerôme - SI Ruixu}
-\date{2019 - 2020}
-\maketitle
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=12cm]{./sourcesIMAGES/othello.jpg}
-  \end{figure}
+  \input{./sourcesTEX/PageDeGarde}
 
-\newpage
-\tableofcontents
+  \newpage
+  \tableofcontents
 
-\newpage
-\section{TADs}
-	\input{./sourcesTEX/TADs}
+  \newpage
+  \section{TADs}
+    \input{./sourcesTEX/TADs}
 
-\newpage
-\section{Analyse descendante}
-	\input{./sourcesTEX/analyse_descendante}
+  \newpage
+  \section{Analyse descendante}
+    \input{./sourcesTEX/analyse_descendante}
 
-\newpage
-\section{Conception preliminaire}
-	\input{./sourcesTEX/signaturesTAD1}
-	\input{./sourcesTEX/signaturesTAD2}
-	\input{./sourcesTEX/signatures}
+  \newpage
+  \section{Conception preliminaire}
+    \input{./sourcesTEX/signaturesTAD1}
+    \input{./sourcesTEX/signaturesTAD2}
+    \input{./sourcesTEX/signatures}
 
-\newpage
-\section{Types}
-	\input{./sourcesTEX/Types}
+  \newpage
+  \section{Types}
+    \input{./sourcesTEX/Types}
 
-\newpage
-\section{Conception détaillée}
-	\input{./sourcesTEX/initialiserPlateau}
-	\input{./sourcesTEX/faireUnePartie}
-	\input{./sourcesTEX/plateauRempli}
-	\input{./sourcesTEX/etatDeLaPartie}
-	\input{./sourcesTEX/coupValideExiste}
-	\input{./sourcesTEX/jouerUnTour}
-	\input{./sourcesTEX/rechercherTousLesCoups}
-	\input{./sourcesTEX/obtenirCoupJoueur}
-	\input{./sourcesTEX/calculPoint}
+  \newpage
+  \section{Conception détaillée}
+    \input{./sourcesTEX/initialiserPlateau}
+    \input{./sourcesTEX/faireUnePartie}
+    \input{./sourcesTEX/plateauRempli}
+    \input{./sourcesTEX/etatDeLaPartie}
+    \input{./sourcesTEX/coupValideExiste}
+    \input{./sourcesTEX/jouerUnTour}
+    \input{./sourcesTEX/rechercherTousLesCoups}
+    \input{./sourcesTEX/obtenirCoupJoueur}
+    \input{./sourcesTEX/calculPoint}
 
-\newpage
-\section{Dévellopement en C}
-\input{./sourcesTEX/Dev}
+  \newpage
+  \section{Dévellopement en C}
+    \input{./sourcesTEX/Dev}
 \end{document}
