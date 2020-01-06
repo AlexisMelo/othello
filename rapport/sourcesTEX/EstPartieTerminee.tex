@@ -1,0 +1,19 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{EstPartieTerminee}
+	{plateau : Plateau, j1PeutJouer, j2PeutJouer : \booleen}
+	{\booleen}
+    {}
+    {
+    \sialorssinon {(non j1PeutJouer et non j2PeutJouer)}{
+        \instruction{retourner Vrai}
+    }{
+        \sialorssinon {EstRempli(plateau)}{
+            \instruction{retourner Vrai}
+        }{
+            \instruction{retourner Faux}
+        }
+    }
+    }
+\end{algorithme}
