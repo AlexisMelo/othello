@@ -1,17 +1,20 @@
 \begin{algorithme}
 	\small
 	\fonction
-	{rechercherTousLesCoups}
-	{plateauDeJeu : Plateau, joueurActuel : Couleur}
+	{RechercherTousLesCoups}
+	{plateauDeJeu : Plateau, couleurJoueurActuel : Couleur}
 	{Coups}
 	{lesCoups : Coups \\
-	i : 1 .. Taille \\
-	j : 1 .. Taille}
+	unCoup : Coup \\
+	i, j, taillePlateau : \naturel}
 	{
-	\pour{i}{1}{Taille}{}{
-		\pour{j}{1}{Taille}{}{
-			\sialors {rechercherUnCoup (plateauDeJeu, joueurActuel, Position(i,j))}
-				{\instruction{ajouterCoup (lesCoups, coup(Position(i,j), joueurActuel)}}
+	\affecter{lesCoups}{CreerCoups()}
+	\affecter{taillePlateau}{ObtenirTaille(plateau)}
+	\pour{i}{1}{taillePlateau}{}{
+		\pour{j}{1}{taillePlateau}{}{
+			\affecter{unCoup}{CreerCoup(CreerPosition(ObtenirLigneDepuisInt(i), ObtenirColonneDepuisInt(j)),\\ \dots \dots couleurJoueurActuel)}
+			\sialors {(EstCoupValide(plateau, unCoup))}
+				{\instruction{ajouterCoup (lesCoups, unCoup)}}
 		}
 	}
 	\retourner{(lesCoups)}
@@ -24,12 +27,12 @@
 	\small
 	\fonction
 	{rechercherUnCoup}
-	{plateauDeJeu : Plateau, joueurActuel : Couleur, positionDuCoup : Position}
+	{plateauDeJeu : Plateau, couleurJoueurActuel : Couleur, positionDuCoup : Position}
 	{\booleen}
 	{}
 	{
 	\sialorssinon {EstPositionVide (plateauDeJeu, positionDuCoup)}
-			{\retourner{parcourirLesDirections (unPlateauDeJeu, positionDuCoup, joueurActuel)}}
+			{\retourner{parcourirLesDirections (unPlateauDeJeu, positionDuCoup, couleurJoueurActuel)}}
 			{\retourner{(Faux)}}		
 	}
 \end{algorithme}
@@ -40,18 +43,18 @@
 	\small
 	\fonction
 	{parcourirLesDirections}
-	{unPlateauDeJeu : Plateau, positionDuCoup : Position, joueurActuel: Couleur}
+	{unPlateauDeJeu : Plateau, positionDuCoup : Position, couleurJoueurActuel: Couleur}
 	{\booleen}
 	{}
 	{
-	\retourner{parcourirUneDirection (unPlateauDeJeu, positionDuCoup, HG, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, H, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, HD, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, D, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, BD, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, B, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, BG, joueurActuel)\\
-	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, G, joueurActuel)}
+	\retourner{parcourirUneDirection (unPlateauDeJeu, positionDuCoup, HG, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, H, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, HD, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, D, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, BD, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, B, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, BG, couleurJoueurActuel)\\
+	ou (parcourirUneDirection (unPlateauDeJeu, positionDuCoup, G, couleurJoueurActuel)}
 	}
 \end{algorithme}
 
@@ -61,7 +64,7 @@
 	\small
 	\fonction
 	{parcourirUneDirection}
-	{unPlateauDeJeu : Plateau, positionDuCoup : Position, uneDirection : Direction, joueurActuel : Couleur}
+	{unPlateauDeJeu : Plateau, positionDuCoup : Position, uneDirection : Direction, couleurJoueurActuel : Couleur}
 	{\booleen}
 	{ligneEnCours, directionValide : \booleen \\
 	i : 1 .. Taille\\
@@ -72,13 +75,13 @@
 	\affecter{ligneEnCours}{Faux}
 	\affecter{directionValide}{Faux}
 	\instruction{appliquerDirection (positionDuCoup, uneDirection)}
-	\sialors{obtenirCouleur (unPlateauDeJeu, positionDuCoup) $\neq$ joueurActuel}{
+	\sialors{obtenirCouleur (unPlateauDeJeu, positionDuCoup) $\neq$ couleurJoueurActuel}{
 		\affecter{ligneEnCours}{Vrai}
 		\tantque{(non directionValide et ligneEnCours)}{
 			\instruction{appliquerDirection (positionDuCoup, uneDirection)}
 			\sialorssinon {EstPositionVide (plateauDeJeu, positionDuCoup)}
 				{\affecter{ligneEnCours}{Faux}}
-				{\sialors{obtenirCouleur (unPlateauDeJeu, positionDuCoup) = joueurActuel}
+				{\sialors{obtenirCouleur (unPlateauDeJeu, positionDuCoup) = couleurJoueurActuel}
 					{\affecter{directionValide}{Vrai}}}
 		}
 	}
