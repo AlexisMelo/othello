@@ -34,7 +34,7 @@ void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
     j1 = JOUEUR_CreerJoueurIA(couleurJ1, profondeurIA);
     j2 = JOUEUR_CreerJoueurHumain(couleurJ2);
 
-    printf("Jouer partie IA vs IA avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
+    //printf("Jouer partie IA vs IA avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
 
     PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, AFFICHAGE_AfficherCoupJoue, j1, j2);
 

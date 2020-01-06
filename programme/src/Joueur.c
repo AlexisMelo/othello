@@ -19,7 +19,7 @@ Joueur JOUEUR_CreerJoueurIA(Couleur couleur, int profondeur) {
 Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     char * entree;
     entree = (char*)malloc(5*sizeof(char));
-    printf("A quelle position voulez vous jouer ?");
+    //printf("A quelle position voulez vous jouer ?");
     scanf("%s", entree);
     int ligneNombre = strtol(&entree[1], NULL, 10);
     char colonneLettre = entree[0];
