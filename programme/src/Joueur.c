@@ -19,7 +19,7 @@ Joueur JOUEUR_CreerJoueurIA(Couleur couleur, int profondeur) {
 Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     char * entree;
     entree = (char*)malloc(5*sizeof(char));
-    printf("A quelle position voulez vous jouer ?");
+    //printf("A quelle position voulez vous jouer ?");
     scanf("%s", entree);
     int ligneNombre = strtol(&entree[1], NULL, 10);
     char colonneLettre = entree[0];
@@ -29,7 +29,7 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
 Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {
   Couleur * copiePlateau = PLATEAU_CreerPlateau();
   memcpy(copiePlateau, plateau, PLATEAU_ObtenirTaille(plateau)*PLATEAU_ObtenirTaille(plateau) * sizeof(Couleur)) ;
-  Coup coup = IA_MinMax(copiePlateau, j, j.profondeur);
+  Coup coup = IA_AlphaBeta(copiePlateau, j, j.profondeur);
   return coup;
 }
 

@@ -78,11 +78,11 @@ void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Jou
   }
   else {
     if (scorej1 > scorej2) {
-      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j1)));
+      printf("%s\n", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j1)));
       }
     else {
     if(scorej1 < scorej2){
-      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j2)));
+      printf("%s\n", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j2)));
     }
     else {
     printf("nulle\n");}
