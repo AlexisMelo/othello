@@ -88,8 +88,6 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
         if (score > alpha) {
             alpha = score;
             BestCoup = COUPS_ObtenirCoup(coupsPossibles);
-        COUPS_RetirerCoup(&coupsPossibles);
-          free(plateausp);
           if (score >alpha) {
             beta = score;
             BestCoup = COUPS_ObtenirCoup(coupsPossibles);
@@ -122,14 +120,14 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
 Coup IA_AlphaBeta(Couleur * plateau, Joueur joueurAMaximiser, int Profondeur){
       Coups coupsPossibles = RECHERCHECOUP_RechercherTousLesCoups(plateau,JOUEUR_ObtenirCouleur(joueurAMaximiser)); // + rechercherLesCoups ?
       Coup meilleurCoup= COUPS_ObtenirCoup(coupsPossibles);
-      int pointsMax =-1;
+      int pointsMax =-10000;
       while (!COUPS_EstVide(coupsPossibles))
       {
-        PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));JOUEUR_ObtenirProfondeur(joueurAMaximiser);
+        PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));
         int alpha = -10000;
         int beta = 10000;
-        int resExploration = IA_alphabeta(alpha, beta,plateau,JOUEUR_ObtenirProfondeur(joueurAMaximiser), JOUEUR_ObtenirCouleur(joueurAMaximiser),joueurAMaximiser);
-        if (resExploration> pointsMax){
+        int resExploration = IA_alphabeta(alpha, beta,plateau,JOUEUR_ObtenirProfondeur(joueurAMaximiser), COULEUR_ObtenirCouleurOpposee(JOUEUR_ObtenirCouleur(joueurAMaximiser)),joueurAMaximiser);
+        if (resExploration>pointsMax){
           meilleurCoup = COUPS_ObtenirCoup(coupsPossibles);
           pointsMax =resExploration;
         }
