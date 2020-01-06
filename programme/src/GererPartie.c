@@ -44,7 +44,7 @@ void PARTIE_FaireUnePartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),v
 void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void (*AfficherPlateau)(Couleur *),void (*AfficherCoup)(Coup),Joueur j1 ,Joueur j2,Couleur * plateau) {
   bool j1PeutJouer = true;
   bool j2PeutJouer = true;
-
+  char important[strlen("passe\n")+2];
   bool partieTerminee = false;
 
   Joueur premierJoueur, secondJoueur;
@@ -59,12 +59,33 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
         AfficherPlateau(plateau);
         partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
      }
+     else
+     {if(JOUEUR_EstIA(premierJoueur)){
+       printf("passe\n");
+     }
+     else
+     {
+       scanf("%s", important);
+     }
+     
+     }
+     
 
     j2PeutJouer = P_PARTIE_JoueurPeutJouer(plateau, secondJoueur);
     if (j2PeutJouer){
         PARTIE_JouerUnTour(plateau,secondJoueur, AfficherCoup);
         AfficherPlateau(plateau);
     }
+     else
+     {
+       if(JOUEUR_EstIA(secondJoueur)){
+       printf("passe\n");
+     }
+     else
+     {
+       scanf("%s", important);
+     }
+     }
     partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
   }
 

@@ -114,8 +114,6 @@ void AFFICHAGE_AfficherCoupJoue(Coup coupJoue){
   char colonne[2] = "\0";
   ligne[0] = '0'+LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne);
   colonne[0] = COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne);
-  //sprintf(ligne, LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne));
-  //sprintf(colonne, COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne));
   printf("%s", strcat(strcat(ligne, colonne), "\n"));
   fflush(stdout);
 }
