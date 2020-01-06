@@ -78,11 +78,11 @@ void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Jou
   }
   else {
     if (scorej1 > scorej2) {
-      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j1)));
+      printf("%s\n", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j1)));
       }
     else {
     if(scorej1 < scorej2){
-      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j2)));
+      printf("%s\n", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j2)));
     }
     else {
     printf("nulle\n");}
@@ -111,7 +111,7 @@ printf("     - Colonne de ""a"" a ""h"" \n");
 
 void AFFICHAGE_AfficherCoupJoue(Coup coupJoue){
   char ligne[2] = "\0";
-  char colonne[2] = "\0";
+  char colonne[3] = "\0";
   ligne[0] = '0'+LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne);
   colonne[0] = COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne);
   printf("%s", strcat(strcat(colonne, ligne), "\n"));

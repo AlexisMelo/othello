@@ -25,4 +25,5 @@
  */
 Coup IA_MinMax(Couleur * plateau, Joueur joueurAMaximiser, int profondeur);
 
+Coup IA_AlphaBeta(Couleur * plateau, Joueur joueurAMaximiser, int Profondeur) ;
 #endif

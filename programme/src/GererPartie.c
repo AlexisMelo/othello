@@ -62,6 +62,7 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
      else
      {if(JOUEUR_EstIA(premierJoueur)){
        printf("passe\n");
+       fflush(stdout);
      }
      else
      {
@@ -80,6 +81,7 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
      {
        if(JOUEUR_EstIA(secondJoueur)){
        printf("passe\n");
+       fflush(stdout);
      }
      else
      {
@@ -96,5 +98,5 @@ void PARTIE_JouerUnTour(Couleur * plateau, Joueur joueur, void (*AfficherCoup)(C
   Coup coupAJouer = RECHERCHECOUP_ObtenirCoupValide(plateau, joueur);
   PLATEAU_JouerCoup(plateau, coupAJouer);
   PLATEAU_CapturerPions(plateau, coupAJouer);
-  AfficherCoup(coupAJouer);
+  if (JOUEUR_EstIA(joueur)){AfficherCoup(coupAJouer);};
 }

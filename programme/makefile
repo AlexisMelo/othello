@@ -4,14 +4,13 @@ SRCDIR = src
 CFLAGS = -Wall -pedantic
 INCFLAGS = -I$(INCLUDEDIR)
 BINDIR= bin
-EXEC= Othello
+EXEC= othello
 LIBDIR= lib
 TESTDIR= tests
 DOCDIR = ../doc
 
 all : directories
 	$(MAKE) prg
-	$(MAKE) doc
 	$(MAKE) tests
 
 directories : $(BINDIR)
