@@ -1,6 +1,6 @@
-#include "MenuLigneCommande.h"
+#include "../include/MenuLigneCommande.h"
 
-void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
+void MenuLigneCommande(int nbArguments, char ** arguments) {
 
   Joueur j1;
   Joueur j2;
@@ -15,31 +15,25 @@ void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
     j1 = JOUEUR_CreerJoueurHumain(couleurJ1);
     j2 = JOUEUR_CreerJoueurHumain(couleurJ2);
 
-    printf("Jouer partie Joueur vs Joueur avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments));
-
-    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, j1, j2);
   }
   else if (strcmp(arguments[1], JOUEURVSIA) == 0) {
 
     j1 = JOUEUR_CreerJoueurHumain(couleurJ1);
     j2 = JOUEUR_CreerJoueurIA(couleurJ2, profondeurIA);
 
-    printf("Jouer partie Joueur vs IA avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
-
-    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, j1, j2);
 
   }
   else if (strcmp(arguments[1], IAVSIA) == 0) {
 
     j1 = JOUEUR_CreerJoueurIA(couleurJ1, profondeurIA);
-    j2 = JOUEUR_CreerJoueurHumain(couleurJ2);
+    j2 = JOUEUR_CreerJoueurIA(couleurJ2, profondeurIA);
 
-    printf("Jouer partie IA vs IA avec profondeur %d\n", MENU_ObtenirProfondeurIADepuisArguments(nbArguments,arguments)); //remplacer avec fairePartie
-
-    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, AFFICHAGE_AfficherCoupJoue, j1, j2);
+    PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, j1, j2);
 
   }
   else {
-    AFFICHAGE_MessageAide();
+    MessageDAide();
   }
 }
