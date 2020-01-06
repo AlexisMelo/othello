@@ -21,8 +21,8 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
     entree = (char*)malloc(5*sizeof(char));
     printf("A quelle position voulez vous jouer ?");
     scanf("%s", entree);
-    int ligneNombre = strtol(&entree[0], NULL, 10);
-    char colonneLettre = entree[1];
+    int ligneNombre = strtol(&entree[1], NULL, 10);
+    char colonneLettre = entree[0];
   return COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(ligneNombre), COLONNE_ObtenirColonneDepuisChar(colonneLettre)),JOUEUR_ObtenirCouleur(j));
 }
 

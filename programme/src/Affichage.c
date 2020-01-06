@@ -111,7 +111,7 @@ printf("     - Colonne de ""a"" a ""h"" \n");
 
 void AFFICHAGE_AfficherCoupJoue(Coup coupJoue){
   char ligne[2] = "\0";
-  char colonne[2] = "\0";
+  char colonne[3] = "\0";
   ligne[0] = '0'+LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne);
   colonne[0] = COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne);
   printf("%s", strcat(strcat(colonne, ligne), "\n"));
