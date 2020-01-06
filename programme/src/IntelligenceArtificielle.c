@@ -44,11 +44,11 @@ Coup IA_MinMax(Couleur * plateau, Joueur joueurAMaximiser, int Profondeur){
       {
         PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));
         int resExploration = P_IA_MinMaxExplorationRecursive(joueurAMaximiser, JOUEUR_ObtenirCouleur(joueurAMaximiser),plateau,JOUEUR_ObtenirProfondeur(joueurAMaximiser));
-        //printf("%d pts%d", pointsMax, resExploration);
+        printf("%d pts%d", pointsMax, resExploration);
         if (resExploration> pointsMax){
           meilleurCoup = COUPS_ObtenirCoup(coupsPossibles);
           pointsMax =resExploration;
-          //printf("%d pts%d", pointsMax, resExploration);
+          printf("%d pts%d", pointsMax, resExploration);
         }
         COUPS_RetirerCoup(&coupsPossibles);
       }
