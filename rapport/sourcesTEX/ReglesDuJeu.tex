@@ -1,0 +1,39 @@
+\subsection{Règle du jeu}
+    \textbf{Plateau de jeu :}
+    \begin{itemize}
+        \item 64 cases (8x8)
+        \item Colonne de a à h
+        \item Ligne de 1 à 8 
+        \item Initialiser avec deux pions noirs en e4 et d5 et deux pions blancs en d4 et e5
+    \end{itemize}
+    \textbf{Chaque joueur pose l'un après l'autre un pion de sa couleur}
+    \begin{itemize}
+        \item Obligation de capturer au moins un pion de l’adversaire
+        \item Si un joueur ne peut pas capturer de pion : il passe son tour
+    \end{itemize}
+    \textbf{Capture de pions = retourner les pions adverses}
+    \begin{itemize}
+        \item Il faut placer ses pions à l'extrémité d'un alignement de pions adverses contigus terminé par un de ses propres pions (ex : B N N N N)
+        \item Les alignements considérés peuvent être une colonne, une ligne, ou une diagonal
+        \item Si le pion placé ferme plusieurs alignements, alors la capture des pions se fait sur tous les alignements
+    \end{itemize}
+    \textbf{Le jeu s'arrête quand les deux joueurs ne peuvent plus poser de pion}
+    \begin{itemize}
+        \item Aucun des deux joueurs ne peut jouer
+        \item Le plateau ne comporte plus de case vide
+    \end{itemize}
+    \textbf{Score : nb de pions de sa couleur} \\ \\
+    \textbf{Gagnant : le joueur ayant le score le plus grand}
+
+\subsection{Différent mode de jeu}
+    \textbf{Standard :}
+    \begin{itemize}
+        \item Joueur vs IA
+        \item Choix de la couleur des pions que l’on donne à l’IA
+    \end{itemize}
+    \textbf{Tournoi :}
+    \begin{itemize}
+        \item Obligation de capturer au moins un pion de l’adversaire
+        \item 10 secondes sur les machines des salles de TP pour jouer
+        \item Communication à l’aide des entrées standards et des sorties standards du “broker”
+    \end{itemize}
