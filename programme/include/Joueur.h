@@ -1,93 +1,107 @@
-#ifndef JOUEUR_TYPE
-#define JOUEUR_TYPE
+/**
+ * \file Joueur.h
+ *
+ * Fichier contenant la définition du type Joueur et de ses fonctions associées.
+*/
+
+#ifndef __JOUEUR_TYPE__
+#define __JOUEUR_TYPE__
 
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
-
 #include "Couleur.h"
 #include "Coup.h"
 
+/**
+ * \struct Joueur
+ *
+ * Le type Joueur permet de manipuler une couleur en sachant si elle est jouée par
+ * une IA ou un Joueur réel. Cette différence influe sur la façon dont les Coup
+ * sont obtenus.
+ */
 typedef struct {
-  int profondeur;
-  Couleur couleur;
-  bool estIA;
+  int profondeur; /*<! Profondeur de recherche de l'IA. */
+  Couleur couleur; /*<! Couleur des pions que pose le joueur. */
+  bool estIA; /*<! true si le joueur est joué par une IA, false sinon. */
 } Joueur;
 
 #include "IntelligenceArtificielle.h"
+
 /**
- * @brief Initialise une structure pour un joueur humain
+ * Crée un Joueur joué par un humain.
  *
- *@param couleur Couleur associée au joueur
+ * \param couleur Couleur des pions posés par le joueur.
  *
- *@returns Structure joueur avec champs initialisés pour un humain
+ * \return Instance de Joueur.
  */
 Joueur JOUEUR_CreerJoueurHumain(Couleur couleur);
 
 /**
- * @brief Initialise une structure pour un joueur IA
+ * Crée un Joueur joué par une IA.
  *
- *@param couleur Couleur associée au joueur
- *@param profondeur Integer représentant le nombre de coups à l'avance que prévoit l'IA
+ * \param couleur Couleur des pions posés par le joueur.
+ * \param profondeur Profondeur de recherche de l'IA.
  *
- *@returns Structure joueur avec champs initialisés pour une IA
+ * \return Instance de Joueur.
  */
 Joueur JOUEUR_CreerJoueurIA(Couleur couleur, int profondeur);
 
 /**
- * @brief Demande à un joueur humain la saisie d'une position où il veut jouer
+ * Permet d'obtenir un Coup à partir d'une saisie par un Joueur humain.
  *
- *@param j Joueur qui doit saisir où il veut jouer
+ * \param joueur Joueur dont on souhaite obtenir un Coup.
  *
- *@returns Coup construit à partir de la saisie
+ * \return Coup construit à partir de la saisie.
  */
-Coup JOUEUR_SaisirCoupHumain(Joueur j);
+Coup JOUEUR_SaisirCoupHumain(Joueur joueur);
 
 /**
- * @brief Demande à une IA une position où elle veut jouer
+ * Permet d'obtenir un Coup à partir d'une saisie par une IA.
  *
- *@param j Joueur qui doit saisir où il veut jouer
- *@param plateau Plateau de jeu
+ * \param joueur Joueur dont on souhaite obtenir un Coup.
+ * \param plateau Plateau de jeu
  *
- *@returns Coup construit à partir de la saisie
+ *\return Coup construit à partir de la saisie.
  */
-Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau);
+Coup JOUEUR_SaisirCoupIA(Joueur joueur, Couleur * plateau);
 
 /**
- * @brief Demande à une IA une position où elle veut jouer
+ * Permet d'obtenir un Coup pour un Joueur donné.
  *
- *@param j Joueur qui doit saisir où il veut jouer
- *@param plateau Plateau de jeu
+ * \param joueur Joueur dont on souhaite obtenir un Coup.
+ * \param plateau Plateau de jeu
  *
- *@returns Coup construit à partir de la saisie
+ * \return Coup construit à partir de la saisie.
  */
-Coup JOUEUR_ObtenirCoup(Joueur j, Couleur * plateau);
+Coup JOUEUR_SaisirCoup(Joueur joueur, Couleur * plateau);
 
 /**
- * @brief Obtenir la couleur d'un joueur
+ * Permet d'accéder au champs couleur d'une instance de Joueur.
  *
- *@param j Joueur dont on cherche la couleur
+ * \param joueur Joueur dont on souhaite obtenir la Couleur.
  *
- *@returns Couleur du joueur
+ * \return Couleur du joueur.
  */
-Couleur JOUEUR_ObtenirCouleur(Joueur j);
+Couleur JOUEUR_ObtenirCouleur(Joueur joueur);
 
 /**
- * @brief Savoir si un joueur est une IA
+ * Détermine si un Joueur est joué par une IA ou non.
  *
- *@param j Joueur dont on cherche à determiner si il est une IA ou non
+ * \param joueur Joueur dont on souhaite determiner si il est une IA ou non.
  *
- *@returns true si le joueur est une IA, false sinon
+ * \return true si le joueur est une IA, false sinon.
  */
-bool JOUEUR_EstIA(Joueur j);
+bool JOUEUR_EstIA(Joueur joueur);
 
 /**
- * @brief Obtenir la profondeur d'un joueur quand il est une IA
+ * Permet d'accéder au champs profondeur d'une instance de Joueur. Cette fonction
+ * n'a pas de sens si le Joueur est joué par un humain.
  *
- *@param j Joueur dont on cherche la profondeur de l'IA
+ *\param joueur Joueur dont on souhaite obtenir la profondeur.
  *
- *@returns Profondeur du joueur
+ *\return Profondeur du Joueur.
  */
-int JOUEUR_ObtenirProfondeur(Joueur j);
+int JOUEUR_ObtenirProfondeur(Joueur joueur);
 
 #endif

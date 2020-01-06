@@ -1,47 +1,34 @@
 #include"../include/Affichage.h"
 
-void SetTextColorToBlack(){
+void P_AFFICHAGE_SetP_AFFICHAGE_TextColorToBlack(){
     printf("\033[0;30m");
 }
-void SetTextColorToWhite(){
+void P_AFFICHAGE_SetP_AFFICHAGE_TextColorToWhite(){
     printf("\033[0;37m");
 }
-void ResetTextColor(){
+void P_AFFICHAGE_ResetP_AFFICHAGE_TextColor(){
     printf("\033[0m");
 }
 
 
-void TextColor(Couleur couleur){
-    if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurNoir())) {
-      SetTextColorToBlack();
+void P_AFFICHAGE_TextColor(Couleur couleur){
+    if (COULEUR_SontEgalesCouleurs(couleur,COULEUR_ObtenirCouleurNoir())) {
+      P_AFFICHAGE_SetP_AFFICHAGE_TextColorToBlack();
     }
-    else if (COULEUR_EstEgalCouleur(couleur,COULEUR_ObtenirCouleurBlanc())) {
-      SetTextColorToWhite();
+    else if (COULEUR_SontEgalesCouleurs(couleur,COULEUR_ObtenirCouleurBlanc())) {
+      P_AFFICHAGE_SetP_AFFICHAGE_TextColorToWhite();
     }
     else {
-      ResetTextColor();
+      P_AFFICHAGE_ResetP_AFFICHAGE_TextColor();
     }
 }
 
-void AppliquerDecalageHorizontal(){
-    for (int hori = 0; hori<HORIZONTAL_OFFSET; hori++){
-                printf(" ");
-            }
-}
-
-
-void AppliquerDecalageVertical(){
-    for (int vert = 0; vert<VERTICAL_OFFSET; vert++){
-                printf("\n");
-
-    }
-}
 void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 {
 	int i, j;
   Position pos;
 
-	printf("    a  b  c  d  e  f  g      h\n");
+	printf("    a  b  c  d  e  f  g  h\n");
 
 	for(i=1; i<=TAILLE; i++)
 	{
@@ -50,47 +37,12 @@ void AFFICHAGE_AfficherPlateau(Couleur * plateau)
 		{
 
       pos = POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i), COLONNE_ObtenirColonneDepuisInt(j));
-      TextColor(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos));
+      P_AFFICHAGE_TextColor(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos));
       printf(" %c ",COULEUR_ObtenirSymbole(PLATEAU_ObtenirCouleurAvecPosition(plateau,pos)));
 
 		}
 		printf("\n");
 	}
-}
-void InitialiserAffichagePlateau(){
-
-    struct timespec ts;
-    ts.tv_nsec = 9000000;
-    ts.tv_sec = 0;
-    Couleur * plateau = PLATEAU_CreerPlateau();
-    Couleur couleur = COULEUR_ObtenirCouleurNeutre();
-    for (int i=1; i<= 8; i++){
-        for (int j=1; j<= 8; j++){
-            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
-            PLATEAU_JouerCoup(plateau, coup);
-        }
-    }
-    couleur = COULEUR_ObtenirCouleurNoir();
-    for (int i=1; i<= 8; i++){
-        for (int j=1; j<= 8; j++){
-            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
-            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
-            PLATEAU_JouerCoup(plateau, coup);
-            AFFICHAGE_AfficherPlateau(plateau);
-            nanosleep(&ts, &ts);
-            }
-    };
-    couleur = COULEUR_ObtenirCouleurNeutre();
-    for (int i=1; i<= 8; i++){
-        for (int j=1; j<= 8; j++){
-            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
-            PLATEAU_JouerCoup(plateau, coup);
-            nanosleep(&ts, &ts);
-            AFFICHAGE_AfficherPlateau(plateau);
-        }
-    }
-    PLATEAU_InitialiserPlateau(plateau);
-    AFFICHAGE_AfficherPlateau(plateau);
 }
 
 void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) {
@@ -119,8 +71,49 @@ void AFFICHAGE_AfficherResultatsPartie(Couleur * plateau, Joueur j1, Joueur j2) 
 }
 
 void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Joueur j2) {
-  //pour l'instant aucun affichage de fin de partie nécessaire en mode tournois
+  int scorej1 = PLATEAU_CalculerPoints(plateau, JOUEUR_ObtenirCouleur(j1));
+  int scorej2 = PLATEAU_CalculerPoints(plateau, JOUEUR_ObtenirCouleur(j2));
+  if (scorej1 == scorej2) {
+    printf("nulle\n");
+  }
+  else {
+    if (scorej1 > scorej2) {
+      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j1)));
+      }
+    else {
+    if(scorej1 < scorej2){
+      printf("%s", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(j2)));
+    }
+    else {
+    printf("nulle\n");}
+    }
+  } 
 }
 void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
+}
+
+void AFFICHAGE_MessageAide() {
+printf("Aide pour le joueur : \n \n");
+printf("Deux modes de jeu sont disponibles : \n");
+printf("- Mode Standard : (blanc | noir [profondeur > 1]) \n");
+printf("     - Permet de jouer contre l""ordinateur en lui donnant les blancs ou les noirs \n");
+printf("     - Par defaut [profondeur> = 5] \n \n");
+printf("- Mode Tournoi : (blanc | noir [profondeur > 1] \n");
+printf("     - Permet de faire jouer le programme dans un mode ""tournoi"" en lui donnant les blancs ou les noirs \n");
+printf("     - Par defaut [profondeur = 5] \n \n");
+printf("Comment poser un pion sur le plateau ? \n");
+printf("     - Ecrire le chiffre de la ligne puis la lettre de la colonne \n");
+printf("         ex : ""7e"" \n");
+printf("     - Ligne de ""1"" a ""8"" \n");
+printf("     - Colonne de ""a"" a ""h"" \n");
+}
+
+void AFFICHAGE_AfficherCoupJoue(Coup coupJoue){
+  char ligne[2] = "\0";
+  char colonne[2] = "\0";
+  ligne[0] = '0'+LIGNE_ObtenirNumeroLigne(coupJoue.position.ligne);
+  colonne[0] = COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne);
+  printf("%s", strcat(strcat(colonne, ligne), "\n"));
+  fflush(stdout);
 }

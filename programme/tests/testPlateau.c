@@ -4,8 +4,8 @@
 #include <stdbool.h>
 #include <CUnit/CUnit.h>
 #include "testPlateau.h"
-#include "../include/Couleur.h"
-#include "../include/AfficherPlateau.h"
+#include "Couleur.h"
+#include "AfficherPlateau.h"
 void TestPlateau()
 {
     Couleur (*pPlateau)[64] = CreerPlateau();
