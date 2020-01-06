@@ -11,8 +11,8 @@
     \affecter{i}{1}
     \affecter{j}{1}
     \affecter{Taille}{ObtenirTaille(plateau)}
-    \tantque{(plateauEstRempli et i < Taille)}{
-        \tantque{(plateauEstRempli et j < Taille)}{
+    \tantque{(plateauEstRempli et i $\leq$ Taille)}{
+        \tantque{(plateauEstRempli et j $\leq$ Taille)}{
             \sialors {(EstPositionLibre(plateau, CreerPosition(i,j)))}{
                 \affecter{plateauEstRempli}{Faux}
             }
@@ -22,4 +22,4 @@
     }
     \retourner{plateauEstRempli}
     }
-    \end{algorithme}
+\end{algorithme}
