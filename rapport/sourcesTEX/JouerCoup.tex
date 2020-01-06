@@ -1,0 +1,16 @@
+\begin{algorithme}
+	\small
+	\procedure
+	{JouerCoup}
+	{\paramEntreeSortie plateau : Plateau, \paramEntree coup : Coup}
+    {positionDuCoup : Position \\
+    ligneDuCoup, colonneDuCoup : \naturel \\
+    coul : Couleur}
+	{
+	\affecter{positionDuCoup}{ObtenirPosition(coup)}
+    \affecter{ligneDuCoup}{ObtenirNumeroLigne(ObtenirLigne(positionDuCoup))}
+    \affecter{colonneDuCoup}{ObtenirNumeroColonne(ObtenirColonne(positionDuCoup))}
+	\affecter{coul}{ObtenirCouleur(coup)}
+	\affecter{plateau[(ligneDuCoup-1) * ObtenirTaille(plateau) + (colonneDuCoup-1)]}{coul}
+	}
+\end{algorithme}

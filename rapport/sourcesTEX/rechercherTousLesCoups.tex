@@ -12,7 +12,7 @@
 	\affecter{taillePlateau}{ObtenirTaille(plateau)}
 	\pour{i}{1}{taillePlateau}{}{
 		\pour{j}{1}{taillePlateau}{}{
-			\affecter{unCoup}{CreerCoup(CreerPosition(ObtenirLigneDepuisInt(i), ObtenirColonneDepuisInt(j)),\\ \dots \dots couleurJoueurActuel)}
+			\affecter{unCoup}{CreerCoup(CreerPosition(ObtenirLigneDepuisInt(i), ObtenirColonneDepuisInt(j)), couleurJoueurActuel)}
 			\sialors {(EstCoupValide(plateau, unCoup))}
 				{\instruction{ajouterCoup (lesCoups, unCoup)}}
 		}
