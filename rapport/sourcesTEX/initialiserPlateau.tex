@@ -1,28 +1,21 @@
 \begin{algorithme}
 	\small
 	\procedure
-	{Initialiser Plateau}
-	{\paramEntreeSortie p : Plateau}
-	{ObtenirTaille(p) : \naturelNonNul \\
-	blanc, noir, neutre : Couleur}
+	{InitialiserPlateau}
+	{\paramEntreeSortie plateau : Plateau}
+	{blanc, noir, neutre : Couleur}
 	{
-	\affecter{neutre}{creerNeutre()}
-	\affecter{blanc}{creerBlanc()}
-	\affecter{noir}{creerNoir()}
-	\pour{i}{1}{ObtenirTaille(p)}{}{
-
-		\pour{j}{1}{ObtenirTaille(p)}{}{
-
-			\instruction{JouerCoup(plateau,Coup(neutre,Position(Ligne(i),Colonne(j))))}
+	\affecter{neutre}{ObtenirCouleurNeutre()}
+	\affecter{blanc}{ObtenirCouleurBlanc()}
+	\affecter{noir}{ObtenirCouleurNoir()}
+	\pour{i}{1}{ObtenirTaille(plateau)}{}{
+		\pour{j}{1}{ObtenirTaille(plateau)}{}{
+			\instruction{JouerCoup(plateau, CreerCoup(CreerPosition(ObtenirLigneDepuisInt(i), ObtenirColonneDepuisInt(j)), \\ \dots \dots neutre))}
 		}
 	}
-
-	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2))))}
-
-	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2 + 1))))}
-
-	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2 + 1))))}
-
-	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2))))}
+	\instruction{JouerCoup(plateau, CreerCoup(CreerPosition(ObtenirLigneDepuisInt(ObtenirTaille(plateau)/2), \\ \dots \dots ObtenirColonneDepuisInt(ObtenirTaille(plateau)/2)), blanc))}
+	\instruction{JouerCoup(plateau, CreerCoup(CreerPosition(ObtenirLigneDepuisInt(ObtenirTaille(plateau)/2 + 1), \\ \dots \dots ObtenirColonneDepuisInt(ObtenirTaille(plateau)/2 + 1)), blanc))}
+	\instruction{JouerCoup(plateau, CreerCoup(CreerPosition(ObtenirLigneDepuisInt(ObtenirTaille(plateau)/2), \\ \dots \dots ObtenirColonneDepuisInt(ObtenirTaille(plateau)/2 + 1)), noir))}
+	\instruction{JouerCoup(plateau, CreerCoup(CreerPosition(ObtenirLigneDepuisInt(ObtenirTaille(plateau)/2 + 1), \\ \dots \dots ObtenirColonneDepuisInt(ObtenirTaille(plateau)/2)), noir))}
 	}
 \end{algorithme}
