@@ -1,0 +1,25 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{EstRempli}
+    {plateau : Plateau}
+	{\booleen}
+    {plateauEstRempli : \booleen \\
+    i, j, Taille : \naturel}
+    {
+    \affecter{plateauEstRempli}{Vrai}
+    \affecter{i}{1}
+    \affecter{j}{1}
+    \affecter{Taille}{ObtenirTaille(plateau)}
+    \tantque{(plateauEstRempli et i < Taille)}{
+        \tantque{(plateauEstRempli et j < Taille)}{
+            \sialors {(EstPositionLibre(plateau, CreerPosition(i,j)))}{
+                \affecter{plateauEstRempli}{Faux}
+            }
+            \affecter{j}{j + 1}
+        }
+        \affecter{i}{i + 1}
+    }
+    \retourner{plateauEstRempli}
+    }
+    \end{algorithme}
