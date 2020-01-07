@@ -22,3 +22,5 @@ programme/tests/test
 *.bak
 /latex
 /programme/bin
+programme/tests/testPlateauAff
+programme/tests/testTypes
