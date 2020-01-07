@@ -1,7 +1,7 @@
 CC=gcc
 INCLUDEDIR = include
 SRCDIR = src
-CFLAGS = -Wall -pedantic
+CFLAGS = -Wall -pedantic -O2
 INCFLAGS = -I$(INCLUDEDIR)
 BINDIR= bin
 EXEC= othello

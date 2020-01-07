@@ -13,7 +13,7 @@
 #define HELP "help"
 
 #define PROFONDEUR_DEFAUT_IA 5
-#define PRONDEUR_MAX_IA 100 //nombre à partir duquel l'IA prend plus de 10 secondes à répondre
+#define PRONDEUR_MAX_IA 10 //nombre à partir duquel l'IA prend plus de 10 secondes à répondre
 
 #include <stdlib.h>
 #include <string.h>
