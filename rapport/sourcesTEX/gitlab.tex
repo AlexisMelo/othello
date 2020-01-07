@@ -19,6 +19,16 @@ Les types possibles sont les suivants :
 
 \textbf{SOUS-TACHE} : Les tâches ont parfois besoin d’être divisées en sous-tâches pour être mieux réparties entre les développeurs. La tâche correspond alors à un ensemble fonctionnel. Une sous-tâche ne peut pas elle même avoir de sous tâche. Le nom d’une issue de type sous-tâche est précédé d’un \# avec le numéro de l’issue à laquelle elle fait référence.
 
+Nous avons également défini certains labels à associer aux issues pour savoir leur avancement. Nous pouvions choisir parmis les suivants :
+
+\textbf{A faire} : L'issue n'est pas encore commencée
+
+\textbf{En cours} : L'issue est en cours de développement/ réalisation
+
+\textbf{En review} : l'issue est terminée mais non validée, elle est en cours de révision sur une merge request
+
+\textbf{Terminée} : l'issue est terminée et validée, disponible sur la branche master
+
 	L’autre utilité de Gitlab a été les merge request. Une merge request est une demande de fusion entre une branche A et une autre branche B. Ce qui veut dire que les branches A et B vont être mélangées commit par commit pour que tous les changements de la branche A soient intégrés dans la branche B.
 Grâce à Gitlab les développeurs peuvent alors visionner les changements apportés par la branche A par rapport à la B, donner leur avis, et approuver la demande de merge.
 Chaque développeur peut alors voir le travail fourni par les autres lorsqu’ils souhaitent proposer leurs modifications au projet, et apporter un oeil nouveau sur le travail produit. Une fois tous les commentaires validés sur la merge request, elle est prête à être “merge” directement sur la branche master.
