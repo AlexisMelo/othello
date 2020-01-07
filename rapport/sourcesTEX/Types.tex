@@ -1,5 +1,4 @@
 \begin{algorithme}
-
 	\begin{enregistrement}{Couleur}
 		\champEnregistrement{nom}{Chaine de caractères}
 		\champEnregistrement{hexa}{Chaine de caractères}
@@ -7,36 +6,33 @@
 		\champEnregistrement{symbole}{Caractère}
 		\champEnregistrement{estNeutre}{\booleen}
 	\end{enregistrement}
-\\
+\\ \\
 	\begin{enregistrement}{Pion [DEPRECATED]}
 		\champEnregistrement{couleur}{Couleur}
 	\end{enregistrement}
-\\
+\\ \\
 	\begin{enregistrement}{Position}
 		\champEnregistrement{ligne}{Ligne}
 		\champEnregistrement{colonne}{Colonne}
 	\end{enregistrement}
-\\
-
+\\ \\
 	\begin{enregistrement}{Coup}
 		\champEnregistrement{couleur}{Couleur}
 		\champEnregistrement{position}{Position}
 	\end{enregistrement}
-\\
-	\textbf{Type} Plateau \textbf{=} Tableau[1...Taille][1...Taille] de Couleur
-\\
-	\textbf{Type} Coups \textbf{=} Ensemble$<$Coup$>$
-\\
-	\textbf{Type} Ligne \textbf{=} 1...Taille
-\\
-	\textbf{Type} Colonne \textbf{=} 1...Taille
-\\
+\\ \\
 	\begin{enregistrement}{Direction}
 		\champEnregistrement{decalageLigne}{\{-1,0,1\}}
 		\champEnregistrement{decalageColonne}{\{-1,0,1\}}
 	\end{enregistrement}
-\\
+\\ \\
+	\textbf{Type} Plateau \textbf{=} Tableau[1...Taille][1...Taille] de Couleur
+\\ \\
+	\textbf{Type} Coups \textbf{=} Ensemble$<$Coup$>$
+\\ \\
+	\textbf{Type} Ligne \textbf{=} 1...Taille
+\\ \\
+	\textbf{Type} Colonne \textbf{=} 1...Taille
+\\ \\
 	\textbf{Type} Etat \textbf{=} {\{EN COURS, BLOQUE, TERMINE\}}
-
-
 \end{algorithme}
