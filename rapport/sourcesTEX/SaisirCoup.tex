@@ -1,0 +1,13 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{SaisirCoup}
+	{j : Joueur, plateau : Plateau}
+	{Coup}
+    {}
+	{
+    \sialorssinon {EstIA(j)}
+    {\retourner{SaisirCoupIA(j,plateau)}}
+    {\retourner{SaisirCoupHumain(j)}}
+	}
+\end{algorithme}
