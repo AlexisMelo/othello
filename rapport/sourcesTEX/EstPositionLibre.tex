@@ -1,0 +1,12 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{EstPositionLibre}
+	{plateau : Plateau, position : Position}
+	{\booleen}
+    {couleurDeLaCase : Couleur}
+	{
+    \affecter{couleurDeLaCase}{ObtenirCouleurAvecPosition(plateau, position)}
+    {\retourner{(SontEgalesCouleurs(couleurDeLaCase, ObtenirCouleurNeutre()))}}
+	}
+\end{algorithme}
