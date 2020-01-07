@@ -1,0 +1,4 @@
+\hspace{3em}
+
+	Au début du projet nous avions prévu de définir un TAD Pion, mais nous nous sommes rendu compte qu’il était inutile car sa notion était confondue avec elle de couleur. Même si nous employons à plusieurs reprises par soucis de clarté le mot “ pion “ que ce soit dans le rapport ou bien dans les fonctions, dans notre jeu un pion est symbolisé par le type “Couleur” qui n’est rien d’autre que Blanche, Noire ou bien Neutre. Au lieu d’avoir un plateau de pions nous avons simplement un plateau de couleurs.
+Pareil, nous avions eu l’idée de faire un plateau de cases, mais c’était ajouter une couche inutile entre le plateau et la couleur sans ajouter d’information pertinente sur la case.
