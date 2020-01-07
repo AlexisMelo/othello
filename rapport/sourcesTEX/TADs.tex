@@ -141,3 +141,24 @@
 		\tadAxiome{ObtenirNumeroColonne(Colonne(1..Taille)) = 1..Taille}
 		\end{tadAxiomes}
 \end{tad}
+
+\subsection{TAD Joueur}
+\begin{tad}
+	\tadNom{Joueur}
+	\begin{tadOperations}{Joueur}
+		\tadOperation{CreerJoueurHumain}{\tadUnParam(Couleur)}{\tadUnParam{Joueur}}
+		\tadOperation{CreerJoueurIA}{\tadUnParam{Couleur x Naturel}}{\tadUnParam{Joueur}}
+		\tadOperation{SaisirCoup}{\tadUnParam{Joueur}}{\tadUnParam{Coup}}
+		\tadOperation{ObtenirCouleur}{\tadUnParam{Joueur}}{Couleur}
+		\tadOperation{ObtenirProfondeur}{\tadUnParam{Joueur}}{Naturel}
+		\tadOperation{EstIA}{\tadUnParam{Joueur}}{\booleen}
+	\end{tadOperations}
+	\begin{tadAxiomes}
+		\tadAxiome{EstIA(CreerJoueurIA(Couleur,Entier)) = true}
+		\tadAxiome{EstIA(CreerJoueurHumain(Couleur)) = false}
+		\tadAxiome{ObtenirProfondeur(CreerJoueurHumain(Couleur)) = 0}
+		\tadAxiome{ObtenirProfondeur(CreerJoueurIA(Couleur, Entier)) = Entier}
+		\tadAxiome{ObtenirCouleur(CreerJoueurHumain(Couleur)) = Couleur}
+		\tadAxiome{ObtenirCouleur(CreerJoueurIA(Couleur, Entier)) = Couleur}
+		\end{tadAxiomes}
+\end{tad}
