@@ -1,5 +1,5 @@
 all :
-	cd programme/ && $(MAKE)
+	cd programme/ && $(MAKE) && $(MAKE) doc
 	cd rapport/ && $(MAKE)
 
 prg :
@@ -10,7 +10,7 @@ tests :
 
 doc :
 	cd programme/ && $(MAKE) doc
-	
+
 rapport :
 	cd rapport/ && $(MAKE) rapport
 

@@ -11,7 +11,6 @@ DOCDIR = ../doc
 
 all : directories
 	$(MAKE) prg
-	$(MAKE) doc
 	$(MAKE) tests
 
 directories : $(BINDIR)
