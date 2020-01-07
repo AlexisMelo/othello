@@ -2,12 +2,12 @@
 	\small
 	\fonction
 	{FaireUnePartie}
-	{AfficherResultat, AfficherPlateau, AfficherCoup : Fonction, j1, j2 : Joueur}
+	{AfficherResultat, AfficherPlateau, AfficherCoup, AfficherSaisieCoup : Fonction, j1, j2 : Joueur}
 	{}
 	{plateau : Plateau}
 	{
 	\affecter{plateau}{CreerPlateau()}
 	\instruction{InitialiserPlateau(plateau)}
-	\instruction{GererPartie(AfficherResultat,AfficherPlateau,AfficherCoup,j1,j2,plateau)}
+	\instruction{GererPartie(AfficherResultat,AfficherPlateau,AfficherCoup,AfficherSaisieCoup,j1,j2,plateau)}
 	}
 \end{algorithme}
