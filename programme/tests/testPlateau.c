@@ -5,7 +5,7 @@
 #include <CUnit/CUnit.h>
 #include "testPlateau.h"
 #include "Couleur.h"
-#include "AfficherPlateau.h"
+#include "Affichage.h"
 void TestPlateau()
 {
     Couleur * plateau =PLATEAU_CreerPlateau();
@@ -16,11 +16,11 @@ void TestPlateau()
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
-            couleur = ObtenirCouleuropposee(couleur);
-            Coup coup = CreerCoup(CreerPosition(ligne + i - 1,colonne + j - 1), couleur);
-            JouerCoup(*pPlateau, coup);
-            Couleur res = ObtenirCouleurDepuisPlateau(pPlateau, CreerPosition(ligne + i - 1,colonne + j - 1));
-            CU_ASSERT(EstEgalCouleur(res, couleur));
+            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(ligne + i - 1,colonne + j - 1), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
+            Couleur res = PLATEAU_ObtenirCouleurAvecPosition(plateau, POSITION_CreerPosition(ligne + i - 1,colonne + j - 1));
+            CU_ASSERT(COULEUR_SontEgalesCouleurs(res, couleur));
             /* printf("%d        %d      ", res.nom, couleur.nom);
             printf("%s        %s      ", res.hexa, couleur.hexa);
             printf("%c        %c      ", res.symbole, couleur.symbole);

@@ -7,10 +7,7 @@ void testCreerCoups() {
 
 void testAjoutCoups() {
 
-  Coup monCoup = CreerCoup(CreerPosition(1,1),CouleurNoir());
-
-  Coups * coups = CreerCoups();
-  AjouterCoup(coups,monCoup);
+  Coup monCoup = COUP_CreerCoup(POSITION_CreerPosition(1,1),COULEUR_ObtenirCouleurNoir());
 
   Coups coups = COUPS_CreerCoups();
   COUPS_AjouterCoup(&coups,monCoup);

@@ -1,4 +1,3 @@
-#include "CalculerPoint.h"
 #include "Plateau.h"
 #include "Couleur.h"
 #include "Coup.h"

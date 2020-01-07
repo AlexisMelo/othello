@@ -1,5 +1,4 @@
-#include"Recherche_Coup.h"
-#include"JouerCoup.h"
-#include"Parcourir_Direction.h"
+#include"RechercherCoup.h"
+#include"ParcourirDirection.h"
 
 void testRechercheDesCoups() ;

@@ -31,7 +31,7 @@ tests : $(TESTDIR)/testTypes $(TESTDIR)/testAff
 $(TESTDIR)/testAff : $(TESTDIR)/testAffichage.o $(SRCDIR)/IntelligenceArtificielle.o $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testCoup.o $(TESTDIR)/testCoups.o $(TESTDIR)/testPlateau.o $(SRCDIR)/Colonne.o $(SRCDIR)/Plateau.o $(SRCDIR)/Coup.o $(SRCDIR)/Coups.o $(SRCDIR)/ParcourirDirection.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(TESTDIR)/testParcourirLesDirections.o $(TESTDIR)/testParcourirUneDirection.o $(SRCDIR)/Direction.o $(SRCDIR)/Affichage.o $(SRCDIR)/Joueur.o $(SRCDIR)/RechercherCoup.o $(TESTDIR)/testRechercheDesCoups.o $(TESTDIR)/testPlateau.o
 		$(CC) -o $(TESTDIR)/testPlateauAff $^ -lcunit $(CFLAGS) -I$(TESTDIR)
 
-$(TESTDIR)/testTypes : $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Coup.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(SRCDIR)/Plateau.o $(SRCDIR)/Direction.o $(SRCDIR)/JouerCoup.o
+$(TESTDIR)/testTypes : $(SRCDIR)/IntelligenceArtificielle.o $(TESTDIR)/testLigne.o $(TESTDIR)/testColonne.o $(TESTDIR)/testCouleur.o $(TESTDIR)/testCoup.o $(TESTDIR)/testCoups.o $(TESTDIR)/testPlateau.o $(TESTDIR)/TypesTests.o $(SRCDIR)/Colonne.o $(SRCDIR)/Plateau.o $(SRCDIR)/Coup.o $(SRCDIR)/Coups.o $(SRCDIR)/ParcourirDirection.o $(SRCDIR)/Position.o $(SRCDIR)/Ligne.o $(SRCDIR)/Couleur.o $(TESTDIR)/testParcourirLesDirections.o $(TESTDIR)/testParcourirUneDirection.o $(SRCDIR)/Direction.o $(SRCDIR)/Affichage.o $(SRCDIR)/Joueur.o $(SRCDIR)/RechercherCoup.o $(TESTDIR)/testRechercheDesCoups.o $(TESTDIR)/testPlateau.o
 		$(CC) -o $(TESTDIR)/testTypes $^ -lcunit $(CFLAGS) -I$(TESTDIR)
 
 $(TESTDIR)/%.o : $(TESTDIR)/%.c

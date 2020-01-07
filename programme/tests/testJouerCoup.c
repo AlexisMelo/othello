@@ -13,9 +13,9 @@ int clean_suite_success(void) {
 
 void TestJouerCoup(){
     void * plateauDeJeu = CreerPlateau();
-    Couleur NOIR = CouleurNoir();
-    Couleur BLANC = CouleurBlanc();
-    Couleur NEUTRE = CouleurNeutre();
+    Couleur NOIR = COULEUR_ObtenirCouleurNoir();
+    Couleur BLANC = COULEUR_ObtenirCouleurBlanc();
+    Couleur NEUTRE = COULEUR_ObtenirCouleurNeutre();
     Coup coup;
     Ligne ligne = CreerLigne(1);
     Colonne colonne = CreerColonne(1);
@@ -23,14 +23,14 @@ void TestJouerCoup(){
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
-            coup = CreerCoup(CreerPosition(ligne + i - 1,colonne + j - 1), NEUTRE);
-            JouerCoup(plateauDeJeu, coup);
+            coup = COUP_CreerCoup(POSITION_CreerPosition(ligne + i - 1,colonne + j - 1), NEUTRE);
+            PLATEAU_JouerCoup(plateauDeJeu, coup);
         }
     }
-    coup = CreerCoup(CreerPosition(1,2), NOIR);
-    JouerCoup(plateauDeJeu, coup);
+    coup = COUP_CreerCoup(POSITION_CreerPosition(1,2), NOIR);
+    PLATEAU_JouerCoup(plateauDeJeu, coup);
     Couleur resultatAttendu = NOIR;
-    Couleur resultatObtenu = CouleurNeutre();
-    resultatObtenu = ObtenirCouleurDepuisPlateau(plateauDeJeu, CreerPosition(1,2));
+    Couleur resultatObtenu = COULEUR_ObtenirCouleurNeutre();
+    resultatObtenu = PLATEAU_ObtenirCouleurAvecPosition(plateauDeJeu, POSITION_CreerPosition(1,2));
     CU_ASSERT(EstEgalCouleur(resultatAttendu, resultatObtenu))
 }
