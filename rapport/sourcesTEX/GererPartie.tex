@@ -2,7 +2,7 @@
 	\small
 	\procedure
 	{GererPartie}
-	{\paramEntree AfficherResultat, \paramEntree AfficherPlateau, \paramEntree AfficherCoup : Fonction, \paramEntree j1, \paramEntree j2 : Joueur, \paramEntreeSortie plateau : Plateau}
+	{\paramEntree AfficherResultat, \paramEntree AfficherPlateau, \paramEntree AfficherCoup, \paramEntree AfficherSaisieCoup : Fonction, \paramEntree j1, \paramEntree j2 : Joueur, \paramEntreeSortie plateau : Plateau}
     {j1PeutJouer, j2PeutJouer, partieTerminee : \booleen \\
     important : ChaineDeCaractères \\
     premierJoueur, secondJoueur : Joueur
@@ -16,7 +16,7 @@
     \tantque{non partieTerminee}{
         \affecter{j1PeutJouer}{JoueurPeutJouer(plateau, premierJoueur)}
 		\sialorssinon {j1PeutJouer}{
-            \instruction{JouerUnTour(plateau,premierJoueur, AfficherCoup)}
+            \instruction{JouerUnTour(plateau,premierJoueur, AfficherCoup, AfficherSaisieCoup)}
             \instruction{AfficherPlateau(plateau)}
             \affecter{partieTerminee}{EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer)}
         }
@@ -31,7 +31,7 @@
         }
         \affecter{j2PeutJouer}{JoueurPeutJouer(plateau, secondJoueur)}
 		\sialorssinon {j1PeutJouer}{
-            \instruction{JouerUnTour(plateau,secondJoueur, AfficherCoup)}
+            \instruction{JouerUnTour(plateau,secondJoueur, AfficherCoup, AfficherSaisieCoup)}
             \instruction{AfficherPlateau(plateau)}
         }
             {

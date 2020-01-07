@@ -2,12 +2,14 @@
 	\small
 	\procedure
 	{JouerUnTour}
-	{\paramEntreeSortie plateau : Plateau, \paramEntree joueur : Joueur, \paramEntree AfficherCoup : Fonction}
+	{\paramEntreeSortie plateau : Plateau, \paramEntree joueur : Joueur, \paramEntree AfficherCoup, \paramEntree AfficherSaisieCoup : Fonction}
 	{coupAJouer : Coup}
 	{
+	\instruction{AfficherSaisieCoup(joueur)}
 	\affecter{coupAJouer}{ObtenirCoupValide(plateau, joueur)}
 	\instruction{JouerCoup(plateau, coupAJouer)}
 	\instruction{CapturerPions(plateau, coupAJouer)}
-	\instruction{AfficherCoup(coupAJouer)}
+	\sialors{EstIA(joueur)}
+		{\instruction{AfficherCoup(coupAJouer)}}
 	}
 \end{algorithme}

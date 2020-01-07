@@ -1,12 +1,12 @@
 \subsection{Analyse descendante bleue}	
 	\begin{algorithme}
-		\signaturefonction{FaireUnePartie}{AfficherResultat, AfficherPlateau, AfficherCoup : Fonction, j1, j2 : Joueur}{}
+		\signaturefonction{FaireUnePartie}{AfficherResultat, AfficherPlateau, AfficherCoup, AfficherSaisieCoup : Fonction, j1, j2 : Joueur}{}
 	\end{algorithme}
 	\begin{algorithme}
 		\signatureprocedure{InitialiserPlateau}{\paramEntreeSortie plateau : Plateau}
 	\end{algorithme}
 	\begin{algorithme}
-		\signatureprocedure{GererPartie}{\paramEntree AfficherResultat, \paramEntree AfficherPlateau, \paramEntree AfficherCoup : Fonction, \paramEntree j1, \paramEntree j2 : Joueur, \paramEntreeSortie plateau : Plateau}
+		\signatureprocedure{GererPartie}{\paramEntree AfficherResultat, \paramEntree AfficherPlateau, \paramEntree AfficherCoup, \paramEntree AfficherSaisieCoup : Fonction, \paramEntree j1, \paramEntree j2 : Joueur, \paramEntreeSortie plateau : Plateau}
 	\end{algorithme}
 	\begin{algorithme}
 		\signaturefonction{EstPartieTerminee}{plateau : Plateau, j1PeutJouer, j2PeutJouer : \booleen}{\booleen}
@@ -20,7 +20,7 @@
 	
 \subsection{Analyse descendante verte}	
 	\begin{algorithme}
-		\signatureprocedure{JouerUnTour}{\paramEntreeSortie plateau : Plateau, \paramEntree joueur : Joueur, \paramEntree AfficherCoup : Fonction}
+		\signatureprocedure{JouerUnTour}{\paramEntreeSortie plateau : Plateau, \paramEntree joueur : Joueur, \paramEntree AfficherCoup, \paramEntree AfficherSaisieCoup : Fonction}
 	\end{algorithme}
 	\begin{algorithme}
 		\signatureprocedure{CapturerPions}{\paramEntreeSortie plateau : Plateau, \paramEntree coup : Coup}
