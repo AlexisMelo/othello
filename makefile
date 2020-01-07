@@ -11,8 +11,8 @@ tests :
 doc :
 	cd programme/ && $(MAKE) doc
 
-rapport :
-	cd rapport/ && $(MAKE) rapport
+report :
+	cd rapport/ && $(MAKE) report
 
 clean :
 	cd programme/ && $(MAKE) clean

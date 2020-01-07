@@ -7,7 +7,7 @@ BINDIR= bin
 EXEC= othello
 LIBDIR= lib
 TESTDIR= tests
-DOCDIR = ../doc
+DOCDIR = doc
 
 all : directories
 	$(MAKE) prg

@@ -1,9 +1,9 @@
 OUTPUTDIR = ..
 
 all :
-	$(MAKE) rapport
+	$(MAKE) report
 
-rapport :
+report :
 	pwd
 	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory $(OUTPUTDIR)/ ./sourcesTEX/Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex
 	find $(OUTPUTDIR) -type f -name '*.log' -exec rm {} +
