@@ -2,7 +2,7 @@
 
 void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
 
-  if ( nbArguments == 2 || (strcmp(arguments[2], HELP) == 0)) {
+  if ( nbArguments == 2 || arguments[2] == HELP ) {
     AFFICHAGE_MessageAide();
   }
   else {

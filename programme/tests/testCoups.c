@@ -1,22 +1,22 @@
 #include "testCoups.h"
 
 void testCreerCoups() {
-  Coups coups = COUPS_CreerCoups();
-/* 
-  CU_ASSERT(LC_estVide(coups->lesCoups)); */
-  CU_ASSERT(coups.nbCoups == 0);
+  Coups * coups = CreerCoups();
+
+  CU_ASSERT(LC_estVide(coups->coups));
+  CU_ASSERT(coups->nbDeCoups == 0);
 }
 
 void testAjoutCoups() {
 
-  Coup monCoup = COUP_CreerCoup(POSITION_CreerPosition(1,1),COULEUR_ObtenirCouleurNoir());
+  Coup monCoup = CreerCoup(CreerPosition(1,1),CouleurNoir());
 
-  Coups coups = COUPS_CreerCoups();
-  COUPS_AjouterCoup(coups.lesCoups,monCoup);
-/* 
-  CU_ASSERT(!LC_estVide(coups->lesCoups)); */
-  CU_ASSERT(coups.nbCoups == 1);
-  CU_ASSERT(COUP_SontEgauxCoups(monCoup,COUPS_ObtenirCoup(coups)))
+  Coups * coups = CreerCoups();
+  AjouterCoup(coups,monCoup);
+
+  CU_ASSERT(!LC_estVide(coups->coups));
+  CU_ASSERT(coups->nbDeCoups == 1);
+  CU_ASSERT(EstEgalCoup(monCoup,COUPS_ObtenirCoup(*coups)))
  // printf("%d       %c           %s", monCoup.couleur.nom, monCoup.couleur.symbole, monCoup.couleur.hexa);
   //printf("%d       %c           %s", COUPS_ObtenirCoup(*coups).couleur.nom, COUPS_ObtenirCoup(*coups).couleur.symbole, COUPS_ObtenirCoup(*coups).couleur.hexa);
 }

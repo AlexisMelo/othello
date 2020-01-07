@@ -1,3 +1,3 @@
-#include "../include/Couleur.h"
+#include "Couleur.h"
 
 void TestJOUEUR_SaisirCoupHumain() ;

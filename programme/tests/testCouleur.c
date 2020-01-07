@@ -4,15 +4,15 @@
 #include <CUnit/CUnit.h>
 #include <string.h>
 void testBlanc(){
-    Couleur blanc = COULEUR_ObtenirCouleurBlanc();
-    Couleur res = COULEUR_ObtenirCouleurOpposee(COULEUR_ObtenirCouleurOpposee(blanc));
+    Couleur blanc = CouleurBlanc();
+    Couleur res = ObtenirCouleuropposee(ObtenirCouleuropposee(blanc));
     CU_ASSERT(res.nom == blanc.nom);
     CU_ASSERT(res.symbole == blanc.symbole);
     }
 
 void testNoir(){
-    Couleur noir = COULEUR_ObtenirCouleurNoir();
-    Couleur res = COULEUR_ObtenirCouleurOpposee(COULEUR_ObtenirCouleurOpposee(noir));
+    Couleur noir = CouleurNoir();
+    Couleur res = ObtenirCouleuropposee(ObtenirCouleuropposee(noir));
     CU_ASSERT(res.nom == noir.nom);
     CU_ASSERT(res.symbole == noir.symbole);
 }
