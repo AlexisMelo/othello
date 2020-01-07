@@ -1,0 +1,58 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{CoupPossibleDansUneDirectionQuelconque}
+	{PLATEAU : Plateau, coup : Coup}
+	{\booleen}
+	{}
+	{
+    \retourner{CoupPossibleDansDirection(plateau, coup, HG) \\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, H)\\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, HD)\\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, D)\\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, BD)\\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, B)\\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, BG)\\ \dots
+    ou CoupPossibleDansDirection(plateau, coup, G)}
+	}
+\end{algorithme}
+
+\vspace*{1cm}
+
+\begin{algorithme}
+	\small
+	\fonction
+	{CoupPossibleDansDirection}
+	{plateau : Plateau, coup : Coup, direction : Direction}
+	{\booleen}
+    {nouvellePosition : Position\\
+    caseVideRencontree, maCouleurRencontree, limitePlateauAtteinte  : \booleen}
+	{
+    \affecter{nouvellePosition}{AppliquerDirection(ObtenirPosition(coup), direction)}
+    \sialors{(non EstPositionValide(plateau, nouvellePosition))}
+        {\retourner{Faux}}
+    \sialors{(non SontEgalesCouleurs(ObtenirCouleurAvecPosition(plateau, nouvellePosition), \\\dots \dots ObtenirCouleurOpposee(ObtenirCouleur(coup))))}
+        {\retourner{Faux}}
+    
+    \affecter{caseVideRencontree}{Faux}
+    \affecter{maCouleurRencontree}{Faux}
+    \affecter{limitePlateauAtteinte}{Faux}
+    \tantque{(non caseVideRencontree et non maCouleurRencontree et non limitePlateauAtteinte)}
+        {
+            \affecter{nouvellePosition}{AppliquerDirection(nouvellePosition, direction)}
+            \affecter{limitePlateauAtteinte}{non EstPositionValide(plateau, nouvellePosition)}
+            \sialors{non limitePlateauAtteinte}
+            {
+                \sialorssinon{(SontEgalesCouleurs(ObtenirCouleurAvecPosition(plateau, nouvellePosition), ObtenirCouleur(coup)))}
+                {
+                    \affecter{maCouleurRencontree}{Vrai}
+                }
+                {
+                    \sialors{(EstPositionLibre(plateau, nouvellePosition))}
+                    {\affecter{caseVideRencontree}{Vrai}}
+                }
+            }
+        }
+	\retourner{(maCouleurRencontree)}
+	}
+\end{algorithme}
