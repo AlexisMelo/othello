@@ -34,33 +34,49 @@
 
   \newpage
   \section{Conception détaillée}
-    \subsection{FaireUnePartie}
+  \subsection{Analyse descendante bleue}
+     \subsubsection{FaireUnePartie}
       \input{./sourcesTEX/faireUnePartie}
-    \subsection{GererPartie}
+    \subsubsection{InitialiserPlateau}
+      \input{./sourcesTEX/initialiserPlateau} 
+    \subsubsection{GererPartie}
       \input{./sourcesTEX/GererPartie}
-    \subsection{InitialiserPlateau}
-      \input{./sourcesTEX/initialiserPlateau}
-    \subsection{JouerUnTour}
-      \input{./sourcesTEX/jouerUnTour}
-    \subsection{EstPartieTerminee}
+    \subsubsection{EstPartieTerminee}
       \input{./sourcesTEX/EstPartieTerminee}
-    \subsection{JoueurPeutJouer}
+    \subsubsection{JoueurPeutJouer}
       \input{./sourcesTEX/JoueurPeutJouer}
-    \subsection{EstRempli}
+    \subsubsection{EstRempli}
       \input{./sourcesTEX/EstRempli}
-    \subsection{RechercherTousLesCoups}
-      \input{./sourcesTEX/rechercherTousLesCoups}
-    \subsection{EstUnCoupValide}
-      \input{./sourcesTEX/EstUnCoupValide}
-    \subsection{CapturerPions}
+    
+  \subsection{Analyse descendante verte}
+    \subsubsection{JouerUnTour}
+      \input{./sourcesTEX/jouerUnTour}
+    \subsubsection{CapturerPions}
       \input{./sourcesTEX/CapturerPions}
-    \subsection{JouerCoup}
+    \subsubsection{JouerCoup}
       \input{./sourcesTEX/JouerCoup}
-    \subsection{ObtenirCoupValide}
+    \subsubsection{ObtenirCoupValide}
       \input{./sourcesTEX/ObtenirCoupValide}
-    % \input{./sourcesTEX/coupValideExiste}
-    % \input{./sourcesTEX/obtenirCoupJoueur}
-    % \input{./sourcesTEX/calculPoint}
+    \subsubsection{SaisirCoup}
+
+    \subsubsection{SaisirCoupHumain}
+
+    \subsubsection{SaisirCoupIA}
+
+    \subsubsection{MinMax}
+
+    
+  \subsection{Analyse descendante jaune}
+    \subsubsection{RechercherTousLesCoups}
+      \input{./sourcesTEX/rechercherTousLesCoups}
+    \subsubsection{EstUnCoupValide}
+      \input{./sourcesTEX/EstUnCoupValide}
+    \subsubsection{EstPositionLibre}
+
+    \subsubsection{EstPositionValide}
+
+    \subsubsection{CoupPermetCapture}
+  
 
   \newpage
   \section{Dévellopement en C}
