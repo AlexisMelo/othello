@@ -13,7 +13,6 @@ void TestPlateau()
     Couleur couleur = COULEUR_ObtenirCouleurNoir();
     Ligne ligne = LIGNE_ObtenirLigneDepuisInt(1);
     Colonne colonne = COLONNE_ObtenirColonneDepuisInt(1);
-    AFFICHAGE_AfficherPlateau(plateau);
     for (int i = 1; i < TAILLE + 1; i++)
     {
         for (int j = 1; j < TAILLE + 1; j++)
