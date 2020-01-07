@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"Couleur.h"
+#include"../include/Couleur.h"
 
 void testBlanc() ;
 void testNoir() ;

@@ -1,4 +1,4 @@
-#include"AfficherPlateau.h"
+#include"../include/Affichage.h"
 #include"Position.h"
 #include"Plateau.h"
 #include"Coup.h"
@@ -8,13 +8,13 @@
 Couleur *plateau;
 
 void testAffichagePlateauAleatoire(){
-    plateau = *CreerPlateau();
-    Couleur couleur = CouleurNoir();
+    plateau = PLATEAU_CreerPlateau();
+    Couleur couleur = COULEUR_ObtenirCouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            couleur = ObtenirCouleuropposee(couleur);
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
+            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
             AfficherPlateau(plateau);
         }
     }
@@ -23,11 +23,11 @@ void testAffichagePlateauAleatoire(){
 
 void testAffichagePlateauVide(){
     plateau = CreerPlateau();
-    Couleur couleur = CouleurNeutre();
+    Couleur couleur = COULEUR_ObtenirCouleurNeutre();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(i, j), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
         }
     }
     AfficherPlateau(plateau);

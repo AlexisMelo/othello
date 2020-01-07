@@ -40,7 +40,7 @@ int main(){
          CU_ADD_TEST(couleurSuite,testBlanc);
          CU_ADD_TEST(couleurSuite,testNoir);
 
-         //CU_ADD_TEST(plateauSuite,TestPlateau);
+         CU_ADD_TEST(plateauSuite,TestPlateau);
 
          CU_ADD_TEST(UneDirectionSuite,testParcourirUneDirection);
 
