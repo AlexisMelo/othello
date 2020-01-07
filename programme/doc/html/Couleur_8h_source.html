@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello_Algo_19-20_12:  Fichier source de include/Couleur.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello_Algo_19-20_12
+   </div>
+   <div id="projectbrief">DéveloppementdujeuOthelloenlangageC</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Couleur.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Couleur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef __COULEUR_TYPE__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define __COULEUR_TYPE__</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include&lt;stdbool.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include&lt;string.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include&lt;stdlib.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include&lt;assert.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define COULEUR_BLANCHE &quot;blanc&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define COULEUR_NOIRE &quot;noir&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define COULEUR_NEUTRE &quot;neutre&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="Couleur_8h.html#aaca4e6192fa64673e34ef06ceb76bb16">   24</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> { Neutre, Blanc, Noir } <a class="code" href="Couleur_8h.html#aaca4e6192fa64673e34ef06ceb76bb16">nomCouleur</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structCouleur.html">   32</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structCouleur.html#a0083f38ad28cc4b9ca57356fa0440ee9">   33</a></span>&#160;    <a class="code" href="Couleur_8h.html#aaca4e6192fa64673e34ef06ceb76bb16">nomCouleur</a> <a class="code" href="structCouleur.html#a0083f38ad28cc4b9ca57356fa0440ee9">nom</a>; </div><div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structCouleur.html#a4da2f2ca44f4b0c7c963afd7339f2600">   34</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="structCouleur.html#a4da2f2ca44f4b0c7c963afd7339f2600">symbole</a>; </div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}<a class="code" href="structCouleur.html">Couleur</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="Couleur_8h.html#abe9e2c9e1f3de354428e39e43c6a3c24">COULEUR_ObtenirCouleurNoir</a>() ;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="Couleur_8h.html#a46a2c4b27022ac80b7d073790e8bfcda">COULEUR_ObtenirCouleurBlanc</a>() ;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="Couleur_8h.html#aed24736ec4b229943d1d1f67439f438c">COULEUR_ObtenirCouleurNeutre</a>() ;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> COULEUR_ObtenirCouleurOpposee(<a class="code" href="structCouleur.html">Couleur</a> couleur) ;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="Couleur_8h.html#a65508cd85f4651b72b8120e3173b145b">COULEUR_EstNeutre</a>(<a class="code" href="structCouleur.html">Couleur</a> couleur) ;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="Couleur_8h.html#a2f818000b78b17149b8b63d1191c153b">COULEUR_SontEgalesCouleurs</a>(<a class="code" href="structCouleur.html">Couleur</a> couleur1, <a class="code" href="structCouleur.html">Couleur</a> couleur2) ;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="Couleur_8h.html#a4c53c074b7757521f7228ed215e87e3a">COULEUR_ObtenirCouleurDepuisString</a>(<span class="keywordtype">char</span> * couleur);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">char</span> * <a class="code" href="Couleur_8h.html#ad0dad7182393f92a0831661263c63e4c">COULEUR_ObtenirStr</a>(<a class="code" href="structCouleur.html">Couleur</a> couleur) ;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">char</span> <a class="code" href="Couleur_8h.html#a36de4a580e681c96e8641327b2b1ed41">COULEUR_ObtenirSymbole</a>(<a class="code" href="structCouleur.html">Couleur</a> couleur);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="Couleur_8h_html_a2f818000b78b17149b8b63d1191c153b"><div class="ttname"><a href="Couleur_8h.html#a2f818000b78b17149b8b63d1191c153b">COULEUR_SontEgalesCouleurs</a></div><div class="ttdeci">bool COULEUR_SontEgalesCouleurs(Couleur couleur1, Couleur couleur2)</div><div class="ttdoc">Détermine si les Couleur sont identiques. </div><div class="ttdef"><b>Definition:</b> Couleur.c:43</div></div>
+<div class="ttc" id="structCouleur_html"><div class="ttname"><a href="structCouleur.html">Couleur</a></div><div class="ttdoc">Le type Couleur permet de symboliser un pion. </div><div class="ttdef"><b>Definition:</b> Couleur.h:32</div></div>
+<div class="ttc" id="structCouleur_html_a4da2f2ca44f4b0c7c963afd7339f2600"><div class="ttname"><a href="structCouleur.html#a4da2f2ca44f4b0c7c963afd7339f2600">Couleur::symbole</a></div><div class="ttdeci">char symbole</div><div class="ttdoc">Symbole représentant la couleur. </div><div class="ttdef"><b>Definition:</b> Couleur.h:34</div></div>
+<div class="ttc" id="Couleur_8h_html_a65508cd85f4651b72b8120e3173b145b"><div class="ttname"><a href="Couleur_8h.html#a65508cd85f4651b72b8120e3173b145b">COULEUR_EstNeutre</a></div><div class="ttdeci">bool COULEUR_EstNeutre(Couleur couleur)</div><div class="ttdoc">Détermine si la Couleur passée en entrée est une couleur neutre. </div><div class="ttdef"><b>Definition:</b> Couleur.c:38</div></div>
+<div class="ttc" id="Couleur_8h_html_abe9e2c9e1f3de354428e39e43c6a3c24"><div class="ttname"><a href="Couleur_8h.html#abe9e2c9e1f3de354428e39e43c6a3c24">COULEUR_ObtenirCouleurNoir</a></div><div class="ttdeci">Couleur COULEUR_ObtenirCouleurNoir()</div><div class="ttdoc">Crée une Couleur noire. </div><div class="ttdef"><b>Definition:</b> Couleur.c:10</div></div>
+<div class="ttc" id="Couleur_8h_html_aed24736ec4b229943d1d1f67439f438c"><div class="ttname"><a href="Couleur_8h.html#aed24736ec4b229943d1d1f67439f438c">COULEUR_ObtenirCouleurNeutre</a></div><div class="ttdeci">Couleur COULEUR_ObtenirCouleurNeutre()</div><div class="ttdoc">Crée une Couleur neutre. </div><div class="ttdef"><b>Definition:</b> Couleur.c:18</div></div>
+<div class="ttc" id="Couleur_8h_html_ad0dad7182393f92a0831661263c63e4c"><div class="ttname"><a href="Couleur_8h.html#ad0dad7182393f92a0831661263c63e4c">COULEUR_ObtenirStr</a></div><div class="ttdeci">char * COULEUR_ObtenirStr(Couleur couleur)</div><div class="ttdoc">Permet de retourner la chaine de caractères correspondante à une couleur. </div><div class="ttdef"><b>Definition:</b> Couleur.c:62</div></div>
+<div class="ttc" id="Couleur_8h_html_aaca4e6192fa64673e34ef06ceb76bb16"><div class="ttname"><a href="Couleur_8h.html#aaca4e6192fa64673e34ef06ceb76bb16">nomCouleur</a></div><div class="ttdeci">nomCouleur</div><div class="ttdoc">L&amp;#39;énumeration nomCouleur permet de définir un ensemble de valeurs possibles pour le nom des couleurs...</div><div class="ttdef"><b>Definition:</b> Couleur.h:24</div></div>
+<div class="ttc" id="Couleur_8h_html_a46a2c4b27022ac80b7d073790e8bfcda"><div class="ttname"><a href="Couleur_8h.html#a46a2c4b27022ac80b7d073790e8bfcda">COULEUR_ObtenirCouleurBlanc</a></div><div class="ttdeci">Couleur COULEUR_ObtenirCouleurBlanc()</div><div class="ttdoc">Crée une Couleur blanche. </div><div class="ttdef"><b>Definition:</b> Couleur.c:3</div></div>
+<div class="ttc" id="Couleur_8h_html_a36de4a580e681c96e8641327b2b1ed41"><div class="ttname"><a href="Couleur_8h.html#a36de4a580e681c96e8641327b2b1ed41">COULEUR_ObtenirSymbole</a></div><div class="ttdeci">char COULEUR_ObtenirSymbole(Couleur couleur)</div><div class="ttdoc">Permet d&amp;#39;accéder au champs symbole d&amp;#39;une instance de Couleur. </div><div class="ttdef"><b>Definition:</b> Couleur.c:58</div></div>
+<div class="ttc" id="Couleur_8h_html_a4c53c074b7757521f7228ed215e87e3a"><div class="ttname"><a href="Couleur_8h.html#a4c53c074b7757521f7228ed215e87e3a">COULEUR_ObtenirCouleurDepuisString</a></div><div class="ttdeci">Couleur COULEUR_ObtenirCouleurDepuisString(char *couleur)</div><div class="ttdoc">Obtient une instance de Couleur grâce à un String indiquant son nom. </div><div class="ttdef"><b>Definition:</b> Couleur.c:48</div></div>
+<div class="ttc" id="structCouleur_html_a0083f38ad28cc4b9ca57356fa0440ee9"><div class="ttname"><a href="structCouleur.html#a0083f38ad28cc4b9ca57356fa0440ee9">Couleur::nom</a></div><div class="ttdeci">nomCouleur nom</div><div class="ttdoc">Nom de la couleur. </div><div class="ttdef"><b>Definition:</b> Couleur.h:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

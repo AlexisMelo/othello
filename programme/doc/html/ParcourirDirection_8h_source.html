@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello_Algo_19-20_12:  Fichier source de include/ParcourirDirection.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello_Algo_19-20_12
+   </div>
+   <div id="projectbrief">DéveloppementdujeuOthelloenlangageC</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ParcourirDirection.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ParcourirDirection_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef __PARCOURIR_DIRECTION__</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define __PARCOURIR_DIRECTION__</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Couleur_8h.html">Couleur.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Coup_8h.html">Coup.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ParcourirDirection_8h.html#adff04d0a50f7374e644ab91b9a653dd0">RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structCoup.html">Coup</a> coup);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="ParcourirDirection_8h.html#ac6935ce8b96af10a9ac50c1a286f0752">RECHERCHEDIRECTIONS_CoupPossibleDansDirection</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structCoup.html">Coup</a> coup, <a class="code" href="Direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="structCoup_html"><div class="ttname"><a href="structCoup.html">Coup</a></div><div class="ttdoc">Le type Coup permet de jouer une couleur à une position. </div><div class="ttdef"><b>Definition:</b> Coup.h:24</div></div>
+<div class="ttc" id="structCouleur_html"><div class="ttname"><a href="structCouleur.html">Couleur</a></div><div class="ttdoc">Le type Couleur permet de symboliser un pion. </div><div class="ttdef"><b>Definition:</b> Couleur.h:32</div></div>
+<div class="ttc" id="ParcourirDirection_8h_html_adff04d0a50f7374e644ab91b9a653dd0"><div class="ttname"><a href="ParcourirDirection_8h.html#adff04d0a50f7374e644ab91b9a653dd0">RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque</a></div><div class="ttdeci">bool RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque(Couleur *plateau, Coup coup)</div><div class="ttdoc">Détermine si un Coup permet de capturer des pions dans au moins une Direction. </div><div class="ttdef"><b>Definition:</b> ParcourirDirection.c:3</div></div>
+<div class="ttc" id="Direction_8h_html_a224b9163917ac32fc95a60d8c1eec3aa"><div class="ttname"><a href="Direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">L&amp;#39;énumeration Direction permet de manipuler des coordonnées relatives à un point central pour obtenir...</div><div class="ttdef"><b>Definition:</b> Direction.h:18</div></div>
+<div class="ttc" id="ParcourirDirection_8h_html_ac6935ce8b96af10a9ac50c1a286f0752"><div class="ttname"><a href="ParcourirDirection_8h.html#ac6935ce8b96af10a9ac50c1a286f0752">RECHERCHEDIRECTIONS_CoupPossibleDansDirection</a></div><div class="ttdeci">bool RECHERCHEDIRECTIONS_CoupPossibleDansDirection(Couleur *plateau, Coup coup, Direction direction)</div><div class="ttdoc">Détermine si un Coup permet de capturer des pions dans une Direction donnée. </div><div class="ttdef"><b>Definition:</b> ParcourirDirection.c:14</div></div>
+<div class="ttc" id="Couleur_8h_html"><div class="ttname"><a href="Couleur_8h.html">Couleur.h</a></div><div class="ttdoc">Fichier contenant la définition du type Couleur, l&amp;#39;enum nomCouleur et de leurs fonctions associées...</div></div>
+<div class="ttc" id="Coup_8h_html"><div class="ttname"><a href="Coup_8h.html">Coup.h</a></div><div class="ttdoc">Fichier contenant la définition du type Coup et de ses fonctions associées. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

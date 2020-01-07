@@ -1,0 +1,171 @@
+\hypertarget{Affichage_8h}{}\section{Référence du fichier include/\+Affichage.h}
+\label{Affichage_8h}\index{include/\+Affichage.\+h@{include/\+Affichage.\+h}}
+
+
+Fichier contenant les fonctions d\textquotesingle{}affichage.  
+
+
+{\ttfamily \#include \char`\"{}Couleur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Joueur.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Affichage.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Affichage_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{Affichage_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Affichage_8h_a91db9073b1040dc14478d89f33e7409d}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau} (\hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\begin{DoxyCompactList}\small\item\em Affiche le plateau de jeu. \end{DoxyCompactList}\item 
+void \hyperlink{Affichage_8h_af655201e2e5fff5c88686d4d6fdceca6}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois} (\hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\begin{DoxyCompactList}\small\item\em Affiche le plateau de jeu pour une partie en mode tournois. \end{DoxyCompactList}\item 
+void \hyperlink{Affichage_8h_aca28e5d6eeae807ba3c08e8e61fd3df5}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structJoueur}{Joueur} j1, \hyperlink{structJoueur}{Joueur} j2)
+\begin{DoxyCompactList}\small\item\em Affiche les résultats de fin de partie. \end{DoxyCompactList}\item 
+void \hyperlink{Affichage_8h_afc225bc9439788d4f78c7c77fdf55487}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structJoueur}{Joueur} j1, \hyperlink{structJoueur}{Joueur} j2)
+\begin{DoxyCompactList}\small\item\em Affiche les résultats de fin de partie en mode tournois. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Affichage_8h_af7d343da360a669c284263f6e2f2923f}\label{Affichage_8h_af7d343da360a669c284263f6e2f2923f}} 
+void \hyperlink{Affichage_8h_af7d343da360a669c284263f6e2f2923f}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Message\+Aide} ()
+\begin{DoxyCompactList}\small\item\em Affiche un message d\textquotesingle{}aide concernant l\textquotesingle{}utilisation du programme et les règles du jeu. \end{DoxyCompactList}\item 
+void \hyperlink{Affichage_8h_a9e25de9a63bcc359320de3b0672aec5e}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue} (\hyperlink{structCoup}{Coup} coup\+Joue)
+\begin{DoxyCompactList}\small\item\em Affiche un \hyperlink{structCoup}{Coup} quand il est joué. \end{DoxyCompactList}\item 
+void \hyperlink{Affichage_8h_ab3360912a9cd961951d655d6b3777c5c}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup} (\hyperlink{structJoueur}{Joueur} joueur)
+\begin{DoxyCompactList}\small\item\em Affiche une phrase pour demander la saisie d\textquotesingle{}un coup à un joueur. \end{DoxyCompactList}\item 
+void \hyperlink{Affichage_8h_a168bcabce01b652ac5238fec5157b8a8}{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois} (\hyperlink{structJoueur}{Joueur} joueur)
+\begin{DoxyCompactList}\small\item\em Affiche une phrase pour demander la saisie d\textquotesingle{}un coup à un joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant les fonctions d\textquotesingle{}affichage. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{Affichage_8h_a9e25de9a63bcc359320de3b0672aec5e}\label{Affichage_8h_a9e25de9a63bcc359320de3b0672aec5e}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue()}{AFFICHAGE\_AfficherCoupJoue()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Coup\+Joue (\begin{DoxyParamCaption}\item[{\hyperlink{structCoup}{Coup}}]{coup\+Joue }\end{DoxyParamCaption})}
+
+
+
+Affiche un \hyperlink{structCoup}{Coup} quand il est joué. 
+
+Utile nottament pour envoyer le \hyperlink{structCoup}{Coup} sur la sortie standard en mode tournois.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coup\+Joue} & \hyperlink{structCoup}{Coup} qui doit être affiché \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Affichage_8h_a91db9073b1040dc14478d89f33e7409d}\label{Affichage_8h_a91db9073b1040dc14478d89f33e7409d}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau()}{AFFICHAGE\_AfficherPlateau()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Affiche le plateau de jeu. 
+
+Le plateau est affiché sur la sortie standard (terminal). Les lettres du dessus correspondent aux colonnes du jeu et les chiffres sur le côté sont les lignes. A l\textquotesingle{}intersection d\textquotesingle{}une ligne et d\textquotesingle{}une colonne se trouve un symbole significatif de la couleur présente sur la case.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Affichage_8h_af655201e2e5fff5c88686d4d6fdceca6}\label{Affichage_8h_af655201e2e5fff5c88686d4d6fdceca6}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois()}{AFFICHAGE\_AfficherPlateauTournois()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Plateau\+Tournois (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Affiche le plateau de jeu pour une partie en mode tournois. 
+
+Pour l\textquotesingle{}instant il n\textquotesingle{}est pas nécessaire d\textquotesingle{}afficher le plateau quand la partie est jouée en mode tournois, donc la fonction n\textquotesingle{}affiche rien.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Affichage_8h_aca28e5d6eeae807ba3c08e8e61fd3df5}\label{Affichage_8h_aca28e5d6eeae807ba3c08e8e61fd3df5}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie()}{AFFICHAGE\_AfficherResultatsPartie()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structJoueur}{Joueur}}]{j1,  }\item[{\hyperlink{structJoueur}{Joueur}}]{j2 }\end{DoxyParamCaption})}
+
+
+
+Affiche les résultats de fin de partie. 
+
+Affiche le score total de chaque joueur ( c\textquotesingle{}est à dire le nombre de cases portant sa couleur présentes sur le plateau ) ainsi que le vainqueur de la partie. Affiche égalité en cas d\textquotesingle{}égalité.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Affichage_8h_afc225bc9439788d4f78c7c77fdf55487}\label{Affichage_8h_afc225bc9439788d4f78c7c77fdf55487}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois()}{AFFICHAGE\_AfficherResultatsPartieTournois()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Resultats\+Partie\+Tournois (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structJoueur}{Joueur}}]{j1,  }\item[{\hyperlink{structJoueur}{Joueur}}]{j2 }\end{DoxyParamCaption})}
+
+
+
+Affiche les résultats de fin de partie en mode tournois. 
+
+Pour l\textquotesingle{}instant il n\textquotesingle{}est pas nécessaire d\textquotesingle{}afficher les résultats quand la partie est en mode tournois, donc la fonction n\textquotesingle{}affiche rien.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Affichage_8h_ab3360912a9cd961951d655d6b3777c5c}\label{Affichage_8h_ab3360912a9cd961951d655d6b3777c5c}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup()}{AFFICHAGE\_AfficherSaisieCoup()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Affiche une phrase pour demander la saisie d\textquotesingle{}un coup à un joueur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} qui doit saisir son coup. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Affichage_8h_a168bcabce01b652ac5238fec5157b8a8}\label{Affichage_8h_a168bcabce01b652ac5238fec5157b8a8}} 
+\index{Affichage.\+h@{Affichage.\+h}!A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois}}
+\index{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois@{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois}!Affichage.\+h@{Affichage.\+h}}
+\subsubsection{\texorpdfstring{A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois()}{AFFICHAGE\_AfficherSaisieCoupTournois()}}
+{\footnotesize\ttfamily void A\+F\+F\+I\+C\+H\+A\+G\+E\+\_\+\+Afficher\+Saisie\+Coup\+Tournois (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Affiche une phrase pour demander la saisie d\textquotesingle{}un coup à un joueur. 
+
+Pour l\textquotesingle{}instant en mode tournoi aucun affichage n\textquotesingle{}est demandé, voir même cela peut entraver le bon fonctionnement si des printf sont utilisés.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} qui doit saisir son coup. \\
+\hline
+\end{DoxyParams}

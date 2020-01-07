@@ -1,0 +1,18 @@
+<map id="include/MenuGraphique.h" name="include/MenuGraphique.h">
+<area shape="rect" id="node2" href="$Menu_8h.html" title="Fichier contenant la définition les fonctions utilisées par les fichiers MenuGraphique et MenuLigneCo..." alt="" coords="5,677,71,704"/>
+<area shape="rect" id="node9" href="$MenuLigneCommande_8h.html" title="Fichier contenant la définition de fonctions permettant d&#39;avoir un menu en ligne de commande pour lan..." alt="" coords="494,80,657,107"/>
+<area shape="rect" id="node6" href="$Couleur_8h.html" title="Fichier contenant la définition du type Couleur, l&#39;enum nomCouleur et de leurs fonctions associées..." alt="" coords="197,752,276,779"/>
+<area shape="rect" id="node10" href="$Joueur_8h.html" title="Fichier contenant la définition du type Joueur et de ses fonctions associées. " alt="" coords="621,229,693,256"/>
+<area shape="rect" id="node21" href="$Affichage_8h.html" title="Fichier contenant les fonctions d&#39;affichage. " alt="" coords="613,155,701,181"/>
+<area shape="rect" id="node22" href="$GererPartie_8h.html" title="Fichier contenant la définition des fonctions permettant de gérer le déroulement d&#39;une partie d&#39;Othel..." alt="" coords="833,155,931,181"/>
+<area shape="rect" id="node11" href="$Coup_8h.html" title="Fichier contenant la définition du type Coup et de ses fonctions associées. " alt="" coords="611,528,675,555"/>
+<area shape="rect" id="node18" href="$IntelligenceArtificielle_8h.html" title="Fichier contenant la définition des fonctions pour obtenir un Coup d&#39;une IA. " alt="" coords="641,304,797,331"/>
+<area shape="rect" id="node12" href="$Position_8h.html" title="Fichier contenant la définition du type Position et de ses fonctions associées. " alt="" coords="767,677,847,704"/>
+<area shape="rect" id="node16" href="$Plateau_8h.html" title="Fichier contenant la définition des fonctions permettant d&#39;intéragir avec le plateau de jeu..." alt="" coords="807,603,885,629"/>
+<area shape="rect" id="node13" href="$Ligne_8h.html" title="Fichier contenant la définition de l&#39;enum Ligne et de ses fonctions associées. " alt="" coords="871,752,935,779"/>
+<area shape="rect" id="node14" href="$Colonne_8h.html" title="Fichier contenant la définition de l&#39;enum Colonne et de ses fonctions associées. " alt="" coords="453,752,535,779"/>
+<area shape="rect" id="node15" href="$Direction_8h.html" title="Fichier contenant la définition de l&#39;enum Direction et de ses fonctions associées. " alt="" coords="711,752,797,779"/>
+<area shape="rect" id="node17" href="$ParcourirDirection_8h.html" title="Fichier contenant la définition de fonctions pour parcourir un plateau dans des directions données et..." alt="" coords="605,677,743,704"/>
+<area shape="rect" id="node19" href="$Coups_8h.html" title="Fichier contenant la définition du type Coups et de ses fonctions associées. " alt="" coords="813,453,884,480"/>
+<area shape="rect" id="node20" href="$RechercherCoup_8h.html" title="Fichier contenant la définition des fonctions pour rechercher des Coup possibles. ..." alt="" coords="819,379,950,405"/>
+</map>

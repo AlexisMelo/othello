@@ -1,0 +1,9 @@
+<map id="include/RechercherCoup.h" name="include/RechercherCoup.h">
+<area shape="rect" id="node2" href="$IntelligenceArtificielle_8h.html" title="Fichier contenant la définition des fonctions pour obtenir un Coup d&#39;une IA. " alt="" coords="15,80,217,107"/>
+<area shape="rect" id="node8" href="$GererPartie_8h.html" title="Fichier contenant la définition des fonctions permettant de gérer le déroulement d&#39;une partie d&#39;Othel..." alt="" coords="213,229,357,256"/>
+<area shape="rect" id="node3" href="$Joueur_8h.html" title="Fichier contenant la définition du type Joueur et de ses fonctions associées. " alt="" coords="97,155,215,181"/>
+<area shape="rect" id="node4" href="$Affichage_8h.html" title="Fichier contenant les fonctions d&#39;affichage. " alt="" coords="5,229,139,256"/>
+<area shape="rect" id="node5" href="$MenuLigneCommande_8h.html" title="Fichier contenant la définition de fonctions permettant d&#39;avoir un menu en ligne de commande pour lan..." alt="" coords="72,304,280,331"/>
+<area shape="rect" id="node6" href="$MenuGraphique_8h.html" title="Fichier contenant la définition de fonctions permettant d&#39;avoir un menu graphique pour lancer le jeu..." alt="" coords="30,379,199,405"/>
+<area shape="rect" id="node7" href="$Othello_8h.html" title="Fichier contenant la définition du main du programme. " alt="" coords="117,453,235,480"/>
+</map>

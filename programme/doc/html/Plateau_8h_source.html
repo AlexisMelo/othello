@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello_Algo_19-20_12:  Fichier source de include/Plateau.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello_Algo_19-20_12
+   </div>
+   <div id="projectbrief">DéveloppementdujeuOthelloenlangageC</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Plateau.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Plateau_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef __PLATEAU__</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define __PLATEAU__</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Position_8h.html">Position.h</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Coup_8h.html">Coup.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ParcourirDirection_8h.html">ParcourirDirection.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define TAILLE 8 // taille d&#39;un plateau</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> PLATEAU_InitialiserPlateau(<a class="code" href="structCouleur.html">Couleur</a> * plateau);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> * <a class="code" href="Plateau_8h.html#ad1972b1f8f2087b03bca55805a2a0a73">PLATEAU_CreerPlateau</a>() ;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Plateau_8h.html#a527bd475dd6c51db8b640f3ccca0d75a">PLATEAU_JouerCoup</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structCoup.html">Coup</a> coup);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="structCouleur.html">Couleur</a> <a class="code" href="Plateau_8h.html#afce75f28d97af92ab6ccfc22a6c10cf5">PLATEAU_ObtenirCouleurAvecPosition</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structPosition.html">Position</a> position) ;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="Plateau_8h.html#a29307bcab64380a2d5815867ca965552">PLATEAU_EstPositionLibre</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structPosition.html">Position</a> position) ;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Plateau_8h.html#a41bf1a2697e9d8891d919f307f0881c1">PLATEAU_ObtenirTaille</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau) ;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="Plateau_8h.html#a93ebca467b0af23b97f559d54323b7a2">PLATEAU_EstRempli</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">int</span> <a class="code" href="Plateau_8h.html#a649c5ed91fceb626ebeab35d0b334be9">PLATEAU_CalculerPoints</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structCouleur.html">Couleur</a> couleur);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="Plateau_8h.html#a9c2b70ecfa0b94e04ca251af0686b26d">PLATEAU_EstPositionValide</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structPosition.html">Position</a> position) ;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Plateau_8h.html#a97260b37600a04f94e722a3cc02c51dc">PLATEAU_CapturerPions</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structCoup.html">Coup</a> coup);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">void</span> <a class="code" href="Plateau_8h.html#a4680e3c7bbc9813fa691122ad41b1ccc">PLATEAU_CapturerPionsDansDirection</a>(<a class="code" href="structCouleur.html">Couleur</a> * plateau, <a class="code" href="structCoup.html">Coup</a> coup, <a class="code" href="Direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> direction);</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="Plateau_8h_html_a41bf1a2697e9d8891d919f307f0881c1"><div class="ttname"><a href="Plateau_8h.html#a41bf1a2697e9d8891d919f307f0881c1">PLATEAU_ObtenirTaille</a></div><div class="ttdeci">int PLATEAU_ObtenirTaille(Couleur *plateau)</div><div class="ttdoc">Permet d&amp;#39;obtenir la taille d&amp;#39;un plateau. </div><div class="ttdef"><b>Definition:</b> Plateau.c:51</div></div>
+<div class="ttc" id="Plateau_8h_html_a97260b37600a04f94e722a3cc02c51dc"><div class="ttname"><a href="Plateau_8h.html#a97260b37600a04f94e722a3cc02c51dc">PLATEAU_CapturerPions</a></div><div class="ttdeci">void PLATEAU_CapturerPions(Couleur *plateau, Coup coup)</div><div class="ttdoc">Capture les pions adverses depuis la Position d&amp;#39;un Coup donné. </div><div class="ttdef"><b>Definition:</b> Plateau.c:79</div></div>
+<div class="ttc" id="structCoup_html"><div class="ttname"><a href="structCoup.html">Coup</a></div><div class="ttdoc">Le type Coup permet de jouer une couleur à une position. </div><div class="ttdef"><b>Definition:</b> Coup.h:24</div></div>
+<div class="ttc" id="structCouleur_html"><div class="ttname"><a href="structCouleur.html">Couleur</a></div><div class="ttdoc">Le type Couleur permet de symboliser un pion. </div><div class="ttdef"><b>Definition:</b> Couleur.h:32</div></div>
+<div class="ttc" id="Plateau_8h_html_a4680e3c7bbc9813fa691122ad41b1ccc"><div class="ttname"><a href="Plateau_8h.html#a4680e3c7bbc9813fa691122ad41b1ccc">PLATEAU_CapturerPionsDansDirection</a></div><div class="ttdeci">void PLATEAU_CapturerPionsDansDirection(Couleur *plateau, Coup coup, Direction direction)</div><div class="ttdoc">Capture les pions adverses depuis la Position d&amp;#39;un Coup donné dans une certaine Direction. </div><div class="ttdef"><b>Definition:</b> Plateau.c:92</div></div>
+<div class="ttc" id="Direction_8h_html_a224b9163917ac32fc95a60d8c1eec3aa"><div class="ttname"><a href="Direction_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">L&amp;#39;énumeration Direction permet de manipuler des coordonnées relatives à un point central pour obtenir...</div><div class="ttdef"><b>Definition:</b> Direction.h:18</div></div>
+<div class="ttc" id="Plateau_8h_html_a93ebca467b0af23b97f559d54323b7a2"><div class="ttname"><a href="Plateau_8h.html#a93ebca467b0af23b97f559d54323b7a2">PLATEAU_EstRempli</a></div><div class="ttdeci">bool PLATEAU_EstRempli(Couleur *plateau)</div><div class="ttdoc">Détermine si le plateau est entièrement rempli. </div><div class="ttdef"><b>Definition:</b> Plateau.c:55</div></div>
+<div class="ttc" id="Plateau_8h_html_a527bd475dd6c51db8b640f3ccca0d75a"><div class="ttname"><a href="Plateau_8h.html#a527bd475dd6c51db8b640f3ccca0d75a">PLATEAU_JouerCoup</a></div><div class="ttdeci">void PLATEAU_JouerCoup(Couleur *plateau, Coup coup)</div><div class="ttdoc">Joue un coup sur le plateau. </div><div class="ttdef"><b>Definition:</b> Plateau.c:32</div></div>
+<div class="ttc" id="Plateau_8h_html_a649c5ed91fceb626ebeab35d0b334be9"><div class="ttname"><a href="Plateau_8h.html#a649c5ed91fceb626ebeab35d0b334be9">PLATEAU_CalculerPoints</a></div><div class="ttdeci">int PLATEAU_CalculerPoints(Couleur *plateau, Couleur couleur)</div><div class="ttdoc">Calcule le nombre de points d&amp;#39;une Couleur. </div><div class="ttdef"><b>Definition:</b> Plateau.c:66</div></div>
+<div class="ttc" id="ParcourirDirection_8h_html"><div class="ttname"><a href="ParcourirDirection_8h.html">ParcourirDirection.h</a></div><div class="ttdoc">Fichier contenant la définition de fonctions pour parcourir un plateau dans des directions données et...</div></div>
+<div class="ttc" id="Plateau_8h_html_afce75f28d97af92ab6ccfc22a6c10cf5"><div class="ttname"><a href="Plateau_8h.html#afce75f28d97af92ab6ccfc22a6c10cf5">PLATEAU_ObtenirCouleurAvecPosition</a></div><div class="ttdeci">Couleur PLATEAU_ObtenirCouleurAvecPosition(Couleur *plateau, Position position)</div><div class="ttdoc">Permet d&amp;#39;obtenir la Couleur présente sur le plateau grâce à une Position. </div><div class="ttdef"><b>Definition:</b> Plateau.c:40</div></div>
+<div class="ttc" id="Plateau_8h_html_a9c2b70ecfa0b94e04ca251af0686b26d"><div class="ttname"><a href="Plateau_8h.html#a9c2b70ecfa0b94e04ca251af0686b26d">PLATEAU_EstPositionValide</a></div><div class="ttdeci">bool PLATEAU_EstPositionValide(Couleur *plateau, Position position)</div><div class="ttdoc">Détermine si une Position est valide. </div><div class="ttdef"><b>Definition:</b> Plateau.c:106</div></div>
+<div class="ttc" id="structPosition_html"><div class="ttname"><a href="structPosition.html">Position</a></div><div class="ttdoc">Le type Position permet de symboliser les cases du plateau. </div><div class="ttdef"><b>Definition:</b> Position.h:22</div></div>
+<div class="ttc" id="Position_8h_html"><div class="ttname"><a href="Position_8h.html">Position.h</a></div><div class="ttdoc">Fichier contenant la définition du type Position et de ses fonctions associées. </div></div>
+<div class="ttc" id="Plateau_8h_html_ad1972b1f8f2087b03bca55805a2a0a73"><div class="ttname"><a href="Plateau_8h.html#ad1972b1f8f2087b03bca55805a2a0a73">PLATEAU_CreerPlateau</a></div><div class="ttdeci">Couleur * PLATEAU_CreerPlateau()</div><div class="ttdoc">Crée un plateau. </div><div class="ttdef"><b>Definition:</b> Plateau.c:26</div></div>
+<div class="ttc" id="Plateau_8h_html_a29307bcab64380a2d5815867ca965552"><div class="ttname"><a href="Plateau_8h.html#a29307bcab64380a2d5815867ca965552">PLATEAU_EstPositionLibre</a></div><div class="ttdeci">bool PLATEAU_EstPositionLibre(Couleur *plateau, Position position)</div><div class="ttdoc">Détermine si la Position est libre à la Position donnée. </div><div class="ttdef"><b>Definition:</b> Plateau.c:46</div></div>
+<div class="ttc" id="Coup_8h_html"><div class="ttname"><a href="Coup_8h.html">Coup.h</a></div><div class="ttdoc">Fichier contenant la définition du type Coup et de ses fonctions associées. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

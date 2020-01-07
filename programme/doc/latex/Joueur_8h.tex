@@ -1,0 +1,213 @@
+\hypertarget{Joueur_8h}{}\section{Référence du fichier include/\+Joueur.h}
+\label{Joueur_8h}\index{include/\+Joueur.\+h@{include/\+Joueur.\+h}}
+
+
+Fichier contenant la définition du type \hyperlink{structJoueur}{Joueur} et de ses fonctions associées.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Couleur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Coup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Intelligence\+Artificielle.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Joueur.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Joueur_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Joueur_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structJoueur}{Joueur}
+\begin{DoxyCompactList}\small\item\em Le type \hyperlink{structJoueur}{Joueur} permet de manipuler une couleur en sachant si elle est jouée par une IA ou un \hyperlink{structJoueur}{Joueur} réel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structJoueur}{Joueur} \hyperlink{Joueur_8h_a4df13be25c1cf218785dc9edd1134390}{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain} (\hyperlink{structCouleur}{Couleur} couleur)
+\begin{DoxyCompactList}\small\item\em Crée un \hyperlink{structJoueur}{Joueur} joué par un humain. \end{DoxyCompactList}\item 
+\hyperlink{structJoueur}{Joueur} \hyperlink{Joueur_8h_a418fd1c5d250f5a47420b60f3f771939}{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+IA} (\hyperlink{structCouleur}{Couleur} couleur, int profondeur)
+\begin{DoxyCompactList}\small\item\em Crée un \hyperlink{structJoueur}{Joueur} joué par une IA. \end{DoxyCompactList}\item 
+\hyperlink{structCoup}{Coup} \hyperlink{Joueur_8h_a3af76f7b5fc6bec9be5c3ff8d4ab42fe}{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain} (\hyperlink{structJoueur}{Joueur} joueur)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} à partir d\textquotesingle{}une saisie par un \hyperlink{structJoueur}{Joueur} humain. \end{DoxyCompactList}\item 
+\hyperlink{structCoup}{Coup} \hyperlink{Joueur_8h_a765e58cef67a7dd015f3594ee089ccef}{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+IA} (\hyperlink{structJoueur}{Joueur} joueur, \hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} à partir d\textquotesingle{}une saisie par une IA. \end{DoxyCompactList}\item 
+\hyperlink{structCoup}{Coup} \hyperlink{Joueur_8h_aab6024f4f4b2d37b7db7472d7e78ce4a}{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup} (\hyperlink{structJoueur}{Joueur} joueur, \hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} pour un \hyperlink{structJoueur}{Joueur} donné. \end{DoxyCompactList}\item 
+\hyperlink{structCouleur}{Couleur} \hyperlink{Joueur_8h_a63accc277bd097d4f3caa5503489f98c}{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur} (\hyperlink{structJoueur}{Joueur} joueur)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder au champs couleur d\textquotesingle{}une instance de \hyperlink{structJoueur}{Joueur}. \end{DoxyCompactList}\item 
+bool \hyperlink{Joueur_8h_a9a2f9f2afaf4dac9cfccd4fcece11399}{J\+O\+U\+E\+U\+R\+\_\+\+Est\+IA} (\hyperlink{structJoueur}{Joueur} joueur)
+\begin{DoxyCompactList}\small\item\em Détermine si un \hyperlink{structJoueur}{Joueur} est joué par une IA ou non. \end{DoxyCompactList}\item 
+int \hyperlink{Joueur_8h_a331a546215bed25ae863e06396be6843}{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur} (\hyperlink{structJoueur}{Joueur} joueur)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder au champs profondeur d\textquotesingle{}une instance de \hyperlink{structJoueur}{Joueur}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant la définition du type \hyperlink{structJoueur}{Joueur} et de ses fonctions associées. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{Joueur_8h_a4df13be25c1cf218785dc9edd1134390}\label{Joueur_8h_a4df13be25c1cf218785dc9edd1134390}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain@{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain@{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain()}{JOUEUR\_CreerJoueurHumain()}}
+{\footnotesize\ttfamily \hyperlink{structJoueur}{Joueur} J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+Humain (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur}}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Crée un \hyperlink{structJoueur}{Joueur} joué par un humain. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur} & \hyperlink{structCouleur}{Couleur} des pions posés par le joueur.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Instance de \hyperlink{structJoueur}{Joueur}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_a418fd1c5d250f5a47420b60f3f771939}\label{Joueur_8h_a418fd1c5d250f5a47420b60f3f771939}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+IA@{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+IA}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+IA@{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+IA}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+I\+A()}{JOUEUR\_CreerJoueurIA()}}
+{\footnotesize\ttfamily \hyperlink{structJoueur}{Joueur} J\+O\+U\+E\+U\+R\+\_\+\+Creer\+Joueur\+IA (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur}}]{couleur,  }\item[{int}]{profondeur }\end{DoxyParamCaption})}
+
+
+
+Crée un \hyperlink{structJoueur}{Joueur} joué par une IA. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em couleur} & \hyperlink{structCouleur}{Couleur} des pions posés par le joueur. \\
+\hline
+{\em profondeur} & Profondeur de recherche de l\textquotesingle{}IA.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Instance de \hyperlink{structJoueur}{Joueur}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_a9a2f9f2afaf4dac9cfccd4fcece11399}\label{Joueur_8h_a9a2f9f2afaf4dac9cfccd4fcece11399}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Est\+IA@{J\+O\+U\+E\+U\+R\+\_\+\+Est\+IA}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Est\+IA@{J\+O\+U\+E\+U\+R\+\_\+\+Est\+IA}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Est\+I\+A()}{JOUEUR\_EstIA()}}
+{\footnotesize\ttfamily bool J\+O\+U\+E\+U\+R\+\_\+\+Est\+IA (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Détermine si un \hyperlink{structJoueur}{Joueur} est joué par une IA ou non. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} dont on souhaite determiner si il est une IA ou non.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le joueur est une IA, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_a63accc277bd097d4f3caa5503489f98c}\label{Joueur_8h_a63accc277bd097d4f3caa5503489f98c}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur@{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur@{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur()}{JOUEUR\_ObtenirCouleur()}}
+{\footnotesize\ttfamily \hyperlink{structCouleur}{Couleur} J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Couleur (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder au champs couleur d\textquotesingle{}une instance de \hyperlink{structJoueur}{Joueur}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} dont on souhaite obtenir la \hyperlink{structCouleur}{Couleur}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{structCouleur}{Couleur} du joueur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_a331a546215bed25ae863e06396be6843}\label{Joueur_8h_a331a546215bed25ae863e06396be6843}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur@{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur@{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur()}{JOUEUR\_ObtenirProfondeur()}}
+{\footnotesize\ttfamily int J\+O\+U\+E\+U\+R\+\_\+\+Obtenir\+Profondeur (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder au champs profondeur d\textquotesingle{}une instance de \hyperlink{structJoueur}{Joueur}. 
+
+Cette fonction n\textquotesingle{}a pas de sens si le \hyperlink{structJoueur}{Joueur} est joué par un humain.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} dont on souhaite obtenir la profondeur.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Profondeur du \hyperlink{structJoueur}{Joueur}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_aab6024f4f4b2d37b7db7472d7e78ce4a}\label{Joueur_8h_aab6024f4f4b2d37b7db7472d7e78ce4a}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup@{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup@{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup()}{JOUEUR\_SaisirCoup()}}
+{\footnotesize\ttfamily \hyperlink{structCoup}{Coup} J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur,  }\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} pour un \hyperlink{structJoueur}{Joueur} donné. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} dont on souhaite obtenir un \hyperlink{structCoup}{Coup}. \\
+\hline
+{\em plateau} & Plateau de jeu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{structCoup}{Coup} construit à partir de la saisie. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_a3af76f7b5fc6bec9be5c3ff8d4ab42fe}\label{Joueur_8h_a3af76f7b5fc6bec9be5c3ff8d4ab42fe}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain@{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain@{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain()}{JOUEUR\_SaisirCoupHumain()}}
+{\footnotesize\ttfamily \hyperlink{structCoup}{Coup} J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+Humain (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} à partir d\textquotesingle{}une saisie par un \hyperlink{structJoueur}{Joueur} humain. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} dont on souhaite obtenir un \hyperlink{structCoup}{Coup}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{structCoup}{Coup} construit à partir de la saisie. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Joueur_8h_a765e58cef67a7dd015f3594ee089ccef}\label{Joueur_8h_a765e58cef67a7dd015f3594ee089ccef}} 
+\index{Joueur.\+h@{Joueur.\+h}!J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+IA@{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+IA}}
+\index{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+IA@{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+IA}!Joueur.\+h@{Joueur.\+h}}
+\subsubsection{\texorpdfstring{J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+I\+A()}{JOUEUR\_SaisirCoupIA()}}
+{\footnotesize\ttfamily \hyperlink{structCoup}{Coup} J\+O\+U\+E\+U\+R\+\_\+\+Saisir\+Coup\+IA (\begin{DoxyParamCaption}\item[{\hyperlink{structJoueur}{Joueur}}]{joueur,  }\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} à partir d\textquotesingle{}une saisie par une IA. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em joueur} & \hyperlink{structJoueur}{Joueur} dont on souhaite obtenir un \hyperlink{structCoup}{Coup}. \\
+\hline
+{\em plateau} & Plateau de jeu\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{structCoup}{Coup} construit à partir de la saisie. 
+\end{DoxyReturn}

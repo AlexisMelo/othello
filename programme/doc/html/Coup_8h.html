@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Othello_Algo_19-20_12: Référence du fichier include/Coup.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Othello_Algo_19-20_12
+   </div>
+   <div id="projectbrief">DéveloppementdujeuOthelloenlangageC</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Coup.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fichier contenant la définition du type <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> et de ses fonctions associées.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="Position_8h_source.html">Position.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Couleur_8h_source.html">Couleur.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="Plateau_8h_source.html">Plateau.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Coup.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="Coup_8h__incl.png" border="0" usemap="#include_2Coup_8h" alt=""/></div>
+<map name="include_2Coup_8h" id="include_2Coup_8h">
+<area shape="rect" id="node2" href="Position_8h.html" title="Fichier contenant la définition du type Position et de ses fonctions associées. " alt="" coords="251,155,331,181"/>
+<area shape="rect" id="node9" href="Couleur_8h.html" title="Fichier contenant la définition du type Couleur, l&#39;enum nomCouleur et de leurs fonctions associées..." alt="" coords="147,229,226,256"/>
+<area shape="rect" id="node12" href="Plateau_8h.html" title="Fichier contenant la définition des fonctions permettant d&#39;intéragir avec le plateau de jeu..." alt="" coords="309,80,387,107"/>
+<area shape="rect" id="node5" href="Ligne_8h.html" title="Fichier contenant la définition de l&#39;enum Ligne et de ses fonctions associées. " alt="" coords="356,229,420,256"/>
+<area shape="rect" id="node6" href="Colonne_8h.html" title="Fichier contenant la définition de l&#39;enum Colonne et de ses fonctions associées. " alt="" coords="250,229,331,256"/>
+<area shape="rect" id="node11" href="Direction_8h.html" title="Fichier contenant la définition de l&#39;enum Direction et de ses fonctions associées. " alt="" coords="444,229,529,256"/>
+<area shape="rect" id="node13" href="ParcourirDirection_8h.html" title="Fichier contenant la définition de fonctions pour parcourir un plateau dans des directions données et..." alt="" coords="355,155,493,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="Coup_8h__dep__incl.png" border="0" usemap="#include_2Coup_8hdep" alt=""/></div>
+<map name="include_2Coup_8hdep" id="include_2Coup_8hdep">
+<area shape="rect" id="node2" href="Plateau_8h.html" title="Fichier contenant la définition des fonctions permettant d&#39;intéragir avec le plateau de jeu..." alt="" coords="295,155,418,181"/>
+<area shape="rect" id="node8" href="Joueur_8h.html" title="Fichier contenant la définition du type Joueur et de ses fonctions associées. " alt="" coords="201,304,318,331"/>
+<area shape="rect" id="node11" href="ParcourirDirection_8h.html" title="Fichier contenant la définition de fonctions pour parcourir un plateau dans des directions données et..." alt="" coords="124,80,307,107"/>
+<area shape="rect" id="node12" href="Coups_8h.html" title="Fichier contenant la définition du type Coups et de ses fonctions associées. " alt="" coords="5,155,121,181"/>
+<area shape="rect" id="node3" href="Affichage_8h.html" title="Fichier contenant les fonctions d&#39;affichage. " alt="" coords="418,379,551,405"/>
+<area shape="rect" id="node7" href="IntelligenceArtificielle_8h.html" title="Fichier contenant la définition des fonctions pour obtenir un Coup d&#39;une IA. " alt="" coords="145,229,347,256"/>
+<area shape="rect" id="node9" href="RechercherCoup_8h.html" title="Fichier contenant la définition des fonctions pour rechercher des Coup possibles. ..." alt="" coords="46,379,222,405"/>
+<area shape="rect" id="node10" href="GererPartie_8h.html" title="Fichier contenant la définition des fonctions permettant de gérer le déroulement d&#39;une partie d&#39;Othel..." alt="" coords="142,453,286,480"/>
+<area shape="rect" id="node4" href="MenuLigneCommande_8h.html" title="Fichier contenant la définition de fonctions permettant d&#39;avoir un menu en ligne de commande pour lan..." alt="" coords="219,528,427,555"/>
+<area shape="rect" id="node5" href="MenuGraphique_8h.html" title="Fichier contenant la définition de fonctions permettant d&#39;avoir un menu graphique pour lancer le jeu..." alt="" coords="300,603,469,629"/>
+<area shape="rect" id="node6" href="Othello_8h.html" title="Fichier contenant la définition du main du programme. " alt="" coords="264,677,383,704"/>
+</map>
+</div>
+</div>
+<p><a href="Coup_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structCoup.html">Coup</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Le type <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> permet de jouer une couleur à une position.  <a href="structCoup.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af23d663394bd9fede8f84b8c8159f129"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCoup.html">Coup</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Coup_8h.html#af23d663394bd9fede8f84b8c8159f129">COUP_CreerCoup</a> (<a class="el" href="structPosition.html">Position</a> position, <a class="el" href="structCouleur.html">Couleur</a> couleur)</td></tr>
+<tr class="memdesc:af23d663394bd9fede8f84b8c8159f129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>.  <a href="#af23d663394bd9fede8f84b8c8159f129">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af23d663394bd9fede8f84b8c8159f129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb431030561c86583c8163d02f2ae19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Coup_8h.html#addb431030561c86583c8163d02f2ae19">COUP_SontEgauxCoups</a> (<a class="el" href="structCoup.html">Coup</a> coup1, <a class="el" href="structCoup.html">Coup</a> coup2)</td></tr>
+<tr class="memdesc:addb431030561c86583c8163d02f2ae19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détermine si deux <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> sont identiques.  <a href="#addb431030561c86583c8163d02f2ae19">Plus de détails...</a><br /></td></tr>
+<tr class="separator:addb431030561c86583c8163d02f2ae19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c3e47fcc4c12e2ebc0eeb7f28c37d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structCouleur.html">Couleur</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Coup_8h.html#af0c3e47fcc4c12e2ebc0eeb7f28c37d6">COUP_ObtenirCouleur</a> (<a class="el" href="structCoup.html">Coup</a> coup)</td></tr>
+<tr class="memdesc:af0c3e47fcc4c12e2ebc0eeb7f28c37d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'accéder au champs couleur d'une instance de <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>.  <a href="#af0c3e47fcc4c12e2ebc0eeb7f28c37d6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af0c3e47fcc4c12e2ebc0eeb7f28c37d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac930852f7ad3c8052fb9fdbf5f1db109"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPosition.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Coup_8h.html#ac930852f7ad3c8052fb9fdbf5f1db109">COUP_ObtenirPosition</a> (<a class="el" href="structCoup.html">Coup</a> coup)</td></tr>
+<tr class="memdesc:ac930852f7ad3c8052fb9fdbf5f1db109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'accéder au champs position d'une instance de <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>.  <a href="#ac930852f7ad3c8052fb9fdbf5f1db109">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac930852f7ad3c8052fb9fdbf5f1db109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9edbed93843ade7938339a2729c54fc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Coup_8h.html#a9edbed93843ade7938339a2729c54fc7">COUP_EstCoupValide</a> (<a class="el" href="structCouleur.html">Couleur</a> *plateau, <a class="el" href="structCoup.html">Coup</a> coup)</td></tr>
+<tr class="memdesc:a9edbed93843ade7938339a2729c54fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Détermine si un <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> est valide.  <a href="#a9edbed93843ade7938339a2729c54fc7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9edbed93843ade7938339a2729c54fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fichier contenant la définition du type <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> et de ses fonctions associées. </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="af23d663394bd9fede8f84b8c8159f129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23d663394bd9fede8f84b8c8159f129">&#9670;&nbsp;</a></span>COUP_CreerCoup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCoup.html">Coup</a> COUP_CreerCoup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPosition.html">Position</a>&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCouleur.html">Couleur</a>&#160;</td>
+          <td class="paramname"><em>couleur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée un <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="structPosition.html" title="Le type Position permet de symboliser les cases du plateau. ">Position</a> où le <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> doit être joué. </td></tr>
+    <tr><td class="paramname">couleur</td><td><a class="el" href="structCouleur.html" title="Le type Couleur permet de symboliser un pion. ">Couleur</a> du joueur qui joue le <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Instance de <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a9edbed93843ade7938339a2729c54fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9edbed93843ade7938339a2729c54fc7">&#9670;&nbsp;</a></span>COUP_EstCoupValide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool COUP_EstCoupValide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCouleur.html">Couleur</a> *&#160;</td>
+          <td class="paramname"><em>plateau</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>coup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détermine si un <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> est valide. </p>
+<p>Il est considéré valide quand la position est elle même valide par rapport au plateau, et si la couleur du <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> n'est pas neutre.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">plateau</td><td>Plateau de jeu. </td></tr>
+    <tr><td class="paramname">coup</td><td><a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> dont on souhaite tester la validité.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si le <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> est valide, false sinon. </dd></dl>
+
+</div>
+</div>
+<a id="af0c3e47fcc4c12e2ebc0eeb7f28c37d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c3e47fcc4c12e2ebc0eeb7f28c37d6">&#9670;&nbsp;</a></span>COUP_ObtenirCouleur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structCouleur.html">Couleur</a> COUP_ObtenirCouleur </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>coup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet d'accéder au champs couleur d'une instance de <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coup</td><td><a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> dont on souhaite obtenir la <a class="el" href="structCouleur.html" title="Le type Couleur permet de symboliser un pion. ">Couleur</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structCouleur.html" title="Le type Couleur permet de symboliser un pion. ">Couleur</a> du <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ac930852f7ad3c8052fb9fdbf5f1db109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac930852f7ad3c8052fb9fdbf5f1db109">&#9670;&nbsp;</a></span>COUP_ObtenirPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPosition.html">Position</a> COUP_ObtenirPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>coup</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet d'accéder au champs position d'une instance de <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coup</td><td><a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> dont on souhaite obtenir la <a class="el" href="structPosition.html" title="Le type Position permet de symboliser les cases du plateau. ">Position</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structPosition.html" title="Le type Position permet de symboliser les cases du plateau. ">Position</a> du <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a>. </dd></dl>
+
+</div>
+</div>
+<a id="addb431030561c86583c8163d02f2ae19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addb431030561c86583c8163d02f2ae19">&#9670;&nbsp;</a></span>COUP_SontEgauxCoups()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool COUP_SontEgauxCoups </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>coup1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCoup.html">Coup</a>&#160;</td>
+          <td class="paramname"><em>coup2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Détermine si deux <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> sont identiques. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coup1</td><td>Premier <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> à comparer. </td></tr>
+    <tr><td class="paramname">coup2</td><td>Deuxième <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> à comparer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si les <a class="el" href="structCoup.html" title="Le type Coup permet de jouer une couleur à une position. ">Coup</a> sont égaux, false sinon. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

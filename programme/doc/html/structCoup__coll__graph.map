@@ -1,0 +1,4 @@
+<map id="Coup" name="Coup">
+<area shape="rect" id="node2" href="$structCouleur.html" title="Le type Couleur permet de symboliser un pion. " alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node3" href="$structPosition.html" title="Le type Position permet de symboliser les cases du plateau. " alt="" coords="96,5,165,32"/>
+</map>

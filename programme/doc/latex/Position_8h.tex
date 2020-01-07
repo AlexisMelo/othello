@@ -1,0 +1,193 @@
+\hypertarget{Position_8h}{}\section{Référence du fichier include/\+Position.h}
+\label{Position_8h}\index{include/\+Position.\+h@{include/\+Position.\+h}}
+
+
+Fichier contenant la définition du type \hyperlink{structPosition}{Position} et de ses fonctions associées.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Ligne.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Colonne.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Couleur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Direction.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Position.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Position_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Position_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structPosition}{Position}
+\begin{DoxyCompactList}\small\item\em Le type \hyperlink{structPosition}{Position} permet de symboliser les cases du plateau. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structPosition}{Position} \hyperlink{Position_8h_a61dec4aa9f7fa4d042bbc3b8f1368acb}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position} (\hyperlink{Ligne_8h_a5cdc09714e36ad7319234eab8fdf5e0b}{Ligne} ligne, \hyperlink{Colonne_8h_aae4471c444022e1a2ce4e2af6c2d4419}{Colonne} colonne)
+\begin{DoxyCompactList}\small\item\em Crée une \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+\hyperlink{Ligne_8h_a5cdc09714e36ad7319234eab8fdf5e0b}{Ligne} \hyperlink{Position_8h_a433c112916adba44c03861546b634306}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne} (\hyperlink{structPosition}{Position} position)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder au champs Ligne de la \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+\hyperlink{Colonne_8h_aae4471c444022e1a2ce4e2af6c2d4419}{Colonne} \hyperlink{Position_8h_ad21b2f29bb972a8f788bd559e1ca06e3}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne} (\hyperlink{structPosition}{Position} position)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}accéder au champs Colonne de la \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+void \hyperlink{Position_8h_af8df127d881b60f03c86a8df2572a586}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne} (\hyperlink{structPosition}{Position} $\ast$position, \hyperlink{Ligne_8h_a5cdc09714e36ad7319234eab8fdf5e0b}{Ligne} ligne)
+\begin{DoxyCompactList}\small\item\em Permet de modifier le champs Ligne de la \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+void \hyperlink{Position_8h_ab56c68ab09e1d9355661bfdfb900e582}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne} (\hyperlink{structPosition}{Position} $\ast$position, \hyperlink{Colonne_8h_aae4471c444022e1a2ce4e2af6c2d4419}{Colonne} colonne)
+\begin{DoxyCompactList}\small\item\em Permet de modifier le champs Colonne de la \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+\hyperlink{structPosition}{Position} \hyperlink{Position_8h_a5a6111c36df5c4f8ac4cde8fe111b16e}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction} (\hyperlink{structPosition}{Position} position, \hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} direction)
+\begin{DoxyCompactList}\small\item\em Applique une Direction à la \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+bool \hyperlink{Position_8h_a1dc37e5024770f745b62ff6314493087}{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions} (\hyperlink{structPosition}{Position} position1, \hyperlink{structPosition}{Position} position2)
+\begin{DoxyCompactList}\small\item\em Détermine si les \hyperlink{structPosition}{Position} sont identiques. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant la définition du type \hyperlink{structPosition}{Position} et de ses fonctions associées. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{Position_8h_a5a6111c36df5c4f8ac4cde8fe111b16e}\label{Position_8h_a5a6111c36df5c4f8ac4cde8fe111b16e}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction()}{POSITION\_AppliquerDirection()}}
+{\footnotesize\ttfamily \hyperlink{structPosition}{Position} P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Appliquer\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{structPosition}{Position}}]{position,  }\item[{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Applique une Direction à la \hyperlink{structPosition}{Position}. 
+
+Attention, la fontion ne modifie pas la \hyperlink{structPosition}{Position} donnée mais elle renvoi bien une autre \hyperlink{structPosition}{Position} à laquelle on a appliqué la modification.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & \hyperlink{structPosition}{Position} de départ à laquelle on souhaite appliquer une Direction. \\
+\hline
+{\em direction} & Direction à appliquer sur la \hyperlink{structPosition}{Position}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Nouvelle \hyperlink{structPosition}{Position} avec la Direction appliquée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Position_8h_a61dec4aa9f7fa4d042bbc3b8f1368acb}\label{Position_8h_a61dec4aa9f7fa4d042bbc3b8f1368acb}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position()}{POSITION\_CreerPosition()}}
+{\footnotesize\ttfamily \hyperlink{structPosition}{Position} P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Creer\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{Ligne_8h_a5cdc09714e36ad7319234eab8fdf5e0b}{Ligne}}]{ligne,  }\item[{\hyperlink{Colonne_8h_aae4471c444022e1a2ce4e2af6c2d4419}{Colonne}}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Crée une \hyperlink{structPosition}{Position}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ligne} & Ligne de la \hyperlink{structPosition}{Position}. \\
+\hline
+{\em colonne} & Colonne de la \hyperlink{structPosition}{Position}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Instance de \hyperlink{structPosition}{Position}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Position_8h_ab56c68ab09e1d9355661bfdfb900e582}\label{Position_8h_ab56c68ab09e1d9355661bfdfb900e582}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne()}{POSITION\_FixerColonne()}}
+{\footnotesize\ttfamily void P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Colonne (\begin{DoxyParamCaption}\item[{\hyperlink{structPosition}{Position} $\ast$}]{position,  }\item[{\hyperlink{Colonne_8h_aae4471c444022e1a2ce4e2af6c2d4419}{Colonne}}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Permet de modifier le champs Colonne de la \hyperlink{structPosition}{Position}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & \hyperlink{structPosition}{Position} dont on souhaite modifier la Colonne. \\
+\hline
+{\em colonne} & Nouvelle valeur de la Colonne.\\
+\hline
+\end{DoxyParams}
+Permet de modifier le champs Colonne de la \hyperlink{structPosition}{Position}.
+
+\hyperlink{structPosition}{Position} Appliquer\+Direction(\+Position position, Direction direction)\{ \hyperlink{structPosition}{Position} old\+Pos = position; Fixer\+Ligne(\&position, Obtenir\+Ligne(position) + Obtenir\+Decalage\+Ligne(direction)); Fixer\+Colonne(\&position, Obtenir\+Colonne(position) + Obtenir\+Decalage\+Colonne(direction)); if(\+Est\+Position\+Valide(position))\{ return position; \} else\{ return old\+Pos; \} \} \mbox{\Hypertarget{Position_8h_af8df127d881b60f03c86a8df2572a586}\label{Position_8h_af8df127d881b60f03c86a8df2572a586}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne()}{POSITION\_FixerLigne()}}
+{\footnotesize\ttfamily void P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Fixer\+Ligne (\begin{DoxyParamCaption}\item[{\hyperlink{structPosition}{Position} $\ast$}]{position,  }\item[{\hyperlink{Ligne_8h_a5cdc09714e36ad7319234eab8fdf5e0b}{Ligne}}]{ligne }\end{DoxyParamCaption})}
+
+
+
+Permet de modifier le champs Ligne de la \hyperlink{structPosition}{Position}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & \hyperlink{structPosition}{Position} dont on souhaite modifier la Ligne. \\
+\hline
+{\em ligne} & Nouvelle valeur de la Ligne. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Position_8h_ad21b2f29bb972a8f788bd559e1ca06e3}\label{Position_8h_ad21b2f29bb972a8f788bd559e1ca06e3}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne()}{POSITION\_ObtenirColonne()}}
+{\footnotesize\ttfamily \hyperlink{Colonne_8h_aae4471c444022e1a2ce4e2af6c2d4419}{Colonne} P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Colonne (\begin{DoxyParamCaption}\item[{\hyperlink{structPosition}{Position}}]{position }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder au champs Colonne de la \hyperlink{structPosition}{Position}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & \hyperlink{structPosition}{Position} dont on souhaite obtenir la Colonne.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Colonne de la \hyperlink{structPosition}{Position}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Position_8h_a433c112916adba44c03861546b634306}\label{Position_8h_a433c112916adba44c03861546b634306}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne()}{POSITION\_ObtenirLigne()}}
+{\footnotesize\ttfamily \hyperlink{Ligne_8h_a5cdc09714e36ad7319234eab8fdf5e0b}{Ligne} P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Obtenir\+Ligne (\begin{DoxyParamCaption}\item[{\hyperlink{structPosition}{Position}}]{position }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}accéder au champs Ligne de la \hyperlink{structPosition}{Position}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & \hyperlink{structPosition}{Position} dont on souhaite obtenir la Ligne.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ligne de la \hyperlink{structPosition}{Position}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Position_8h_a1dc37e5024770f745b62ff6314493087}\label{Position_8h_a1dc37e5024770f745b62ff6314493087}} 
+\index{Position.\+h@{Position.\+h}!P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions@{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions}!Position.\+h@{Position.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions()}{POSITION\_SontEgalesPositions()}}
+{\footnotesize\ttfamily bool P\+O\+S\+I\+T\+I\+O\+N\+\_\+\+Sont\+Egales\+Positions (\begin{DoxyParamCaption}\item[{\hyperlink{structPosition}{Position}}]{position1,  }\item[{\hyperlink{structPosition}{Position}}]{position2 }\end{DoxyParamCaption})}
+
+
+
+Détermine si les \hyperlink{structPosition}{Position} sont identiques. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position1} & Première \hyperlink{structPosition}{Position} à comparer. \\
+\hline
+{\em position2} & Seconde \hyperlink{structPosition}{Position} à comparer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si les deux \hyperlink{structPosition}{Position} sont égales, false sinon. 
+\end{DoxyReturn}

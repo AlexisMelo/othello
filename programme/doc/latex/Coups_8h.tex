@@ -1,0 +1,204 @@
+\hypertarget{Coups_8h}{}\section{Référence du fichier include/\+Coups.h}
+\label{Coups_8h}\index{include/\+Coups.\+h@{include/\+Coups.\+h}}
+
+
+Fichier contenant la définition du type \hyperlink{structCoups}{Coups} et de ses fonctions associées.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Coup.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Coups.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Coups_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Coups_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structCoups}{Coups}
+\begin{DoxyCompactList}\small\item\em Le type \hyperlink{structCoups}{Coups} permet de stocker plusieurs \hyperlink{structCoup}{Coup}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structCoups}{Coups} \hyperlink{Coups_8h_a9234aaaeab8977b7d0405bf9fa7e0de0}{Coups}
+\begin{DoxyCompactList}\small\item\em Le type \hyperlink{structCoups}{Coups} permet de stocker plusieurs \hyperlink{structCoup}{Coup}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCoups}{Coups} \hyperlink{Coups_8h_a182f348b22fe6709722563d3486803c5}{C\+O\+U\+P\+S\+\_\+\+Creer\+Coups} ()
+\begin{DoxyCompactList}\small\item\em Crée une pile de \hyperlink{structCoup}{Coup}. \end{DoxyCompactList}\item 
+bool \hyperlink{Coups_8h_af7bab4a0187f58e39953521d9d3a3046}{C\+O\+U\+P\+S\+\_\+\+Est\+Vide} (\hyperlink{structCoups}{Coups} coups)
+\begin{DoxyCompactList}\small\item\em Détermine si \hyperlink{structCoups}{Coups} est vide, c\textquotesingle{}est à dire qu\textquotesingle{}il ne possède aucun \hyperlink{structCoup}{Coup}. \end{DoxyCompactList}\item 
+void \hyperlink{Coups_8h_acbf64e939c28d8934dc22750cecfff34}{C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup} (\hyperlink{structCoups}{Coups} $\ast$p\+Coups, \hyperlink{structCoup}{Coup} coup)
+\begin{DoxyCompactList}\small\item\em Ajoute un \hyperlink{structCoup}{Coup} à une instance de \hyperlink{structCoups}{Coups}. \end{DoxyCompactList}\item 
+void \hyperlink{Coups_8h_a07e41b6f2bb5741ce3c84bda1111d254}{C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup} (\hyperlink{structCoups}{Coups} $\ast$p\+Coups)
+\begin{DoxyCompactList}\small\item\em Supprime un \hyperlink{structCoup}{Coup} d\textquotesingle{}une instance de \hyperlink{structCoups}{Coups}. \end{DoxyCompactList}\item 
+\hyperlink{structCoup}{Coup} \hyperlink{Coups_8h_acaf697a0e6a06720fd5e1d4236d53af7}{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup} (\hyperlink{structCoups}{Coups} coups)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup}. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{Coups_8h_af0876433a345cff704d9d1b400fd9e3d}{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups} (\hyperlink{structCoups}{Coups} coups)
+\begin{DoxyCompactList}\small\item\em Permet de connaitre le nombre de \hyperlink{structCoup}{Coup} présents dans une pile \hyperlink{structCoups}{Coups}. \end{DoxyCompactList}\item 
+bool \hyperlink{Coups_8h_a8153be7ff134057f2935173465a58da4}{C\+O\+U\+P\+S\+\_\+\+Est\+Present} (\hyperlink{structCoups}{Coups} coups, \hyperlink{structCoup}{Coup} coup)
+\begin{DoxyCompactList}\small\item\em Détermine si un \hyperlink{structCoup}{Coup} est présent dans une Pile \hyperlink{structCoups}{Coups}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant la définition du type \hyperlink{structCoups}{Coups} et de ses fonctions associées. 
+
+\begin{DoxyAuthor}{Auteur}
+Léo Pacary 
+
+Alexis Melo Da Silva 
+\end{DoxyAuthor}
+
+
+\subsection{Documentation des définitions de type}
+\mbox{\Hypertarget{Coups_8h_a9234aaaeab8977b7d0405bf9fa7e0de0}\label{Coups_8h_a9234aaaeab8977b7d0405bf9fa7e0de0}} 
+\index{Coups.\+h@{Coups.\+h}!Coups@{Coups}}
+\index{Coups@{Coups}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{Coups}{Coups}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structCoups}{Coups} \hyperlink{structCoups}{Coups}}
+
+
+
+Le type \hyperlink{structCoups}{Coups} permet de stocker plusieurs \hyperlink{structCoup}{Coup}. 
+
+Sa manipulation s\textquotesingle{}apparente à celle d\textquotesingle{}une pile L\+I\+FO. 
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{Coups_8h_acbf64e939c28d8934dc22750cecfff34}\label{Coups_8h_acbf64e939c28d8934dc22750cecfff34}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup@{C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup}}
+\index{C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup@{C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup()}{COUPS\_AjouterCoup()}}
+{\footnotesize\ttfamily void C\+O\+U\+P\+S\+\_\+\+Ajouter\+Coup (\begin{DoxyParamCaption}\item[{\hyperlink{structCoups}{Coups} $\ast$}]{p\+Coups,  }\item[{\hyperlink{structCoup}{Coup}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Ajoute un \hyperlink{structCoup}{Coup} à une instance de \hyperlink{structCoups}{Coups}. 
+
+Le \hyperlink{structCoup}{Coup} est ajouté en tête de pile.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\+Coups} & Pointeur vers l\textquotesingle{}instance de \hyperlink{structCoups}{Coups} à laquelle on souhaite ajouter un \hyperlink{structCoup}{Coup}. \\
+\hline
+{\em coup} & \hyperlink{structCoup}{Coup} que l\textquotesingle{}on souhaite ajouter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Coups_8h_a182f348b22fe6709722563d3486803c5}\label{Coups_8h_a182f348b22fe6709722563d3486803c5}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Creer\+Coups@{C\+O\+U\+P\+S\+\_\+\+Creer\+Coups}}
+\index{C\+O\+U\+P\+S\+\_\+\+Creer\+Coups@{C\+O\+U\+P\+S\+\_\+\+Creer\+Coups}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Creer\+Coups()}{COUPS\_CreerCoups()}}
+{\footnotesize\ttfamily \hyperlink{structCoups}{Coups} C\+O\+U\+P\+S\+\_\+\+Creer\+Coups (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée une pile de \hyperlink{structCoup}{Coup}. 
+
+\begin{DoxyReturn}{Renvoie}
+Instance de \hyperlink{structCoups}{Coups}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Coups_8h_a8153be7ff134057f2935173465a58da4}\label{Coups_8h_a8153be7ff134057f2935173465a58da4}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Est\+Present@{C\+O\+U\+P\+S\+\_\+\+Est\+Present}}
+\index{C\+O\+U\+P\+S\+\_\+\+Est\+Present@{C\+O\+U\+P\+S\+\_\+\+Est\+Present}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Est\+Present()}{COUPS\_EstPresent()}}
+{\footnotesize\ttfamily bool C\+O\+U\+P\+S\+\_\+\+Est\+Present (\begin{DoxyParamCaption}\item[{\hyperlink{structCoups}{Coups}}]{coups,  }\item[{\hyperlink{structCoup}{Coup}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Détermine si un \hyperlink{structCoup}{Coup} est présent dans une Pile \hyperlink{structCoups}{Coups}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & Pile \hyperlink{structCoups}{Coups} dont on souhaite vérifier le contenu. \\
+\hline
+{\em coup} & \hyperlink{structCoup}{Coup} que l\textquotesingle{}on recherche.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le coup est présent, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Coups_8h_af7bab4a0187f58e39953521d9d3a3046}\label{Coups_8h_af7bab4a0187f58e39953521d9d3a3046}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Est\+Vide@{C\+O\+U\+P\+S\+\_\+\+Est\+Vide}}
+\index{C\+O\+U\+P\+S\+\_\+\+Est\+Vide@{C\+O\+U\+P\+S\+\_\+\+Est\+Vide}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Est\+Vide()}{COUPS\_EstVide()}}
+{\footnotesize\ttfamily bool C\+O\+U\+P\+S\+\_\+\+Est\+Vide (\begin{DoxyParamCaption}\item[{\hyperlink{structCoups}{Coups}}]{coups }\end{DoxyParamCaption})}
+
+
+
+Détermine si \hyperlink{structCoups}{Coups} est vide, c\textquotesingle{}est à dire qu\textquotesingle{}il ne possède aucun \hyperlink{structCoup}{Coup}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & Pile \hyperlink{structCoups}{Coups} dont on souhaite tester le contenu.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si \hyperlink{structCoups}{Coups} est vide, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Coups_8h_acaf697a0e6a06720fd5e1d4236d53af7}\label{Coups_8h_acaf697a0e6a06720fd5e1d4236d53af7}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup@{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup}}
+\index{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup@{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup()}{COUPS\_ObtenirCoup()}}
+{\footnotesize\ttfamily \hyperlink{structCoup}{Coup} C\+O\+U\+P\+S\+\_\+\+Obtenir\+Coup (\begin{DoxyParamCaption}\item[{\hyperlink{structCoups}{Coups}}]{coups }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup}. 
+
+Obtient le coup en tête de pile.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & Pile \hyperlink{structCoups}{Coups} dans laquelle on souhaite obtenir un \hyperlink{structCoup}{Coup}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Instance de \hyperlink{structCoup}{Coup} obtenue. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Coups_8h_af0876433a345cff704d9d1b400fd9e3d}\label{Coups_8h_af0876433a345cff704d9d1b400fd9e3d}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups@{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups}}
+\index{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups@{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups()}{COUPS\_ObtenirNombreDeCoups()}}
+{\footnotesize\ttfamily unsigned int C\+O\+U\+P\+S\+\_\+\+Obtenir\+Nombre\+De\+Coups (\begin{DoxyParamCaption}\item[{\hyperlink{structCoups}{Coups}}]{coups }\end{DoxyParamCaption})}
+
+
+
+Permet de connaitre le nombre de \hyperlink{structCoup}{Coup} présents dans une pile \hyperlink{structCoups}{Coups}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coups} & Pile \hyperlink{structCoups}{Coups} dont on souhaite connaitre le nombre de \hyperlink{structCoup}{Coup}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Nombre de \hyperlink{structCoup}{Coup}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Coups_8h_a07e41b6f2bb5741ce3c84bda1111d254}\label{Coups_8h_a07e41b6f2bb5741ce3c84bda1111d254}} 
+\index{Coups.\+h@{Coups.\+h}!C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup@{C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup}}
+\index{C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup@{C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup}!Coups.\+h@{Coups.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup()}{COUPS\_RetirerCoup()}}
+{\footnotesize\ttfamily void C\+O\+U\+P\+S\+\_\+\+Retirer\+Coup (\begin{DoxyParamCaption}\item[{\hyperlink{structCoups}{Coups} $\ast$}]{p\+Coups }\end{DoxyParamCaption})}
+
+
+
+Supprime un \hyperlink{structCoup}{Coup} d\textquotesingle{}une instance de \hyperlink{structCoups}{Coups}. 
+
+Le coup supprimé est celui en tête de pile.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p\+Coups} & Pointeur vers l\textquotesingle{}instance de \hyperlink{structCoups}{Coups} à laquelle on souhaite retirer un coup. \\
+\hline
+\end{DoxyParams}

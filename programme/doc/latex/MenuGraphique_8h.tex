@@ -1,0 +1,49 @@
+\hypertarget{MenuGraphique_8h}{}\section{Référence du fichier include/\+Menu\+Graphique.h}
+\label{MenuGraphique_8h}\index{include/\+Menu\+Graphique.\+h@{include/\+Menu\+Graphique.\+h}}
+
+
+Fichier contenant la définition de fonctions permettant d\textquotesingle{}avoir un menu graphique pour lancer le jeu.  
+
+
+{\ttfamily \#include \char`\"{}Menu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Menu\+Ligne\+Commande.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Menu\+Graphique.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MenuGraphique_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{MenuGraphique_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{MenuGraphique_8h_a28c8c8fade9f041e6d015f86a5b5ffd8}{M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique} ()
+\begin{DoxyCompactList}\small\item\em Lance un enchainement de commandes pour lancer les fonctionnalités du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant la définition de fonctions permettant d\textquotesingle{}avoir un menu graphique pour lancer le jeu. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{MenuGraphique_8h_a28c8c8fade9f041e6d015f86a5b5ffd8}\label{MenuGraphique_8h_a28c8c8fade9f041e6d015f86a5b5ffd8}} 
+\index{Menu\+Graphique.\+h@{Menu\+Graphique.\+h}!M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique@{M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique}}
+\index{M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique@{M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique}!Menu\+Graphique.\+h@{Menu\+Graphique.\+h}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique()}{MENU\_G\_MenuGraphique()}}
+{\footnotesize\ttfamily void M\+E\+N\+U\+\_\+\+G\+\_\+\+Menu\+Graphique (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Lance un enchainement de commandes pour lancer les fonctionnalités du jeu. 
+
+Il est possible d\textquotesingle{}afficher l\textquotesingle{}aide du jeu ou bien de lancer une partie. Dans le cas où une partie est lancée, le Menu graphique demande d\textquotesingle{}abord dans quel mode de jeu souhaite jouer l\textquotesingle{}utilisateur (P\+VP, standard, tournois).. Il demande ensuite la profondeur de l\textquotesingle{}IA si il y en a une, et la \hyperlink{structCouleur}{Couleur} du premier \hyperlink{structJoueur}{Joueur}. 

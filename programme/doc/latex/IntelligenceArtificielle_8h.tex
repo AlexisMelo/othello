@@ -1,0 +1,68 @@
+\hypertarget{IntelligenceArtificielle_8h}{}\section{Référence du fichier include/\+Intelligence\+Artificielle.h}
+\label{IntelligenceArtificielle_8h}\index{include/\+Intelligence\+Artificielle.\+h@{include/\+Intelligence\+Artificielle.\+h}}
+
+
+Fichier contenant la définition des fonctions pour obtenir un \hyperlink{structCoup}{Coup} d\textquotesingle{}une IA.  
+
+
+{\ttfamily \#include \char`\"{}Plateau.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Joueur.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Coups.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Rechercher\+Coup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Couleur.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Intelligence\+Artificielle.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IntelligenceArtificielle_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IntelligenceArtificielle_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structCoup}{Coup} \hyperlink{IntelligenceArtificielle_8h_a799512a1c957a2bb61227007284370ca}{I\+A\+\_\+\+Min\+Max} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structJoueur}{Joueur} joueur\+A\+Maximiser, int profondeur)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} par une IA. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{IntelligenceArtificielle_8h_a8e4a56f42aef3c4a4931a7469308f5ed}\label{IntelligenceArtificielle_8h_a8e4a56f42aef3c4a4931a7469308f5ed}} 
+\hyperlink{structCoup}{Coup} {\bfseries I\+A\+\_\+\+Alpha\+Beta} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structJoueur}{Joueur} joueur\+A\+Maximiser, int Profondeur)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant la définition des fonctions pour obtenir un \hyperlink{structCoup}{Coup} d\textquotesingle{}une IA. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{IntelligenceArtificielle_8h_a799512a1c957a2bb61227007284370ca}\label{IntelligenceArtificielle_8h_a799512a1c957a2bb61227007284370ca}} 
+\index{Intelligence\+Artificielle.\+h@{Intelligence\+Artificielle.\+h}!I\+A\+\_\+\+Min\+Max@{I\+A\+\_\+\+Min\+Max}}
+\index{I\+A\+\_\+\+Min\+Max@{I\+A\+\_\+\+Min\+Max}!Intelligence\+Artificielle.\+h@{Intelligence\+Artificielle.\+h}}
+\subsubsection{\texorpdfstring{I\+A\+\_\+\+Min\+Max()}{IA\_MinMax()}}
+{\footnotesize\ttfamily \hyperlink{structCoup}{Coup} I\+A\+\_\+\+Min\+Max (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structJoueur}{Joueur}}]{joueur\+A\+Maximiser,  }\item[{int}]{profondeur }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir un \hyperlink{structCoup}{Coup} par une IA. 
+
+Le \hyperlink{structCoup}{Coup} est calculé automatiquement, la profondeur permet de spécifier combien de \hyperlink{structCoup}{Coup} à l\textquotesingle{}avance l\textquotesingle{}IA peut calculer son coup, sachant que plus ce nombre est élevé plus l\textquotesingle{}IA sera lente à répondre.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu \\
+\hline
+{\em joueur\+A\+Maximiser} & \hyperlink{structJoueur}{Joueur} dont on souhaite obtenir le meilleur coup possible \\
+\hline
+{\em profondeur} & Profondeur de recherche de l\textquotesingle{}IA\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Meilleur \hyperlink{structCoup}{Coup} obtenu par l\textquotesingle{}IA 
+\end{DoxyReturn}

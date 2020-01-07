@@ -1,0 +1,261 @@
+\hypertarget{Plateau_8h}{}\section{Référence du fichier include/\+Plateau.h}
+\label{Plateau_8h}\index{include/\+Plateau.\+h@{include/\+Plateau.\+h}}
+
+
+Fichier contenant la définition des fonctions permettant d\textquotesingle{}intéragir avec le plateau de jeu.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Position.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Coup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Parcourir\+Direction.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Plateau.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Plateau_8h__incl}
+\end{center}
+\end{figure}
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Plateau_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Plateau_8h_a7b29335add3a553ed85d0e3ace85629c}\label{Plateau_8h_a7b29335add3a553ed85d0e3ace85629c}} 
+\#define {\bfseries T\+A\+I\+L\+LE}~8
+\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Plateau_8h_a16ae8e251080137fd93da6d2f6b761bc}\label{Plateau_8h_a16ae8e251080137fd93da6d2f6b761bc}} 
+void {\bfseries P\+L\+A\+T\+E\+A\+U\+\_\+\+Initialiser\+Plateau} (\hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\item 
+\hyperlink{structCouleur}{Couleur} $\ast$ \hyperlink{Plateau_8h_ad1972b1f8f2087b03bca55805a2a0a73}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau} ()
+\begin{DoxyCompactList}\small\item\em Crée un plateau. \end{DoxyCompactList}\item 
+void \hyperlink{Plateau_8h_a527bd475dd6c51db8b640f3ccca0d75a}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structCoup}{Coup} coup)
+\begin{DoxyCompactList}\small\item\em Joue un coup sur le plateau. \end{DoxyCompactList}\item 
+\hyperlink{structCouleur}{Couleur} \hyperlink{Plateau_8h_afce75f28d97af92ab6ccfc22a6c10cf5}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structPosition}{Position} position)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la \hyperlink{structCouleur}{Couleur} présente sur le plateau grâce à une \hyperlink{structPosition}{Position}. \end{DoxyCompactList}\item 
+bool \hyperlink{Plateau_8h_a29307bcab64380a2d5815867ca965552}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structPosition}{Position} position)
+\begin{DoxyCompactList}\small\item\em Détermine si la \hyperlink{structPosition}{Position} est libre à la \hyperlink{structPosition}{Position} donnée. \end{DoxyCompactList}\item 
+int \hyperlink{Plateau_8h_a41bf1a2697e9d8891d919f307f0881c1}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille} (\hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la taille d\textquotesingle{}un plateau. \end{DoxyCompactList}\item 
+bool \hyperlink{Plateau_8h_a93ebca467b0af23b97f559d54323b7a2}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli} (\hyperlink{structCouleur}{Couleur} $\ast$plateau)
+\begin{DoxyCompactList}\small\item\em Détermine si le plateau est entièrement rempli. \end{DoxyCompactList}\item 
+int \hyperlink{Plateau_8h_a649c5ed91fceb626ebeab35d0b334be9}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structCouleur}{Couleur} couleur)
+\begin{DoxyCompactList}\small\item\em Calcule le nombre de points d\textquotesingle{}une \hyperlink{structCouleur}{Couleur}. \end{DoxyCompactList}\item 
+bool \hyperlink{Plateau_8h_a9c2b70ecfa0b94e04ca251af0686b26d}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structPosition}{Position} position)
+\begin{DoxyCompactList}\small\item\em Détermine si une \hyperlink{structPosition}{Position} est valide. \end{DoxyCompactList}\item 
+void \hyperlink{Plateau_8h_a97260b37600a04f94e722a3cc02c51dc}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structCoup}{Coup} coup)
+\begin{DoxyCompactList}\small\item\em Capture les pions adverses depuis la \hyperlink{structPosition}{Position} d\textquotesingle{}un \hyperlink{structCoup}{Coup} donné. \end{DoxyCompactList}\item 
+void \hyperlink{Plateau_8h_a4680e3c7bbc9813fa691122ad41b1ccc}{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction} (\hyperlink{structCouleur}{Couleur} $\ast$plateau, \hyperlink{structCoup}{Coup} coup, \hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} direction)
+\begin{DoxyCompactList}\small\item\em Capture les pions adverses depuis la \hyperlink{structPosition}{Position} d\textquotesingle{}un \hyperlink{structCoup}{Coup} donné dans une certaine Direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier contenant la définition des fonctions permettant d\textquotesingle{}intéragir avec le plateau de jeu. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{Plateau_8h_a649c5ed91fceb626ebeab35d0b334be9}\label{Plateau_8h_a649c5ed91fceb626ebeab35d0b334be9}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points()}{PLATEAU\_CalculerPoints()}}
+{\footnotesize\ttfamily int P\+L\+A\+T\+E\+A\+U\+\_\+\+Calculer\+Points (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structCouleur}{Couleur}}]{couleur }\end{DoxyParamCaption})}
+
+
+
+Calcule le nombre de points d\textquotesingle{}une \hyperlink{structCouleur}{Couleur}. 
+
+Un point équivaut à un pion présent sur le plateau de la couleur donnée.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em couleur} & \hyperlink{structCouleur}{Couleur} dont on souhaite calculer le nombre de points.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Integer donnant le nombre de points de la \hyperlink{structCouleur}{Couleur} donnée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Plateau_8h_a97260b37600a04f94e722a3cc02c51dc}\label{Plateau_8h_a97260b37600a04f94e722a3cc02c51dc}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions()}{PLATEAU\_CapturerPions()}}
+{\footnotesize\ttfamily void P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structCoup}{Coup}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Capture les pions adverses depuis la \hyperlink{structPosition}{Position} d\textquotesingle{}un \hyperlink{structCoup}{Coup} donné. 
+
+On entend par capture le fait de remplacer la \hyperlink{structCouleur}{Couleur} des pions qui ne sont pas de la \hyperlink{structCouleur}{Couleur} du \hyperlink{structCoup}{Coup} joué par la \hyperlink{structCouleur}{Couleur} de ce dernier. Il est possible de capturer dans les 8 Direction différentes. La capture s\textquotesingle{}arrête dans une Direction quand on rencontre une case avec la même \hyperlink{structCouleur}{Couleur} que celle du \hyperlink{structCoup}{Coup}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em coup} & \hyperlink{structCoup}{Coup} qui engendre la capture. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Plateau_8h_a4680e3c7bbc9813fa691122ad41b1ccc}\label{Plateau_8h_a4680e3c7bbc9813fa691122ad41b1ccc}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction()}{PLATEAU\_CapturerPionsDansDirection()}}
+{\footnotesize\ttfamily void P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions\+Dans\+Direction (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structCoup}{Coup}}]{coup,  }\item[{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Capture les pions adverses depuis la \hyperlink{structPosition}{Position} d\textquotesingle{}un \hyperlink{structCoup}{Coup} donné dans une certaine Direction. 
+
+cf P\+L\+A\+T\+E\+A\+U\+\_\+\+Capturer\+Pions pour avoir des informations sur la capture.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em coup} & \hyperlink{structCoup}{Coup} qui egendre la capture. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Plateau_8h_ad1972b1f8f2087b03bca55805a2a0a73}\label{Plateau_8h_ad1972b1f8f2087b03bca55805a2a0a73}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau()}{PLATEAU\_CreerPlateau()}}
+{\footnotesize\ttfamily \hyperlink{structCouleur}{Couleur}$\ast$ P\+L\+A\+T\+E\+A\+U\+\_\+\+Creer\+Plateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crée un plateau. 
+
+\begin{DoxyReturn}{Renvoie}
+\+: Pointeur vers un tableau de \hyperlink{structCouleur}{Couleur}, alloué dynamiquement. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Plateau_8h_a29307bcab64380a2d5815867ca965552}\label{Plateau_8h_a29307bcab64380a2d5815867ca965552}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre()}{PLATEAU\_EstPositionLibre()}}
+{\footnotesize\ttfamily bool P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Libre (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structPosition}{Position}}]{position }\end{DoxyParamCaption})}
+
+
+
+Détermine si la \hyperlink{structPosition}{Position} est libre à la \hyperlink{structPosition}{Position} donnée. 
+
+On considère qu\textquotesingle{}une \hyperlink{structPosition}{Position} est libre quand la \hyperlink{structCouleur}{Couleur} à cet emplacement est neutre.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em position} & \hyperlink{structPosition}{Position} dont on souhaite vérifier la liberté.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la \hyperlink{structPosition}{Position} est libre, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Plateau_8h_a9c2b70ecfa0b94e04ca251af0686b26d}\label{Plateau_8h_a9c2b70ecfa0b94e04ca251af0686b26d}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide()}{PLATEAU\_EstPositionValide()}}
+{\footnotesize\ttfamily bool P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Position\+Valide (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structPosition}{Position}}]{position }\end{DoxyParamCaption})}
+
+
+
+Détermine si une \hyperlink{structPosition}{Position} est valide. 
+
+On considère une \hyperlink{structPosition}{Position} valide par rapport à un plateau donné, c\textquotesingle{}est à dire que l\textquotesingle{}on vérifie si cette \hyperlink{structPosition}{Position} n\textquotesingle{}est pas en dehors des limites du plateau.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em position} & \hyperlink{structPosition}{Position} que l\textquotesingle{}on souhaite tester.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la Positon est valide, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Plateau_8h_a93ebca467b0af23b97f559d54323b7a2}\label{Plateau_8h_a93ebca467b0af23b97f559d54323b7a2}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli()}{PLATEAU\_EstRempli()}}
+{\footnotesize\ttfamily bool P\+L\+A\+T\+E\+A\+U\+\_\+\+Est\+Rempli (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Détermine si le plateau est entièrement rempli. 
+
+On appelle un plateau rempli un plateau dont toutes les \hyperlink{structPosition}{Position} renvoient une \hyperlink{structCouleur}{Couleur} qui n\textquotesingle{}est pas neutre, donc qui ne comporte pas de case \char`\"{}libre\char`\"{}.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le plateau est rempli, false sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Plateau_8h_a527bd475dd6c51db8b640f3ccca0d75a}\label{Plateau_8h_a527bd475dd6c51db8b640f3ccca0d75a}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup()}{PLATEAU\_JouerCoup()}}
+{\footnotesize\ttfamily void P\+L\+A\+T\+E\+A\+U\+\_\+\+Jouer\+Coup (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structCoup}{Coup}}]{coup }\end{DoxyParamCaption})}
+
+
+
+Joue un coup sur le plateau. 
+
+C\textquotesingle{}est à dire que la \hyperlink{structCouleur}{Couleur} du \hyperlink{structCoup}{Coup} est posée à la bonne \hyperlink{structPosition}{Position}, cependant il n\textquotesingle{}y a pas de capture des pions adverses sur le plateau.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em coup} & \hyperlink{structCoup}{Coup} que l\textquotesingle{}on souhaite jouer sur le plateau. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Plateau_8h_afce75f28d97af92ab6ccfc22a6c10cf5}\label{Plateau_8h_afce75f28d97af92ab6ccfc22a6c10cf5}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position()}{PLATEAU\_ObtenirCouleurAvecPosition()}}
+{\footnotesize\ttfamily \hyperlink{structCouleur}{Couleur} P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Couleur\+Avec\+Position (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau,  }\item[{\hyperlink{structPosition}{Position}}]{position }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la \hyperlink{structCouleur}{Couleur} présente sur le plateau grâce à une \hyperlink{structPosition}{Position}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu. \\
+\hline
+{\em position} & \hyperlink{structPosition}{Position} de la case du plateau dont on souhaite obtenir la \hyperlink{structCouleur}{Couleur}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\hyperlink{structCouleur}{Couleur} à la \hyperlink{structPosition}{Position} donnée. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Plateau_8h_a41bf1a2697e9d8891d919f307f0881c1}\label{Plateau_8h_a41bf1a2697e9d8891d919f307f0881c1}} 
+\index{Plateau.\+h@{Plateau.\+h}!P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille}}
+\index{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille@{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille}!Plateau.\+h@{Plateau.\+h}}
+\subsubsection{\texorpdfstring{P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille()}{PLATEAU\_ObtenirTaille()}}
+{\footnotesize\ttfamily int P\+L\+A\+T\+E\+A\+U\+\_\+\+Obtenir\+Taille (\begin{DoxyParamCaption}\item[{\hyperlink{structCouleur}{Couleur} $\ast$}]{plateau }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}obtenir la taille d\textquotesingle{}un plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em plateau} & Plateau de jeu dont on souhaite connaitre la taille.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Integer donnant la taille du plateau. 
+\end{DoxyReturn}

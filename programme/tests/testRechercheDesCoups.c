@@ -6,7 +6,6 @@ void testRechercheDesCoups() {
     Couleur * plateau = PLATEAU_CreerPlateau();
     Couleur NOIR = COULEUR_ObtenirCouleurNoir();
     Couleur BLANC = COULEUR_ObtenirCouleurBlanc();
-    Coups lesCoups = COUPS_CreerCoups();
 
     /* Initialisation du plateau */
     /* Creation d'un plateau de test */
