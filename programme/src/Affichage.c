@@ -87,7 +87,7 @@ void AFFICHAGE_AfficherResultatsPartieTournois(Couleur * plateau, Joueur j1, Jou
     else {
     printf("nulle\n");}
     }
-  } 
+  }
 }
 void AFFICHAGE_AfficherPlateauTournois(Couleur * plateau) {
   //pour l'instant aucun affichage de plateau de partie nécessaire en mode tournois
@@ -116,4 +116,14 @@ void AFFICHAGE_AfficherCoupJoue(Coup coupJoue){
   colonne[0] = COLONNE_ObtenirCharDepuisColonne(coupJoue.position.colonne);
   printf("%s", strcat(strcat(colonne, ligne), "\n"));
   fflush(stdout);
+}
+
+void AFFICHAGE_AfficherSaisieCoup(Joueur joueur) {
+  if (!JOUEUR_EstIA(joueur)) {
+    printf("%s > A quelle position voulez-vous jouer ?", COULEUR_ObtenirStr(JOUEUR_ObtenirCouleur(joueur)));
+  }
+}
+
+void AFFICHAGE_AfficherSaisieCoupTournois(Joueur joueur) {
+  //pour l'instant aucun affichage de saisie de coup nécessaire en mode tournois;
 }
