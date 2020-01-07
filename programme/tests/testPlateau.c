@@ -5,24 +5,24 @@
 #include <CUnit/CUnit.h>
 #include "testPlateau.h"
 #include "Couleur.h"
-#include "AfficherPlateau.h"
+#include "../include/Affichage.h"
+#include "../include/Plateau.h"
 void TestPlateau()
 {
-    Couleur (*pPlateau)[64] = CreerPlateau();
-    InitPlateau(pPlateau);
-    Couleur couleur = CouleurNoir();
-    Ligne ligne = CreerLigne(1);
-    Colonne colonne = CreerColonne(1);
-    AfficherPlateau(pPlateau);
+    Couleur * plateau =PLATEAU_CreerPlateau();
+    Couleur couleur = COULEUR_ObtenirCouleurNoir();
+    Ligne ligne = LIGNE_ObtenirLigneDepuisInt(1);
+    Colonne colonne = COLONNE_ObtenirColonneDepuisInt(1);
+    AFFICHAGE_AfficherPlateau(plateau);
     for (int i = 1; i < TAILLE + 1; i++)
     {
         for (int j = 1; j < TAILLE + 1; j++)
         {
-            couleur = ObtenirCouleuropposee(couleur);
-            Coup coup = CreerCoup(CreerPosition(ligne + i - 1,colonne + j - 1), couleur);
-            JouerCoup(*pPlateau, coup);
-            Couleur res = ObtenirCouleurDepuisPlateau(pPlateau, CreerPosition(ligne + i - 1,colonne + j - 1));
-            CU_ASSERT(EstEgalCouleur(res, couleur));
+            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(ligne + i - 1,colonne + j - 1), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
+            Couleur res = PLATEAU_ObtenirCouleurAvecPosition(plateau, POSITION_CreerPosition(ligne + i - 1,colonne + j - 1));
+            CU_ASSERT(COULEUR_SontEgalesCouleurs(res, couleur));
             /* printf("%d        %d      ", res.nom, couleur.nom);
             printf("%s        %s      ", res.hexa, couleur.hexa);
             printf("%c        %c      ", res.symbole, couleur.symbole); 

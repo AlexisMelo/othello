@@ -7,9 +7,6 @@
 #ifndef __MENU__
 #define __MENU__
 
-#define COULEUR_NOIRE "noir"
-#define COULEUR_BLANCHE "blanc"
-
 #define JOUEURVSJOUEUR "pvp"
 #define JOUEURVSIA "standard"
 #define IAVSIA "tournoi"

@@ -60,6 +60,13 @@ char COULEUR_ObtenirSymbole(Couleur couleur) {
 }
 
 char * COULEUR_ObtenirStr(Couleur couleur) {
-    if(COULEUR_SontEgalesCouleurs(couleur, COULEUR_ObtenirCouleurBlanc())){return "blanc";};
-    if(COULEUR_SontEgalesCouleurs(couleur, COULEUR_ObtenirCouleurNoir())){return "noir";};
+    if(COULEUR_SontEgalesCouleurs(couleur, COULEUR_ObtenirCouleurBlanc())){
+      return COULEUR_BLANCHE;
+    }
+    else if (COULEUR_EstNeutre(couleur)) {
+      return COULEUR_NEUTRE;
+    }
+    else {
+      return COULEUR_NOIRE;
+    }
 }
