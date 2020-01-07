@@ -13,16 +13,16 @@
 
 		\pour{j}{1}{ObtenirTaille(p)}{}{
 
-			\instruction{JouerCoup(plateau,Coup(neutre,Position(Ligne(i),Colonne(j))))}
+			\instruction{PLATEAU_JouerCoup(plateau,Coup(neutre,Position(Ligne(i),Colonne(j))))}
 		}
 	}
 
-	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2))))}
+	\instruction{PLATEAU_JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2))))}
 
-	\instruction{JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2 + 1))))}
+	\instruction{PLATEAU_JouerCoup(plateau,Coup(blanc,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2 + 1))))}
 
-	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2 + 1))))}
+	\instruction{PLATEAU_JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2),Colonne(ObtenirTaille(p) div 2 + 1))))}
 
-	\instruction{JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2))))}
+	\instruction{PLATEAU_JouerCoup(plateau,Coup(noir,Position(Ligne(ObtenirTaille(p) div 2 + 1),Colonne(ObtenirTaille(p) div 2))))}
 	}
 \end{algorithme}

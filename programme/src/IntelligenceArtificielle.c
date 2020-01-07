@@ -78,7 +78,7 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
   int pts;
     Coup BestCoup = COUPS_ObtenirCoup(coupsPossibles);
     if (!COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)) { 
-          while (!COUPS_EstVide(coupsPossibles)){
+        while (!COUPS_EstVide(coupsPossibles)){
         Couleur * plateausp = PLATEAU_CreerPlateau();
         memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
         PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
@@ -88,9 +88,7 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
         if (score > alpha) {
             alpha = score;
             BestCoup = COUPS_ObtenirCoup(coupsPossibles);
-          if (score >alpha) {
-            beta = score;
-            BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+          if (alpha >= beta) {
                break;
          }
       }
@@ -123,14 +121,17 @@ Coup IA_AlphaBeta(Couleur * plateau, Joueur joueurAMaximiser, int Profondeur){
       int pointsMax =-10000;
       while (!COUPS_EstVide(coupsPossibles))
       {
-        PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));
+        Couleur * plateausp = PLATEAU_CreerPlateau();
+        memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
+        PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
         int alpha = -10000;
         int beta = 10000;
-        int resExploration = IA_alphabeta(alpha, beta,plateau,JOUEUR_ObtenirProfondeur(joueurAMaximiser), COULEUR_ObtenirCouleurOpposee(JOUEUR_ObtenirCouleur(joueurAMaximiser)),joueurAMaximiser);
+        int resExploration = IA_alphabeta(alpha, beta,plateausp,JOUEUR_ObtenirProfondeur(joueurAMaximiser), COULEUR_ObtenirCouleurOpposee(JOUEUR_ObtenirCouleur(joueurAMaximiser)),joueurAMaximiser);
         if (resExploration>pointsMax){
           meilleurCoup = COUPS_ObtenirCoup(coupsPossibles);
           pointsMax =resExploration;
         }
+        free(plateausp);
         COUPS_RetirerCoup(&coupsPossibles);
       }
       return meilleurCoup;

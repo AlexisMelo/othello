@@ -112,16 +112,16 @@
 	\tadDependances{Position,Coup,Couleur,\booleen,\naturel}
 	\begin{tadOperations}{Plateau}
 		\tadOperation{Plateau}{\tadUnParam{\naturel}}{\tadUnParam{Plateau}}
-		\tadOperationAvecPreconditions{JouerCoup}{\tadUnParam{Plateau x Coup}}{\tadUnParam{Plateau}}
+		\tadOperationAvecPreconditions{PLATEAU_JouerCoup}{\tadUnParam{Plateau x Coup}}{\tadUnParam{Plateau}}
 		\tadOperation{ObtenirCouleur}{\tadUnParam{Plateau x Position}}{\tadUnParam{Couleur}}
 		\tadOperation{EstPositionVide}{\tadUnParam{Plateau x Position}}{\tadUnParam{\booleen}}
 		\tadOperation{ObtenirTaille}{\tadUnParam{Plateau}}{\tadUnParam{\naturel}}
 	\end{tadOperations}
 	\begin{tadAxiomes}
-		\tadAxiome{ObtenirCouleur(JouerCoup(Plateau,Coup(Position,Couleur)), Position) = Couleur}
+		\tadAxiome{ObtenirCouleur(PLATEAU_JouerCoup(Plateau,Coup(Position,Couleur)), Position) = Couleur}
 	\end{tadAxiomes}
 	\begin{tadPreconditions}{Plateau}
-		\tadPrecondition{JouerCoup}{EstPositionValide(Plateau,ObtenirPosition(Coup))}
+		\tadPrecondition{PLATEAU_JouerCoup}{EstPositionValide(Plateau,ObtenirPosition(Coup))}
 	\end{tadPreconditions}
 \end{tad}
 

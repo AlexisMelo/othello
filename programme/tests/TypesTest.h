@@ -6,7 +6,6 @@
 #include"Ligne.h"
 #include"Couleur.h"
 #include "testCalculerPoint.h"
-#include "testJouerCoup.h"
 #include "testColonne.h"
 #include "testLigne.h"
 #include "testCouleur.h"

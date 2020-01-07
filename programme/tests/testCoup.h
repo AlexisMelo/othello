@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include"Coup.h"
+#include"../include/Coup.h"
 #include <CUnit/CUnit.h>
 #include <string.h>
 
