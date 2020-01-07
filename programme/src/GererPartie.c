@@ -54,15 +54,19 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
 
   while(!partieTerminee){
     j1PeutJouer = P_PARTIE_JoueurPeutJouer(plateau, premierJoueur); // à améliorer en stockant chercherTousLesCoups et le faire passer dans le cas où il peut jouer
+    j2PeutJouer = P_PARTIE_JoueurPeutJouer(plateau, secondJoueur);
     if (j1PeutJouer){
         PARTIE_JouerUnTour(plateau,premierJoueur, AfficherCoup);
         AfficherPlateau(plateau);
         partieTerminee = PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer);
      }
      else
-     {if(JOUEUR_EstIA(premierJoueur)){
+     {
+       if(JOUEUR_EstIA(premierJoueur)){
+       if(!PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer)){
        printf("passe\n");
        fflush(stdout);
+       }
      }
      else
      {
@@ -72,7 +76,6 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
      }
      
 
-    j2PeutJouer = P_PARTIE_JoueurPeutJouer(plateau, secondJoueur);
     if (j2PeutJouer){
         PARTIE_JouerUnTour(plateau,secondJoueur, AfficherCoup);
         AfficherPlateau(plateau);
@@ -80,8 +83,10 @@ void PARTIE_GererPartie(void (*AfficherResultat)(Couleur *, Joueur, Joueur),void
      else
      {
        if(JOUEUR_EstIA(secondJoueur)){
-       printf("passe\n");
-       fflush(stdout);
+        if(!PARTIE_EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer)){
+        printf("passe\n");
+        fflush(stdout);
+        }
      }
      else
      {

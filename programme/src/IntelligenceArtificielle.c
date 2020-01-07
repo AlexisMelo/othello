@@ -46,6 +46,7 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
             BestCoup = COUPS_ObtenirCoup(coupsPossibles);
           }
           COUPS_RetirerCoup(&coupsPossibles);
+          free(plateausp);
         }
     };
     return pts;
@@ -77,20 +78,23 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
   int score =0;
   int pts;
     Coup BestCoup = COUPS_ObtenirCoup(coupsPossibles);
-    if (!COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)) { 
+    if (COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)) { 
         while (!COUPS_EstVide(coupsPossibles)){
         Couleur * plateausp = PLATEAU_CreerPlateau();
         memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
         PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
         int score = -IA_alphabeta(-alpha, -beta, plateausp, profondeurDepart - 1, joueurActuel, JoueurAMaximiser); 
-        COUPS_RetirerCoup(&coupsPossibles);
         free(plateausp);
         if (score > alpha) {
             alpha = score;
             BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+            COUPS_RetirerCoup(&coupsPossibles);
           if (alpha >= beta) {
                break;
          }
+      }
+      else{
+        COUPS_RetirerCoup(&coupsPossibles);
       }
       return alpha ;
     }
@@ -101,14 +105,17 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
         memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
         PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
         int score = IA_alphabeta(alpha, beta, plateausp, profondeurDepart - 1, joueurActuel, JoueurAMaximiser);
-        COUPS_RetirerCoup(&coupsPossibles);
           free(plateausp);
           if (score < beta) {
             beta = score;
             BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+            COUPS_RetirerCoup(&coupsPossibles);
             if (alpha >= beta){
                break;
          }
+      }
+      else{
+        COUPS_RetirerCoup(&coupsPossibles);
       }
     }
       return beta;

@@ -29,7 +29,7 @@ Coup JOUEUR_SaisirCoupHumain(Joueur j) {
 Coup JOUEUR_SaisirCoupIA(Joueur j, Couleur * plateau) {
   Couleur * copiePlateau = PLATEAU_CreerPlateau();
   memcpy(copiePlateau, plateau, PLATEAU_ObtenirTaille(plateau)*PLATEAU_ObtenirTaille(plateau) * sizeof(Couleur)) ;
-  Coup coup = IA_AlphaBeta(copiePlateau, j, j.profondeur);
+  Coup coup = IA_MinMax(copiePlateau, j, j.profondeur);
   return coup;
 }
 
