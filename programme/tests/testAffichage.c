@@ -12,29 +12,27 @@ void testAffichagePlateauAleatoire(){
     Couleur couleur = CouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            couleur = ObtenirCouleuropposee(couleur);
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
-            AfficherPlateau(plateau);
+            couleur = COULEUR_ObtenirCouleurOpposee(couleur);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i), COLONNE_ObtenirColonneDepuisInt(j)), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
+            AFFICHAGE_AfficherPlateau(plateau);
         }
     }
-    //afficherPlateau(plateau);
 }
 
 void testAffichagePlateauVide(){
-    plateau = CreerPlateau();
-    Couleur couleur = CouleurNeutre();
+    plateau = PLATEAU_CreerPlateau();
+    Couleur couleur = COULEUR_ObtenirCouleurNeutre();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
-            Coup coup = CreerCoup(CreerPosition(i, j), couleur);
-            JouerCoup(plateau, coup);
+            Coup coup = COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(i), COLONNE_ObtenirColonneDepuisInt(j)), couleur);
+            PLATEAU_JouerCoup(plateau, coup);
         }
     }
-    AfficherPlateau(plateau);
+    AFFICHAGE_AfficherPlateau(plateau);
 }
 
 int main(){
     testAffichagePlateauAleatoire();
     testAffichagePlateauVide();
-    InitialiserAffichagePlateau();
 }

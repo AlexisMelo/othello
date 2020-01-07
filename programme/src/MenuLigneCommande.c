@@ -19,14 +19,14 @@ void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
       j1 = JOUEUR_CreerJoueurHumain(couleurJ1);
       j2 = JOUEUR_CreerJoueurHumain(couleurJ2);
 
-      PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, j1, j2);
+      PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, AFFICHAGE_AfficherSaisieCoup, j1, j2);
     }
     else if (strcmp(arguments[1], JOUEURVSIA) == 0) {
 
       j1 = JOUEUR_CreerJoueurHumain(couleurJ1);
       j2 = JOUEUR_CreerJoueurIA(couleurJ2, profondeurIA);
 
-      PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, j1, j2);
+      PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartie, AFFICHAGE_AfficherPlateau, AFFICHAGE_AfficherCoupJoue, AFFICHAGE_AfficherSaisieCoup, j1, j2);
 
     }
     else if (strcmp(arguments[1], IAVSIA) == 0) {
@@ -34,7 +34,7 @@ void MENU_LC_MenuLigneCommande(int nbArguments, char ** arguments) {
       j1 = JOUEUR_CreerJoueurIA(couleurJ1, profondeurIA);
       j2 = JOUEUR_CreerJoueurHumain(couleurJ2);
 
-      PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, AFFICHAGE_AfficherCoupJoue, j1, j2);
+      PARTIE_FaireUnePartie(AFFICHAGE_AfficherResultatsPartieTournois, AFFICHAGE_AfficherPlateauTournois, AFFICHAGE_AfficherCoupJoue, AFFICHAGE_AfficherSaisieCoupTournois, j1, j2);
 
     }
     else {

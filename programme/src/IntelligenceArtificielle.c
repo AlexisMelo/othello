@@ -17,10 +17,10 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
         }
     int score =0;
     int pts;
-    Coup BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+    //Coup BestCoup = COUPS_ObtenirCoup(coupsPossibles);
         if(!COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)){
           while (!COUPS_EstVide(coupsPossibles))
-          {          
+          {
           pts = -1;
           Couleur * plateausp = PLATEAU_CreerPlateau();
           memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
@@ -28,7 +28,7 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
           score =P_IA_MinMaxExplorationRecursive(JoueurAMaximiser, COULEUR_ObtenirCouleurOpposee(joueurActuel), plateausp, profondeurDepart-1);
           if (score > pts){
             pts = score;
-            BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+            //BestCoup = COUPS_ObtenirCoup(coupsPossibles);
           }
           COUPS_RetirerCoup(&coupsPossibles);
           free(plateausp);
@@ -43,9 +43,10 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
           score = P_IA_MinMaxExplorationRecursive(JoueurAMaximiser, COULEUR_ObtenirCouleurOpposee(joueurActuel), plateausp, profondeurDepart-1);
           if (score < pts){
             pts = score;
-            BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+            //BestCoup = COUPS_ObtenirCoup(coupsPossibles);
           }
           COUPS_RetirerCoup(&coupsPossibles);
+          free(plateausp);
         }
     };
     return pts;
@@ -54,11 +55,13 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
 Coup IA_MinMax(Couleur * plateau, Joueur joueurAMaximiser, int Profondeur){
       Coups coupsPossibles = RECHERCHECOUP_RechercherTousLesCoups(plateau,JOUEUR_ObtenirCouleur(joueurAMaximiser)); // + rechercherLesCoups ?
       Coup meilleurCoup= COUPS_ObtenirCoup(coupsPossibles);
-      int pointsMax =-1;
+      int pointsMax =-1000;
       while (!COUPS_EstVide(coupsPossibles))
       {
-        PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));
-        int resExploration = P_IA_MinMaxExplorationRecursive(joueurAMaximiser, JOUEUR_ObtenirCouleur(joueurAMaximiser),plateau,JOUEUR_ObtenirProfondeur(joueurAMaximiser));
+        Couleur * plateausp = PLATEAU_CreerPlateau();
+        memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
+        PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
+        int resExploration = P_IA_MinMaxExplorationRecursive(joueurAMaximiser, JOUEUR_ObtenirCouleur(joueurAMaximiser),plateausp,JOUEUR_ObtenirProfondeur(joueurAMaximiser));
         if (resExploration> pointsMax){
           meilleurCoup = COUPS_ObtenirCoup(coupsPossibles);
           pointsMax =resExploration;
@@ -74,30 +77,25 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
   if (profondeurDepart == 0 || PLATEAU_EstRempli(plateau)){
           return PLATEAU_CalculerPoints(plateau, joueurActuel);
   }
-  int score =0;
-  int pts;
-    Coup BestCoup = COUPS_ObtenirCoup(coupsPossibles);
-    if (!COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)) { 
-          while (!COUPS_EstVide(coupsPossibles)){
+    if (COULEUR_SontEgalesCouleurs(JOUEUR_ObtenirCouleur(JoueurAMaximiser), joueurActuel)) {
+        while (!COUPS_EstVide(coupsPossibles)){
         Couleur * plateausp = PLATEAU_CreerPlateau();
         memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
         PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
-        int score = -IA_alphabeta(-alpha, -beta, plateausp, profondeurDepart - 1, joueurActuel, JoueurAMaximiser); 
-        COUPS_RetirerCoup(&coupsPossibles);
+        int score = IA_alphabeta(alpha, beta, plateausp, profondeurDepart - 1, joueurActuel, JoueurAMaximiser);
         free(plateausp);
         if (score > alpha) {
             alpha = score;
-            BestCoup = COUPS_ObtenirCoup(coupsPossibles);
-        COUPS_RetirerCoup(&coupsPossibles);
-          free(plateausp);
-          if (score >alpha) {
-            beta = score;
-            BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+            COUPS_RetirerCoup(&coupsPossibles);
+          if (alpha >= beta) {
                break;
          }
       }
-      return alpha ;
+      else{
+        COUPS_RetirerCoup(&coupsPossibles);
+      }
     }
+    return alpha ;
    }
    else {
         while (!COUPS_EstVide(coupsPossibles)){
@@ -105,14 +103,16 @@ int IA_alphabeta(int alpha, int beta, Couleur * plateau, int profondeurDepart, C
         memcpy(plateausp, plateau, TAILLE*TAILLE*sizeof(Couleur));
         PLATEAU_JouerCoup(plateausp, COUPS_ObtenirCoup(coupsPossibles));
         int score = IA_alphabeta(alpha, beta, plateausp, profondeurDepart - 1, joueurActuel, JoueurAMaximiser);
-        COUPS_RetirerCoup(&coupsPossibles);
           free(plateausp);
           if (score < beta) {
             beta = score;
-            BestCoup = COUPS_ObtenirCoup(coupsPossibles);
+            COUPS_RetirerCoup(&coupsPossibles);
             if (alpha >= beta){
                break;
          }
+      }
+      else{
+        COUPS_RetirerCoup(&coupsPossibles);
       }
     }
       return beta;

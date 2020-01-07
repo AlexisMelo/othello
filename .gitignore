@@ -12,7 +12,7 @@
 *.odg#
 *.toc
 *.out
-programme/bin/Othello
+programme/bin/othello
 programme/tests/test
 .vscode
 /programme/.vscode
@@ -21,4 +21,6 @@ programme/tests/test
 /doc
 *.bak
 /latex
-/programe/bin
+/programme/bin
+programme/tests/testPlateauAff
+programme/tests/testTypes

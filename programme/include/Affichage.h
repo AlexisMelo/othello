@@ -60,4 +60,20 @@ void AFFICHAGE_MessageAide();
  */
 void AFFICHAGE_AfficherCoupJoue(Coup coupJoue);
 
+/**
+ * Affiche une phrase pour demander la saisie d'un coup à un joueur.
+ *
+ * \param joueur Joueur qui doit saisir son coup.
+ */
+void AFFICHAGE_AfficherSaisieCoup(Joueur joueur);
+
+/**
+ * Affiche une phrase pour demander la saisie d'un coup à un joueur. Pour l'instant
+ * en mode tournoi aucun affichage n'est demandé, voir même cela peut entraver le
+ * bon fonctionnement si des printf sont utilisés.
+ *
+ * \param joueur Joueur qui doit saisir son coup.
+ */
+void AFFICHAGE_AfficherSaisieCoupTournois(Joueur joueur);
+
 #endif

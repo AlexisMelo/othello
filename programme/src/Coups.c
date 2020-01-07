@@ -17,9 +17,8 @@ void COUPS_AjouterCoup(Coups *pCoups, Coup coup){
 }
 
 void COUPS_RetirerCoup(Coups *pCoups){
-  Coup* tab = pCoups->lesCoups;
   for (int i = 1; i < pCoups->nbCoups; i++) {
-    tab[i-1] = tab[i];
+    pCoups->lesCoups[i-1] = pCoups->lesCoups[i];
   }
   pCoups->nbCoups--;
 }

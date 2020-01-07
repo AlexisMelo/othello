@@ -1,7 +1,7 @@
 OUTPUTDIR = ..
 
 all :
-	$(MAKE) rapport
+	$(MAKE) report
 
 rapport :
 	pdflatex -interaction nonstopmode -halt-on-error -file-line-error -output-directory $(OUTPUTDIR)/ ./sourcesTEX/Rapport_BenayadLoudiyi-MeloDaSilva-Mesbah-Saivres-Si.tex

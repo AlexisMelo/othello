@@ -8,12 +8,10 @@
 #include "AfficherPlateau.h"
 void TestPlateau()
 {
-    Couleur (*pPlateau)[64] = CreerPlateau();
-    InitPlateau(pPlateau);
-    Couleur couleur = CouleurNoir();
-    Ligne ligne = CreerLigne(1);
-    Colonne colonne = CreerColonne(1);
-    AfficherPlateau(pPlateau);
+    Couleur * plateau =PLATEAU_CreerPlateau();
+    Couleur couleur = COULEUR_ObtenirCouleurNoir();
+    Ligne ligne = LIGNE_ObtenirLigneDepuisInt(1);
+    Colonne colonne = COLONNE_ObtenirColonneDepuisInt(1);
     for (int i = 1; i < TAILLE + 1; i++)
     {
         for (int j = 1; j < TAILLE + 1; j++)
@@ -25,7 +23,7 @@ void TestPlateau()
             CU_ASSERT(EstEgalCouleur(res, couleur));
             /* printf("%d        %d      ", res.nom, couleur.nom);
             printf("%s        %s      ", res.hexa, couleur.hexa);
-            printf("%c        %c      ", res.symbole, couleur.symbole); 
+            printf("%c        %c      ", res.symbole, couleur.symbole);
             printf("\n"); */
         }
     }
