@@ -55,7 +55,7 @@ int P_IA_MinMaxExplorationRecursive(Joueur JoueurAMaximiser,Couleur joueurActuel
 Coup IA_MinMax(Couleur * plateau, Joueur joueurAMaximiser, int Profondeur){
       Coups coupsPossibles = RECHERCHECOUP_RechercherTousLesCoups(plateau,JOUEUR_ObtenirCouleur(joueurAMaximiser)); // + rechercherLesCoups ?
       Coup meilleurCoup= COUPS_ObtenirCoup(coupsPossibles);
-      int pointsMax =-1;
+      int pointsMax =-1000;
       while (!COUPS_EstVide(coupsPossibles))
       {
         PLATEAU_JouerCoup(plateau, COUPS_ObtenirCoup(coupsPossibles));
