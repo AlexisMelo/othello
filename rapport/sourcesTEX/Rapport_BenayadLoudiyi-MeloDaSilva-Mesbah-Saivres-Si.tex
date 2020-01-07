@@ -1,94 +1,109 @@
-%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
-\documentclass[french]{extarticle}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setcounter{secnumdepth}{4}
-\usepackage{color}
-\addtolength{\oddsidemargin}{-.8in}
-\addtolength{\evensidemargin}{-.8in}
-\addtolength{\textwidth}{1.6in}
-\makeatletter
-
-\makeatother
-\usepackage{graphicx}
-\usepackage[unicode=true,pdfusetitle,
- bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
- breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=true]
- {hyperref}
-\hypersetup{
- linkcolor=blue,urlcolor=blue}
-
-\makeatletter
-\newcommand{\lyxrightaddress}[1]{
-	\par {\raggedleft \begin{tabular}{l}\ignorespaces
-	#1
-	\end{tabular}
-	\vspace{1.4em}
-	\par}
-}
-
-\usepackage[svgnames]{xcolor}
-\usepackage{svg}
-\usepackage{rapport/lib/algorithmeUTF8}
-\usepackage[utf8]{inputenc}
-
-\usepackage{fancyhdr}
-\lhead{TITRE DOCUMENT}
-\chead{}
-\rhead{}
-\lfoot{AUTEURS - AUTEURS}
-\cfoot{Page \thepage}
-\rfoot{\today}
-\usepackage{fancyvrb}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\addtolength{\headheight}{\baselineskip}
-\makeatother
+\input{./sourcesTEX/Preambule}
 
 \begin{document}
-\rhead{\includegraphics[height=1cm]{./rapport/sourcesIMAGES/Logo_INSARouen.png}}
-\title{TITRE}
-\author{AUTEURS - RU Siu - MELO DA SILVA Alexis - MESBAH Zacharia - SAIVRES
-Jerôme - SI Ruixu}
-\date{2019 - 2020}
-\maketitle
-\newpage
-\tableofcontents{}
-\newpage
-\section{TADs}
-\input{rapport/sourcesTEX/TADs}
+  \input{./sourcesTEX/PageDeGarde}
 
-\newpage
-\section{Analyse descendante}
-\input{rapport/sourcesTEX/analyse_descendante}
-\newpage
-\section{Conception preliminaire}
-\input{rapport/sourcesTEX/signaturesTAD1}
-\input{rapport/sourcesTEX/signaturesTAD2}
-\input{rapport/sourcesTEX/signatures}
-\newpage
-\section{Types}
-\input{rapport/sourcesTEX/Types}
-\newpage
-\section{Conception détaillée}
+  \newpage
+  \tableofcontents
 
-\input{rapport/sourcesTEX/initialiserPlateau}
+  \newpage
+  \section{Introduction}
+    \input{./sourcesTEX/Introduction}
 
-\input{rapport/sourcesTEX/faireUnePartie}
+  \newpage
+  \section{Analyse du jeu de l'Othello}
+    \input{./sourcesTEX/ReglesDuJeu}
 
-\input{rapport/sourcesTEX/plateauRempli}
+  \newpage
+  \section{Gestion de projet}
+    \input{./sourcesTEX/remarquesGestion}
 
-\input{rapport/sourcesTEX/etatDeLaPartie}
+    \subsection{Règles concernant l’utilisation de git}
+      \input{./sourcesTEX/reglesGit}
 
-\input{rapport/sourcesTEX/coupValideExiste}
+    \subsection{L'outil Gitlab et ce qu'il a permis pendant le projet}
+      \input{./sourcesTEX/gitlab}
 
-\input{rapport/sourcesTEX/jouerUnTour}
+    \subsection{Nomenclature utilisée dans le projet}
+      \input{./sourcesTEX/nomenclature}
 
-\input{rapport/sourcesTEX/rechercherTousLesCoups}
+    \subsection{Organisation et répartition des tâches}
+      \input{./sourcesTEX/repartitionTaches}
 
-\input{rapport/sourcesTEX/obtenirCoupJoueur}
+  \newpage
+  \section{TADs}
+    \input{./sourcesTEX/TADs}
 
-\input{rapport/sourcesTEX/calculPoint}
+  \newpage
+  \section{Analyse descendante}
+    \input{./sourcesTEX/remarquesAnalyse}
+    \input{./sourcesTEX/analyse_descendante}
+
+  \newpage
+  \section{Conception preliminaire}
+    \input{./sourcesTEX/signaturesTAD1}
+    \input{./sourcesTEX/signaturesTAD2}
+    \input{./sourcesTEX/signatures}
+
+  \newpage
+  \section{Types}
+    \input{./sourcesTEX/remarquesTypes}
+    \input{./sourcesTEX/Types}
+
+  \newpage
+  \section{Conception détaillée}
+  \subsection{Analyse descendante pour faire une partie}
+     \subsubsection{FaireUnePartie}
+      \input{./sourcesTEX/faireUnePartie}
+    \subsubsection{InitialiserPlateau}
+      \input{./sourcesTEX/initialiserPlateau}
+    \subsubsection{GererPartie}
+      \input{./sourcesTEX/GererPartie}
+    \subsubsection{EstPartieTerminee}
+      \input{./sourcesTEX/EstPartieTerminee}
+    \subsubsection{JoueurPeutJouer}
+      \input{./sourcesTEX/JoueurPeutJouer}
+    \subsubsection{EstRempli}
+      \input{./sourcesTEX/EstRempli}
+
+  \subsection{Analyse descendante pour jouer un tour}
+    \subsubsection{JouerUnTour}
+      \input{./sourcesTEX/jouerUnTour}
+    \subsubsection{CapturerPions}
+      \input{./sourcesTEX/CapturerPions}
+    \subsubsection{JouerCoup}
+      \input{./sourcesTEX/JouerCoup}
+    \subsubsection{ObtenirCoupValide}
+      \input{./sourcesTEX/ObtenirCoupValide}
+    \subsubsection{SaisirCoup}
+      \input{./sourcesTEX/SaisirCoup}
+    \subsubsection{SaisirCoupHumain}
+      \input{./sourcesTEX/SaisirCoupHumain}
+    \subsubsection{SaisirCoupIA}
+      \input{./sourcesTEX/SaisirCoupIA}
+    \subsubsection{MinMax}
+      \input{./sourcesTEX/MinMax}
+
+
+  \subsection{Analyse descendante pour la recherche de tous les coups}
+    \subsubsection{RechercherTousLesCoups}
+      \input{./sourcesTEX/rechercherTousLesCoups}
+    \subsubsection{EstUnCoupValide}
+      \input{./sourcesTEX/EstUnCoupValide}
+    \subsubsection{EstPositionLibre}
+      \input{./sourcesTEX/EstPositionLibre}
+    \subsubsection{EstPositionValide}
+      \input{./sourcesTEX/EstPositionValide}
+    \subsubsection{CoupPermetCapture}
+      \input{./sourcesTEX/CoupPermetCapture}
+
+  \newpage
+  \section{Développement en C}
+    \input{./sourcesTEX/remarquesDev}
+    \input{./sourcesTEX/Dev}
+
+  \newpage
+  \section{Bilan et Conclusion}
+    \input{./sourcesTEX/Conclusion}
 
 \end{document}

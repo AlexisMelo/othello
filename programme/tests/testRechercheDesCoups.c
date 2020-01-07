@@ -6,16 +6,16 @@ void testRechercheDesCoups() {
     Couleur * plateau = PLATEAU_CreerPlateau();
     Couleur NOIR = COULEUR_ObtenirCouleurNoir();
     Couleur BLANC = COULEUR_ObtenirCouleurBlanc();
-    Coups lesCoups = COUPS_CreerCoups();    
+    Coups lesCoups = COUPS_CreerCoups();
 
     /* Initialisation du plateau */
     /* Creation d'un plateau de test */
-    Coup unCoup = COUP_CreerCoup(POSITION_CreerPosition(1,1), NOIR);
-    PLATEAU_JouerCoup(plateau, unCoup);
-    unCoup = COUP_CreerCoup(POSITION_CreerPosition(1,2), BLANC);
-    PLATEAU_JouerCoup(plateau, unCoup);
-    unCoup = COUP_CreerCoup(POSITION_CreerPosition(2,2), BLANC);
-    PLATEAU_JouerCoup(plateau, unCoup);
+    Coup unCoup = CreerCoup(CreerPosition(1,1), Noir);
+    JouerCoup(pPlateau, unCoup);
+    unCoup = CreerCoup(CreerPosition(1,2), Blanc);
+    JouerCoup(pPlateau, unCoup);
+    unCoup = CreerCoup(CreerPosition(2,2), Blanc);
+    JouerCoup(pPlateau, unCoup);
 
     /* Tests */
     Coup coup1 = COUP_CreerCoup(POSITION_CreerPosition(LIGNE_ObtenirLigneDepuisInt(1),COLONNE_ObtenirColonneDepuisInt(3)), NOIR);
@@ -27,12 +27,10 @@ void testRechercheDesCoups() {
     CU_ASSERT(COUP_SontEgauxCoups(coup1, coup2));
     CU_ASSERT(COUP_SontEgauxCoups(coup1, COUPS_ObtenirCoup(lesCoups2)));
 
-    CU_ASSERT(COUP_SontEgauxCoups(COUPS_ObtenirCoup(lesCoups2), COUPS_ObtenirCoup(lesCoups2)));
-    COUPS_AjouterCoup(&lesCoups, COUP_CreerCoup(POSITION_CreerPosition(1,3), NOIR));
-    COUPS_AjouterCoup(&lesCoups, COUP_CreerCoup(POSITION_CreerPosition(3,3), NOIR));
-    CU_ASSERT(COUPS_EstPresent(lesCoups, COUP_CreerCoup(POSITION_CreerPosition(1,3), NOIR)) == true);
-    CU_ASSERT(COUPS_EstPresent(lesCoups, COUP_CreerCoup(POSITION_CreerPosition(3,3), NOIR)) == true);
+    CU_ASSERT(EstEgalCoup(COUPS_ObtenirCoup(lesCoups2), COUPS_ObtenirCoup(lesCoups2))); //passe ???
+    printf("bug that4");
 
+    // la suite des tests devrait etre resolu en resolvant le pb au dessus
 
     CU_ASSERT(RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque(plateau,COUP_CreerCoup(POSITION_CreerPosition(1,3), NOIR)) == true);
     CU_ASSERT(RECHERCHEDIRECTIONS_CoupPossibleDansUneDirectionQuelconque(plateau,COUP_CreerCoup(POSITION_CreerPosition(3,3), NOIR)) == true);

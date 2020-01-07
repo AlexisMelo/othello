@@ -1,0 +1,19 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{ObtenirCoupValide}
+	{plateau : Plateau, joueur : Joueur}
+	{Coup}
+    {lesCoups : lesCoups\\
+    unCoup : Coup\\
+    estCoupValide : \booleen}
+	{
+    \affecter{lesCoups}{RechercherTousLesCoups(plateau, ObtenirCouleur(joueur))}
+    \affecter{estCoupValide}{Faux}
+    \tantque{non estCoupValide}{
+        \affecter{unCoup}{SaisirCoup(joueur, plateau)}
+        \affecter{estCoupValide}{EstPresent(lesCoups, unCoup)}
+    }
+    \retourner{unCoup}
+	}
+\end{algorithme}

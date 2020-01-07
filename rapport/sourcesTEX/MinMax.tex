@@ -1,0 +1,28 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{MinMax}
+	{plateau : Plateau, joueurAMaximiser : Joueur, profondeur : \naturel}
+	{Coup}
+    {coupsPossibles : Coups\\
+    meilleurCoup : Coup\\
+    pointsMax, resExploration : \naturel\\
+    }
+	{
+    \affecter{coupsPossibles}{RechercherTousLesCoups(plateau,ObtenirCouleur(joueurAMaximiser))}
+    \affecter{meilleurCoup}{ObtenirCoup(coupsPossibles)}
+    \affecter{pointsMax}{-1}
+    \tantque{(non EstVide(coupsPossibles))}
+    {
+        \instruction{JouerCoup(plateau, ObtenirCoup(coupsPossibles))}
+        \affecter{resExploration}{IAMinMaxExplorationRecursive(joueurAMaximiser, ObtenirCouleur(joueurAMaximiser), \\.  \hspace{3cm} \dots plateau, ObtenirProfondeur(joueurAMaximiser))}
+        \sialors {(resExploration > pointsMax)}
+        {
+            \affecter{meilleurCoup}{ObtenirCoup(coupsPossibles)}
+            \affecter{pointsMax}{resExploration}
+        }
+        \instruction{RetirerCoup(coupsPossibles)}
+    }
+    \retourner{(meilleurCoup)}
+	}
+\end{algorithme}

@@ -1,0 +1,16 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{EstPositionLibre}
+	{plateau : Plateau, position : Position}
+	{\booleen}
+    {colonne : Colonne\\
+    ligne : Ligne}
+	{
+    \affecter{colonne}{ObtenirColonne(position)}
+    \affecter{ligne}{ObtenirLigne(position)}
+    {\retourner{((ObtenirNumeroColonne(colonne) $\leq$ ObtenirTaille(plateau)) \\ \dots \dots
+     et (ObtenirNumeroLigne(ligne) $\leq$ ObtenirTaille(plateau)) \\ \dots \dots
+     et (ObtenirNumeroColonne(colonne) $\geq$ 1) et (ObtenirNumeroLigne(ligne) $\geq$ 1))}}
+	}
+\end{algorithme}

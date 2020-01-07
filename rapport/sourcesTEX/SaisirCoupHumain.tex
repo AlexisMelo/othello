@@ -1,0 +1,16 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{SaisirCoupHumain}
+	{j : Joueur}
+	{Coup}
+    {entree : ChaineDeCaractères\\
+    ligneNombre : \naturel\\
+    colonneLettre : Caractère}
+	{
+    \instruction{lire(entree)}
+    \affecter{ligneNombre}{entree[1]}
+    \affecter{colonneLettre}{entree[2]}
+    \retourner{(CreerCoup(CreerPosition(ObtenirLigneDepuisInt(ligneNombre), \\ \dots \dots ObtenirColonneDepuisChar(colonneLettre)), ObtenirCouleur(j)))}
+	}
+\end{algorithme}

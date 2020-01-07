@@ -1,0 +1,15 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{SaisirCoupIA}
+	{j : Joueur, plateau : Plateau}
+	{Coup}
+    {copiePlateau : Plateau\\
+    coup : Coup}
+	{
+    \affecter{copiePlateau}{CreerPlateau()}
+    \affecter{copiePlateau}{plateau}
+    \affecter{coup}{IAAlphaBeta(copiePlateau, j, j.profondeur)}
+    \retourner{coup}
+    }
+\end{algorithme}

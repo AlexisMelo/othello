@@ -1,9 +1,10 @@
 #ifndef __TEST_JOUER_COUP__
 #define __TEST_JOUER_COUP__
-#include "../include/Plateau.h"
-#include "../include/Couleur.h"
-#include "../include/Coup.h"
-#include "../include/Position.h"
+#include "JouerCoup.h"
+#include "Plateau.h"
+#include "Couleur.h"
+#include "Coup.h"
+#include "Position.h"
 
 void TestJouerCoup() ;
 #endif

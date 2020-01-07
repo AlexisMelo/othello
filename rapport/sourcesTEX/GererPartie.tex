@@ -1,0 +1,50 @@
+\begin{algorithme}
+	\small
+	\procedure
+	{GererPartie}
+	{\paramEntree AfficherResultat, \paramEntree AfficherPlateau, \paramEntree AfficherCoup, \paramEntree AfficherSaisieCoup : Fonction, \paramEntree j1, \paramEntree j2 : Joueur, \paramEntreeSortie plateau : Plateau}
+    {j1PeutJouer, j2PeutJouer, partieTerminee : \booleen \\
+    important : ChaineDeCaractères \\
+    premierJoueur, secondJoueur : Joueur
+    }
+	{
+    \affecter{j1PeutJouer}{Vrai}
+    \affecter{j2PeutJouer}{Vrai}
+    \affecter{partieTerminee}{Faux}
+    \instruction{SetOrdreJoueurs(premierJoueur, secondJoueur, j1, j2)}
+    \instruction{AfficherPlateau(plateau)}
+    \tantque{non partieTerminee}{
+        \affecter{j1PeutJouer}{JoueurPeutJouer(plateau, premierJoueur)}
+		\sialorssinon {j1PeutJouer}{
+            \instruction{JouerUnTour(plateau,premierJoueur, AfficherCoup, AfficherSaisieCoup)}
+            \instruction{AfficherPlateau(plateau)}
+            \affecter{partieTerminee}{EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer)}
+        }
+            {
+            {\sialorssinon{EstIA(premierJoueur)}{
+                \instruction{ecrire("passe$\backslash$n")}
+            }
+                {
+                \instruction{lire(important)}
+                }
+            }
+        }
+        \affecter{j2PeutJouer}{JoueurPeutJouer(plateau, secondJoueur)}
+		\sialorssinon {j1PeutJouer}{
+            \instruction{JouerUnTour(plateau,secondJoueur, AfficherCoup, AfficherSaisieCoup)}
+            \instruction{AfficherPlateau(plateau)}
+        }
+            {
+            {\sialorssinon{EstIA(secondJoueur)}{
+                \instruction{ecrire("passe$\backslash$n")}
+            }
+                {
+                \instruction{lire(important)}
+                }
+            }
+        }
+        \affecter{partieTerminee}{EstPartieTerminee(plateau, j1PeutJouer, j2PeutJouer)}
+    }
+    \instruction{AfficherResultat(plateau,j1,j2)}
+	}
+\end{algorithme}

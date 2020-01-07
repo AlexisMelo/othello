@@ -1,4 +1,4 @@
-#include"../include/Affichage.h"
+#include"AfficherPlateau.h"
 #include"Position.h"
 #include"Plateau.h"
 #include"Coup.h"
@@ -8,8 +8,8 @@
 Couleur *plateau;
 
 void testAffichagePlateauAleatoire(){
-    plateau = PLATEAU_CreerPlateau();
-    Couleur couleur = COULEUR_ObtenirCouleurNoir();
+    plateau = *CreerPlateau();
+    Couleur couleur = CouleurNoir();
     for (int i=1; i<= 8; i++){
         for (int j=1; j<= 8; j++){
             couleur = COULEUR_ObtenirCouleurOpposee(couleur);

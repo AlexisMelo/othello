@@ -2,16 +2,12 @@
 	\small
 	\fonction
 	{FaireUnePartie}
-	{couleur : Couleur, AfficherPlateau : Procedure, ObtenirCoupJ1, ObtenirCoupJ2 : Fonction}
-	{Couleur}
+	{AfficherResultat, AfficherPlateau, AfficherCoup, AfficherSaisieCoup : Fonction, j1, j2 : Joueur}
+	{}
 	{plateau : Plateau}
 	{
-	\affecter{plateau}{Plateau()}
+	\affecter{plateau}{CreerPlateau()}
 	\instruction{InitialiserPlateau(plateau)}
-	\tantque{non FinirLaPartie(couleur, plateau}{
-		\affecter{plateau}{JouerUnTour(plateau, niveau, couleur)}
-		\instruction afficherPlateau(plateau)
-		\affecter{couleur}{Inverser(couleur)}
-	}
+	\instruction{GererPartie(AfficherResultat,AfficherPlateau,AfficherCoup,AfficherSaisieCoup,j1,j2,plateau)}
 	}
 \end{algorithme}

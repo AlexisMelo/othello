@@ -1,0 +1,15 @@
+\begin{algorithme}
+	\small
+	\fonction
+	{JoueurPeutJouer}
+	{plateau : Plateau, joueur : Joueur}
+	{\booleen}
+    {}
+    {
+    \sialorssinon {(ObtenirNombreDeCoups(RechercherTousLesCoups(plateau, ObtenirCouleur(joueur))) == 0)}{
+        \retourner{Faux}
+    }{
+        \retourner{Vrai}
+    }
+    }
+\end{algorithme}

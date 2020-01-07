@@ -1,0 +1,36 @@
+\begin{algorithme}
+	\small
+	\procedure
+	{CapturerPions}
+	{\paramEntreeSortie plateau : Plateau, \paramEntree coup : Coup}
+	{}
+	{
+    \instruction{CapturerPionsDansDirection(plateau, coup, H)}
+    \instruction{CapturerPionsDansDirection(plateau, coup, HD)}
+    \instruction{CapturerPionsDansDirection(plateau, coup, D)}
+    \instruction{CapturerPionsDansDirection(plateau, coup, BD)}
+    \instruction{CapturerPionsDansDirection(plateau, coup, B)}
+    \instruction{CapturerPionsDansDirection(plateau, coup, BG)}
+    \instruction{CapturerPionsDansDirection(plateau, coup, G)}
+	\instruction{CapturerPionsDansDirection(plateau, coup, HG)}
+	}
+\end{algorithme}
+
+\begin{algorithme}
+	\small
+	\procedure
+	{CapturerPionsDansDirection}
+	{\paramEntreeSortie plateau : Plateau, \paramEntree coup : Coup, \paramEntree direction : Direction}
+    {nouvellePosition : Position\\
+    nouveauCoup : Coup}
+	{
+    \sialors{(CoupPossibleDansDirection(plateau, coup, direction))}{
+        \affecter{nouvellePosition}{AppliquerDirection(ObtenirPosition(coup), direction)}
+        \tantque {(EstPositionValide(plateau, nouvellePosition)) et (!SontEgalesCouleurs(ObtenirCouleur(coup), ObtenirCouleurAvecPosition(plateau, nouvellePosition))))}{
+            \affecter{nouveauCoup}{CreerCoup(nouvellePosition , ObtenirCouleur(coup))}
+            \instruction{JouerCoup(plateau,nouveauCoup)}
+            \affecter{nouvellePosition}{AppliquerDirection(ObtenirPosition(nouveauCoup), direction)}
+        }
+    }
+	}
+\end{algorithme}

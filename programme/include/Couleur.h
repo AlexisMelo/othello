@@ -14,7 +14,6 @@
 
 #define COULEUR_BLANCHE "blanc"
 #define COULEUR_NOIRE "noir"
-#define COULEUR_NEUTRE "neutre"
 
 /**
  * \enum nomCouleur
@@ -94,15 +93,7 @@ bool COULEUR_SontEgalesCouleurs(Couleur couleur1, Couleur couleur2) ;
  */
 Couleur COULEUR_ObtenirCouleurDepuisString(char * couleur);
 
-/**
- * Permet de retourner la chaine de caractères correspondante à une couleur
- *
- * \param couleur Couleur dont on souhaite obtenir la valeur sous forme de String
- *
- * \return String indiquant la couleur
- */
 char * COULEUR_ObtenirStr(Couleur couleur) ;
-
 /**
  * Permet d'accéder au champs symbole d'une instance de Couleur.
  *

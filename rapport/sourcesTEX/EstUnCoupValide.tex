@@ -1,10 +1,19 @@
 \begin{algorithme}
 	\small
 	\fonction
-	{EstUnCoupValide}
-	{coupAJouer : Coup, coupsPossibles : Coups, p : Plateau}
+	{EstCoupValide}
+	{plateau : Plateau, coup : Coup}
 	{\booleen}
+	{}
 	{
-	\retourner{EstPresent(coupsPossibles,coupAJouer) and ObtenirLigne(ObtenirPosition(coupAJouer)) <= ObtenirTaille(p) and ObtenirColonne(ObtenirPosition(coupAJouer)) <= ObtenirTaille(p) and EstPositionVide(p,ObtenirPosition(coupAJouer))}
+	\sialorssinon {(non EstPositionValide(plateau, ObtenirPosition(coup)))}{
+        \retourner{Faux}
+	}{
+		\sialorssinon {(non EstPositionLibre(plateau, ObtenirPosition(coup)))}{
+        	\retourner{Faux}
+		}{
+			\retourner{CoupPossibleDansUneDirectionQuelconque(plateau, coup)}
+		}
+	}
 	}
 \end{algorithme}

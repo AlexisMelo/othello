@@ -1,31 +1,26 @@
-   \subsection{TAD Couleur}
+   \subsection{Cp du TAD Couleur}
     \begin{algorithme}
-    \signaturefonction{creerBlanc}{}{\textbf{Couleur}}
-    \signaturefonction{creerNoir}{}{\textbf{Couleur}}
-    \signaturefonction{creerNeutre}{}{\textbf{Couleur}}
-    \signaturefonction{ObtenirCouleurOpposee}{couleur : Couleur}{\textbf{Couleur}}
-    \signaturefonction{estNeutre}{}{\textbf{Couleur}}
-    \signaturefonction{FixerCouleurOpposee}{couleur : Couleur, couleurOpposee : Couleur}{\textbf{Couleur}}
+      \signaturefonction{ObtenirCouleurBlanc}{}{Couleur}
+      \signaturefonction{ObtenirCouleurNoir}{}{Couleur}
+      \signaturefonction{ObtenirCouleurNeutre}{}{Couleur}
+      \signaturefonction{ObtenirCouleurOpposee}{couleur : Couleur}{Couleur}
+      \signaturefonction{EstNeutre}{couleur : Couleur}{\booleen}
+      \signaturefonction{EstEgalCouleur}{couleur1, couleur2 : Couleur}{\booleen}
+      \signaturefonction{ObtenirCouleurDepuisString}{uneChaine : CDC}{Couleur}
+      \signaturefonction{ObtenirSymbole}(couleur : Couleur){Char}
     \end{algorithme}
-    \subsection{TAD Direction}
-     \begin{algorithme}
-    \signaturefonction{creerH}{}{\textbf{Direction}}
-    \signaturefonction{creerHD}{}{\textbf{Direction}}
-    \signaturefonction{creerD}{}{\textbf{Direction}}
-    \signaturefonction{creerBD}{}{\textbf{Direction}}
-    \signaturefonction{creerB}{}{\textbf{Direction}}
-    \signaturefonction{creerBG}{}{\textbf{Direction}}
-    \signaturefonction{creerG}{}{\textbf{Direction}}
-    \signaturefonction{creerHG}{}{\textbf{Direction}}
-    \signaturefonction{ObtenirDecalageColonne}{direction : Direction}{\textbf{-1},\textbf{0},\textbf{1}}
-    \signaturefonction{ObtenirDecalageLigne}{direction : Direction}{\textbf{-1},\textbf{0},\textbf{1}}
-    \end{algorithme}
-    \subsection{TAD Etat}
-     \begin{algorithme}
-    \signaturefonction{creerTermine}{}{\textbf{Etat}}
-    \signaturefonction{creerEnCours}{}{\textbf{Etat}}
-    \signaturefonction{creerBloque}{}{\textbf{Etat}}
-    \signaturefonction{EtatDeLaPartie}{plateauDeJeu : PLateau, joueurActuel : Couleur}{\textbf{Etat}}
+   \subsection{Cp du TAD Direction}
+    \begin{algorithme}
+      \signaturefonction{creerH}{}{Direction}
+      \signaturefonction{creerHD}{}{Direction}
+      \signaturefonction{creerD}{}{Direction}
+      \signaturefonction{creerBD}{}{Direction}
+      \signaturefonction{creerB}{}{Direction}
+      \signaturefonction{creerBG}{}{Direction}
+      \signaturefonction{creerG}{}{Direction}
+      \signaturefonction{creerHG}{}{Direction}
+      \signaturefonction{ObtenirDecalageColonne}{direction : Direction}{-1,0,1}
+      \signaturefonction{ObtenirDecalageLigne}{direction : Direction}{-1,0,1}
     \end{algorithme}
     
     
