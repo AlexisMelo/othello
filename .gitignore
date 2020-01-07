@@ -12,7 +12,7 @@
 *.odg#
 *.toc
 *.out
-programme/bin/Othello
+programme/bin/othello
 programme/tests/test
 .vscode
 /programme/.vscode
